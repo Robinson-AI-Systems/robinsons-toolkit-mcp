@@ -1,0 +1,430 @@
+{
+  "sourceHead": "6c590f9c7895ea3bf2ce9e5d37bf300f5bd03cff",
+  "node": "v24.19.0",
+  "counts": {
+    "registryEntries": 3049,
+    "uniqueNames": 3049,
+    "handlerDispatchBranches": 3067,
+    "uniqueHandlerNames": 3058,
+    "namespaces": 31,
+    "duplicateNames": 0
+  },
+  "mismatches": {
+    "registryWithoutHandler": [],
+    "handlerWithoutRegistry": [
+      "cf_get_api_token",
+      "cf_list_ai_finetune_assets",
+      "sentry_get_project_data_scrubbing",
+      "sentry_list_org_rules",
+      "slack_convert_channel_to_private",
+      "slack_list_apps",
+      "slack_set_user_active",
+      "supabase_get_edge_function_body",
+      "supabase_get_postgres_logs"
+    ]
+  },
+  "duplicateNames": [],
+  "repeatedDispatchNames": [
+    {
+      "name": "anthropic_get_usage",
+      "locations": [
+        "handlers/anthropic.js:123",
+        "handlers/anthropic.js:582"
+      ]
+    },
+    {
+      "name": "anthropic_list_workspaces",
+      "locations": [
+        "handlers/anthropic.js:380",
+        "handlers/anthropic.js:537"
+      ]
+    },
+    {
+      "name": "anthropic_get_workspace",
+      "locations": [
+        "handlers/anthropic.js:381",
+        "handlers/anthropic.js:542"
+      ]
+    },
+    {
+      "name": "anthropic_list_workspace_members",
+      "locations": [
+        "handlers/anthropic.js:385",
+        "handlers/anthropic.js:548"
+      ]
+    },
+    {
+      "name": "anthropic_list_api_keys",
+      "locations": [
+        "handlers/anthropic.js:399",
+        "handlers/anthropic.js:561"
+      ]
+    },
+    {
+      "name": "openai_get_usage",
+      "locations": [
+        "handlers/openai.js:237",
+        "handlers/openai.js:629"
+      ]
+    },
+    {
+      "name": "openai_list_projects",
+      "locations": [
+        "handlers/openai.js:402",
+        "handlers/openai.js:617"
+      ]
+    },
+    {
+      "name": "openai_create_project",
+      "locations": [
+        "handlers/openai.js:404",
+        "handlers/openai.js:623"
+      ]
+    },
+    {
+      "name": "openai_list_org_users",
+      "locations": [
+        "handlers/openai.js:411",
+        "handlers/openai.js:599"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "file": "handlers/anthropic.js",
+      "line": 82,
+      "rule": "fabricated-tool-result",
+      "evidence": "`[Tool ${b.name} called with: ${JSON.stringify(b.input)}]`",
+      "disposition": "confirmed-false-tool-result"
+    },
+    {
+      "file": "handlers/gemini.js",
+      "line": 685,
+      "rule": "syntax-error",
+      "evidence": "Unterminated string constant (685:94)",
+      "disposition": "confirmed-broken-module"
+    }
+  ],
+  "dependencies": [
+    {
+      "file": "handlers/anthropic.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/clerk.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/compound.js",
+      "imports": [
+        "fs",
+        "path",
+        "child_process",
+        "../ledger.js"
+      ]
+    },
+    {
+      "file": "handlers/context7.js",
+      "imports": [
+        "fs",
+        "path"
+      ]
+    },
+    {
+      "file": "handlers/fly.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/gemini.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/github.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/google.js",
+      "imports": [
+        "crypto",
+        "fs"
+      ]
+    },
+    {
+      "file": "handlers/linear.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/local.js",
+      "imports": [
+        "child_process",
+        "fs",
+        "path",
+        "util",
+        "crypto"
+      ]
+    },
+    {
+      "file": "handlers/mapbox.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/moonshot.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/n8n.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/neon.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/ollama.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/openai.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/playwright.js",
+      "imports": [
+        "playwright"
+      ]
+    },
+    {
+      "file": "handlers/postgres.js",
+      "imports": [
+        "postgres",
+        "child_process"
+      ]
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/resend.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/sam.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/search.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/sentry.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/slack.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/stripe.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/supabase.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/twilio.js",
+      "imports": [
+        "crypto"
+      ]
+    },
+    {
+      "file": "handlers/upstash.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/vercel.js",
+      "imports": []
+    },
+    {
+      "file": "handlers/voyage.js",
+      "imports": []
+    }
+  ],
+  "handlerImports": [
+    {
+      "file": "anthropic.js",
+      "passed": true
+    },
+    {
+      "file": "clerk.js",
+      "passed": true
+    },
+    {
+      "file": "cloudflare.js",
+      "passed": true
+    },
+    {
+      "file": "compound.js",
+      "passed": true
+    },
+    {
+      "file": "context7.js",
+      "passed": true
+    },
+    {
+      "file": "fly.js",
+      "passed": true
+    },
+    {
+      "file": "gemini.js",
+      "passed": false,
+      "error": "Invalid or unexpected token"
+    },
+    {
+      "file": "github.js",
+      "passed": true
+    },
+    {
+      "file": "google.js",
+      "passed": true
+    },
+    {
+      "file": "linear.js",
+      "passed": true
+    },
+    {
+      "file": "local.js",
+      "passed": true
+    },
+    {
+      "file": "mapbox.js",
+      "passed": true
+    },
+    {
+      "file": "moonshot.js",
+      "passed": true
+    },
+    {
+      "file": "n8n.js",
+      "passed": true
+    },
+    {
+      "file": "neon.js",
+      "passed": true
+    },
+    {
+      "file": "ollama.js",
+      "passed": true
+    },
+    {
+      "file": "openai.js",
+      "passed": true
+    },
+    {
+      "file": "playwright.js",
+      "passed": true
+    },
+    {
+      "file": "postgres.js",
+      "passed": true
+    },
+    {
+      "file": "qdrant.js",
+      "passed": true
+    },
+    {
+      "file": "resend.js",
+      "passed": true
+    },
+    {
+      "file": "sam.js",
+      "passed": true
+    },
+    {
+      "file": "search.js",
+      "passed": true
+    },
+    {
+      "file": "sentry.js",
+      "passed": true
+    },
+    {
+      "file": "slack.js",
+      "passed": true
+    },
+    {
+      "file": "stripe.js",
+      "passed": true
+    },
+    {
+      "file": "supabase.js",
+      "passed": true
+    },
+    {
+      "file": "twilio.js",
+      "passed": true
+    },
+    {
+      "file": "upstash.js",
+      "passed": true
+    },
+    {
+      "file": "vercel.js",
+      "passed": true
+    },
+    {
+      "file": "voyage.js",
+      "passed": true
+    }
+  ],
+  "legacyAudit": {
+    "exitCode": 0,
+    "stdout": "anthropic      ✅ 64\nclerk          ✅ 102\ncloudflare     ❌ 2 issue(s)\n  H not R: cf_list_ai_finetune_assets, cf_get_api_token\ncompound       ✅ 46\ncontext7       ✅ 45\nfly            ✅ 116\ngemini         ✅ 31\ngithub         ✅ 311\ngoogle         ✅ 158\nlinear         ✅ 64\nlocal          ✅ 87\nmapbox         ✅ 51\nmoonshot       ✅ 17\nn8n            ✅ 79\nneon           ✅ 204\nollama         ✅ 16\nopenai         ✅ 133\nplaywright     ✅ 47\npostgres       ✅ 111\nqdrant         ✅ 71\nresend         ✅ 52\nsam            ✅ 21\nsearch         ✅ 30\nsentry         ❌ 2 issue(s)\n  H not R: sentry_get_project_data_scrubbing, sentry_list_org_rules\nslack          ❌ 3 issue(s)\n  H not R: slack_set_user_active, slack_convert_channel_to_private, slack_list_apps\nstripe         ✅ 202\nsupabase       ❌ 2 issue(s)\n  H not R: supabase_get_postgres_logs, supabase_get_edge_function_body\ntwilio         ✅ 115\nupstash        ✅ 197\nvercel         ✅ 181\nvoyage         ✅ 11\n---\nTOTAL: 3049 | ❌ ISSUES FOUND\n"
+  },
+  "runtime": {
+    "booted": true,
+    "protocolVersion": "2024-11-05",
+    "advertisedToolCount": 14,
+    "advertisedSchemaBytes": 9044,
+    "advertisedNames": [
+      "search_toolkit",
+      "list_namespaces",
+      "get_tool_schema",
+      "execute_tool",
+      "local_run_command",
+      "local_read_file",
+      "local_write_file",
+      "local_list_directory",
+      "github_create_branch",
+      "github_create_pull_request",
+      "neon_run_sql",
+      "vercel_list_deployments",
+      "compound_scaffold_feature",
+      "compound_rollback_transaction"
+    ],
+    "providerSchemasAdvertised": 10,
+    "localCallPassed": true,
+    "missingStripeIsError": true,
+    "noSecretSearch": {
+      "content": [
+        {
+          "type": "text",
+          "text": "Found 20 tools matching \"search\":\n\n**compound_semantic_search**\nSUPER TOOL: Convert a text query to an OpenAI embedding and search Qdrant — semantic search in one call.\nParameters: query, collection_name, limit, score_threshold, filter\n\n**compound_research_and_summarize**\nSUPER TOOL: Web search via Tavily plus AI synthesis — searches the web for a query with configurable depth, then sends the top results to Claude or Gemini for a structured summary answer. One call replaces separate search + LLM workflow.\nParameters: query, max_results, search_depth, use_gemini, model\n\n**compound_competitor_research**\nSUPER TOOL: Run competitive intelligence research using Tavily web search — searches for pricing, features, reviews, and recent news about a company and its competitors, then returns structured findings with sources. One call replaces hours of manual research.\nParameters: company, competitors, aspects, max_results\n\n**local_search_files**\nSearch for files by filename pattern or content (alias for local_find_files).\nParameters: directory, pattern, contains\n\n**brave_web_search**\nSearch the web using Brave Search. Returns organic results with titles, URLs, descriptions, and age.\nParameters: query, count, country, freshness, result_filter\n\n**brave_news_search**\nSearch for recent news articles using Brave News Search.\nParameters: query, count, country, freshness\n\n**brave_local_search**\nSearch for local businesses and points of interest using Brave Local Search.\nParameters: query, count, country\n\n**brave_image_search**\nSearch for images using Brave Image Search.\nParameters: query, count, safe_search\n\n**brave_video_search**\nSearch for videos using Brave Video Search.\nParameters: query, count, freshness\n\n**tavily_search**\nSearch the web using Tavily AI — returns an AI-generated answer plus source URLs. Better for research queries than Brave.\nParameters: query, search_depth, max_results, include_answer, include_domains, exclude_domains, topic\n\n**tavily_search_deep**\nDeep web research using Tavily — advanced search depth with raw content extraction. Slower but more thorough.\nParameters: query, max_results, include_domains, topic\n\n**tavily_news_search**\nSearch for recent news articles using Tavily's news topic mode.\nParameters: query, max_results\n\n**tavily_finance_search**\nSearch for financial news, stock data, and market information using Tavily's finance topic mode.\nParameters: query, max_results\n\n**search_web**\nSmart web search that uses Tavily if available, otherwise falls back to Brave — automatically picks the best configured provider.\nParameters: query, max_results, count\n\n**search_and_summarize**\nSearch the web and return a concise AI-generated answer plus top 3 source links. Best for quick factual lookups.\nParameters: query\n\n**search_news**\nSearch for recent news using the best available provider (Tavily news topic or Brave news search).\nParameters: query, max_results, freshness\n\n**search_recent**\nSearch for events from the past 24 hours — news and breaking stories.\nParameters: query, max_results\n\n**search_technical_docs**\nSearch technical documentation sites (MDN, GitHub Docs, npm, Python docs, etc.) for developer reference material.\nParameters: query, max_results\n\n**search_multiple_queries**\nRun multiple search queries in parallel and return all results — efficiently research several angles at once.\nParameters: queries, max_results_each\n\n**search_fact_check**\nSearch the web to verify or fact-check a specific claim — returns a verdict and supporting sources.\nParameters: claim, max_results\n\nTo use any tool: call execute_tool with the tool_name and args.\nTo see exact parameters: call get_tool_schema with the tool_name."
+        }
+      ]
+    },
+    "stderr": "Handler load error in gemini.js: Invalid or unexpected token\n\n╔══════════════════════════════════════════════════════╗\n║  Robinson's Toolkit MCP v2.0 — Active               ║\n║  226  tools across 4  namespaces        ║\n║  Active: playwright, local, compound, ollama\n╚══════════════════════════════════════════════════════╝\n\n",
+    "providerLiveTests": "not run — credentials unavailable"
+  },
+  "duplicateCandidateCount": 440,
+  "limits": [
+    "Branch presence does not prove a working implementation.",
+    "Duplicate analysis is conservative static evidence, not semantic equivalence proof.",
+    "No provider mutation or authenticated network tests were performed."
+  ]
+}
