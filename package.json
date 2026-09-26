@@ -10,16 +10,19 @@
     "test": "node --test tests/*.test.mjs",
     "audit": "node audit.js",
     "audit:integrity": "node scripts/check-integrity.mjs",
-    "audit:baseline": "node scripts/baseline.mjs"
+    "audit:baseline": "node scripts/baseline.mjs",
+    "audit:metadata": "node scripts/generate-capabilities.mjs --check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "acorn": "8.18.0"
   },
   "engines": {
     "node": ">=18.0.0"
   },
-  "devDependencies": {
-    "acorn": "8.18.0"
+  "bin": {
+    "rt": "bin/rt.js",
+    "robinsons-toolkit": "bin/rt.js"
   }
 }
