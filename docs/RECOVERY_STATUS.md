@@ -71,3 +71,11 @@ Inventory remains 3,049 registry names, 31 namespaces, 440 duplicate candidates;
 MCP remains six broker tools / 2,442 schema bytes with zero direct provider schemas.
 Strict integrity still fails on the same nine orphan names and nine repeated
 dispatch names. See SECURITY_STATUS.md for the substantial remaining security work.
+
+## Integrity increment — shadowed dispatch cleanup
+
+Removed nine unreachable Anthropic/OpenAI branches while preserving all reachable
+per-tool AST fingerprints and registry names. Twenty-four tests pass. Strict
+integrity now reports only the nine orphan names; it remains a failing gate.
+Provider endpoint correctness still requires separate review, including legacy
+usage routes. See PROVIDER_REPAIRS.md and the generated integrity repair report.

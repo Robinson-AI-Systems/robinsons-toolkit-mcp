@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sources": {
-    "handlers/anthropic.js": "daee85bae36128a3631538563ceacde618912a3b24c9ce310922c52311c6a8f4",
+    "handlers/anthropic.js": "2aa42c0ee5447c57359ffc85908c0feb22a8a92bc6153b334b355589a03c4ee8",
     "handlers/clerk.js": "ed526739aadbc0756409ff3ec2abb2e4b381d6fccfdb12bbb42033ceff34de99",
     "handlers/cloudflare.js": "d6c9b69b6769ee7312baec8317fb7617fdff616e109257070ce9feae769c203c",
     "handlers/compound.js": "4e3e50bc5bac543ec11430f5336acd749781812de5efd3fc738c94bb2d08782f",
@@ -17,7 +17,7 @@
     "handlers/n8n.js": "ee2f9d1b1359e64e681c34ef3713695743b0cc854b476eb86eeb06c824889c1e",
     "handlers/neon.js": "079a7265fa0c48d1a4736109d32d6f775b93f0e0e47bd43db34dc9d6d3d4ae84",
     "handlers/ollama.js": "1abf5eb5a2017b966673350bece054fd95ed15b69c5700db4ce1e1ba4166941e",
-    "handlers/openai.js": "0cc64cfa27fcdd96a23e9581192c73c78bfec1518bf1915dc98b1d0784caa740",
+    "handlers/openai.js": "0da1c0bbc41043b93f701c37dac6e22bd6e130e3ec9d386e01c489ebb9b7094d",
     "handlers/playwright.js": "d56d5fb9a0f3f20cd7322968b3b9a59760ff99c3ee88196a8782cf018a386a76",
     "handlers/postgres.js": "219d1975bf0f15417cc531398ff4f5cda017b34ed04b0fc8341f2660fbe4cf47",
     "handlers/qdrant.js": "3f8f9a14a9f5fd6b31ad7666e94cbe3e1459e2b9212bc8f9d5b98042fd7edc35",

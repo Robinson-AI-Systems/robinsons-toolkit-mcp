@@ -1,0 +1,70 @@
+{
+  "baseCommit": "13ff6f4abf865701786b9c50fe48c19630eb3af5",
+  "removedUnreachableBranches": [
+    {
+      "name": "anthropic_list_workspaces",
+      "file": "handlers/anthropic.js",
+      "retainedLine": 379,
+      "removedLine": 536,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "anthropic_get_workspace",
+      "file": "handlers/anthropic.js",
+      "retainedLine": 380,
+      "removedLine": 541,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "anthropic_list_workspace_members",
+      "file": "handlers/anthropic.js",
+      "retainedLine": 384,
+      "removedLine": 547,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "anthropic_list_api_keys",
+      "file": "handlers/anthropic.js",
+      "retainedLine": 398,
+      "removedLine": 560,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "anthropic_get_usage",
+      "file": "handlers/anthropic.js",
+      "retainedLine": 122,
+      "removedLine": 581,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "openai_list_org_users",
+      "file": "handlers/openai.js",
+      "retainedLine": 411,
+      "removedLine": 599,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "openai_list_projects",
+      "file": "handlers/openai.js",
+      "retainedLine": 402,
+      "removedLine": 617,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "openai_create_project",
+      "file": "handlers/openai.js",
+      "retainedLine": 404,
+      "removedLine": 623,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    },
+    {
+      "name": "openai_get_usage",
+      "file": "handlers/openai.js",
+      "retainedLine": 237,
+      "removedLine": 629,
+      "reason": "Earlier identical tool-name condition ends in unconditional return; later branch is unreachable."
+    }
+  ],
+  "verification": "All first-reachable per-tool AST fingerprints and all unique handler names preserved. Registry unchanged.",
+  "liveProviderTests": "not run — credentials unavailable"
+}

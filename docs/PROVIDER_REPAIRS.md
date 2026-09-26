@@ -19,3 +19,22 @@ shadowed dispatch branches still fail strict integrity checks.
 Official contracts checked:
 - https://platform.claude.com/docs/en/agents-and-tools/tool-use/handle-tool-calls
 - https://ai.google.dev/api/generate-content
+
+## Shadowed dispatch cleanup
+
+Nine later Anthropic/OpenAI dispatch branches repeated earlier exact tool names.
+Each earlier branch ends in an unconditional return, making the later branch
+unreachable. Removed only these dead branches; all first-reachable implementation
+AST fingerprints and all unique names were compared before/after and preserved.
+The machine-readable proof is reports/integrity/shadowed-dispatch-repair.json.
+Registry count remains 3,049. This is not a provider API correctness certification.
+
+Official references reviewed on 2026-09-26:
+- https://platform.claude.com/docs/en/manage-claude/admin-api
+- https://platform.claude.com/docs/en/manage-claude/usage-cost-api
+- https://developers.openai.com/api/reference/typescript/resources/admin/subresources/organization/subresources/projects
+
+Follow-up: the retained legacy get_usage branches use older /usage routes, unlike
+current documented organization usage-report routes. Repair their parameter and
+credential contracts separately; removing dead code does not repair those calls.
+Live provider tests: not run — credentials unavailable.
