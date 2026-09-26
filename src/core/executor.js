@@ -33,7 +33,7 @@ export async function routeToolCall(toolName, args, handlers, registry, opts = {
   const result = await handler.execute(toolName, args || {});
 
   // ── Observability Ledger: record a reversal receipt for mutating tools ─────
-  if (!opts.skipLedger && inverses[toolName]) {
+  if (!opts.skipLedger && inverses[toolName] && result?.success !== false && result?.operationFailed !== true) {
     try {
       const receipt = inverses[toolName](args || {}, result);
       if (receipt) {
@@ -47,7 +47,7 @@ export async function routeToolCall(toolName, args, handlers, registry, opts = {
         });
       }
     } catch (e) {
-      console.error(`Ledger receipt failed for ${toolName}: ${e.message}`);
+      throw Object.assign(new Error('Operation completed, but its transaction receipt could not be recorded. Do not retry the operation blindly.'), {code:'LEDGER_WRITE_FAILED',operationMayHaveCompleted:true});
     }
   }
 

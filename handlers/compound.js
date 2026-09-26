@@ -570,8 +570,8 @@ async function execute(tool, args) {
         const handler = await loadHandler(ns);
         const result = await handler.execute(step.inverse, step.inverse_args);
         if (result?.success === false || result?.operationFailed === true) throw new Error('Inverse operation reported failure');
-        executed.push({ id: step.id, inverse: step.inverse, result });
         markRolledBack(step.id);
+        executed.push({ id: step.id, inverse: step.inverse, result });
       } catch (e) {
         failed.push({ id: step.id, inverse: step.inverse, error: e.message });
       }

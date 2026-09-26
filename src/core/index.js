@@ -63,7 +63,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
         return internal?output:results.deliver(output);
       }catch(error){
         availability.recordFailure(canonicalName,error);
-        throw Object.assign(new Error(credentials.redact(error.message)),{code:error.code||'EXECUTION_FAILED'});
+        throw Object.assign(new Error(credentials.redact(error.message)),{code:error.code||'EXECUTION_FAILED',...(error.operationMayHaveCompleted?{operationMayHaveCompleted:true}:{})});
       }
   }
   return {
@@ -73,7 +73,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
     doctor:()=>({profile:selectedProfile?.name||null,workspace,namespaces:namespaces(),providersProbed:false,note:'AVAILABLE means locally configured; authorization and reachability are checked lazily on execution.'}),
     redact:value=>credentials.redact(value),
     errorResult(error){
-      const details=credentials.redact({code:error.code||'EXECUTION_FAILED',message:error.message,...(error.availability?{availability:error.availability}:{})});
+      const details=credentials.redact({code:error.code||'EXECUTION_FAILED',message:error.message,...(error.availability?{availability:error.availability}:{}),...(error.operationMayHaveCompleted?{operationMayHaveCompleted:true}:{})});
       try{return results.deliver(details);}
       catch{return {code:details.code,message:'Error details could not be stored within output limits.',detailsUnavailable:true};}
     },

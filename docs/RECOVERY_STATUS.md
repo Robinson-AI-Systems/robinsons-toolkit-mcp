@@ -174,3 +174,15 @@ connection strings are redacted from public results, receipts, and later error
 messages. Internal workflow values remain usable without exposing them to clients.
 Fifty offline tests pass, including nested generated-secret and environment-setter
 cases. This is defense in depth; provider modules still require credential isolation.
+
+### Ledger durability and truthful reversal
+
+Ledger I/O now rejects symlinks, hard links, malformed receipts and corrupt JSON,
+uses private permissions and exclusive writer locks, and fsyncs append-only events.
+Rollback marks no longer rewrite receipt history. A receipt failure after a
+successful operation raises LEDGER_WRITE_FAILED with an explicit warning against
+blind retries. Failed operations do not receive successful inverse receipts.
+GitHub create-or-update-file no longer advertises deletion as a valid reversal
+without a before-image. Fifty-three offline tests pass. Legacy inverse coverage
+is still incomplete; concurrent rollback and ambiguous remote outcomes require
+further handling before transaction certification.

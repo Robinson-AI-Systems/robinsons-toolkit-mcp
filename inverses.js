@@ -26,15 +26,10 @@ export const inverses = {
     args: { owner: args.owner, repo: args.repo, issue_number: result?.number },
     reversible: !!result?.number
   }),
-  github_create_or_update_file: (args, result) => ({
-    tool: 'github_delete_file',
-    args: {
-      owner: args.owner, repo: args.repo, path: args.path,
-      branch: args.branch, sha: result?.content?.sha,
-      message: `Rollback: delete ${args.path}`
-    },
-    reversible: !!result?.content?.sha,
-    notes: 'Deletes the file; cannot restore the previous version if this was an update'
+  github_create_or_update_file: () => ({
+    tool: null,
+    reversible: false,
+    notes: 'No verified before-image is recorded; deleting the file could destroy an existing version. Restore from Git history manually.'
   }),
 
   // ── Neon ──────────────────────────────────────────────────────────────

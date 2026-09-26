@@ -4,7 +4,7 @@
     "handlers/anthropic.js": "2aa42c0ee5447c57359ffc85908c0feb22a8a92bc6153b334b355589a03c4ee8",
     "handlers/clerk.js": "ed526739aadbc0756409ff3ec2abb2e4b381d6fccfdb12bbb42033ceff34de99",
     "handlers/cloudflare.js": "bec885f2b8b1130f8499fcdecda6132d480cb3560fbe546a32400ccab3bd5735",
-    "handlers/compound.js": "3b800c647881cc303b4575ed73a8ed9eb97487570e0d56e9700c470abcf65a10",
+    "handlers/compound.js": "0744faf7d31e0335a3d9ff692193330843d02d3e6bf87654dcdbd012d8053f4b",
     "handlers/context7.js": "819046f82e17ef7dec5fef9688071e55c6203e22591d19422c000bcffe4ca0d8",
     "handlers/fly.js": "5e2bf5584421dd64bebaca49f999cc893856d44921c2f0db3d9c2b97eb243685",
     "handlers/gemini.js": "e6cb3bbf6a22f73d05bfebea6a2d81a0d33e32fc9645dc7822e58656e71215c8",
