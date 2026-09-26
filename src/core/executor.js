@@ -4,8 +4,10 @@ import {inverses} from '../../inverses.js';
 
 export async function routeToolCall(toolName, args, handlers, registry, opts = {}) {
   // Validate args against the registry schema BEFORE hitting the network
+  const capability = registry.find(tool => tool.name === toolName);
+  if (!capability) throw Object.assign(new Error(`Unknown capability: ${toolName}`), {code:'UNKNOWN_TOOL'});
   const validationError = validateArgs(toolName, args, registry);
-  if (validationError) throw new Error(validationError);
+  if (validationError) throw Object.assign(new Error(validationError), {code:'INVALID_ARGUMENTS'});
 
   // Determine namespace from tool name prefix
   const parts = toolName.split('_');
@@ -22,7 +24,8 @@ export async function routeToolCall(toolName, args, handlers, registry, opts = {
   // Map cf_ prefix to the cloudflare handler
   if (namespace === 'cf') namespace = 'cloudflare';
 
-  const handler = handlers[namespace];
+  namespace = capability.namespace || namespace;
+  const handler = typeof handlers.load === 'function' ? await handlers.load(namespace) : handlers[namespace];
   if (!handler) {
     throw new Error(`No handler found for namespace '${namespace}'. Tool: ${toolName}\nAvailable handlers: ${Object.keys(handlers).join(', ')}`);
   }

@@ -8,11 +8,11 @@ import {PINNED_TOOLS} from '../src/adapters/mcp/surface.js';
 import {probeMcp} from '../scripts/probe-mcp.mjs';
 const baseline=JSON.parse(readFileSync(new URL('../reports/recovery/baseline.json',import.meta.url)));
 const registry=loadRegistry(toolkitRoot);
-test('extraction preserves every registry entry and advertised schema byte',()=>{
+test('catalog preserves every registry name while MCP advertises only brokers',()=>{
   const manifest=JSON.parse(readFileSync(new URL('../reports/recovery/capability-manifest.json',import.meta.url)));
   assert.deepEqual(registry.map(t=>t.name).sort(),manifest.map(t=>t.name).sort());
-  assert.deepEqual(PINNED_TOOLS.map(t=>t.name),baseline.runtime.advertisedNames);
-  assert.equal(Buffer.byteLength(JSON.stringify(PINNED_TOOLS)),baseline.runtime.advertisedSchemaBytes);
+  assert.deepEqual(PINNED_TOOLS.map(t=>t.name),baseline.runtime.advertisedNames.slice(0,4));
+  assert.ok(Buffer.byteLength(JSON.stringify(PINNED_TOOLS))<baseline.runtime.advertisedSchemaBytes);
 });
 test('shared executor validates before dispatch and preserves special namespaces',async()=>{
   const calls=[];
@@ -31,11 +31,11 @@ test('shared executor preserves inverse receipts',async()=>{
   assert.equal(receipts[0].inverse.tool,'github_delete_branch');
   assert.equal(receipts[0].inverse.args.branch,'fixture');
 });
-test('MCP still boots without optional secrets and keeps measured surface',async()=>{
+test('MCP boots without optional secrets and advertises only brokers',async()=>{
   const r=await probeMcp(toolkitRoot);
   assert.equal(r.booted,true);assert.equal(r.localCallPassed,true);assert.equal(r.missingStripeIsError,true);
-  assert.equal(r.advertisedSchemaBytes,baseline.runtime.advertisedSchemaBytes);
-  assert.equal(r.advertisedToolCount,baseline.runtime.advertisedToolCount);
+  assert.ok(r.advertisedSchemaBytes<baseline.runtime.advertisedSchemaBytes);
+  assert.equal(r.advertisedToolCount,4);
 });
 test('core supports execution and discovery independently of MCP',async()=>{
   const core=await createToolkit();

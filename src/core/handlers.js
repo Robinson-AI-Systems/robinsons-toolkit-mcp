@@ -1,21 +1,21 @@
-import {readdirSync,existsSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
 import {join} from 'node:path';
 
-export async function loadHandlers(root) {
-  const handlers = {};
-  const handlersDir = join(root, 'handlers');
-  if (!existsSync(handlersDir)) return handlers;
-  const files = readdirSync(handlersDir).filter(f => f.endsWith('.js'));
-  for (const file of files) {
-    try {
-      const mod = await import(join(handlersDir, file).replace(/\\/g, '/'));
-      const namespace = file.replace('.js', '');
-      if (mod.default && typeof mod.default.execute === 'function') {
-        handlers[namespace] = mod.default;
+/** Imports only a requested namespace; concurrent callers share the same promise. */
+export function createHandlerLoader(root){
+  const pending=new Map();
+  return {
+    get loadedNamespaces(){return [...pending.keys()];},
+    async load(namespace){
+      if(!/^[a-z][a-z0-9]*$/.test(namespace))throw new Error('Invalid handler namespace');
+      if(!pending.has(namespace)){
+        const promise=import(pathToFileURL(join(root,'handlers',namespace+'.js')).href).then(module=>{
+          if(typeof module.default?.execute!=='function')throw new Error('Handler has no execute function');
+          return module.default;
+        }).catch(error=>{pending.delete(namespace);throw Object.assign(new Error(`Handler unavailable: ${namespace}: ${error.message}`),{code:'HANDLER_UNAVAILABLE'});});
+        pending.set(namespace,promise);
       }
-    } catch (e) {
-      console.error(`Handler load error in ${file}:`, e.message);
+      return pending.get(namespace);
     }
-  }
-  return handlers;
+  };
 }

@@ -1,28 +1,57 @@
 import {fileURLToPath} from 'node:url';
+import {readFileSync} from 'node:fs';
+import {join} from 'node:path';
 import {loadRegistry} from './registry.js';
-import {loadHandlers} from './handlers.js';
-import {getActiveNamespaces} from './capabilities.js';
+import {createHandlerLoader} from './handlers.js';
+import {CapabilityAvailability,Availability} from './capabilities.js';
+import {EnvironmentCredentials} from './credentials.js';
 import {searchTools} from './discovery.js';
 import {routeToolCall} from './executor.js';
-
+import {appendReceipt} from '../../ledger.js';
 export const toolkitRoot=fileURLToPath(new URL('../../',import.meta.url));
 
-/** Shared behavior for adapters. No MCP, dotenv, or stdio side effects on import. */
-export async function createToolkit({root=toolkitRoot}={}) {
+/** Transport-independent capability gateway; constructing it imports no handlers. */
+export async function createToolkit({root=toolkitRoot,credentials=new EnvironmentCredentials(),packageExists}={}) {
   const registry=loadRegistry(root);
-  const handlers=await loadHandlers(root);
-  const activeNamespaces=getActiveNamespaces();
-  const namespaceCounts={};
-  for (const tool of registry) {
-    const ns=tool.namespace||tool.name.split('_')[0];
-    if(activeNamespaces[ns]!==false) namespaceCounts[ns]=(namespaceCounts[ns]||0)+1;
+  const byName=new Map();
+  for(const tool of registry){
+    if(byName.has(tool.name))throw new Error(`Duplicate canonical tool: ${tool.name}`);
+    byName.set(tool.name,tool);
   }
-  const totalActiveTools=Object.values(namespaceCounts).reduce((a,b)=>a+b,0);
-  const activeNs=Object.entries(activeNamespaces).filter(([,v])=>v).map(([k])=>k);
+  const metadata=JSON.parse(readFileSync(join(root,'src/core/capability-metadata.json'),'utf8')).capabilities;
+  const handlers=createHandlerLoader(root);
+  const availability=new CapabilityAvailability(metadata,{credentials,packageExists});
+  const namespaces=()=>[...new Set(registry.map(t=>t.namespace))].sort().map(namespace=>{
+    const members=registry.filter(t=>t.namespace===namespace);
+    const states={};for(const tool of members){const state=availability.get(tool.name).state;states[state]=(states[state]||0)+1;}
+    return {namespace,total:members.length,available:states.AVAILABLE||0,states};
+  });
   return {
-    registry,activeNamespaces,namespaceCounts,totalActiveTools,activeNs,
-    search:(query,limit=10)=>searchTools(registry,query,activeNamespaces,limit),
-    schema:name=>registry.find(t=>t.name===name),
-    execute:(name,args,options)=>routeToolCall(name,args,handlers,registry,options)
+    registry, metadata, availability,
+    get loadedNamespaces(){return handlers.loadedNamespaces;},
+    namespaces,
+    doctor:()=>({namespaces:namespaces(),providersProbed:false,note:'AVAILABLE means locally configured; authorization and reachability are checked lazily on execution.'}),
+    redact:value=>credentials.redact(value),
+    search(query,limit=8,{includeUnavailable=false}={}){
+      if(typeof query!=='string'||!query.trim())throw Object.assign(new Error('query must be a non-empty string'),{code:'INVALID_ARGUMENTS'});
+      if(!Number.isInteger(limit)||limit<1||limit>20)throw Object.assign(new Error('limit must be an integer between 1 and 20'),{code:'INVALID_ARGUMENTS'});
+      const states=new Map(registry.map(t=>[t.name,availability.get(t.name)]));
+      const candidates=registry.filter(t=>includeUnavailable||states.get(t.name).state===Availability.AVAILABLE);
+      return searchTools(candidates,query,{},limit).map(t=>({name:t.name,description:t.description,namespace:t.namespace,availability:states.get(t.name),whyMatched:'Lexical name, description or tag match'}));
+    },
+    schema(name){const tool=byName.get(name);return tool?{...tool,availability:availability.get(name)}:undefined;},
+    async execute(name,args={}){
+      if(!byName.has(name))throw Object.assign(new Error(`Unknown capability: ${name}`),{code:'UNKNOWN_TOOL'});
+      if(!args||typeof args!=='object'||Array.isArray(args))throw Object.assign(new Error('args must be an object'),{code:'INVALID_ARGUMENTS'});
+      const status=availability.get(name);
+      if(status.state!==Availability.AVAILABLE)throw Object.assign(new Error(`Capability ${name} unavailable: ${status.state}`),{code:'CAPABILITY_UNAVAILABLE',availability:status});
+      try {
+        const result=await routeToolCall(name,args,handlers,registry,{appendReceipt:receipt=>appendReceipt(credentials.redact(receipt))});
+        return credentials.redact(result);
+      }catch(error){
+        availability.recordFailure(name,error);
+        throw Object.assign(new Error(credentials.redact(error.message)),{code:error.code||'EXECUTION_FAILED'});
+      }
+    }
   };
 }

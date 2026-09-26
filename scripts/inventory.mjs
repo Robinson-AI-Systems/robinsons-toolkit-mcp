@@ -77,6 +77,18 @@ export function inventory(root) {
     findings.push(...analysis.findings);
     modules.push({file:path, imports:analysis.imports});
   }
+  const scanAdditional=(directory)=>{
+    for(const entry of readdirSync(join(root,directory),{withFileTypes:true})){
+      const path=directory+'/'+entry.name;
+      if(entry.isDirectory())scanAdditional(path);
+      else if(entry.name.endsWith('.js')){
+        try{findings.push(...analyzeHandler(readFileSync(join(root,path),'utf8'),path).findings);}
+        catch(error){findings.push({file:path,rule:'syntax-error',evidence:error.message,disposition:'confirmed-broken-module'});}
+      }
+    }
+  };
+  for(const path of ['index.js','ledger.js','inverses.js'])findings.push(...analyzeHandler(readFileSync(join(root,path),'utf8'),path).findings);
+  try{scanAdditional('src');}catch(error){if(error.code!=='ENOENT')throw error;}
   const grouped=new Map();
   for (const e of entries) grouped.set(e.name,[...(grouped.get(e.name)||[]),e.registryNamespace]);
   const uniqueHandlers=new Set(branches.map(b=>b.name));

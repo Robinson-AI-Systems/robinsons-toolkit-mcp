@@ -32,9 +32,17 @@ availability explicit and handler loading lazy; then implement CLI/result
 storage over the same core. Review [MCP compatibility](architecture/mcp-compatibility.md)
 before adapting protocol/transport behavior.
 
+## Checkpoint 2 — availability and lazy loading
+
+Provider import and fabricated-result defects repaired in a separate commit.
+Formal per-capability requirements, isolated lazy imports, provider health states,
+zero-secret discovery gating and a four-tool MCP broker surface are implemented.
+See CAPABILITY_AVAILABILITY.md for deliberately conservative dependency limits.
+Fourteen tests pass. The strict orphan/repeated-dispatch gate remains red.
+
 ## Repository publishing
 
-GitHub API reads succeed. Creating `v3/recovery-core` through the connector
-returned HTTP 403 `Resource not accessible by integration`. Work is committed
-locally on that branch; the original main remains unchanged. Publishing needs
-the GitHub App installation to authorize this organization and repository.
+Organization GitHub App authorization was corrected. Checkpoints 0 and 1 were
+published as 60403b5 and 3a65c08. GitHub Git Data API commits may have different
+commit SHAs from local commits; compare tree SHAs to verify identical contents.
+Main remains unchanged.

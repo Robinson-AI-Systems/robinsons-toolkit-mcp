@@ -13,6 +13,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: node scripts/generate-capabilities.mjs --check
       # Deliberately fails on the inherited defects captured in reports/recovery.
       # Do not weaken this gate to make the baseline appear production-ready.
       - run: npm run audit:integrity
