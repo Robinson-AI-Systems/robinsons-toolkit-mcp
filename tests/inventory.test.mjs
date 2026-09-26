@@ -2,6 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {analyzeHandler as parseHandler,duplicateCandidates} from '../scripts/inventory.mjs';
 const analyzeHandler=(source,file)=>parseHandler('async function execute(tool,args) {\n'+source+'\n}',file);
+test('dispatch after unconditional termination is reported without misclassifying guarded returns',()=>{
+  for (const terminal of ["throw new Error('Unknown tool');", 'return null;']) {
+    const result = analyzeHandler(`if(tool === 'working'){ return api(); } ${terminal} if(tool === 'broken'){ return api(); }`, 'fixture.js');
+    assert.equal(result.branches[0].unreachable, false);
+    assert.equal(result.branches[1].unreachable, true);
+    assert.deepEqual(result.findings.map(f=>[f.rule,f.name]), [['unreachable-dispatch','broken']]);
+  }
+});
 test('dispatch scanner understands aliases and ignores commented-out handlers',()=>{
   const out=analyzeHandler("// if(tool === 'fake') {}\nif(tool === 'local_make' || tool === 'local_create') { return mkdir(args.path); }",'fixture.js');
   assert.deepEqual(out.branches.map(b=>b.name),['local_make','local_create']);

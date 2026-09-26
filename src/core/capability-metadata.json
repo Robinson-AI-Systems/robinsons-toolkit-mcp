@@ -3,7 +3,7 @@
   "sources": {
     "handlers/anthropic.js": "2aa42c0ee5447c57359ffc85908c0feb22a8a92bc6153b334b355589a03c4ee8",
     "handlers/clerk.js": "ed526739aadbc0756409ff3ec2abb2e4b381d6fccfdb12bbb42033ceff34de99",
-    "handlers/cloudflare.js": "d6c9b69b6769ee7312baec8317fb7617fdff616e109257070ce9feae769c203c",
+    "handlers/cloudflare.js": "490a0ff83519bf7c809f00b50a928e4b9f0650a47e53017e39e1f134c6c67134",
     "handlers/compound.js": "4e3e50bc5bac543ec11430f5336acd749781812de5efd3fc738c94bb2d08782f",
     "handlers/context7.js": "819046f82e17ef7dec5fef9688071e55c6203e22591d19422c000bcffe4ca0d8",
     "handlers/fly.js": "5e2bf5584421dd64bebaca49f999cc893856d44921c2f0db3d9c2b97eb243685",
@@ -25,7 +25,7 @@
     "handlers/sam.js": "1acf6c7e5c7b9523f00b7d05b9d662923a0f854ad8485321750880e2bd7e50b4",
     "handlers/search.js": "e94b8d883f7ff7d2af7e311b17ac29e79f3699eafb36198244d566535bd9bfc1",
     "handlers/sentry.js": "87419a2d42120ef5ad9b3fd771cad334e293227c89320447a71e94e92893377f",
-    "handlers/slack.js": "59f1c88f7c2f91c3ef6ebcf71196c43e75baa0bd024cdce6d93b79e4c4b837f2",
+    "handlers/slack.js": "f976191a716efbd502e0bf609aa046df163eaf5971bcd0dd38b766d3b8f4f15d",
     "handlers/stripe.js": "48745dd16b77ec634cbdba58c9557d723e6637f46e66517ba3c04a18bfbf0960",
     "handlers/supabase.js": "e0b71c308272b9105dfe1722ffcd78b451d5b834671396d9a2efcfb0a682e838",
     "handlers/twilio.js": "b690cff5b09bcb58355f50a9ad2390907b7b6075511501641cb25aec447114e8",
@@ -2132,7 +2132,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_get_saml_connection": {
       "namespace": "clerk",
@@ -2147,7 +2148,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_create_saml_connection": {
       "namespace": "clerk",
@@ -2162,7 +2164,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_update_saml_connection": {
       "namespace": "clerk",
@@ -2177,7 +2180,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_delete_saml_connection": {
       "namespace": "clerk",
@@ -2192,7 +2196,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_list_oauth_applications": {
       "namespace": "clerk",
@@ -2207,7 +2212,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_get_oauth_application": {
       "namespace": "clerk",
@@ -2222,7 +2228,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_create_oauth_application": {
       "namespace": "clerk",
@@ -2237,7 +2244,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_update_oauth_application": {
       "namespace": "clerk",
@@ -2252,7 +2260,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_delete_oauth_application": {
       "namespace": "clerk",
@@ -2267,7 +2276,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_rotate_oauth_application_secret": {
       "namespace": "clerk",
@@ -2282,7 +2292,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_list_domains": {
       "namespace": "clerk",
@@ -2297,7 +2308,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_add_domain": {
       "namespace": "clerk",
@@ -2312,7 +2324,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_delete_domain": {
       "namespace": "clerk",
@@ -2327,7 +2340,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_update_domain": {
       "namespace": "clerk",
@@ -2342,7 +2356,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_create_sign_in_token": {
       "namespace": "clerk",
@@ -2357,7 +2372,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_revoke_sign_in_token": {
       "namespace": "clerk",
@@ -2372,7 +2388,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_list_sign_ups": {
       "namespace": "clerk",
@@ -2387,7 +2404,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_get_sign_up": {
       "namespace": "clerk",
@@ -2402,7 +2420,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_update_sign_up": {
       "namespace": "clerk",
@@ -2417,7 +2436,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_list_org_membership_requests": {
       "namespace": "clerk",
@@ -2432,7 +2452,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_accept_org_membership_request": {
       "namespace": "clerk",
@@ -2447,7 +2468,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_reject_org_membership_request": {
       "namespace": "clerk",
@@ -2462,7 +2484,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_verify_proxy_url": {
       "namespace": "clerk",
@@ -2477,7 +2500,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_create_testing_token": {
       "namespace": "clerk",
@@ -2492,7 +2516,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_security_overview": {
       "namespace": "clerk",
@@ -2507,7 +2532,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "clerk_org_member_audit": {
       "namespace": "clerk",
@@ -2522,7 +2548,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_zones": {
       "namespace": "cloudflare",
@@ -4991,7 +5018,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_enable_email_routing": {
       "namespace": "cloudflare",
@@ -5006,7 +5034,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_disable_email_routing": {
       "namespace": "cloudflare",
@@ -5021,7 +5050,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_email_routing_rules": {
       "namespace": "cloudflare",
@@ -5036,7 +5066,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_create_email_routing_rule": {
       "namespace": "cloudflare",
@@ -5051,7 +5082,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_update_email_routing_rule": {
       "namespace": "cloudflare",
@@ -5066,7 +5098,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_delete_email_routing_rule": {
       "namespace": "cloudflare",
@@ -5081,7 +5114,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_email_routing_addresses": {
       "namespace": "cloudflare",
@@ -5096,7 +5130,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_create_email_routing_address": {
       "namespace": "cloudflare",
@@ -5111,7 +5146,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_delete_email_routing_address": {
       "namespace": "cloudflare",
@@ -5126,7 +5162,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_waf_packages": {
       "namespace": "cloudflare",
@@ -5141,7 +5178,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_waf_rule_groups": {
       "namespace": "cloudflare",
@@ -5156,7 +5194,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_waf_rules": {
       "namespace": "cloudflare",
@@ -5171,7 +5210,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_update_waf_rule": {
       "namespace": "cloudflare",
@@ -5186,7 +5226,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_get_bot_management_config": {
       "namespace": "cloudflare",
@@ -5201,7 +5242,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_update_bot_management_config": {
       "namespace": "cloudflare",
@@ -5216,7 +5258,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_create_ai_finetune": {
       "namespace": "cloudflare",
@@ -5231,7 +5274,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_r2_list_objects": {
       "namespace": "cloudflare",
@@ -5246,7 +5290,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_r2_delete_object": {
       "namespace": "cloudflare",
@@ -5261,7 +5306,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_r2_head_object": {
       "namespace": "cloudflare",
@@ -5276,7 +5322,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_analytics_engine_datasets": {
       "namespace": "cloudflare",
@@ -5291,7 +5338,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_query_analytics_engine": {
       "namespace": "cloudflare",
@@ -5306,7 +5354,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_identity_providers": {
       "namespace": "cloudflare",
@@ -5321,7 +5370,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_get_identity_provider": {
       "namespace": "cloudflare",
@@ -5336,7 +5386,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_create_identity_provider": {
       "namespace": "cloudflare",
@@ -5351,7 +5402,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_delete_identity_provider": {
       "namespace": "cloudflare",
@@ -5366,7 +5418,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_list_api_tokens": {
       "namespace": "cloudflare",
@@ -5381,7 +5434,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_verify_api_token": {
       "namespace": "cloudflare",
@@ -5396,7 +5450,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_roll_api_token": {
       "namespace": "cloudflare",
@@ -5411,7 +5466,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_delete_api_token": {
       "namespace": "cloudflare",
@@ -5426,7 +5482,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_invite_account_member": {
       "namespace": "cloudflare",
@@ -5441,7 +5498,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_remove_account_member": {
       "namespace": "cloudflare",
@@ -5456,7 +5514,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_update_account_member_roles": {
       "namespace": "cloudflare",
@@ -5471,7 +5530,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_get_all_zone_settings": {
       "namespace": "cloudflare",
@@ -5486,7 +5546,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_update_zone_settings_bulk": {
       "namespace": "cloudflare",
@@ -5501,7 +5562,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_get_zone_ssl_setting": {
       "namespace": "cloudflare",
@@ -5516,7 +5578,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_update_zone_ssl_setting": {
       "namespace": "cloudflare",
@@ -5531,7 +5594,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_zone_health_report": {
       "namespace": "cloudflare",
@@ -5546,9 +5610,26 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "cf_workers_summary": {
+      "namespace": "cloudflare",
+      "handlerModule": "handlers/cloudflare.js",
+      "requirements": [
+        {
+          "credentials": [
+            "CLOUDFLARE_API_TOKEN"
+          ],
+          "configuration": [],
+          "packages": []
+        }
+      ],
+      "childTools": [],
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+    },
+    "cf_get_api_token": {
       "namespace": "cloudflare",
       "handlerModule": "handlers/cloudflare.js",
       "requirements": [
@@ -8542,7 +8623,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_set_autoscale_config": {
       "namespace": "fly",
@@ -8557,7 +8639,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_reset_autoscale_config": {
       "namespace": "fly",
@@ -8572,7 +8655,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_list_private_network_peers": {
       "namespace": "fly",
@@ -8587,7 +8671,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_get_app_network": {
       "namespace": "fly",
@@ -8602,7 +8687,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_list_dns_records": {
       "namespace": "fly",
@@ -8617,7 +8703,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_restore_volume_from_snapshot": {
       "namespace": "fly",
@@ -8632,7 +8719,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_get_volume_snapshot": {
       "namespace": "fly",
@@ -8647,7 +8735,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_list_process_groups": {
       "namespace": "fly",
@@ -8662,7 +8751,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_scale_process_group": {
       "namespace": "fly",
@@ -8677,7 +8767,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_get_org_usage": {
       "namespace": "fly",
@@ -8692,7 +8783,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_get_app_usage": {
       "namespace": "fly",
@@ -8707,7 +8799,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_update_machine_resources": {
       "namespace": "fly",
@@ -8722,7 +8815,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_org_cost_breakdown": {
       "namespace": "fly",
@@ -8737,7 +8831,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "fly_org_deployment_status": {
       "namespace": "fly",
@@ -8752,7 +8847,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "gemini_standard_query": {
       "namespace": "gemini",
@@ -13462,7 +13558,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_installations": {
       "namespace": "github",
@@ -13477,7 +13574,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_get_installation": {
       "namespace": "github",
@@ -13492,7 +13590,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_app_repos": {
       "namespace": "github",
@@ -13507,7 +13606,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_org_rulesets": {
       "namespace": "github",
@@ -13522,7 +13622,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_get_org_ruleset": {
       "namespace": "github",
@@ -13537,7 +13638,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_create_org_ruleset": {
       "namespace": "github",
@@ -13552,7 +13654,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_update_org_ruleset": {
       "namespace": "github",
@@ -13567,7 +13670,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_delete_org_ruleset": {
       "namespace": "github",
@@ -13582,7 +13686,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_create_repo_ruleset": {
       "namespace": "github",
@@ -13597,7 +13702,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_update_repo_ruleset": {
       "namespace": "github",
@@ -13612,7 +13718,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_delete_repo_ruleset": {
       "namespace": "github",
@@ -13627,7 +13734,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_get_org_audit_log": {
       "namespace": "github",
@@ -13642,7 +13750,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_discussions": {
       "namespace": "github",
@@ -13657,7 +13766,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_get_discussion": {
       "namespace": "github",
@@ -13672,7 +13782,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_discussion_categories": {
       "namespace": "github",
@@ -13687,7 +13798,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_upload_sarif": {
       "namespace": "github",
@@ -13702,7 +13814,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_get_sarif_upload": {
       "namespace": "github",
@@ -13717,7 +13830,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_check_dependabot_enabled": {
       "namespace": "github",
@@ -13732,7 +13846,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_dependabot_org_alerts": {
       "namespace": "github",
@@ -13747,7 +13862,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_get_copilot_billing": {
       "namespace": "github",
@@ -13762,7 +13878,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_copilot_seats": {
       "namespace": "github",
@@ -13777,7 +13894,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_add_copilot_seats": {
       "namespace": "github",
@@ -13792,7 +13910,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_remove_copilot_seats": {
       "namespace": "github",
@@ -13807,7 +13926,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_list_required_workflows": {
       "namespace": "github",
@@ -13822,7 +13942,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_create_required_workflow": {
       "namespace": "github",
@@ -13837,7 +13958,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_delete_required_workflow": {
       "namespace": "github",
@@ -13852,7 +13974,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_org_security_posture": {
       "namespace": "github",
@@ -13867,7 +13990,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "github_repo_dependency_audit": {
       "namespace": "github",
@@ -13882,7 +14006,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "gmail_send_email": {
       "namespace": "google",
@@ -17943,7 +18068,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_webhook": {
       "namespace": "linear",
@@ -17958,7 +18084,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_update_webhook": {
       "namespace": "linear",
@@ -17973,7 +18100,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_delete_webhook": {
       "namespace": "linear",
@@ -17988,7 +18116,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_team": {
       "namespace": "linear",
@@ -18003,7 +18132,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_update_team": {
       "namespace": "linear",
@@ -18018,7 +18148,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_delete_team": {
       "namespace": "linear",
@@ -18033,7 +18164,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_list_team_memberships": {
       "namespace": "linear",
@@ -18048,7 +18180,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_add_team_member": {
       "namespace": "linear",
@@ -18063,7 +18196,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_remove_team_member": {
       "namespace": "linear",
@@ -18078,7 +18212,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_workflow_state": {
       "namespace": "linear",
@@ -18093,7 +18228,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_update_workflow_state": {
       "namespace": "linear",
@@ -18108,7 +18244,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_list_templates": {
       "namespace": "linear",
@@ -18123,7 +18260,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_get_template": {
       "namespace": "linear",
@@ -18138,7 +18276,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_roadmap": {
       "namespace": "linear",
@@ -18153,7 +18292,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_update_roadmap": {
       "namespace": "linear",
@@ -18168,7 +18308,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_list_initiatives": {
       "namespace": "linear",
@@ -18183,7 +18324,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_initiative": {
       "namespace": "linear",
@@ -18198,7 +18340,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_list_notifications": {
       "namespace": "linear",
@@ -18213,7 +18356,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_mark_notification_read": {
       "namespace": "linear",
@@ -18228,7 +18372,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_list_audit_entries": {
       "namespace": "linear",
@@ -18243,7 +18388,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_issue_relation": {
       "namespace": "linear",
@@ -18258,7 +18404,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_delete_issue_relation": {
       "namespace": "linear",
@@ -18273,7 +18420,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_create_attachment": {
       "namespace": "linear",
@@ -18288,7 +18436,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_list_attachments": {
       "namespace": "linear",
@@ -18303,7 +18452,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "linear_team_health_dashboard": {
       "namespace": "linear",
@@ -18318,7 +18468,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_run_command": {
       "namespace": "local",
@@ -19137,7 +19288,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_start": {
       "namespace": "local",
@@ -19150,7 +19302,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_stop": {
       "namespace": "local",
@@ -19163,7 +19316,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_restart": {
       "namespace": "local",
@@ -19176,7 +19330,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_logs": {
       "namespace": "local",
@@ -19189,7 +19344,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_exec": {
       "namespace": "local",
@@ -19202,7 +19358,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_list_images": {
       "namespace": "local",
@@ -19215,7 +19372,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_pull": {
       "namespace": "local",
@@ -19228,7 +19386,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_compose_up": {
       "namespace": "local",
@@ -19241,7 +19400,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_compose_down": {
       "namespace": "local",
@@ -19254,7 +19414,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_docker_compose_logs": {
       "namespace": "local",
@@ -19267,7 +19428,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_kill_process": {
       "namespace": "local",
@@ -19280,7 +19442,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_get_process_by_name": {
       "namespace": "local",
@@ -19293,7 +19456,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_get_memory_usage": {
       "namespace": "local",
@@ -19306,7 +19470,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_get_cpu_usage": {
       "namespace": "local",
@@ -19319,7 +19484,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_zip_files": {
       "namespace": "local",
@@ -19332,7 +19498,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_unzip": {
       "namespace": "local",
@@ -19345,7 +19512,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_tar_create": {
       "namespace": "local",
@@ -19358,7 +19526,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_tar_extract": {
       "namespace": "local",
@@ -19371,7 +19540,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_ping": {
       "namespace": "local",
@@ -19384,7 +19554,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_curl": {
       "namespace": "local",
@@ -19397,7 +19568,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_check_ports": {
       "namespace": "local",
@@ -19410,7 +19582,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_systemctl_status": {
       "namespace": "local",
@@ -19423,7 +19596,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_systemctl_restart": {
       "namespace": "local",
@@ -19436,7 +19610,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "local_systemctl_logs": {
       "namespace": "local",
@@ -19449,7 +19624,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "mapbox_geocode": {
       "namespace": "mapbox",
@@ -21585,7 +21761,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_list_workflow_templates": {
       "namespace": "n8n",
@@ -21602,7 +21779,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_get_workflow_template": {
       "namespace": "n8n",
@@ -21619,7 +21797,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_get_executions_summary": {
       "namespace": "n8n",
@@ -21636,7 +21815,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_clear_execution_history": {
       "namespace": "n8n",
@@ -21653,7 +21833,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_list_credential_types": {
       "namespace": "n8n",
@@ -21670,7 +21851,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_test_credential": {
       "namespace": "n8n",
@@ -21687,7 +21869,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_transfer_credential": {
       "namespace": "n8n",
@@ -21704,7 +21887,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_list_all_variables": {
       "namespace": "n8n",
@@ -21721,7 +21905,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_update_variable": {
       "namespace": "n8n",
@@ -21738,7 +21923,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_get_instance_license": {
       "namespace": "n8n",
@@ -21755,7 +21941,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_activate_instance_license": {
       "namespace": "n8n",
@@ -21772,7 +21959,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_get_instance_diagnostics": {
       "namespace": "n8n",
@@ -21789,7 +21977,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_list_project_workflows": {
       "namespace": "n8n",
@@ -21806,7 +21995,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_transfer_workflow_to_project": {
       "namespace": "n8n",
@@ -21823,7 +22013,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "n8n_instance_overview": {
       "namespace": "n8n",
@@ -21840,7 +22031,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_get_current_user": {
       "namespace": "neon",
@@ -24669,7 +24861,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_add_ip_to_allowlist": {
       "namespace": "neon",
@@ -24684,7 +24877,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_remove_ip_from_allowlist": {
       "namespace": "neon",
@@ -24699,7 +24893,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_enable_logical_replication": {
       "namespace": "neon",
@@ -24714,7 +24909,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_list_replication_slots": {
       "namespace": "neon",
@@ -24729,7 +24925,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_create_replication_slot": {
       "namespace": "neon",
@@ -24744,7 +24941,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_drop_replication_slot": {
       "namespace": "neon",
@@ -24759,7 +24957,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_list_publications": {
       "namespace": "neon",
@@ -24774,7 +24973,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_create_publication": {
       "namespace": "neon",
@@ -24789,7 +24989,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_drop_publication": {
       "namespace": "neon",
@@ -24804,7 +25005,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_get_org_billing": {
       "namespace": "neon",
@@ -24819,7 +25021,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_list_org_projects": {
       "namespace": "neon",
@@ -24834,7 +25037,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_list_org_members": {
       "namespace": "neon",
@@ -24849,7 +25053,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_get_org_consumption": {
       "namespace": "neon",
@@ -24864,7 +25069,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_get_auth_config": {
       "namespace": "neon",
@@ -24879,7 +25085,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_update_auth_config": {
       "namespace": "neon",
@@ -24894,7 +25101,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "neon_project_security_audit": {
       "namespace": "neon",
@@ -24909,7 +25117,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "ollama_list_models": {
       "namespace": "ollama",
@@ -26857,7 +27066,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_update_project_rate_limit": {
       "namespace": "openai",
@@ -26872,7 +27082,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_list_project_service_accounts": {
       "namespace": "openai",
@@ -26887,7 +27098,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_create_project_service_account": {
       "namespace": "openai",
@@ -26902,7 +27114,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_delete_project_service_account": {
       "namespace": "openai",
@@ -26917,7 +27130,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_list_audit_logs": {
       "namespace": "openai",
@@ -26932,7 +27146,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_completions": {
       "namespace": "openai",
@@ -26947,7 +27162,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_embeddings": {
       "namespace": "openai",
@@ -26962,7 +27178,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_images": {
       "namespace": "openai",
@@ -26977,7 +27194,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_audio_speeches": {
       "namespace": "openai",
@@ -26992,7 +27210,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_audio_transcriptions": {
       "namespace": "openai",
@@ -27007,7 +27226,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_moderations": {
       "namespace": "openai",
@@ -27022,7 +27242,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_vector_stores": {
       "namespace": "openai",
@@ -27037,7 +27258,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_get_usage_code_interpreter": {
       "namespace": "openai",
@@ -27052,7 +27274,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_check_model_deprecation": {
       "namespace": "openai",
@@ -27067,7 +27290,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_list_fine_tuning_jobs_for_model": {
       "namespace": "openai",
@@ -27082,7 +27306,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_org_cost_report": {
       "namespace": "openai",
@@ -27097,7 +27322,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "openai_model_usage_breakdown": {
       "namespace": "openai",
@@ -27112,7 +27338,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_goto": {
       "namespace": "playwright",
@@ -27637,7 +27864,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_get_resource_timing": {
       "namespace": "playwright",
@@ -27652,7 +27880,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_record_video": {
       "namespace": "playwright",
@@ -27667,7 +27896,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_capture_har": {
       "namespace": "playwright",
@@ -27682,7 +27912,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_click_by_text": {
       "namespace": "playwright",
@@ -27697,7 +27928,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_click_by_role": {
       "namespace": "playwright",
@@ -27712,7 +27944,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_fill_by_label": {
       "namespace": "playwright",
@@ -27727,7 +27960,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_get_by_test_id": {
       "namespace": "playwright",
@@ -27742,7 +27976,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_open_multiple_tabs": {
       "namespace": "playwright",
@@ -27757,7 +27992,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_block_resources": {
       "namespace": "playwright",
@@ -27772,7 +28008,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_capture_network_requests": {
       "namespace": "playwright",
@@ -27787,7 +28024,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_page_audit": {
       "namespace": "playwright",
@@ -27802,7 +28040,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "playwright_compare_pages": {
       "namespace": "playwright",
@@ -27817,7 +28056,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_run_sql": {
       "namespace": "postgres",
@@ -28939,7 +29179,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_create_database": {
       "namespace": "postgres",
@@ -28956,7 +29197,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_drop_database": {
       "namespace": "postgres",
@@ -28973,7 +29215,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_rename_database": {
       "namespace": "postgres",
@@ -28990,7 +29233,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_change_database_owner": {
       "namespace": "postgres",
@@ -29007,7 +29251,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_database_config": {
       "namespace": "postgres",
@@ -29024,7 +29269,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_create_role": {
       "namespace": "postgres",
@@ -29041,7 +29287,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_grant_role": {
       "namespace": "postgres",
@@ -29058,7 +29305,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_revoke_role": {
       "namespace": "postgres",
@@ -29075,7 +29323,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_revoke_privileges": {
       "namespace": "postgres",
@@ -29092,7 +29341,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_grant_schema_privileges": {
       "namespace": "postgres",
@@ -29109,7 +29359,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_grant_all_tables": {
       "namespace": "postgres",
@@ -29126,7 +29377,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_set_default_privileges": {
       "namespace": "postgres",
@@ -29143,7 +29395,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_alter_user": {
       "namespace": "postgres",
@@ -29160,7 +29413,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_list_role_members": {
       "namespace": "postgres",
@@ -29177,7 +29431,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_dump_schema": {
       "namespace": "postgres",
@@ -29194,7 +29449,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_dump_table": {
       "namespace": "postgres",
@@ -29211,7 +29467,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_query_stats": {
       "namespace": "postgres",
@@ -29228,7 +29485,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_cache_hit_ratio": {
       "namespace": "postgres",
@@ -29245,7 +29503,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_index_bloat": {
       "namespace": "postgres",
@@ -29262,7 +29521,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_long_running_queries": {
       "namespace": "postgres",
@@ -29279,7 +29539,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_missing_indexes": {
       "namespace": "postgres",
@@ -29296,7 +29557,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_reset_statistics": {
       "namespace": "postgres",
@@ -29313,7 +29575,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_analyze_table": {
       "namespace": "postgres",
@@ -29330,7 +29593,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_cluster_table": {
       "namespace": "postgres",
@@ -29347,7 +29611,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_list_available_extensions": {
       "namespace": "postgres",
@@ -29364,7 +29629,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_drop_extension": {
       "namespace": "postgres",
@@ -29381,7 +29647,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_extension_info": {
       "namespace": "postgres",
@@ -29398,7 +29665,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_rename_table": {
       "namespace": "postgres",
@@ -29415,7 +29683,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_drop_table": {
       "namespace": "postgres",
@@ -29432,7 +29701,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_rename_column": {
       "namespace": "postgres",
@@ -29449,7 +29719,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_alter_column_type": {
       "namespace": "postgres",
@@ -29466,7 +29737,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_set_column_not_null": {
       "namespace": "postgres",
@@ -29483,7 +29755,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_set_column_default": {
       "namespace": "postgres",
@@ -29500,7 +29773,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_add_primary_key": {
       "namespace": "postgres",
@@ -29517,7 +29791,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_add_foreign_key": {
       "namespace": "postgres",
@@ -29534,7 +29809,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_add_unique_constraint": {
       "namespace": "postgres",
@@ -29551,7 +29827,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_add_check_constraint": {
       "namespace": "postgres",
@@ -29568,7 +29845,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_drop_constraint": {
       "namespace": "postgres",
@@ -29585,7 +29863,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_create_view": {
       "namespace": "postgres",
@@ -29602,7 +29881,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_drop_view": {
       "namespace": "postgres",
@@ -29619,7 +29899,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_refresh_materialized_view": {
       "namespace": "postgres",
@@ -29636,7 +29917,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_get_function_definition": {
       "namespace": "postgres",
@@ -29653,7 +29935,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_drop_function": {
       "namespace": "postgres",
@@ -29670,7 +29953,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_permissions_audit": {
       "namespace": "postgres",
@@ -29687,7 +29971,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "postgres_performance_report": {
       "namespace": "postgres",
@@ -29704,7 +29989,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_health_check": {
       "namespace": "qdrant",
@@ -30514,7 +30800,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_create_shard_key": {
       "namespace": "qdrant",
@@ -30529,7 +30816,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_delete_shard_key": {
       "namespace": "qdrant",
@@ -30544,7 +30832,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_update_quantization": {
       "namespace": "qdrant",
@@ -30559,7 +30848,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_disable_quantization": {
       "namespace": "qdrant",
@@ -30574,7 +30864,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_update_optimizer_config": {
       "namespace": "qdrant",
@@ -30589,7 +30880,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_update_hnsw_config": {
       "namespace": "qdrant",
@@ -30604,7 +30896,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_update_wal_config": {
       "namespace": "qdrant",
@@ -30619,7 +30912,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_download_snapshot": {
       "namespace": "qdrant",
@@ -30634,7 +30928,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_upload_snapshot": {
       "namespace": "qdrant",
@@ -30649,7 +30944,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_recover_from_snapshot": {
       "namespace": "qdrant",
@@ -30664,7 +30960,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_move_shard": {
       "namespace": "qdrant",
@@ -30679,7 +30976,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_replicate_shard": {
       "namespace": "qdrant",
@@ -30694,7 +30992,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_abort_transfer": {
       "namespace": "qdrant",
@@ -30709,7 +31008,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_remove_peer": {
       "namespace": "qdrant",
@@ -30724,7 +31024,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_set_lock": {
       "namespace": "qdrant",
@@ -30739,7 +31040,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_get_locks": {
       "namespace": "qdrant",
@@ -30754,7 +31056,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "qdrant_collection_health_summary": {
       "namespace": "qdrant",
@@ -30769,7 +31072,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "resend_send_email": {
       "namespace": "resend",
@@ -34890,7 +35194,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_scheduled_messages": {
       "namespace": "slack",
@@ -34905,7 +35210,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_delete_scheduled_message": {
       "namespace": "slack",
@@ -34920,7 +35226,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_pin_message": {
       "namespace": "slack",
@@ -34935,7 +35242,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_unpin_message": {
       "namespace": "slack",
@@ -34950,7 +35258,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_pins": {
       "namespace": "slack",
@@ -34965,7 +35274,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_bookmarks": {
       "namespace": "slack",
@@ -34980,7 +35290,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_add_bookmark": {
       "namespace": "slack",
@@ -34995,7 +35306,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_remove_bookmark": {
       "namespace": "slack",
@@ -35010,7 +35322,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_usergroups": {
       "namespace": "slack",
@@ -35025,7 +35338,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_create_usergroup": {
       "namespace": "slack",
@@ -35040,7 +35354,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_update_usergroup": {
       "namespace": "slack",
@@ -35055,7 +35370,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_disable_usergroup": {
       "namespace": "slack",
@@ -35070,7 +35386,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_usergroup_members": {
       "namespace": "slack",
@@ -35085,7 +35402,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_update_usergroup_members": {
       "namespace": "slack",
@@ -35100,7 +35418,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_workflows": {
       "namespace": "slack",
@@ -35115,7 +35434,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_create_canvas": {
       "namespace": "slack",
@@ -35130,7 +35450,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_get_canvas": {
       "namespace": "slack",
@@ -35145,7 +35466,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_edit_canvas": {
       "namespace": "slack",
@@ -35160,7 +35482,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_delete_canvas": {
       "namespace": "slack",
@@ -35175,7 +35498,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_share_canvas": {
       "namespace": "slack",
@@ -35190,7 +35514,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_get_user_profile": {
       "namespace": "slack",
@@ -35205,7 +35530,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_set_user_profile": {
       "namespace": "slack",
@@ -35220,7 +35546,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_rename_channel": {
       "namespace": "slack",
@@ -35235,7 +35562,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_unarchive_channel": {
       "namespace": "slack",
@@ -35250,7 +35578,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_channel_members": {
       "namespace": "slack",
@@ -35265,7 +35594,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_kick_from_channel": {
       "namespace": "slack",
@@ -35280,7 +35610,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_get_bot_info": {
       "namespace": "slack",
@@ -35295,7 +35626,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_get_auth_test": {
       "namespace": "slack",
@@ -35310,7 +35642,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_list_emoji": {
       "namespace": "slack",
@@ -35325,7 +35658,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_channel_digest": {
       "namespace": "slack",
@@ -35340,7 +35674,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "slack_multi_channel_announce": {
       "namespace": "slack",
@@ -35355,7 +35690,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_customers": {
       "namespace": "stripe",
@@ -37515,7 +37851,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_update_tax_settings": {
       "namespace": "stripe",
@@ -37530,7 +37867,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_calculate_tax": {
       "namespace": "stripe",
@@ -37545,7 +37883,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_tax_transactions": {
       "namespace": "stripe",
@@ -37560,7 +37899,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_tax_transaction": {
       "namespace": "stripe",
@@ -37575,7 +37915,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_tax_codes": {
       "namespace": "stripe",
@@ -37590,7 +37931,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_tax_code": {
       "namespace": "stripe",
@@ -37605,7 +37947,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_customer_tax_ids": {
       "namespace": "stripe",
@@ -37620,7 +37963,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_customer_tax_id": {
       "namespace": "stripe",
@@ -37635,7 +37979,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_delete_customer_tax_id": {
       "namespace": "stripe",
@@ -37650,7 +37995,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_features": {
       "namespace": "stripe",
@@ -37665,7 +38011,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_feature": {
       "namespace": "stripe",
@@ -37680,7 +38027,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_product_features": {
       "namespace": "stripe",
@@ -37695,7 +38043,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_attach_feature_to_product": {
       "namespace": "stripe",
@@ -37710,7 +38059,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_active_entitlements": {
       "namespace": "stripe",
@@ -37725,7 +38075,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_payout": {
       "namespace": "stripe",
@@ -37740,7 +38091,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_cancel_payout": {
       "namespace": "stripe",
@@ -37755,7 +38107,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_reverse_payout": {
       "namespace": "stripe",
@@ -37770,7 +38123,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_update_payout": {
       "namespace": "stripe",
@@ -37785,7 +38139,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_topup": {
       "namespace": "stripe",
@@ -37800,7 +38155,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_topups": {
       "namespace": "stripe",
@@ -37815,7 +38171,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_topup": {
       "namespace": "stripe",
@@ -37830,7 +38187,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_cancel_topup": {
       "namespace": "stripe",
@@ -37845,7 +38203,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_bank_accounts": {
       "namespace": "stripe",
@@ -37860,7 +38219,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_bank_account": {
       "namespace": "stripe",
@@ -37875,7 +38235,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_verify_bank_account": {
       "namespace": "stripe",
@@ -37890,7 +38251,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_delete_bank_account": {
       "namespace": "stripe",
@@ -37905,7 +38267,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_radar_rules": {
       "namespace": "stripe",
@@ -37920,7 +38283,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_radar_rule": {
       "namespace": "stripe",
@@ -37935,7 +38299,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_radar_rule": {
       "namespace": "stripe",
@@ -37950,7 +38315,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_delete_radar_rule": {
       "namespace": "stripe",
@@ -37965,7 +38331,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_radar_value_lists": {
       "namespace": "stripe",
@@ -37980,7 +38347,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_radar_value_list": {
       "namespace": "stripe",
@@ -37995,7 +38363,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_delete_radar_value_list": {
       "namespace": "stripe",
@@ -38010,7 +38379,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_radar_value_list_items": {
       "namespace": "stripe",
@@ -38025,7 +38395,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_radar_value_list_item": {
       "namespace": "stripe",
@@ -38040,7 +38411,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_delete_radar_value_list_item": {
       "namespace": "stripe",
@@ -38055,7 +38427,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_verification_sessions": {
       "namespace": "stripe",
@@ -38070,7 +38443,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_verification_session": {
       "namespace": "stripe",
@@ -38085,7 +38459,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_verification_session": {
       "namespace": "stripe",
@@ -38100,7 +38475,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_cancel_verification_session": {
       "namespace": "stripe",
@@ -38115,7 +38491,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_redact_verification_session": {
       "namespace": "stripe",
@@ -38130,7 +38507,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_billing_alerts": {
       "namespace": "stripe",
@@ -38145,7 +38523,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_billing_alert": {
       "namespace": "stripe",
@@ -38160,7 +38539,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_activate_billing_alert": {
       "namespace": "stripe",
@@ -38175,7 +38555,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_deactivate_billing_alert": {
       "namespace": "stripe",
@@ -38190,7 +38571,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_archive_billing_alert": {
       "namespace": "stripe",
@@ -38205,7 +38587,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_meters": {
       "namespace": "stripe",
@@ -38220,7 +38603,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_meter": {
       "namespace": "stripe",
@@ -38235,7 +38619,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_meter": {
       "namespace": "stripe",
@@ -38250,7 +38635,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_deactivate_meter": {
       "namespace": "stripe",
@@ -38265,7 +38651,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_reactivate_meter": {
       "namespace": "stripe",
@@ -38280,7 +38667,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_meter_event": {
       "namespace": "stripe",
@@ -38295,7 +38683,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_meter_event_summaries": {
       "namespace": "stripe",
@@ -38310,7 +38699,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_list_forwarding_requests": {
       "namespace": "stripe",
@@ -38325,7 +38715,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_get_forwarding_request": {
       "namespace": "stripe",
@@ -38340,7 +38731,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_create_forwarding_request": {
       "namespace": "stripe",
@@ -38355,7 +38747,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_compliance_snapshot": {
       "namespace": "stripe",
@@ -38370,7 +38763,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "stripe_payout_health": {
       "namespace": "stripe",
@@ -38385,7 +38779,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_list_projects": {
       "namespace": "supabase",
@@ -40102,7 +40497,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_update_auth_provider": {
       "namespace": "supabase",
@@ -40119,7 +40515,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_enable_email_auth": {
       "namespace": "supabase",
@@ -40136,7 +40533,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_enable_phone_auth": {
       "namespace": "supabase",
@@ -40153,7 +40551,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_configure_saml": {
       "namespace": "supabase",
@@ -40170,7 +40569,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_list_saml_providers": {
       "namespace": "supabase",
@@ -40187,7 +40587,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_list_user_factors": {
       "namespace": "supabase",
@@ -40204,7 +40605,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_delete_user_factor": {
       "namespace": "supabase",
@@ -40221,7 +40623,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_list_realtime_channels": {
       "namespace": "supabase",
@@ -40238,7 +40641,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_storage_config": {
       "namespace": "supabase",
@@ -40255,7 +40659,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_update_storage_config": {
       "namespace": "supabase",
@@ -40272,7 +40677,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_logs": {
       "namespace": "supabase",
@@ -40289,7 +40695,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_custom_domain": {
       "namespace": "supabase",
@@ -40306,7 +40713,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_set_custom_domain": {
       "namespace": "supabase",
@@ -40323,7 +40731,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_verify_custom_domain": {
       "namespace": "supabase",
@@ -40340,7 +40749,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_delete_custom_domain": {
       "namespace": "supabase",
@@ -40357,7 +40767,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_edge_function_secrets": {
       "namespace": "supabase",
@@ -40374,7 +40785,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_set_edge_function_secrets": {
       "namespace": "supabase",
@@ -40391,7 +40803,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_delete_edge_function_secrets": {
       "namespace": "supabase",
@@ -40408,7 +40821,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_postgres_config": {
       "namespace": "supabase",
@@ -40425,7 +40839,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_update_postgres_config": {
       "namespace": "supabase",
@@ -40442,7 +40857,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_pooler_config": {
       "namespace": "supabase",
@@ -40459,7 +40875,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_update_pooler_config": {
       "namespace": "supabase",
@@ -40476,7 +40893,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_get_ssl_enforcement": {
       "namespace": "supabase",
@@ -40493,7 +40911,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_update_ssl_enforcement": {
       "namespace": "supabase",
@@ -40510,7 +40929,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_security_audit": {
       "namespace": "supabase",
@@ -40527,7 +40947,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "supabase_project_status": {
       "namespace": "supabase",
@@ -40544,7 +40965,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_send_sms": {
       "namespace": "twilio",
@@ -42159,7 +42581,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_get_brand": {
       "namespace": "twilio",
@@ -42176,7 +42599,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_campaigns": {
       "namespace": "twilio",
@@ -42193,7 +42617,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_get_campaign": {
       "namespace": "twilio",
@@ -42210,7 +42635,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_brand_registrations": {
       "namespace": "twilio",
@@ -42227,7 +42653,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_us_app_to_person_campaigns": {
       "namespace": "twilio",
@@ -42244,7 +42671,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_validate_webhook_signature": {
       "namespace": "twilio",
@@ -42261,7 +42689,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_local_numbers": {
       "namespace": "twilio",
@@ -42278,7 +42707,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_configure_number_webhook": {
       "namespace": "twilio",
@@ -42295,7 +42725,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_update_account": {
       "namespace": "twilio",
@@ -42312,7 +42743,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_keys": {
       "namespace": "twilio",
@@ -42329,7 +42761,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_get_key": {
       "namespace": "twilio",
@@ -42346,7 +42779,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_update_key": {
       "namespace": "twilio",
@@ -42363,7 +42797,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_queues": {
       "namespace": "twilio",
@@ -42380,7 +42815,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_create_queue": {
       "namespace": "twilio",
@@ -42397,7 +42833,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_get_queue": {
       "namespace": "twilio",
@@ -42414,7 +42851,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_delete_queue": {
       "namespace": "twilio",
@@ -42431,7 +42869,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_queue_members": {
       "namespace": "twilio",
@@ -42448,7 +42887,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_list_taskrouter_workspaces": {
       "namespace": "twilio",
@@ -42465,7 +42905,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_account_health": {
       "namespace": "twilio",
@@ -42482,7 +42923,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "twilio_compliance_summary": {
       "namespace": "twilio",
@@ -42499,7 +42941,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_list_redis_databases": {
       "namespace": "upstash",
@@ -45338,7 +45781,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_publish_to_topic": {
       "namespace": "upstash",
@@ -45355,7 +45799,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_list_messages": {
       "namespace": "upstash",
@@ -45370,7 +45815,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_get_message": {
       "namespace": "upstash",
@@ -45385,7 +45831,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_cancel_message": {
       "namespace": "upstash",
@@ -45400,7 +45847,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_list_schedules": {
       "namespace": "upstash",
@@ -45415,7 +45863,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_get_schedule": {
       "namespace": "upstash",
@@ -45430,7 +45879,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_create_schedule": {
       "namespace": "upstash",
@@ -45447,7 +45897,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_delete_schedule": {
       "namespace": "upstash",
@@ -45462,7 +45913,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_list_dlq": {
       "namespace": "upstash",
@@ -45477,7 +45929,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_delete_dlq_message": {
       "namespace": "upstash",
@@ -45492,7 +45945,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_list_topics": {
       "namespace": "upstash",
@@ -45507,7 +45961,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_create_topic": {
       "namespace": "upstash",
@@ -45522,7 +45977,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_delete_topic": {
       "namespace": "upstash",
@@ -45537,7 +45993,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_add_endpoint": {
       "namespace": "upstash",
@@ -45552,7 +46009,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_remove_endpoint": {
       "namespace": "upstash",
@@ -45567,7 +46025,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_qstash_get_api_keys": {
       "namespace": "upstash",
@@ -45582,7 +46041,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_list_clusters": {
       "namespace": "upstash",
@@ -45599,7 +46059,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_get_cluster": {
       "namespace": "upstash",
@@ -45616,7 +46077,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_create_cluster": {
       "namespace": "upstash",
@@ -45633,7 +46095,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_delete_cluster": {
       "namespace": "upstash",
@@ -45650,7 +46113,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_list_topics": {
       "namespace": "upstash",
@@ -45667,7 +46131,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_create_topic": {
       "namespace": "upstash",
@@ -45684,7 +46149,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_delete_topic": {
       "namespace": "upstash",
@@ -45701,7 +46167,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_get_topic": {
       "namespace": "upstash",
@@ -45718,7 +46185,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_list_consumer_groups": {
       "namespace": "upstash",
@@ -45735,7 +46203,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_list_credentials": {
       "namespace": "upstash",
@@ -45752,7 +46221,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_kafka_create_credentials": {
       "namespace": "upstash",
@@ -45769,7 +46239,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_list_api_keys": {
       "namespace": "upstash",
@@ -45786,7 +46257,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_create_api_key": {
       "namespace": "upstash",
@@ -45803,7 +46275,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "upstash_delete_api_key": {
       "namespace": "upstash",
@@ -45820,7 +46293,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_list_projects": {
       "namespace": "vercel",
@@ -48085,7 +48559,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_payment_methods": {
       "namespace": "vercel",
@@ -48100,7 +48575,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_spend_summary": {
       "namespace": "vercel",
@@ -48115,7 +48591,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_upgrade_plan": {
       "namespace": "vercel",
@@ -48130,7 +48607,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_encrypt_env_var": {
       "namespace": "vercel",
@@ -48145,7 +48623,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_pull_env_vars": {
       "namespace": "vercel",
@@ -48160,7 +48639,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_promote_env_var_to_production": {
       "namespace": "vercel",
@@ -48175,7 +48655,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_deployment_checks": {
       "namespace": "vercel",
@@ -48190,7 +48671,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_rerun_deployment_check": {
       "namespace": "vercel",
@@ -48205,7 +48687,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_deployment_events": {
       "namespace": "vercel",
@@ -48220,7 +48703,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_deployment_aliases": {
       "namespace": "vercel",
@@ -48235,7 +48719,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_update_firewall_rule": {
       "namespace": "vercel",
@@ -48250,7 +48735,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_list_attack_events": {
       "namespace": "vercel",
@@ -48265,7 +48751,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_waf_active_rules": {
       "namespace": "vercel",
@@ -48280,7 +48767,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_cron_job": {
       "namespace": "vercel",
@@ -48295,7 +48783,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_trigger_cron_job": {
       "namespace": "vercel",
@@ -48310,7 +48799,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_team_members": {
       "namespace": "vercel",
@@ -48325,7 +48815,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_update_team_member": {
       "namespace": "vercel",
@@ -48340,7 +48831,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_team_audit_log": {
       "namespace": "vercel",
@@ -48355,7 +48847,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_team_saml_config": {
       "namespace": "vercel",
@@ -48370,7 +48863,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_update_team_saml_config": {
       "namespace": "vercel",
@@ -48385,7 +48879,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_edge_config_item": {
       "namespace": "vercel",
@@ -48400,7 +48895,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_delete_edge_config_items": {
       "namespace": "vercel",
@@ -48415,7 +48911,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_domain_ssl": {
       "namespace": "vercel",
@@ -48430,7 +48927,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_issue_domain_ssl": {
       "namespace": "vercel",
@@ -48445,7 +48943,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_project_domains_config": {
       "namespace": "vercel",
@@ -48460,7 +48959,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_get_log_drain": {
       "namespace": "vercel",
@@ -48475,7 +48975,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_pause_log_drain": {
       "namespace": "vercel",
@@ -48490,7 +48991,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_resume_log_drain": {
       "namespace": "vercel",
@@ -48505,7 +49007,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_cost_forecast": {
       "namespace": "vercel",
@@ -48520,7 +49023,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "vercel_security_audit": {
       "namespace": "vercel",
@@ -48535,7 +49039,8 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct"
+      "dependencyMode": "direct",
+      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
     },
     "voyage_embed": {
       "namespace": "voyage",

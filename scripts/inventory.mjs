@@ -30,17 +30,26 @@ export function analyzeHandler(source, file) {
   const branches = [];
   const findings = [];
   const imports = [];
+  const unreachableRanges = [];
+  walk(ast, node => {
+    if (node.type !== 'FunctionDeclaration' || node.id?.name !== 'execute') return;
+    const terminal = node.body.body.find(statement => ['ThrowStatement', 'ReturnStatement'].includes(statement.type));
+    if (terminal) unreachableRanges.push([terminal.end, node.body.end]);
+  });
   walk(ast, node => {
     if (node.type === 'ImportDeclaration' || node.type === 'ImportExpression') {
       if (typeof node.source?.value === 'string') imports.push(node.source.value);
     }
     if (node.type === 'IfStatement') {
       for (const name of dispatchNames(node.test)) {
+        const unreachable = unreachableRanges.some(([start, end]) => node.start >= start && node.end <= end);
+        if (unreachable) findings.push({file, line:node.loc.start.line, rule:'unreachable-dispatch', name,
+          disposition:'disabled-until-reviewed', evidence:'Dispatch appears after an unconditional return or throw in execute.'});
         const calls = [];
         walk(node.consequent, child => {
           if (child.type === 'CallExpression') calls.push(source.slice(child.start, child.end));
         });
-        branches.push({ name, file, line: node.loc.start.line,
+        branches.push({ name, file, line: node.loc.start.line, unreachable,
           implementationFingerprint: hash(canonical(node.consequent)), calls,
           body: source.slice(node.consequent.start,node.consequent.end) });
       }

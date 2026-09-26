@@ -10,7 +10,9 @@ const baseline=JSON.parse(readFileSync(new URL('../reports/recovery/baseline.jso
 const registry=loadRegistry(toolkitRoot);
 test('catalog preserves every registry name while MCP advertises only brokers',()=>{
   const manifest=JSON.parse(readFileSync(new URL('../reports/recovery/capability-manifest.json',import.meta.url)));
-  assert.deepEqual(registry.map(t=>t.name).sort(),manifest.map(t=>t.name).sort());
+  const currentNames = new Set(registry.map(t=>t.name));
+  assert.equal(currentNames.size, registry.length);
+  for (const original of manifest) assert.ok(currentNames.has(original.name), `Missing original capability: ${original.name}`);
   assert.deepEqual(PINNED_TOOLS.slice(0,4).map(t=>t.name),baseline.runtime.advertisedNames.slice(0,4));
   assert.ok(Buffer.byteLength(JSON.stringify(PINNED_TOOLS))<baseline.runtime.advertisedSchemaBytes);
 });

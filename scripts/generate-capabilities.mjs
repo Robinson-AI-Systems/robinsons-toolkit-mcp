@@ -52,7 +52,8 @@ for(const entry of data.entries){
  const childTools=[...body.matchAll(/(?:\.execute|\bexecute)\(\s*['"]([^'"]+)['"]/g)].map(m=>m[1]).filter(n=>n!==entry.name);
  capabilities[entry.name]={namespace:ns,handlerModule:sourcePath,requirements,childTools:[...new Set(childTools)],
    dependencyMode:childTools.length?'conservative-all-static-children':'direct',
-   ...(!branch||branch.unparsed?{disabled:'Implementation does not parse or has no dispatch branch'}:{})};
+   ...(!branch||branch.unparsed?{disabled:'Implementation does not parse or has no dispatch branch'}:
+     branch.unreachable?{disabled:'Implementation is unreachable after an unconditional return or throw; pending provider review'}:{})};
 }
 const serialized=JSON.stringify({version:1,sources,capabilities},null,2)+'\n';
 const path=join(root,'src/core/capability-metadata.json');

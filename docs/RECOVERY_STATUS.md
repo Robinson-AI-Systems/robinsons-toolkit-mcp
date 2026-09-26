@@ -79,3 +79,29 @@ per-tool AST fingerprints and registry names. Twenty-four tests pass. Strict
 integrity now reports only the nine orphan names; it remains a failing gate.
 Provider endpoint correctness still requires separate review, including legacy
 usage routes. See PROVIDER_REPAIRS.md and the generated integrity repair report.
+
+## Integrity increment — verified orphan recovery
+
+Recovered cf_get_api_token into the registry, removed the obsolete unregistered
+Slack users.setActive call, and fixed Cloudflare HTTP failure handling. All 3,049
+original registry names remain; the catalog now has 3,050 names. Seven orphan
+handlers remain under review. No live provider tests were run without credentials.
+
+## Reachability correction — counts are not working capability counts
+
+Execution testing exposed premature unconditional throws before expansion code.
+The strengthened AST audit reports 495 unreachable dispatch branches across 18
+namespaces, including 490 registered names. These 490 entries are preserved but
+now DISABLED in generated capability metadata and excluded from normal discovery.
+Dependent workflows may also become unavailable. This corrects prior structural
+reports, which counted branch presence without proving reachability.
+
+cf_get_api_token was moved before the premature Cloudflare throw and verified with
+contract tests. Other expansion branches remain disabled until individually
+reviewed and repaired. Strict integrity intentionally fails on unreachable
+branches plus the seven remaining orphan names. Do not interpret 3,050 registry
+entries as 3,050 working capabilities. The historical recovery report is unchanged.
+
+Regenerate the current reachability report with:
+`node scripts/report-reachability.mjs > reports/integrity/reachability.json`.
+This scan detects direct unconditional return/throw, not all control-flow defects.

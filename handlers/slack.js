@@ -501,9 +501,6 @@ async function execute(tool, args) {
   }
 
   // ── ADMIN (scim-light via users.admin) ────────────────────────────────────
-  if (tool === 'slack_set_user_active') {
-    return await slack('users.setActive', {});
-  }
   if (tool === 'slack_get_user_profile') {
     return await slack('users.profile.get', { user: args.user_id });
   }

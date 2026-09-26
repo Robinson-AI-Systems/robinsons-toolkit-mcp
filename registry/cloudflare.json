@@ -4915,5 +4915,33 @@
       },
       "required": []
     }
+  },
+  {
+    "name": "cf_get_api_token",
+    "description": "Get metadata and permission policies for a Cloudflare user API token by ID (requires API Tokens Read or Write permission).",
+    "namespace": "cloudflare",
+    "tags": [
+      "cloudflare",
+      "tokens",
+      "security",
+      "read"
+    ],
+    "risk": "SECURITY_SENSITIVE",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "token_id": {
+          "type": "string",
+          "description": "Cloudflare API token identifier (32 characters); not the secret token value.",
+          "minLength": 32,
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "token_id"
+      ]
+    }
   }
 ]

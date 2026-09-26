@@ -1,0 +1,3994 @@
+{
+  "counts": {
+    "registryEntries": 3050,
+    "unreachableDispatches": 495,
+    "unreachableRegisteredNames": 490
+  },
+  "byNamespace": {
+    "clerk": 27,
+    "cloudflare": 40,
+    "fly": 15,
+    "github": 29,
+    "linear": 26,
+    "local": 25,
+    "n8n": 16,
+    "neon": 17,
+    "openai": 18,
+    "playwright": 13,
+    "postgres": 46,
+    "qdrant": 18,
+    "slack": 34,
+    "stripe": 59,
+    "supabase": 29,
+    "twilio": 21,
+    "upstash": 31,
+    "vercel": 31
+  },
+  "findings": [
+    {
+      "file": "handlers/clerk.js",
+      "line": 407,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_saml_connections",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 410,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_get_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 413,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 423,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 428,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_delete_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 433,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_oauth_applications",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 436,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_get_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 439,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 444,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 452,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_delete_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 455,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_rotate_oauth_application_secret",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 460,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_domains",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 463,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_add_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 468,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_delete_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 471,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 478,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_sign_in_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 483,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_revoke_sign_in_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 488,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_sign_ups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 491,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_get_sign_up",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 494,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_sign_up",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 501,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_org_membership_requests",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 504,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_accept_org_membership_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 507,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_reject_org_membership_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 512,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_verify_proxy_url",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 517,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_testing_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 522,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_security_overview",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/clerk.js",
+      "line": 542,
+      "rule": "unreachable-dispatch",
+      "name": "clerk_org_member_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 641,
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_email_routing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 644,
+      "rule": "unreachable-dispatch",
+      "name": "cf_enable_email_routing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 647,
+      "rule": "unreachable-dispatch",
+      "name": "cf_disable_email_routing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 650,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_email_routing_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 653,
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_email_routing_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 658,
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_email_routing_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 668,
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_email_routing_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 671,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_email_routing_addresses",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 674,
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_email_routing_address",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 679,
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_email_routing_address",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 684,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_waf_packages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 687,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_waf_rule_groups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 690,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_waf_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 693,
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_waf_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 696,
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_bot_management_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 699,
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_bot_management_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 711,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_ai_finetune_assets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 714,
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_ai_finetune",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 721,
+      "rule": "unreachable-dispatch",
+      "name": "cf_r2_list_objects",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 729,
+      "rule": "unreachable-dispatch",
+      "name": "cf_r2_delete_object",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 734,
+      "rule": "unreachable-dispatch",
+      "name": "cf_r2_head_object",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 741,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_analytics_engine_datasets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 744,
+      "rule": "unreachable-dispatch",
+      "name": "cf_query_analytics_engine",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 758,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_identity_providers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 761,
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_identity_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 764,
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_identity_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 769,
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_identity_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 774,
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_api_tokens",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 777,
+      "rule": "unreachable-dispatch",
+      "name": "cf_verify_api_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 780,
+      "rule": "unreachable-dispatch",
+      "name": "cf_roll_api_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 783,
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_api_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 786,
+      "rule": "unreachable-dispatch",
+      "name": "cf_invite_account_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 791,
+      "rule": "unreachable-dispatch",
+      "name": "cf_remove_account_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 794,
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_account_member_roles",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 799,
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_all_zone_settings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 802,
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_zone_settings_bulk",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 807,
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_zone_ssl_setting",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 810,
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_zone_ssl_setting",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 815,
+      "rule": "unreachable-dispatch",
+      "name": "cf_zone_health_report",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "line": 842,
+      "rule": "unreachable-dispatch",
+      "name": "cf_workers_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 803,
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_autoscale_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 808,
+      "rule": "unreachable-dispatch",
+      "name": "fly_set_autoscale_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 815,
+      "rule": "unreachable-dispatch",
+      "name": "fly_reset_autoscale_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 822,
+      "rule": "unreachable-dispatch",
+      "name": "fly_list_private_network_peers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 827,
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_app_network",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 832,
+      "rule": "unreachable-dispatch",
+      "name": "fly_list_dns_records",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 839,
+      "rule": "unreachable-dispatch",
+      "name": "fly_restore_volume_from_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 844,
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_volume_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 851,
+      "rule": "unreachable-dispatch",
+      "name": "fly_list_process_groups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 856,
+      "rule": "unreachable-dispatch",
+      "name": "fly_scale_process_group",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 865,
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_org_usage",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 870,
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_app_usage",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 877,
+      "rule": "unreachable-dispatch",
+      "name": "fly_update_machine_resources",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 891,
+      "rule": "unreachable-dispatch",
+      "name": "fly_org_cost_breakdown",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/fly.js",
+      "line": 916,
+      "rule": "unreachable-dispatch",
+      "name": "fly_org_deployment_status",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 740,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_app",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 743,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_installations",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 746,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_installation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 749,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_app_repos",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 754,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_org_rulesets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 759,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 764,
+      "rule": "unreachable-dispatch",
+      "name": "github_create_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 773,
+      "rule": "unreachable-dispatch",
+      "name": "github_update_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 778,
+      "rule": "unreachable-dispatch",
+      "name": "github_delete_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 781,
+      "rule": "unreachable-dispatch",
+      "name": "github_create_repo_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 790,
+      "rule": "unreachable-dispatch",
+      "name": "github_update_repo_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 795,
+      "rule": "unreachable-dispatch",
+      "name": "github_delete_repo_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 800,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_org_audit_log",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 812,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_discussions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 826,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_discussion",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 836,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_discussion_categories",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 848,
+      "rule": "unreachable-dispatch",
+      "name": "github_upload_sarif",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 856,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_sarif_upload",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 861,
+      "rule": "unreachable-dispatch",
+      "name": "github_check_dependabot_enabled",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 871,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_dependabot_org_alerts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 882,
+      "rule": "unreachable-dispatch",
+      "name": "github_get_copilot_billing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 887,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_copilot_seats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 892,
+      "rule": "unreachable-dispatch",
+      "name": "github_add_copilot_seats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 897,
+      "rule": "unreachable-dispatch",
+      "name": "github_remove_copilot_seats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 904,
+      "rule": "unreachable-dispatch",
+      "name": "github_list_required_workflows",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 909,
+      "rule": "unreachable-dispatch",
+      "name": "github_create_required_workflow",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 916,
+      "rule": "unreachable-dispatch",
+      "name": "github_delete_required_workflow",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 921,
+      "rule": "unreachable-dispatch",
+      "name": "github_org_security_posture",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/github.js",
+      "line": 943,
+      "rule": "unreachable-dispatch",
+      "name": "github_repo_dependency_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 522,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_webhooks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 526,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 534,
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 544,
+      "rule": "unreachable-dispatch",
+      "name": "linear_delete_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 550,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_team",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 560,
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_team",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 572,
+      "rule": "unreachable-dispatch",
+      "name": "linear_delete_team",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 576,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_team_memberships",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 582,
+      "rule": "unreachable-dispatch",
+      "name": "linear_add_team_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 588,
+      "rule": "unreachable-dispatch",
+      "name": "linear_remove_team_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 594,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_workflow_state",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 603,
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_workflow_state",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 615,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_templates",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 621,
+      "rule": "unreachable-dispatch",
+      "name": "linear_get_template",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 627,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_roadmap",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 637,
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_roadmap",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 649,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_initiatives",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 653,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_initiative",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 665,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_notifications",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 669,
+      "rule": "unreachable-dispatch",
+      "name": "linear_mark_notification_read",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 675,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_audit_entries",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 681,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_issue_relation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 687,
+      "rule": "unreachable-dispatch",
+      "name": "linear_delete_issue_relation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 693,
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_attachment",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 702,
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_attachments",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/linear.js",
+      "line": 710,
+      "rule": "unreachable-dispatch",
+      "name": "linear_team_health_dashboard",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 972,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_list_containers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 978,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_start",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 982,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_stop",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 986,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_restart",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 990,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 996,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_exec",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1002,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_list_images",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1007,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_pull",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1013,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_compose_up",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1019,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_compose_down",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1024,
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_compose_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1032,
+      "rule": "unreachable-dispatch",
+      "name": "local_kill_process",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1039,
+      "rule": "unreachable-dispatch",
+      "name": "local_get_process_by_name",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1048,
+      "rule": "unreachable-dispatch",
+      "name": "local_get_memory_usage",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1053,
+      "rule": "unreachable-dispatch",
+      "name": "local_get_cpu_usage",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1060,
+      "rule": "unreachable-dispatch",
+      "name": "local_zip_files",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1067,
+      "rule": "unreachable-dispatch",
+      "name": "local_unzip",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1074,
+      "rule": "unreachable-dispatch",
+      "name": "local_tar_create",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1082,
+      "rule": "unreachable-dispatch",
+      "name": "local_tar_extract",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1092,
+      "rule": "unreachable-dispatch",
+      "name": "local_ping",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1103,
+      "rule": "unreachable-dispatch",
+      "name": "local_curl",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1119,
+      "rule": "unreachable-dispatch",
+      "name": "local_check_ports",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1136,
+      "rule": "unreachable-dispatch",
+      "name": "local_systemctl_status",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1147,
+      "rule": "unreachable-dispatch",
+      "name": "local_systemctl_restart",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/local.js",
+      "line": 1154,
+      "rule": "unreachable-dispatch",
+      "name": "local_systemctl_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 407,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_duplicate_workflow",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 414,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_workflow_templates",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 420,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_workflow_template",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 425,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_executions_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 441,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_clear_execution_history",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 458,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_credential_types",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 461,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_test_credential",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 464,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_transfer_credential",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 471,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_all_variables",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 474,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_update_variable",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 481,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_instance_license",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 484,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_activate_instance_license",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 489,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_instance_diagnostics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 499,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_project_workflows",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 504,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_transfer_workflow_to_project",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/n8n.js",
+      "line": 511,
+      "rule": "unreachable-dispatch",
+      "name": "n8n_instance_overview",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1381,
+      "rule": "unreachable-dispatch",
+      "name": "neon_update_ip_allowlist",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1388,
+      "rule": "unreachable-dispatch",
+      "name": "neon_add_ip_to_allowlist",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1399,
+      "rule": "unreachable-dispatch",
+      "name": "neon_remove_ip_from_allowlist",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1411,
+      "rule": "unreachable-dispatch",
+      "name": "neon_enable_logical_replication",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1418,
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_replication_slots",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1423,
+      "rule": "unreachable-dispatch",
+      "name": "neon_create_replication_slot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1428,
+      "rule": "unreachable-dispatch",
+      "name": "neon_drop_replication_slot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1433,
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_publications",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1437,
+      "rule": "unreachable-dispatch",
+      "name": "neon_create_publication",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1450,
+      "rule": "unreachable-dispatch",
+      "name": "neon_drop_publication",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1457,
+      "rule": "unreachable-dispatch",
+      "name": "neon_get_org_billing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1462,
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_org_projects",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1467,
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_org_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1472,
+      "rule": "unreachable-dispatch",
+      "name": "neon_get_org_consumption",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1479,
+      "rule": "unreachable-dispatch",
+      "name": "neon_get_auth_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1484,
+      "rule": "unreachable-dispatch",
+      "name": "neon_update_auth_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/neon.js",
+      "line": 1494,
+      "rule": "unreachable-dispatch",
+      "name": "neon_project_security_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 642,
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_project_rate_limits",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 647,
+      "rule": "unreachable-dispatch",
+      "name": "openai_update_project_rate_limit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 661,
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_project_service_accounts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 666,
+      "rule": "unreachable-dispatch",
+      "name": "openai_create_project_service_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 671,
+      "rule": "unreachable-dispatch",
+      "name": "openai_delete_project_service_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 678,
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_audit_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 690,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_completions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 700,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_embeddings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 707,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_images",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 714,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_audio_speeches",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 721,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_audio_transcriptions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 728,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_moderations",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 735,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_vector_stores",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 742,
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_code_interpreter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 751,
+      "rule": "unreachable-dispatch",
+      "name": "openai_check_model_deprecation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 772,
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_fine_tuning_jobs_for_model",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 780,
+      "rule": "unreachable-dispatch",
+      "name": "openai_org_cost_report",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/openai.js",
+      "line": 801,
+      "rule": "unreachable-dispatch",
+      "name": "openai_model_usage_breakdown",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 484,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_get_performance_metrics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 517,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_get_resource_timing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 540,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_record_video",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 564,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_capture_har",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 583,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_click_by_text",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 592,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_click_by_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 601,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_fill_by_label",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 610,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_get_by_test_id",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 624,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_open_multiple_tabs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 649,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_block_resources",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 667,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_capture_network_requests",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 689,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_page_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/playwright.js",
+      "line": 726,
+      "rule": "unreachable-dispatch",
+      "name": "playwright_compare_pages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 432,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_list_databases",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 435,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_create_database",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 444,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_database",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 450,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_rename_database",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 455,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_change_database_owner",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 460,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_database_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 467,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_create_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 473,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_grant_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 478,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_revoke_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 483,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_revoke_privileges",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 488,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_grant_schema_privileges",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 493,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_grant_all_tables",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 498,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_set_default_privileges",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 506,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_alter_user",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 511,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_list_role_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 516,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_dump_schema",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 529,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_dump_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 545,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_query_stats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 549,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_cache_hit_ratio",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 553,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_index_bloat",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 557,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_long_running_queries",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 562,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_missing_indexes",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 566,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_reset_statistics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 569,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_analyze_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 574,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_cluster_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 584,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_list_available_extensions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 588,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_extension",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 593,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_extension_info",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 599,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_rename_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 604,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 609,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_rename_column",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 614,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_alter_column_type",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 621,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_set_column_not_null",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 627,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_set_column_default",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 637,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_primary_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 644,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_foreign_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 650,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_unique_constraint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 657,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_check_constraint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 662,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_constraint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 669,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_create_view",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 680,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_view",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 686,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_refresh_materialized_view",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 693,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_function_definition",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 697,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_function",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 705,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_permissions_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/postgres.js",
+      "line": 717,
+      "rule": "unreachable-dispatch",
+      "name": "postgres_performance_report",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 391,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_list_collection_shards",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 396,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_create_shard_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 405,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_delete_shard_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 412,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_quantization",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 425,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_disable_quantization",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 432,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_optimizer_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 442,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_hnsw_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 452,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_wal_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 462,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_download_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 468,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_upload_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 473,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_recover_from_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 480,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_move_shard",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 487,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_replicate_shard",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 494,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_abort_transfer",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 501,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_remove_peer",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 508,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_set_lock",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 514,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_get_locks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "line": 519,
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_collection_health_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 389,
+      "rule": "unreachable-dispatch",
+      "name": "slack_schedule_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 397,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_scheduled_messages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 400,
+      "rule": "unreachable-dispatch",
+      "name": "slack_delete_scheduled_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 407,
+      "rule": "unreachable-dispatch",
+      "name": "slack_pin_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 412,
+      "rule": "unreachable-dispatch",
+      "name": "slack_unpin_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 417,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_pins",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 422,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_bookmarks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 425,
+      "rule": "unreachable-dispatch",
+      "name": "slack_add_bookmark",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 432,
+      "rule": "unreachable-dispatch",
+      "name": "slack_remove_bookmark",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 437,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_usergroups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 440,
+      "rule": "unreachable-dispatch",
+      "name": "slack_create_usergroup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 448,
+      "rule": "unreachable-dispatch",
+      "name": "slack_update_usergroup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 457,
+      "rule": "unreachable-dispatch",
+      "name": "slack_disable_usergroup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 460,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_usergroup_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 463,
+      "rule": "unreachable-dispatch",
+      "name": "slack_update_usergroup_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 470,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_workflows",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 475,
+      "rule": "unreachable-dispatch",
+      "name": "slack_create_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 483,
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 486,
+      "rule": "unreachable-dispatch",
+      "name": "slack_edit_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 491,
+      "rule": "unreachable-dispatch",
+      "name": "slack_delete_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 494,
+      "rule": "unreachable-dispatch",
+      "name": "slack_share_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 504,
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_user_profile",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 507,
+      "rule": "unreachable-dispatch",
+      "name": "slack_set_user_profile",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 516,
+      "rule": "unreachable-dispatch",
+      "name": "slack_rename_channel",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 521,
+      "rule": "unreachable-dispatch",
+      "name": "slack_unarchive_channel",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 524,
+      "rule": "unreachable-dispatch",
+      "name": "slack_convert_channel_to_private",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 527,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_channel_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 530,
+      "rule": "unreachable-dispatch",
+      "name": "slack_kick_from_channel",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 537,
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_bot_info",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 540,
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_auth_test",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 543,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_apps",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 548,
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_emoji",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 553,
+      "rule": "unreachable-dispatch",
+      "name": "slack_channel_digest",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/slack.js",
+      "line": 571,
+      "rule": "unreachable-dispatch",
+      "name": "slack_multi_channel_announce",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 790,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_tax_settings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 793,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_update_tax_settings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 800,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_calculate_tax",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 823,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_tax_transactions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 826,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_tax_transaction",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 829,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_tax_codes",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 832,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_tax_code",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 837,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_customer_tax_ids",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 840,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_customer_tax_id",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 845,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_customer_tax_id",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 850,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_features",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 853,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_feature",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 860,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_product_features",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 863,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_attach_feature_to_product",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 868,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_active_entitlements",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 875,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 884,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_cancel_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 887,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_reverse_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 894,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_update_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 901,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_topup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 909,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_topups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 912,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_topup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 915,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_cancel_topup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 920,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_bank_accounts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 925,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_bank_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 932,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_verify_bank_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 939,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_bank_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 944,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_radar_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 947,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_radar_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 950,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_radar_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 955,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_radar_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 958,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_radar_value_lists",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 961,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_radar_value_list",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 966,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_radar_value_list",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 969,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_radar_value_list_items",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 972,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_radar_value_list_item",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 977,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_radar_value_list_item",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 982,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_verification_sessions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 985,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 988,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 996,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_cancel_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 999,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_redact_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1004,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_billing_alerts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1007,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1015,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_activate_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1018,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_deactivate_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1021,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_archive_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1026,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_meters",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1029,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1032,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1041,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_deactivate_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1044,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_reactivate_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1047,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_meter_event",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1055,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_meter_event_summaries",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1064,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_forwarding_requests",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1067,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_forwarding_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1070,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_forwarding_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1079,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_compliance_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/stripe.js",
+      "line": 1103,
+      "rule": "unreachable-dispatch",
+      "name": "stripe_payout_health",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 503,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_auth_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 508,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_auth_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 513,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_enable_email_auth",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 520,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_enable_phone_auth",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 527,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_configure_saml",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 532,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_list_saml_providers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 539,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_list_user_factors",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 544,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_delete_user_factor",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 551,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_list_realtime_channels",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 558,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_storage_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 563,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_storage_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 573,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 580,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_postgres_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 587,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 592,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_set_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 597,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_verify_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 602,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_delete_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 609,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_edge_function_body",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 614,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_edge_function_secrets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 619,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_set_edge_function_secrets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 624,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_delete_edge_function_secrets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 631,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_postgres_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 636,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_postgres_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 641,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_pooler_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 646,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_pooler_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 657,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_ssl_enforcement",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 662,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_ssl_enforcement",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 669,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_security_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/supabase.js",
+      "line": 698,
+      "rule": "unreachable-dispatch",
+      "name": "supabase_project_status",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 558,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_brands",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 561,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_brand",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 564,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_campaigns",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 567,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_campaign",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 570,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_brand_registrations",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 579,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_us_app_to_person_campaigns",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 589,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_validate_webhook_signature",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 611,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_local_numbers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 618,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_configure_number_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 631,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_update_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 638,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_keys",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 641,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 644,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_update_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 649,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_queues",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 652,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_create_queue",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 657,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_queue",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 660,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_delete_queue",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 663,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_queue_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 668,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_taskrouter_workspaces",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 678,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_account_health",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/twilio.js",
+      "line": 695,
+      "rule": "unreachable-dispatch",
+      "name": "twilio_compliance_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 423,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_publish",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 441,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_publish_to_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 455,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_messages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 458,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_get_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 461,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_cancel_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 464,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_schedules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 467,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_get_schedule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 470,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_create_schedule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 483,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_delete_schedule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 486,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_dlq",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 489,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_delete_dlq_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 492,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_topics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 495,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_create_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 500,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_delete_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 503,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_add_endpoint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 508,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_remove_endpoint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 513,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_get_api_keys",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 518,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_topics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 523,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_create_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 528,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_delete_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 533,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_get_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 538,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_consumer_groups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 543,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_credentials",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 548,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_create_credentials",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 556,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_clusters",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 559,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_get_cluster",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 562,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_create_cluster",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 567,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_delete_cluster",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 572,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_list_api_keys",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 575,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_create_api_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/upstash.js",
+      "line": 580,
+      "rule": "unreachable-dispatch",
+      "name": "upstash_delete_api_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1282,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_invoice",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1285,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_payment_methods",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1288,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_spend_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1295,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_upgrade_plan",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1302,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_encrypt_env_var",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1307,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_pull_env_vars",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1313,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_promote_env_var_to_production",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1320,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_deployment_checks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1323,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_rerun_deployment_check",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1326,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_deployment_events",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1331,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_deployment_aliases",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1336,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_update_firewall_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1344,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_list_attack_events",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1347,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_waf_active_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1352,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_cron_job",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1357,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_trigger_cron_job",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1364,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1367,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_update_team_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1372,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_audit_log",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1375,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_saml_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1378,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_update_team_saml_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1385,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_edge_config_item",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1390,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_delete_edge_config_items",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1397,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_domain_ssl",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1400,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_issue_domain_ssl",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1403,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_project_domains_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1408,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_log_drain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1411,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_pause_log_drain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1414,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_resume_log_drain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1419,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_cost_forecast",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    },
+    {
+      "file": "handlers/vercel.js",
+      "line": 1434,
+      "rule": "unreachable-dispatch",
+      "name": "vercel_security_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute."
+    }
+  ],
+  "limits": [
+    "Detects direct unconditional return/throw in execute; not a complete control-flow or provider-correctness proof.",
+    "Affected registered capabilities are disabled by generated metadata, not deleted.",
+    "Other capabilities may also be unavailable due to credentials, configuration or disabled child dependencies."
+  ]
+}

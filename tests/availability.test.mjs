@@ -7,6 +7,14 @@ import {createHandlerLoader} from '../src/core/handlers.js';
 import {mkdtempSync,writeFileSync,mkdirSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
+test('unreachable expansion capabilities are disabled even with credentials and excluded from discovery',async()=>{
+  const core=await createToolkit({credentials:new EnvironmentCredentials({CLOUDFLARE_API_TOKEN:'test-only-cloudflare'})});
+  assert.equal(core.schema('cf_get_email_routing').availability.state,'DISABLED');
+  assert.equal(core.schema('cf_list_zones').availability.state,'AVAILABLE');
+  assert.ok(!core.search('cf_get_email_routing',20).some(t=>t.name==='cf_get_email_routing'));
+  await assert.rejects(core.execute('cf_get_email_routing',{zone_id:'test-only-zone'}),{code:'CAPABILITY_UNAVAILABLE'});
+  assert.deepEqual(core.loadedNamespaces,[]);
+});
 test('zero secrets: discovery and schema never import handlers; execution is gated',async()=>{
   const core=await createToolkit({credentials:new EnvironmentCredentials({}),packageExists:()=>false});
   assert.deepEqual(core.loadedNamespaces,[]);
@@ -16,7 +24,7 @@ test('zero secrets: discovery and schema never import handlers; execution is gat
   assert.ok(!core.search('search',20).some(t=>t.namespace==='search'));
   assert.equal(core.schema('playwright_goto').availability.state,'MISSING_CONFIGURATION');
   await assert.rejects(core.execute('stripe_list_customers'),{code:'CAPABILITY_UNAVAILABLE'});
-  await assert.rejects(core.execute('cf_get_api_token'),{code:'UNKNOWN_TOOL'});
+  await assert.rejects(core.execute('unknown_capability'),{code:'UNKNOWN_TOOL'});
   assert.deepEqual(core.loadedNamespaces,[]);
   await core.execute('local_list_directory',{});
   assert.deepEqual(core.loadedNamespaces,['local']);

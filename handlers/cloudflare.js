@@ -21,7 +21,9 @@ async function cf(method, path, body) {
     body: body ? JSON.stringify(body) : undefined
   });
   const data = await res.json();
-  if (!data.success && data.errors?.length) throw new Error(`Cloudflare: ${data.errors.map(e => e.message).join(', ')}`);
+  if (!res.ok || data.success === false) {
+    throw new Error(`Cloudflare ${res.status}: ${data.errors?.map(e => e.message).join(', ') || res.statusText || 'Request failed'}`);
+  }
   return data.result !== undefined ? data.result : data;
 }
 
@@ -626,6 +628,13 @@ async function execute(tool, args) {
     return { answer: answer.response, query_embedding_size: emb.data?.[0]?.length, sources: docs.map(d => d.key) };
   }
 
+  if (tool === 'cf_get_api_token') {
+    if (typeof args.token_id !== 'string' || !/^[a-fA-F0-9]{32}$/.test(args.token_id)) {
+      throw new Error('token_id must be a 32-character hexadecimal token identifier');
+    }
+    return await cf('GET', `/user/tokens/${args.token_id}`);
+  }
+
   throw new Error(`Unknown Cloudflare tool: ${tool}`);
 
   // ── EMAIL ROUTING ─────────────────────────────────────────────────────────
@@ -764,9 +773,6 @@ async function execute(tool, args) {
   // ── ACCOUNT TOKENS & MEMBERS ─────────────────────────────────────────────
   if (tool === 'cf_list_api_tokens') {
     return await cf('GET', `/user/tokens`);
-  }
-  if (tool === 'cf_get_api_token') {
-    return await cf('GET', `/user/tokens/${args.token_id}`);
   }
   if (tool === 'cf_verify_api_token') {
     return await cf('GET', `/user/tokens/verify`);
