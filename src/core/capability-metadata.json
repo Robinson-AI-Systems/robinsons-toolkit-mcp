@@ -11,7 +11,7 @@
     "handlers/github.js": "79bc54d79676fb36002e0d00c3e8a862f3eaa1a2cee99963be0aa4b5ab98e61d",
     "handlers/google.js": "398d3e984755b14b7370b8248b4b61d70f18ac09922c0e3d4e06793ed2b881ed",
     "handlers/linear.js": "6e6f8dbc6aeb5e02c63db902b2fe0328323f6026becc0e2673faa35df0666799",
-    "handlers/local.js": "f07a200659324ce0cfbe8d4e350c4e7968115c89ba2d7e0732f0f2823e896b30",
+    "handlers/local.js": "814978c6045a3d796b0129ed47a383541d3c63b79c07d473f20ce0926370b8e6",
     "handlers/mapbox.js": "2361ae72322cf92ac1b2d8d123d4a0dc0dabdfb00a1431337050c5f595329d21",
     "handlers/moonshot.js": "512a6f2a37b1eee417af9298899cfd55e6dceeb7371b892ddcd015796c227fa6",
     "handlers/n8n.js": "ee2f9d1b1359e64e681c34ef3713695743b0cc854b476eb86eeb06c824889c1e",
@@ -19467,8 +19467,7 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct",
-      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+      "dependencyMode": "direct"
     },
     "local_get_cpu_usage": {
       "namespace": "local",
@@ -19481,8 +19480,7 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct",
-      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+      "dependencyMode": "direct"
     },
     "local_zip_files": {
       "namespace": "local",

@@ -1,8 +1,8 @@
 {
   "counts": {
     "registryEntries": 3050,
-    "unreachableDispatches": 492,
-    "unreachableRegisteredNames": 487
+    "unreachableDispatches": 490,
+    "unreachableRegisteredNames": 485
   },
   "byNamespace": {
     "clerk": 27,
@@ -10,7 +10,7 @@
     "fly": 15,
     "github": 29,
     "linear": 26,
-    "local": 25,
+    "local": 23,
     "n8n": 16,
     "neon": 17,
     "openai": 18,
@@ -1099,7 +1099,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 972,
+      "line": 980,
       "rule": "unreachable-dispatch",
       "name": "local_docker_list_containers",
       "disposition": "disabled-until-reviewed",
@@ -1107,7 +1107,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 978,
+      "line": 986,
       "rule": "unreachable-dispatch",
       "name": "local_docker_start",
       "disposition": "disabled-until-reviewed",
@@ -1115,7 +1115,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 982,
+      "line": 990,
       "rule": "unreachable-dispatch",
       "name": "local_docker_stop",
       "disposition": "disabled-until-reviewed",
@@ -1123,7 +1123,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 986,
+      "line": 994,
       "rule": "unreachable-dispatch",
       "name": "local_docker_restart",
       "disposition": "disabled-until-reviewed",
@@ -1131,7 +1131,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 990,
+      "line": 998,
       "rule": "unreachable-dispatch",
       "name": "local_docker_logs",
       "disposition": "disabled-until-reviewed",
@@ -1139,7 +1139,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 996,
+      "line": 1004,
       "rule": "unreachable-dispatch",
       "name": "local_docker_exec",
       "disposition": "disabled-until-reviewed",
@@ -1147,7 +1147,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1002,
+      "line": 1010,
       "rule": "unreachable-dispatch",
       "name": "local_docker_list_images",
       "disposition": "disabled-until-reviewed",
@@ -1155,7 +1155,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1007,
+      "line": 1015,
       "rule": "unreachable-dispatch",
       "name": "local_docker_pull",
       "disposition": "disabled-until-reviewed",
@@ -1163,7 +1163,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1013,
+      "line": 1021,
       "rule": "unreachable-dispatch",
       "name": "local_docker_compose_up",
       "disposition": "disabled-until-reviewed",
@@ -1171,7 +1171,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1019,
+      "line": 1027,
       "rule": "unreachable-dispatch",
       "name": "local_docker_compose_down",
       "disposition": "disabled-until-reviewed",
@@ -1179,7 +1179,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1024,
+      "line": 1032,
       "rule": "unreachable-dispatch",
       "name": "local_docker_compose_logs",
       "disposition": "disabled-until-reviewed",
@@ -1187,7 +1187,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1032,
+      "line": 1040,
       "rule": "unreachable-dispatch",
       "name": "local_kill_process",
       "disposition": "disabled-until-reviewed",
@@ -1195,25 +1195,9 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1039,
+      "line": 1047,
       "rule": "unreachable-dispatch",
       "name": "local_get_process_by_name",
-      "disposition": "disabled-until-reviewed",
-      "evidence": "Dispatch appears after an unconditional return or throw in execute."
-    },
-    {
-      "file": "handlers/local.js",
-      "line": 1048,
-      "rule": "unreachable-dispatch",
-      "name": "local_get_memory_usage",
-      "disposition": "disabled-until-reviewed",
-      "evidence": "Dispatch appears after an unconditional return or throw in execute."
-    },
-    {
-      "file": "handlers/local.js",
-      "line": 1053,
-      "rule": "unreachable-dispatch",
-      "name": "local_get_cpu_usage",
       "disposition": "disabled-until-reviewed",
       "evidence": "Dispatch appears after an unconditional return or throw in execute."
     },

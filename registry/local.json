@@ -2198,7 +2198,7 @@
   },
   {
     "name": "local_get_memory_usage",
-    "description": "Get system memory usage (free/used/total) on the local machine.",
+    "description": "Read OS system memory counters in bytes: total, free and used (total minus free, including caches).",
     "namespace": "local",
     "tags": [
       "local",
@@ -2210,11 +2210,14 @@
       "type": "object",
       "properties": {},
       "required": []
-    }
+    },
+    "risk": "READ",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "local_get_cpu_usage",
-    "description": "Get current CPU usage statistics.",
+    "description": "Sample aggregate OS CPU busy/idle percentages over an interval; not process usage or container entitlement.",
     "namespace": "local",
     "tags": [
       "local",
@@ -2224,9 +2227,19 @@
     ],
     "inputSchema": {
       "type": "object",
-      "properties": {},
+      "properties": {
+        "sample_ms": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 2000,
+          "default": 250
+        }
+      },
       "required": []
-    }
+    },
+    "risk": "READ",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "local_zip_files",

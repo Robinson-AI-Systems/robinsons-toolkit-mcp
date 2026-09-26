@@ -14,6 +14,7 @@ import { join, resolve, dirname, basename, extname, relative } from 'path';
 import { promisify } from 'util';
 import { exec } from '../src/core/sandbox/restricted-host.js';
 import { createHash } from 'crypto';
+import { memoryUsage, cpuUsage } from '../src/core/system-metrics.js';
 import { assertWriteAllowed } from '../src/core/sandbox/restricted-host.js';
 
 const execAsync = promisify(exec);
@@ -966,6 +967,13 @@ async function execute(tool, args) {
     return { success: true, path: fullPath, template: template || 'default', bytes_written: Buffer.byteLength(content, 'utf-8') };
   }
 
+  if (tool === 'local_get_memory_usage') {
+    return { memory: memoryUsage() };
+  }
+  if (tool === 'local_get_cpu_usage') {
+    return { cpu: await cpuUsage(args.sample_ms) };
+  }
+
   throw new Error(`Unknown local tool: ${tool}`);
 
   // ── DOCKER ────────────────────────────────────────────────────────────────
@@ -1045,16 +1053,8 @@ async function execute(tool, args) {
       return { processes: out.trim().split('\n').filter(Boolean).map(l => { const [pid, ...rest] = l.split(' '); return { pid: parseInt(pid), cmd: rest.join(' ') }; }) };
     } catch { return { processes: [] }; }
   }
-  if (tool === 'local_get_memory_usage') {
-    const { execSync } = await import('../src/core/sandbox/restricted-host.js');
-    const out = execSync('free -h', { encoding: 'utf-8' });
-    return { memory: out };
-  }
-  if (tool === 'local_get_cpu_usage') {
-    const { execSync } = await import('../src/core/sandbox/restricted-host.js');
-    const out = execSync("top -bn1 | grep 'Cpu\\|cpu' | head -3", { encoding: 'utf-8' });
-    return { cpu: out };
-  }
+
+
 
   // ── ARCHIVE / ZIP ─────────────────────────────────────────────────────────
   if (tool === 'local_zip_files') {

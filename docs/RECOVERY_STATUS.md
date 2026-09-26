@@ -113,3 +113,14 @@ email-routing settings, user-token listing and current-token verification. Token
 listing preserves pagination metadata. Thirty-two tests pass. Registered names
 remain 3,050; directly unreachable registered names fall from 490 to 487. Strict
 integrity still fails on remaining unreachable branches and seven orphan names.
+
+## Restored local system readings
+
+local_get_memory_usage and local_get_cpu_usage now use Node OS counters through
+Core instead of unreachable Linux shell pipelines. Memory returns byte counters;
+CPU returns measured aggregate busy/idle percentages over a bounded sampling
+interval. Output identifies host/container scope limitations. Existing names are
+preserved; their previously unreachable string outputs are replaced by structured
+measurements. References: https://nodejs.org/api/os.html#oscpus and #osfreemem.
+Real host and zero-credential CLI tests cover these readings. Directly unreachable
+registered names fall to 485. Windows/macOS execution has not been tested here.
