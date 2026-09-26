@@ -66,24 +66,23 @@ async function execute(tool, args) {
     };
   }
   if (tool === 'anthropic_message_with_tools') {
-    // Multi-turn with tool use — runs up to max_turns
-    const { model = 'claude-sonnet-4-6', system, user_message, tools: aiTools, max_tokens = 2048, max_turns = 3 } = args;
+    // Client tools belong to the calling agent. Return the real tool requests;
+    // never manufacture a tool_result or execute arbitrary model-selected tools.
+    const { model = 'claude-sonnet-4-6', system, user_message, tools: aiTools, max_tokens = 2048 } = args;
     if (!user_message || !aiTools) throw new Error('user_message and tools are required');
     const messages = [{ role: 'user', content: user_message }];
-    const results = [];
-    for (let turn = 0; turn < max_turns; turn++) {
-      const data = await ant('POST', '/messages', { model, messages, system, max_tokens, tools: aiTools });
-      results.push({ turn, content: data.content, stop_reason: data.stop_reason });
-      if (data.stop_reason !== 'tool_use') break;
-      // Add assistant turn
-      messages.push({ role: 'assistant', content: data.content });
-      // Auto-respond to tool calls with placeholders (agent must handle real tool results)
-      const toolResults = data.content.filter(b => b.type === 'tool_use').map(b => ({
-        type: 'tool_result', tool_use_id: b.id, content: `[Tool ${b.name} called with: ${JSON.stringify(b.input)}]`
-      }));
-      messages.push({ role: 'user', content: toolResults });
-    }
-    return { turns: results, final_response: results[results.length - 1]?.content?.[0]?.text };
+    const data = await ant('POST', '/messages', { model, messages, system, max_tokens, tools: aiTools });
+    const pending_tool_calls = (data.content || []).filter(block => block.type === 'tool_use');
+    return {
+      turns: [{ turn: 0, content: data.content, stop_reason: data.stop_reason }],
+      final_response: pending_tool_calls.length ? null : (data.content || []).filter(block => block.type === 'text').map(block => block.text).join('\n'),
+      pending_tool_calls,
+      messages: [...messages, { role: 'assistant', content: data.content }],
+      stop_reason: data.stop_reason,
+      usage: data.usage,
+      continuation: pending_tool_calls.length ? 'Execute the requested client tools, then call anthropic_message with this messages array plus a user message containing the actual tool_result blocks and the same tools definitions.' : null,
+      warnings: args.max_turns !== undefined ? ['max_turns is deprecated: client tool execution is delegated to the calling agent.'] : []
+    };
   }
   if (tool === 'anthropic_count_tokens') {
     const { model = 'claude-sonnet-4-6', messages, system } = args;
