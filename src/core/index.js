@@ -43,7 +43,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
       if(typeof query!=='string'||!query.trim())throw Object.assign(new Error('query must be a non-empty string'),{code:'INVALID_ARGUMENTS'});
       if(!Number.isInteger(limit)||limit<1||limit>20)throw Object.assign(new Error('limit must be an integer between 1 and 20'),{code:'INVALID_ARGUMENTS'});
       const states=new Map(registry.map(t=>[t.name,availability.get(t.name)]));
-      const candidates=registry.filter(t=>includeUnavailable||states.get(t.name).state===Availability.AVAILABLE);
+      const candidates=registry.filter(t=>!t.aliasOf&&(includeUnavailable||states.get(t.name).state===Availability.AVAILABLE));
       return searchTools(candidates,query,{},limit).map(t=>({name:t.name,description:t.description,namespace:t.namespace,availability:states.get(t.name),whyMatched:'Lexical name, description or tag match'}));
     },
     schema(name){const tool=byName.get(name);return tool?{...tool,availability:availability.get(name)}:undefined;},

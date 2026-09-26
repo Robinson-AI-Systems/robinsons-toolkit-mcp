@@ -32,3 +32,10 @@ credentials must be marked not run, never simulated as successful live tests.
 Do not expose provider credentials in subprocesses, logs, errors, receipts or
 results. Environment redaction is defense-in-depth, not credential isolation.
 Raw host command execution is not a security sandbox. Do not claim otherwise.
+
+When encountering an upstream deprecation, implement and test a supported
+replacement in the current repair when feasible. Record affected names, official
+sources, compatibility changes and test evidence in docs/migrations/provider-changes.json.
+If there is no equivalent or a concrete blocker, record that blocker and an
+explicit next action; do not silently substitute different behavior. A documentation
+note alone does not close a migration. Keep blocked broken capabilities unavailable.

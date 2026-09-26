@@ -1,12 +1,12 @@
 {
   "counts": {
     "registryEntries": 3050,
-    "unreachableDispatches": 490,
-    "unreachableRegisteredNames": 485
+    "unreachableDispatches": 489,
+    "unreachableRegisteredNames": 484
   },
   "byNamespace": {
     "clerk": 27,
-    "cloudflare": 37,
+    "cloudflare": 36,
     "fly": 15,
     "github": 29,
     "linear": 26,
@@ -243,7 +243,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 665,
+      "line": 683,
       "rule": "unreachable-dispatch",
       "name": "cf_enable_email_routing",
       "disposition": "disabled-until-reviewed",
@@ -251,7 +251,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 668,
+      "line": 686,
       "rule": "unreachable-dispatch",
       "name": "cf_disable_email_routing",
       "disposition": "disabled-until-reviewed",
@@ -259,7 +259,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 671,
+      "line": 689,
       "rule": "unreachable-dispatch",
       "name": "cf_list_email_routing_rules",
       "disposition": "disabled-until-reviewed",
@@ -267,7 +267,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 674,
+      "line": 692,
       "rule": "unreachable-dispatch",
       "name": "cf_create_email_routing_rule",
       "disposition": "disabled-until-reviewed",
@@ -275,7 +275,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 679,
+      "line": 697,
       "rule": "unreachable-dispatch",
       "name": "cf_update_email_routing_rule",
       "disposition": "disabled-until-reviewed",
@@ -283,7 +283,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 689,
+      "line": 707,
       "rule": "unreachable-dispatch",
       "name": "cf_delete_email_routing_rule",
       "disposition": "disabled-until-reviewed",
@@ -291,7 +291,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 692,
+      "line": 710,
       "rule": "unreachable-dispatch",
       "name": "cf_list_email_routing_addresses",
       "disposition": "disabled-until-reviewed",
@@ -299,7 +299,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 695,
+      "line": 713,
       "rule": "unreachable-dispatch",
       "name": "cf_create_email_routing_address",
       "disposition": "disabled-until-reviewed",
@@ -307,7 +307,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 700,
+      "line": 718,
       "rule": "unreachable-dispatch",
       "name": "cf_delete_email_routing_address",
       "disposition": "disabled-until-reviewed",
@@ -315,7 +315,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 705,
+      "line": 723,
       "rule": "unreachable-dispatch",
       "name": "cf_list_waf_packages",
       "disposition": "disabled-until-reviewed",
@@ -323,7 +323,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 708,
+      "line": 726,
       "rule": "unreachable-dispatch",
       "name": "cf_list_waf_rule_groups",
       "disposition": "disabled-until-reviewed",
@@ -331,7 +331,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 711,
+      "line": 729,
       "rule": "unreachable-dispatch",
       "name": "cf_list_waf_rules",
       "disposition": "disabled-until-reviewed",
@@ -339,7 +339,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 714,
+      "line": 732,
       "rule": "unreachable-dispatch",
       "name": "cf_update_waf_rule",
       "disposition": "disabled-until-reviewed",
@@ -347,7 +347,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 717,
+      "line": 735,
       "rule": "unreachable-dispatch",
       "name": "cf_get_bot_management_config",
       "disposition": "disabled-until-reviewed",
@@ -355,7 +355,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 720,
+      "line": 738,
       "rule": "unreachable-dispatch",
       "name": "cf_update_bot_management_config",
       "disposition": "disabled-until-reviewed",
@@ -363,7 +363,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 732,
+      "line": 750,
       "rule": "unreachable-dispatch",
       "name": "cf_list_ai_finetune_assets",
       "disposition": "disabled-until-reviewed",
@@ -371,7 +371,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 735,
+      "line": 753,
       "rule": "unreachable-dispatch",
       "name": "cf_create_ai_finetune",
       "disposition": "disabled-until-reviewed",
@@ -379,7 +379,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 742,
+      "line": 760,
       "rule": "unreachable-dispatch",
       "name": "cf_r2_list_objects",
       "disposition": "disabled-until-reviewed",
@@ -387,7 +387,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 750,
+      "line": 768,
       "rule": "unreachable-dispatch",
       "name": "cf_r2_delete_object",
       "disposition": "disabled-until-reviewed",
@@ -395,7 +395,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 755,
+      "line": 773,
       "rule": "unreachable-dispatch",
       "name": "cf_r2_head_object",
       "disposition": "disabled-until-reviewed",
@@ -403,7 +403,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 762,
+      "line": 780,
       "rule": "unreachable-dispatch",
       "name": "cf_list_analytics_engine_datasets",
       "disposition": "disabled-until-reviewed",
@@ -411,7 +411,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 765,
+      "line": 783,
       "rule": "unreachable-dispatch",
       "name": "cf_query_analytics_engine",
       "disposition": "disabled-until-reviewed",
@@ -419,7 +419,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 779,
+      "line": 797,
       "rule": "unreachable-dispatch",
       "name": "cf_list_identity_providers",
       "disposition": "disabled-until-reviewed",
@@ -427,7 +427,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 782,
+      "line": 800,
       "rule": "unreachable-dispatch",
       "name": "cf_get_identity_provider",
       "disposition": "disabled-until-reviewed",
@@ -435,7 +435,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 785,
+      "line": 803,
       "rule": "unreachable-dispatch",
       "name": "cf_create_identity_provider",
       "disposition": "disabled-until-reviewed",
@@ -443,7 +443,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 790,
+      "line": 808,
       "rule": "unreachable-dispatch",
       "name": "cf_delete_identity_provider",
       "disposition": "disabled-until-reviewed",
@@ -451,7 +451,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 797,
+      "line": 815,
       "rule": "unreachable-dispatch",
       "name": "cf_roll_api_token",
       "disposition": "disabled-until-reviewed",
@@ -459,7 +459,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 800,
+      "line": 818,
       "rule": "unreachable-dispatch",
       "name": "cf_delete_api_token",
       "disposition": "disabled-until-reviewed",
@@ -467,7 +467,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 803,
+      "line": 821,
       "rule": "unreachable-dispatch",
       "name": "cf_invite_account_member",
       "disposition": "disabled-until-reviewed",
@@ -475,7 +475,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 808,
+      "line": 826,
       "rule": "unreachable-dispatch",
       "name": "cf_remove_account_member",
       "disposition": "disabled-until-reviewed",
@@ -483,7 +483,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 811,
+      "line": 829,
       "rule": "unreachable-dispatch",
       "name": "cf_update_account_member_roles",
       "disposition": "disabled-until-reviewed",
@@ -491,15 +491,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 816,
-      "rule": "unreachable-dispatch",
-      "name": "cf_get_all_zone_settings",
-      "disposition": "disabled-until-reviewed",
-      "evidence": "Dispatch appears after an unconditional return or throw in execute."
-    },
-    {
-      "file": "handlers/cloudflare.js",
-      "line": 819,
+      "line": 834,
       "rule": "unreachable-dispatch",
       "name": "cf_update_zone_settings_bulk",
       "disposition": "disabled-until-reviewed",
@@ -507,7 +499,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 824,
+      "line": 839,
       "rule": "unreachable-dispatch",
       "name": "cf_get_zone_ssl_setting",
       "disposition": "disabled-until-reviewed",
@@ -515,7 +507,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 827,
+      "line": 842,
       "rule": "unreachable-dispatch",
       "name": "cf_update_zone_ssl_setting",
       "disposition": "disabled-until-reviewed",
@@ -523,7 +515,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 832,
+      "line": 847,
       "rule": "unreachable-dispatch",
       "name": "cf_zone_health_report",
       "disposition": "disabled-until-reviewed",
@@ -531,7 +523,7 @@
     },
     {
       "file": "handlers/cloudflare.js",
-      "line": 859,
+      "line": 874,
       "rule": "unreachable-dispatch",
       "name": "cf_workers_summary",
       "disposition": "disabled-until-reviewed",

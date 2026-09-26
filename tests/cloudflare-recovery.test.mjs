@@ -35,7 +35,7 @@ test('restored Cloudflare reads execute through Core with pagination and lazy lo
   assert.deepEqual(await core.execute(names[2],{zone_id:zone}),{enabled:false});
   assert.equal(calls.length,3);assert.deepEqual(core.loadedNamespaces,['cloudflare']);
   assert.equal(core.schema('cf_enable_email_routing').availability.state,'DISABLED');
-  assert.equal(core.schema('cf_get_all_zone_settings').availability.state,'DISABLED');
+  assert.equal(core.schema('cf_get_all_zone_settings').aliasOf,'cf_get_zone_settings');
 });
 test('restored reads reject missing credentials and invalid inputs before HTTP',async t=>{
   const empty=await createToolkit({credentials:new EnvironmentCredentials({})});

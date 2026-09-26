@@ -3,7 +3,7 @@
   "sources": {
     "handlers/anthropic.js": "2aa42c0ee5447c57359ffc85908c0feb22a8a92bc6153b334b355589a03c4ee8",
     "handlers/clerk.js": "ed526739aadbc0756409ff3ec2abb2e4b381d6fccfdb12bbb42033ceff34de99",
-    "handlers/cloudflare.js": "072d7490839e90e8ec1d940bbdc3aa1af3f57acd87c8beb4b9e7e7aef17e1f6f",
+    "handlers/cloudflare.js": "bec885f2b8b1130f8499fcdecda6132d480cb3560fbe546a32400ccab3bd5735",
     "handlers/compound.js": "4e3e50bc5bac543ec11430f5336acd749781812de5efd3fc738c94bb2d08782f",
     "handlers/context7.js": "819046f82e17ef7dec5fef9688071e55c6203e22591d19422c000bcffe4ca0d8",
     "handlers/fly.js": "5e2bf5584421dd64bebaca49f999cc893856d44921c2f0db3d9c2b97eb243685",
@@ -5543,8 +5543,7 @@
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct",
-      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+      "dependencyMode": "direct"
     },
     "cf_update_zone_settings_bulk": {
       "namespace": "cloudflare",

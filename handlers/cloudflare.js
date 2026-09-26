@@ -43,7 +43,25 @@ async function execute(tool, args) {
     const body = args.purge_everything ? { purge_everything: true } : { files: args.files };
     return await cf('POST', `/zones/${zone_id}/purge_cache`, body);
   }
-  if (tool === 'cf_get_zone_settings') { return await cf('GET', `/zones/${zone_id}/settings`); }
+  if (tool === 'cf_get_zone_settings' || tool === 'cf_get_all_zone_settings') {
+    if (typeof zone_id !== 'string' || !/^[a-fA-F0-9]{32}$/.test(zone_id)) throw new Error('zone_id must be a 32-character hexadecimal zone identifier');
+    const { setting_ids } = args;
+    if (!Array.isArray(setting_ids) || !setting_ids.length || setting_ids.length > 50 ||
+        setting_ids.some(id => typeof id !== 'string' || !/^[a-z0-9_]{1,100}$/.test(id))) {
+      throw new Error('Migration required: provide setting_ids (1 to 50 setting names); the deprecated bulk endpoint cannot be used to enumerate all settings');
+    }
+    const requested = [...new Set(setting_ids)];
+    const settings = [];
+    for (let offset = 0; offset < requested.length; offset += 4) {
+      settings.push(...await Promise.all(requested.slice(offset, offset + 4).map(async id => {
+        const result = await cf('GET', `/zones/${zone_id}/settings/${id}`);
+        if (!result || result.id !== id || !Object.hasOwn(result, 'value')) throw new Error(`Cloudflare returned an invalid setting response for ${id}`);
+        return result;
+      })));
+    }
+    return { settings, requested, scope: 'explicitly-requested-settings', complete: true,
+      warnings: tool === 'cf_get_all_zone_settings' ? ['Deprecated name: use cf_get_zone_settings with setting_ids. This result does not enumerate all zone settings.'] : [] };
+  }
   if (tool === 'cf_update_zone_setting') {
     return await cf('PATCH', `/zones/${zone_id}/settings/${args.setting_id}`, { value: args.value });
   }
@@ -813,9 +831,6 @@ async function execute(tool, args) {
   }
 
   // ── ZONE SETTINGS BULK ───────────────────────────────────────────────────
-  if (tool === 'cf_get_all_zone_settings') {
-    return await cf('GET', `/zones/${args.zone_id}/settings`);
-  }
   if (tool === 'cf_update_zone_settings_bulk') {
     const { zone_id, settings } = args;
     if (!zone_id || !settings?.length) throw new Error('zone_id and settings array are required');

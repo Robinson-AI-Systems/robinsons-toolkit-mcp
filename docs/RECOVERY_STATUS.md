@@ -124,3 +124,13 @@ preserved; their previously unreachable string outputs are replaced by structure
 measurements. References: https://nodejs.org/api/os.html#oscpus and #osfreemem.
 Real host and zero-credential CLI tests cover these readings. Directly unreachable
 registered names fall to 485. Windows/macOS execution has not been tested here.
+
+## Implemented zone-settings replacement
+
+Supersedes the earlier deferred bulk-settings note: cf_get_zone_settings and the
+compatibility name cf_get_all_zone_settings now read explicitly requested settings
+through supported individual endpoints. setting_ids is required; the legacy name
+warns and is excluded from discovery. See migrations/cloudflare-zone-settings.md
+for the intentional input/output contract change. The migration tracker records
+completed changes and concrete outstanding blockers. Thirty-eight tests pass;
+directly unreachable registered names fall to 484. Full integrity still fails.

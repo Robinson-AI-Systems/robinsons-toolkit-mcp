@@ -144,7 +144,7 @@
   },
   {
     "name": "cf_get_zone_settings",
-    "description": "Get all Cloudflare settings for a zone",
+    "description": "Read explicitly requested zone settings using the supported individual-setting API. Requires setting_ids; does not enumerate every zone setting.",
     "namespace": "cloudflare",
     "tags": [
       "cloudflare",
@@ -158,13 +158,28 @@
       "type": "object",
       "properties": {
         "zone_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{32}$"
+        },
+        "setting_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 50,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]{1,100}$"
+          },
+          "description": "Explicit setting names, such as ssl or min_tls_version."
         }
       },
       "required": [
-        "zone_id"
+        "zone_id",
+        "setting_ids"
       ]
-    }
+    },
+    "risk": "READ",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "cf_update_zone_setting",
@@ -4806,7 +4821,7 @@
   },
   {
     "name": "cf_get_all_zone_settings",
-    "description": "Get all settings for a Cloudflare zone at once.",
+    "description": "Deprecated compatibility name for cf_get_zone_settings. setting_ids is required; this does not enumerate every zone setting.",
     "namespace": "cloudflare",
     "tags": [
       "cloudflare",
@@ -4819,13 +4834,30 @@
       "type": "object",
       "properties": {
         "zone_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{32}$"
+        },
+        "setting_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 50,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]{1,100}$"
+          },
+          "description": "Explicit setting names, such as ssl or min_tls_version."
         }
       },
       "required": [
-        "zone_id"
+        "zone_id",
+        "setting_ids"
       ]
-    }
+    },
+    "risk": "READ",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY",
+    "aliasOf": "cf_get_zone_settings",
+    "deprecated": true
   },
   {
     "name": "cf_update_zone_settings_bulk",
