@@ -14,7 +14,7 @@ test('CLI boots, discovers and executes local tools with zero secrets',()=>{
  for(const args of [['doctor','--json'],['auth','status','--json'],['namespaces'],['schema','stripe_list_customers'],['search','list directory'],['exec','local_list_directory','--json','{}']]){
   const r=cli(args);assert.equal(r.status,0,JSON.stringify(r));assert.equal(r.body.ok,true);
  }
- const r=cli(['mcp','inspect']);assert.equal(r.body.result.advertisedTools,4);assert.equal(r.body.result.providerSchemasAdvertisedDirectly,0);
+ const r=cli(['mcp','inspect']);assert.equal(r.body.result.advertisedTools,6);assert.equal(r.body.result.providerSchemasAdvertisedDirectly,0);
 });
 test('CLI emits deterministic failure codes and valid JSON',()=>{
  assert.equal(cli(['exec','stripe_list_customers','--json','{}']).status,3);
@@ -23,4 +23,16 @@ test('CLI emits deterministic failure codes and valid JSON',()=>{
  assert.equal(cli(['exec','local_list_directory','--json','[]']).status,2);
  assert.equal(cli(['search','x','--limit','-1']).status,2);
  assert.equal(cli(['audit']).status,5);
+});
+test('CLI large result is readable from a separate invocation',()=>{
+ const cwd=mkdtempSync(join(tmpdir(),'rt-cli-result-'));
+ try{
+  const run=args=>{
+   const r=spawnSync(process.execPath,[bin,...args],{cwd,env:{PATH:process.env.PATH,WORKSPACE_ROOT:cwd,TOOLKIT_STATE_DIR:join(cwd,'state'),RT_MAX_INLINE_BYTES:'1024'},encoding:'utf8',timeout:15000});
+   assert.equal(r.status,0,r.stdout);return JSON.parse(r.stdout).result;
+  };
+  const saved=run(['audit','duplicates']);assert.equal(saved.stored,true);
+  const page=run(['result','read',saved.resultId,'--limit','500']);assert.equal(page.resultId,saved.resultId);assert.equal(page.nextCursor,500);
+  const matches=run(['result','search',saved.resultId,'local_make_directory','--limit','1']);assert.equal(matches.matches.length,1);
+ }finally{rmSync(cwd,{recursive:true,force:true});}
 });

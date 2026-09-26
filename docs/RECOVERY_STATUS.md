@@ -46,3 +46,17 @@ Organization GitHub App authorization was corrected. Checkpoints 0 and 1 were
 published as 60403b5 and 3a65c08. GitHub Git Data API commits may have different
 commit SHAs from local commits; compare tree SHAs to verify identical contents.
 Main remains unchanged.
+
+## Checkpoints 3 and 4 — CLI and bounded results
+
+The CLI commands in CLI.md execute over the shared Core. Large results are
+stored, bounded reads/searches work across processes, and MCP advertises six
+broker tools including result retrieval. Twenty-one tests pass, including CLI
+exit codes, actual no-secret MCP execution, a 5,000-record Unicode round trip,
+secret redaction, result traversal/symlink rejection and quota failures.
+
+Remaining strict integrity issues are nine orphan handler definitions and nine
+repeated dispatch names. Full sandboxing/credential isolation, profiles,
+transaction semantics, deeper duplicate canonicalization, hybrid discovery and
+modern MCP transport migration remain incomplete. Do not interpret these
+checkpoints as full production readiness.

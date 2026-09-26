@@ -40,4 +40,6 @@ export const PINNED_TOOLS = [
       required: ['tool_name']
     }
   },
+  {name:'toolkit_result_read',description:'Read a bounded UTF-8 page from a stored result. Follow nextCursor to retrieve all data.',inputSchema:{type:'object',properties:{id:{type:'string'},cursor:{type:'integer',minimum:0},limit:{type:'integer',minimum:4,maximum:16384}},required:['id']}},
+  {name:'toolkit_result_search',description:'Find literal text in a stored result, with bounded snippets and pagination.',inputSchema:{type:'object',properties:{id:{type:'string'},query:{type:'string',minLength:1,maxLength:256},cursor:{type:'integer',minimum:0},limit:{type:'integer',minimum:1,maximum:20}},required:['id','query']}}
 ];

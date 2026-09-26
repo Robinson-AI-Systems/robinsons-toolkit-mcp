@@ -31,3 +31,6 @@ are review items, not proof of identity, and never trigger automatic deletion.
 Profiles, transactions, and result commands are added only when implemented;
 unsupported commands fail explicitly and are not advertised as functional.
 `serve` currently provides stdio using the locked SDK. It opens no HTTP listener.
+
+Stored result retrieval is now implemented: `rt result read <id>` and
+`rt result search <id> <query>`, with --cursor and --limit. See RESULTS.md.

@@ -11,7 +11,7 @@ const registry=loadRegistry(toolkitRoot);
 test('catalog preserves every registry name while MCP advertises only brokers',()=>{
   const manifest=JSON.parse(readFileSync(new URL('../reports/recovery/capability-manifest.json',import.meta.url)));
   assert.deepEqual(registry.map(t=>t.name).sort(),manifest.map(t=>t.name).sort());
-  assert.deepEqual(PINNED_TOOLS.map(t=>t.name),baseline.runtime.advertisedNames.slice(0,4));
+  assert.deepEqual(PINNED_TOOLS.slice(0,4).map(t=>t.name),baseline.runtime.advertisedNames.slice(0,4));
   assert.ok(Buffer.byteLength(JSON.stringify(PINNED_TOOLS))<baseline.runtime.advertisedSchemaBytes);
 });
 test('shared executor validates before dispatch and preserves special namespaces',async()=>{
@@ -33,9 +33,10 @@ test('shared executor preserves inverse receipts',async()=>{
 });
 test('MCP boots without optional secrets and advertises only brokers',async()=>{
   const r=await probeMcp(toolkitRoot);
+  assert.equal(r.largeOutputStored,true);assert.equal(r.resultReadPassed,true);
   assert.equal(r.booted,true);assert.equal(r.localCallPassed,true);assert.equal(r.missingStripeIsError,true);
   assert.ok(r.advertisedSchemaBytes<baseline.runtime.advertisedSchemaBytes);
-  assert.equal(r.advertisedToolCount,4);
+  assert.equal(r.advertisedToolCount,6);
 });
 test('core supports execution and discovery independently of MCP',async()=>{
   const core=await createToolkit();
