@@ -105,3 +105,11 @@ entries as 3,050 working capabilities. The historical recovery report is unchang
 Regenerate the current reachability report with:
 `node scripts/report-reachability.mjs > reports/integrity/reachability.json`.
 This scan detects direct unconditional return/throw, not all control-flow defects.
+
+## Restored Cloudflare read capabilities
+
+Three reviewed read capabilities are reachable again with credentials configured:
+email-routing settings, user-token listing and current-token verification. Token
+listing preserves pagination metadata. Thirty-two tests pass. Registered names
+remain 3,050; directly unreachable registered names fall from 490 to 487. Strict
+integrity still fails on remaining unreachable branches and seven orphan names.

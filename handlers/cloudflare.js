@@ -15,7 +15,7 @@ function headers() {
 
 const ACCT = () => process.env.CLOUDFLARE_ACCOUNT_ID;
 
-async function cf(method, path, body) {
+async function cf(method, path, body, { envelope = false } = {}) {
   const res = await fetch(`${BASE}${path}`, {
     method, headers: headers(),
     body: body ? JSON.stringify(body) : undefined
@@ -24,7 +24,7 @@ async function cf(method, path, body) {
   if (!res.ok || data.success === false) {
     throw new Error(`Cloudflare ${res.status}: ${data.errors?.map(e => e.message).join(', ') || res.statusText || 'Request failed'}`);
   }
-  return data.result !== undefined ? data.result : data;
+  return envelope ? data : data.result !== undefined ? data.result : data;
 }
 
 async function execute(tool, args) {
@@ -635,12 +635,33 @@ async function execute(tool, args) {
     return await cf('GET', `/user/tokens/${args.token_id}`);
   }
 
+  // Reviewed read-only expansion capabilities; other expansion code stays gated.
+  if (tool === 'cf_get_email_routing') {
+    if (typeof args.zone_id !== 'string' || !/^[a-fA-F0-9]{32}$/.test(args.zone_id)) {
+      throw new Error('zone_id must be a 32-character hexadecimal zone identifier');
+    }
+    return await cf('GET', `/zones/${args.zone_id}/email/routing`);
+  }
+  if (tool === 'cf_verify_api_token') {
+    return await cf('GET', '/user/tokens/verify');
+  }
+  if (tool === 'cf_list_api_tokens') {
+    const { page = 1, per_page = 20, direction, include_expired } = args;
+    if (!Number.isSafeInteger(page) || page < 1) throw new Error('page must be a positive integer');
+    if (!Number.isInteger(per_page) || per_page < 5 || per_page > 50) throw new Error('per_page must be an integer from 5 to 50');
+    if (direction !== undefined && !['asc', 'desc'].includes(direction)) throw new Error('direction must be asc or desc');
+    if (include_expired !== undefined && typeof include_expired !== 'boolean') throw new Error('include_expired must be boolean');
+    const query = new URLSearchParams({ page, per_page });
+    if (direction !== undefined) query.set('direction', direction);
+    if (include_expired !== undefined) query.set('include_expired', String(include_expired));
+    // Preserve pagination metadata rather than implying the first page is all tokens.
+    return await cf('GET', `/user/tokens?${query}`, undefined, { envelope: true });
+  }
+
   throw new Error(`Unknown Cloudflare tool: ${tool}`);
 
   // ── EMAIL ROUTING ─────────────────────────────────────────────────────────
-  if (tool === 'cf_get_email_routing') {
-    return await cf('GET', `/zones/${args.zone_id}/email/routing`);
-  }
+
   if (tool === 'cf_enable_email_routing') {
     return await cf('POST', `/zones/${args.zone_id}/email/routing/enable`, {});
   }
@@ -771,12 +792,8 @@ async function execute(tool, args) {
   }
 
   // ── ACCOUNT TOKENS & MEMBERS ─────────────────────────────────────────────
-  if (tool === 'cf_list_api_tokens') {
-    return await cf('GET', `/user/tokens`);
-  }
-  if (tool === 'cf_verify_api_token') {
-    return await cf('GET', `/user/tokens/verify`);
-  }
+
+
   if (tool === 'cf_roll_api_token') {
     return await cf('PUT', `/user/tokens/${args.token_id}/value`, {});
   }

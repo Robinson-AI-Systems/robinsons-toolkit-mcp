@@ -3964,13 +3964,19 @@
       "type": "object",
       "properties": {
         "zone_id": {
-          "type": "string"
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 32,
+          "pattern": "^[a-fA-F0-9]{32}$"
         }
       },
       "required": [
         "zone_id"
       ]
-    }
+    },
+    "risk": "READ",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "cf_enable_email_routing",
@@ -4619,7 +4625,7 @@
   },
   {
     "name": "cf_list_api_tokens",
-    "description": "List all Cloudflare API tokens for the current user.",
+    "description": "List one page of Cloudflare user API tokens, preserving result_info pagination metadata. Requires API Tokens Read or Write permission.",
     "namespace": "cloudflare",
     "tags": [
       "cloudflare",
@@ -4629,9 +4635,34 @@
     ],
     "inputSchema": {
       "type": "object",
-      "properties": {},
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "per_page": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 50,
+          "default": 20
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "asc",
+            "desc"
+          ]
+        },
+        "include_expired": {
+          "type": "boolean"
+        }
+      },
       "required": []
-    }
+    },
+    "risk": "SECURITY_SENSITIVE",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "cf_verify_api_token",
@@ -4648,7 +4679,10 @@
       "type": "object",
       "properties": {},
       "required": []
-    }
+    },
+    "risk": "SECURITY_SENSITIVE",
+    "sideEffects": [],
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "cf_roll_api_token",

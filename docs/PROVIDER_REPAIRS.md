@@ -74,3 +74,26 @@ branches were located after an unconditional unknown-tool throw. The verified
 branch was moved before that throw; other expansion branches were not activated.
 The same pattern occurs across 18 namespaces. See the generated reachability
 report and RECOVERY_STATUS.md. Registry presence is not evidence of reachability.
+
+## Restored Cloudflare reads
+
+Moved only reviewed cf_get_email_routing, cf_list_api_tokens and
+cf_verify_api_token branches before the premature unknown-tool throw. Their
+existing names remain. Email routing validates the zone identifier before HTTP.
+Token listing now accepts documented page/per_page/direction/include_expired
+parameters and returns the provider envelope, including result_info, rather than
+silently stripping pagination. This changes only previously unreachable behavior.
+The shared helper's envelope option is opt-in; existing callers keep their output.
+
+Contract tests exercise all three through Core, including lazy loading, missing
+credentials, input rejection, empty pages, response preservation and authorization
+failure isolation. HTTP is mocked inside tests only. Live provider tests: not run
+— credentials unavailable. Official references checked 2026-09-26:
+- https://developers.cloudflare.com/api/resources/email_routing/methods/get/
+- https://developers.cloudflare.com/api/resources/user/subresources/tokens/methods/list/
+- https://developers.cloudflare.com/api/resources/user/subresources/tokens/methods/verify/
+
+cf_get_all_zone_settings remains disabled. Its bulk endpoint is deprecated in
+https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/;
+a replacement must preserve the requested meaning without pretending to enumerate
+all settings using an incomplete hardcoded list.

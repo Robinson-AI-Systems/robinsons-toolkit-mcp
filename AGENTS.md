@@ -24,7 +24,7 @@ conservative and requires human review for optional/dynamic workflow branches.
 
 Before checkpoint commits: npm test; npm run audit:integrity; current inventory
 and duplicate analysis; no-secret MCP boot; diff/secret review. Strict integrity
-currently reports inherited orphan metadata and repeated dispatches; do not
+currently reports inherited orphan metadata and unreachable expansion code; do not
 suppress them or describe the system as production-ready. Report newly resolved
 and remaining failures separately. Live provider tests without real authorized
 credentials must be marked not run, never simulated as successful live tests.
