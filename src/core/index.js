@@ -1,3 +1,4 @@
+import {randomUUID} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
@@ -12,7 +13,7 @@ import {routeToolCall} from './executor.js';
 import {ResultStore} from './results.js';
 import {appendReceipt} from '../../ledger.js';
 import {ProfileStore,validateProfile,policyAllows} from './profiles.js';
-import {withExecutionContext,currentWorkspace} from './context.js';
+import {withExecutionContext,currentWorkspace,currentExecutionContext} from './context.js';
 export const toolkitRoot=fileURLToPath(new URL('../../',import.meta.url));
 
 /** Transport-independent capability gateway; constructing it imports no handlers. */
@@ -40,6 +41,29 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
     const states={};for(const tool of members){const state=statusFor(tool.name).state;states[state]=(states[state]||0)+1;}
     return {namespace,total:members.length,available:states.AVAILABLE||0,states};
   });
+  async function executeCapability(name,args={},internal=false){
+      if(!byName.has(name))throw Object.assign(new Error(`Unknown capability: ${name}`),{code:'UNKNOWN_TOOL'});
+      if(!args||typeof args!=='object'||Array.isArray(args))throw Object.assign(new Error('args must be an object'),{code:'INVALID_ARGUMENTS'});
+      const resolved=catalog.resolve(name);
+      const canonicalName=resolved.canonical.name;
+      const status=statusFor(canonicalName);
+      if(status.state!==Availability.AVAILABLE)throw Object.assign(new Error(`Capability ${name} unavailable: ${status.state}`),{code:'CAPABILITY_UNAVAILABLE',availability:status});
+      const validationError=validateArgs(name,args,registry);
+      if(validationError)throw Object.assign(new Error(validationError),{code:'INVALID_ARGUMENTS'});
+      const parent=currentExecutionContext();
+      const depth=internal?(parent.depth||0)+1:0;
+      if(depth>32)throw new Error('Workflow nesting limit exceeded');
+      const transactionId=internal?parent.transactionId:randomUUID();
+      const rollback=parent.rollback||canonicalName==='compound_rollback_transaction';
+      try {
+        const result=await withExecutionContext({workspace,writeRoots:selectedProfile?[workspace]:undefined,depth,transactionId,rollback,dispatch:(child,args)=>executeCapability(child,args,true)},()=>routeToolCall(canonicalName,args,handlers,registry,{skipLedger:rollback,appendReceipt:receipt=>appendReceipt({...credentials.redact(receipt),transaction_id:transactionId})}));
+        const output=name===canonicalName?result:withAliasWarning(result,name,canonicalName);
+        return internal?output:results.deliver(output);
+      }catch(error){
+        availability.recordFailure(canonicalName,error);
+        throw Object.assign(new Error(credentials.redact(error.message)),{code:error.code||'EXECUTION_FAILED'});
+      }
+  }
   return {
     registry, metadata, availability, results, profile:selectedProfile, profileStore, workspace,
     get loadedNamespaces(){return handlers.loadedNamespaces;},
@@ -59,22 +83,6 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
       return searchTools(candidates,query,{},limit).map(t=>({name:t.name,description:t.description,namespace:t.namespace,availability:states.get(t.name),whyMatched:'Lexical name, description or tag match'}));
     },
     schema(name){const tool=byName.get(name);return tool?{...tool,availability:statusFor(name)}:undefined;},
-    async execute(name,args={}){
-      if(!byName.has(name))throw Object.assign(new Error(`Unknown capability: ${name}`),{code:'UNKNOWN_TOOL'});
-      if(!args||typeof args!=='object'||Array.isArray(args))throw Object.assign(new Error('args must be an object'),{code:'INVALID_ARGUMENTS'});
-      const resolved=catalog.resolve(name);
-      const canonicalName=resolved.canonical.name;
-      const status=statusFor(canonicalName);
-      if(status.state!==Availability.AVAILABLE)throw Object.assign(new Error(`Capability ${name} unavailable: ${status.state}`),{code:'CAPABILITY_UNAVAILABLE',availability:status});
-      const validationError=validateArgs(name,args,registry);
-      if(validationError)throw Object.assign(new Error(validationError),{code:'INVALID_ARGUMENTS'});
-      try {
-        const result=await withExecutionContext({workspace,writeRoots:selectedProfile?[workspace]:undefined},()=>routeToolCall(canonicalName,args,handlers,registry,{appendReceipt:receipt=>appendReceipt(credentials.redact(receipt))}));
-        return results.deliver(name===canonicalName?result:withAliasWarning(result,name,canonicalName));
-      }catch(error){
-        availability.recordFailure(canonicalName,error);
-        throw Object.assign(new Error(credentials.redact(error.message)),{code:error.code||'EXECUTION_FAILED'});
-      }
-    }
+    execute:(name,args)=>executeCapability(name,args)
   };
 }

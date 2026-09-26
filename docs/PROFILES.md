@@ -20,9 +20,9 @@ Workspace context is asynchronous-call-local, including local handler defaults,
 compound defaults, ledger paths and default result-store partitions. Guarded local
 writes in a profile cannot use global ALLOWED_WRITE_PATHS to cross the profile root.
 
-This is capability admission and workspace selection, not an OS sandbox. Arbitrary
-commands, unguarded compound file writes and dynamic workflow children still need
-stronger isolation and enforcement. Provider account defaults, credential references
+This is capability admission and workspace selection, not an OS sandbox. Compound child dispatch through Core also applies policy to dynamic children.
+Arbitrary commands and unguarded compound file writes still need stronger OS
+isolation and filesystem enforcement. Provider account defaults, credential references
 and keychain/secret-manager integration are not implemented in this profile format.
 No credential selection is implied by switching profiles. Credentials still come
 from the configured environment. Windows/macOS execution is not certified here.

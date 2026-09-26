@@ -1,4 +1,4 @@
-import { currentWorkspace } from '../src/core/context.js';
+import { currentWorkspace, currentDispatcher } from '../src/core/context.js';
 /**
  * Compound Handler — 36 macro tools
  * Cross-service Super Tools that orchestrate multiple APIs in a single call.
@@ -13,6 +13,8 @@ import { readLedger, markRolledBack } from '../ledger.js';
 
 
 async function loadHandler(name) {
+  const dispatch = currentDispatcher();
+  if (dispatch) return { execute: (tool, args) => dispatch(tool, args) };
   const { default: handler } = await import(`./${name}.js`);
   return handler;
 }
@@ -567,6 +569,7 @@ async function execute(tool, args) {
       try {
         const handler = await loadHandler(ns);
         const result = await handler.execute(step.inverse, step.inverse_args);
+        if (result?.success === false || result?.operationFailed === true) throw new Error('Inverse operation reported failure');
         executed.push({ id: step.id, inverse: step.inverse, result });
         markRolledBack(step.id);
       } catch (e) {
@@ -575,6 +578,7 @@ async function execute(tool, args) {
     }
 
     return {
+      success: failed.length === 0 && skipped.length === 0,
       reversed: executed.length,
       failed: failed.length,
       skipped_non_reversible: skipped.length,

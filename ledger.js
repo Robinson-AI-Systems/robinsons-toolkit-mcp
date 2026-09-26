@@ -19,10 +19,11 @@ const ledgerPath = () => join(currentWorkspace(), '.toolkit-ledger.jsonl');
 
 export const LEDGER_FILE = ledgerPath();
 
-export function appendReceipt({ tool_name, args, result, inverse, reversible = true, notes }) {
+export function appendReceipt({ tool_name, args, result, inverse, reversible = true, notes, transaction_id }) {
   const entry = {
     id: randomUUID(),
     timestamp: new Date().toISOString(),
+    transaction_id,
     tool_name,
     args,
     result_summary: summarize(result),
@@ -47,7 +48,7 @@ export function readLedger({ limit, since, transaction_id, include_rolled_back =
   }).filter(Boolean);
   if (!include_rolled_back) entries = entries.filter(e => !e.rolled_back);
   if (since) entries = entries.filter(e => e.timestamp >= since);
-  if (transaction_id) entries = entries.filter(e => e.id === transaction_id);
+  if (transaction_id) entries = entries.filter(e => e.transaction_id === transaction_id || e.id === transaction_id);
   if (limit) entries = entries.slice(-limit);
   return entries;
 }

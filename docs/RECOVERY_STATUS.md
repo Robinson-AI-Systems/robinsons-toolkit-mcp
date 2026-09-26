@@ -154,3 +154,15 @@ across concurrent Core instances, including guarded local writes and result
 partitions. Alias names cannot bypass canonical admission rules. Forty-five tests
 pass, including real concurrent writes, cross-workspace rejection and cross-process
 CLI profile selection. See PROFILES.md for credential and sandbox limitations.
+
+## Compound dispatch through Core
+
+Compound child calls now pass through Core validation, alias resolution,
+availability, profile admission and ledger routing. Intermediate responses remain
+raw for trusted workflow logic; only external responses enter the result broker.
+Children share a transaction ID in existing receipts, and rollback inverse calls
+do not create another chain of inverse receipts. Legacy rollback now reports
+failure for failed or irreversible steps and does not mark failed inverses undone.
+Forty-eight tests pass, including dynamic policy bypass prevention, bounded final
+outputs with intact intermediates and grouped child receipts. This does not yet
+certify every inverse or provide complete transaction logging for all mutations.
