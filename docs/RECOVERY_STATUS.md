@@ -60,3 +60,14 @@ repeated dispatch names. Full sandboxing/credential isolation, profiles,
 transaction semantics, deeper duplicate canonicalization, hybrid discovery and
 modern MCP transport migration remain incomplete. Do not interpret these
 checkpoints as full production readiness.
+
+## Security increment — local execution
+
+Local subprocesses now receive an allowlisted environment. Existing guarded local
+file writes reject sibling-prefix escapes, symlink escapes and dangling symlinks;
+file moves validate the source too. Twenty-four tests pass, including three new
+security regressions using real subprocesses and filesystem operations.
+Inventory remains 3,049 registry names, 31 namespaces, 440 duplicate candidates;
+MCP remains six broker tools / 2,442 schema bytes with zero direct provider schemas.
+Strict integrity still fails on the same nine orphan names and nine repeated
+dispatch names. See SECURITY_STATUS.md for the substantial remaining security work.
