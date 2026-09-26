@@ -134,3 +134,14 @@ warns and is excluded from discovery. See migrations/cloudflare-zone-settings.md
 for the intentional input/output contract change. The migration tracker records
 completed changes and concrete outstanding blockers. Thirty-eight tests pass;
 directly unreachable registered names fall to 484. Full integrity still fails.
+
+## Shared validation, canonical aliases and generated catalog
+
+Complete registered JSON Schema validation now enforces nested constraints without
+coercing caller arguments. Formal catalog resolution validates aliases and routes
+legacy names to their canonical implementation. Forty-two tests pass, including
+real local alias operations and all-schema compilation. Current reports under
+reports/catalog distinguish canonical entries, aliases, namespaces, risk review,
+zero-credential availability and MCP exposure. CI checks generated freshness.
+See REQUIREMENTS_STATUS.md for the original-request acceptance review and ALIASES.md
+for compatibility response details. Full integrity remains failing.

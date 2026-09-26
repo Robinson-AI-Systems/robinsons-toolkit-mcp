@@ -2,6 +2,8 @@ import {fileURLToPath} from 'node:url';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {loadRegistry} from './registry.js';
+import {buildCatalog,withAliasWarning} from './catalog.js';
+import {validateArgs} from './validation.js';
 import {createHandlerLoader} from './handlers.js';
 import {CapabilityAvailability,Availability} from './capabilities.js';
 import {EnvironmentCredentials} from './credentials.js';
@@ -14,12 +16,9 @@ export const toolkitRoot=fileURLToPath(new URL('../../',import.meta.url));
 /** Transport-independent capability gateway; constructing it imports no handlers. */
 export async function createToolkit({root=toolkitRoot,credentials=new EnvironmentCredentials(),packageExists,resultOptions={}}={}) {
   const results=new ResultStore({inlineBytes:Number(process.env.RT_MAX_INLINE_BYTES||16384),inlineRecords:Number(process.env.RT_MAX_INLINE_RECORDS||100),...resultOptions,redact:value=>credentials.redact(value)});
-  const registry=loadRegistry(root);
-  const byName=new Map();
-  for(const tool of registry){
-    if(byName.has(tool.name))throw new Error(`Duplicate canonical tool: ${tool.name}`);
-    byName.set(tool.name,tool);
-  }
+  const catalog=buildCatalog(loadRegistry(root));
+  const registry=catalog.entries;
+  const byName=catalog.byName;
   const metadata=JSON.parse(readFileSync(join(root,'src/core/capability-metadata.json'),'utf8')).capabilities;
   const handlers=createHandlerLoader(root);
   const availability=new CapabilityAvailability(metadata,{credentials,packageExists});
@@ -50,13 +49,17 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
     async execute(name,args={}){
       if(!byName.has(name))throw Object.assign(new Error(`Unknown capability: ${name}`),{code:'UNKNOWN_TOOL'});
       if(!args||typeof args!=='object'||Array.isArray(args))throw Object.assign(new Error('args must be an object'),{code:'INVALID_ARGUMENTS'});
-      const status=availability.get(name);
+      const resolved=catalog.resolve(name);
+      const canonicalName=resolved.canonical.name;
+      const status=availability.get(canonicalName);
       if(status.state!==Availability.AVAILABLE)throw Object.assign(new Error(`Capability ${name} unavailable: ${status.state}`),{code:'CAPABILITY_UNAVAILABLE',availability:status});
+      const validationError=validateArgs(name,args,registry);
+      if(validationError)throw Object.assign(new Error(validationError),{code:'INVALID_ARGUMENTS'});
       try {
-        const result=await routeToolCall(name,args,handlers,registry,{appendReceipt:receipt=>appendReceipt(credentials.redact(receipt))});
-        return results.deliver(result);
+        const result=await routeToolCall(canonicalName,args,handlers,registry,{appendReceipt:receipt=>appendReceipt(credentials.redact(receipt))});
+        return results.deliver(name===canonicalName?result:withAliasWarning(result,name,canonicalName));
       }catch(error){
-        availability.recordFailure(name,error);
+        availability.recordFailure(canonicalName,error);
         throw Object.assign(new Error(credentials.redact(error.message)),{code:error.code||'EXECUTION_FAILED'});
       }
     }

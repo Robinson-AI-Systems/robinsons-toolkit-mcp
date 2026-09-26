@@ -1,7 +1,7 @@
 {
   "name": "robinsons-toolkit-mcp",
   "version": "2.0.0",
-  "description": "Robinson's Toolkit MCP Server - 1400+ tools across 28 categories",
+  "description": "Robinson's Toolkit capability Core with lean MCP and CLI adapters",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "audit": "node audit.js",
     "audit:integrity": "node scripts/check-integrity.mjs",
     "audit:baseline": "node scripts/baseline.mjs",
-    "audit:metadata": "node scripts/generate-capabilities.mjs --check"
+    "audit:metadata": "node scripts/generate-capabilities.mjs --check",
+    "catalog:generate": "node scripts/generate-catalog.mjs",
+    "catalog:check": "node scripts/generate-catalog.mjs --check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

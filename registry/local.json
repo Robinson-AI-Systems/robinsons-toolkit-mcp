@@ -617,7 +617,9 @@
       "required": [
         "path"
       ]
-    }
+    },
+    "aliasOf": "local_make_directory",
+    "deprecated": true
   },
   {
     "name": "local_delete_directory",
@@ -840,7 +842,9 @@
         }
       },
       "required": []
-    }
+    },
+    "aliasOf": "local_find_files",
+    "deprecated": true
   },
   {
     "name": "local_read_env_file",
@@ -966,7 +970,9 @@
         "key",
         "value"
       ]
-    }
+    },
+    "aliasOf": "local_update_env_var",
+    "deprecated": true
   },
   {
     "name": "local_get_system_info",

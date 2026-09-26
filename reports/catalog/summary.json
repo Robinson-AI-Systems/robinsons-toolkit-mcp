@@ -1,0 +1,64 @@
+{
+  "registryNames": 3050,
+  "canonicalCapabilities": 3046,
+  "aliases": 4,
+  "namespaces": 31,
+  "byNamespace": {
+    "anthropic": 64,
+    "clerk": 102,
+    "cloudflare": 187,
+    "compound": 46,
+    "context7": 45,
+    "fly": 116,
+    "gemini": 31,
+    "github": 311,
+    "google": 158,
+    "linear": 64,
+    "local": 84,
+    "mapbox": 51,
+    "moonshot": 17,
+    "n8n": 79,
+    "neon": 204,
+    "ollama": 16,
+    "openai": 133,
+    "playwright": 47,
+    "postgres": 111,
+    "qdrant": 71,
+    "resend": 52,
+    "sam": 21,
+    "search": 30,
+    "sentry": 104,
+    "slack": 69,
+    "stripe": 202,
+    "supabase": 127,
+    "twilio": 115,
+    "upstash": 197,
+    "vercel": 181,
+    "voyage": 11
+  },
+  "risk": {
+    "READ": 4,
+    "SECURITY_SENSITIVE": 3,
+    "UNREVIEWED": 3039
+  },
+  "zeroCredentialAvailability": {
+    "AVAILABLE": 80,
+    "DISABLED": 485,
+    "MISSING_CONFIGURATION": 246,
+    "MISSING_CREDENTIALS": 2235
+  },
+  "availabilityAssumptions": "Empty credential environment; optional packages assumed absent; no provider probes.",
+  "mcp": {
+    "advertisedTools": 6,
+    "advertisedSchemaBytes": 2442,
+    "providerSchemasAdvertisedDirectly": 0
+  },
+  "integrity": {
+    "duplicateNames": 0,
+    "repeatedDispatchNames": 0,
+    "registryWithoutHandler": 0,
+    "handlerWithoutRegistry": 7,
+    "findings": 489
+  },
+  "certification": "Counts describe catalog structure, not upstream correctness or production readiness."
+}
