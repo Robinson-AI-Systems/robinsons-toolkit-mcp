@@ -145,3 +145,12 @@ reports/catalog distinguish canonical entries, aliases, namespaces, risk review,
 zero-credential availability and MCP exposure. CI checks generated freshness.
 See REQUIREMENTS_STATUS.md for the original-request acceptance review and ALIASES.md
 for compatibility response details. Full integrity remains failing.
+
+## Workspace profiles and admission policy
+
+Profile create/list/use commands persist workspace selection and explicit
+capability allow/deny rules. Asynchronous execution context isolates workspaces
+across concurrent Core instances, including guarded local writes and result
+partitions. Alias names cannot bypass canonical admission rules. Forty-five tests
+pass, including real concurrent writes, cross-workspace rejection and cross-process
+CLI profile selection. See PROFILES.md for credential and sandbox limitations.

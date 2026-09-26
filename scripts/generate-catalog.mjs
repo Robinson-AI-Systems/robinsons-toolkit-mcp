@@ -4,7 +4,7 @@ import {createToolkit,toolkitRoot} from '../src/core/index.js';
 import {EnvironmentCredentials} from '../src/core/credentials.js';
 import {inventory,duplicateCandidates} from './inventory.mjs';
 import {PINNED_TOOLS} from '../src/adapters/mcp/surface.js';
-const core=await createToolkit({credentials:new EnvironmentCredentials({}),packageExists:()=>false});
+const core=await createToolkit({credentials:new EnvironmentCredentials({}),packageExists:()=>false,profile:null});
 const inventoryData=inventory(toolkitRoot);
 const canonical=core.registry.filter(t=>!t.aliasOf);
 const aliases=core.registry.filter(t=>t.aliasOf);

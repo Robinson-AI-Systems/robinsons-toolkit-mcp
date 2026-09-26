@@ -4,7 +4,7 @@ import {createToolkit} from '../src/core/index.js';
 import {PINNED_TOOLS} from '../src/adapters/mcp/surface.js';
 import {auditToolkit} from '../src/core/audit.js';
 
-const usage={commands:['search <intent> [--limit N] [--include-unavailable] [--json]','schema <tool> [--json]','exec <tool> --json <arguments-object>','namespaces [--json]','doctor [--json]','auth status [--json]','audit [duplicates] [--json]','mcp inspect [--json]','result read <id> [--cursor N] [--limit N]','result search <id> <query> [--cursor N] [--limit N]','serve'],exitCodes:{0:'success',2:'invalid input or unknown tool',3:'capability unavailable',4:'execution failure',5:'integrity failure'}};
+const usage={commands:['search <intent> [--limit N] [--include-unavailable] [--json]','schema <tool> [--json]','exec <tool> --json <arguments-object>','namespaces [--json]','doctor [--json]','auth status [--json]','audit [duplicates] [--json]','mcp inspect [--json]','result read <id> [--cursor N] [--limit N]','result search <id> <query> [--cursor N] [--limit N]','profile list [--json]','profile create <name> --json <profile-object>','profile use <name> [--json]','serve'],exitCodes:{0:'success',2:'invalid input or unknown tool',3:'capability unavailable',4:'execution failure',5:'integrity failure'}};
 let core;
 try {
   const argv=process.argv.slice(2);
@@ -15,7 +15,7 @@ try {
     for(let i=0;i<argv.length;i++){
       const arg=argv[i];
       if(arg==='--json'){
-        if(argv[0]==='exec'){
+        if(argv[0]==='exec'||(argv[0]==='profile'&&argv[1]==='create')){
           if(jsonArgs!==undefined||argv[i+1]===undefined)throw new Error('exec requires one --json arguments object');
           jsonArgs=JSON.parse(argv[++i]);
         }
@@ -29,7 +29,7 @@ try {
     }
     const [command,...args]=positionals;
     const arity=(min,max=min)=>{if(args.length<min||args.length>max)throw new Error('Invalid arguments for '+command);};
-    core=await createToolkit();
+    core=await createToolkit(command==='profile'?{profile:null}:{});
     let result;
     switch(command){
       case 'search':arity(1,Infinity);result=core.search(args.join(' '),limit??8,{includeUnavailable});break;
@@ -44,6 +44,12 @@ try {
         if(args[0]==='read'){arity(2);result=core.results.read(args[1],{cursor,limit:limit??4096});}
         else if(args[0]==='search'){arity(3);result=core.results.search(args[1],args[2],{cursor,limit:limit??10});}
         else throw new Error('Use result read or result search');
+        break;
+      case 'profile':
+        if(args[0]==='list'){arity(1);result={profiles:core.profileStore.list(),active:core.profileStore.active()?.name||null};}
+        else if(args[0]==='use'){arity(2);result=core.profileStore.use(args[1]);}
+        else if(args[0]==='create'){arity(2);if(!jsonArgs||typeof jsonArgs!=='object'||Array.isArray(jsonArgs))throw new Error('profile create requires --json with a profile object');result=core.profileStore.create({...jsonArgs,name:args[1]});}
+        else throw new Error('Use profile list, create, or use');
         break;
       case 'serve':arity(0);await import('../index.js');break;
       default:throw new Error('Unknown command: '+command);

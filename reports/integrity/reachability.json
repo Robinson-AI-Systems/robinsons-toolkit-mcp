@@ -1091,7 +1091,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 980,
+      "line": 982,
       "rule": "unreachable-dispatch",
       "name": "local_docker_list_containers",
       "disposition": "disabled-until-reviewed",
@@ -1099,7 +1099,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 986,
+      "line": 988,
       "rule": "unreachable-dispatch",
       "name": "local_docker_start",
       "disposition": "disabled-until-reviewed",
@@ -1107,7 +1107,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 990,
+      "line": 992,
       "rule": "unreachable-dispatch",
       "name": "local_docker_stop",
       "disposition": "disabled-until-reviewed",
@@ -1115,7 +1115,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 994,
+      "line": 996,
       "rule": "unreachable-dispatch",
       "name": "local_docker_restart",
       "disposition": "disabled-until-reviewed",
@@ -1123,7 +1123,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 998,
+      "line": 1000,
       "rule": "unreachable-dispatch",
       "name": "local_docker_logs",
       "disposition": "disabled-until-reviewed",
@@ -1131,7 +1131,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1004,
+      "line": 1006,
       "rule": "unreachable-dispatch",
       "name": "local_docker_exec",
       "disposition": "disabled-until-reviewed",
@@ -1139,7 +1139,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1010,
+      "line": 1012,
       "rule": "unreachable-dispatch",
       "name": "local_docker_list_images",
       "disposition": "disabled-until-reviewed",
@@ -1147,7 +1147,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1015,
+      "line": 1017,
       "rule": "unreachable-dispatch",
       "name": "local_docker_pull",
       "disposition": "disabled-until-reviewed",
@@ -1155,7 +1155,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1021,
+      "line": 1023,
       "rule": "unreachable-dispatch",
       "name": "local_docker_compose_up",
       "disposition": "disabled-until-reviewed",
@@ -1163,7 +1163,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1027,
+      "line": 1029,
       "rule": "unreachable-dispatch",
       "name": "local_docker_compose_down",
       "disposition": "disabled-until-reviewed",
@@ -1171,7 +1171,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1032,
+      "line": 1034,
       "rule": "unreachable-dispatch",
       "name": "local_docker_compose_logs",
       "disposition": "disabled-until-reviewed",
@@ -1179,7 +1179,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1040,
+      "line": 1042,
       "rule": "unreachable-dispatch",
       "name": "local_kill_process",
       "disposition": "disabled-until-reviewed",
@@ -1187,7 +1187,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1047,
+      "line": 1049,
       "rule": "unreachable-dispatch",
       "name": "local_get_process_by_name",
       "disposition": "disabled-until-reviewed",
@@ -1195,7 +1195,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1060,
+      "line": 1062,
       "rule": "unreachable-dispatch",
       "name": "local_zip_files",
       "disposition": "disabled-until-reviewed",
@@ -1203,7 +1203,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1067,
+      "line": 1069,
       "rule": "unreachable-dispatch",
       "name": "local_unzip",
       "disposition": "disabled-until-reviewed",
@@ -1211,7 +1211,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1074,
+      "line": 1076,
       "rule": "unreachable-dispatch",
       "name": "local_tar_create",
       "disposition": "disabled-until-reviewed",
@@ -1219,7 +1219,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1082,
+      "line": 1084,
       "rule": "unreachable-dispatch",
       "name": "local_tar_extract",
       "disposition": "disabled-until-reviewed",
@@ -1227,7 +1227,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1092,
+      "line": 1094,
       "rule": "unreachable-dispatch",
       "name": "local_ping",
       "disposition": "disabled-until-reviewed",
@@ -1235,7 +1235,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1103,
+      "line": 1105,
       "rule": "unreachable-dispatch",
       "name": "local_curl",
       "disposition": "disabled-until-reviewed",
@@ -1243,7 +1243,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1119,
+      "line": 1121,
       "rule": "unreachable-dispatch",
       "name": "local_check_ports",
       "disposition": "disabled-until-reviewed",
@@ -1251,7 +1251,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1136,
+      "line": 1138,
       "rule": "unreachable-dispatch",
       "name": "local_systemctl_status",
       "disposition": "disabled-until-reviewed",
@@ -1259,7 +1259,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1147,
+      "line": 1149,
       "rule": "unreachable-dispatch",
       "name": "local_systemctl_restart",
       "disposition": "disabled-until-reviewed",
@@ -1267,7 +1267,7 @@
     },
     {
       "file": "handlers/local.js",
-      "line": 1154,
+      "line": 1156,
       "rule": "unreachable-dispatch",
       "name": "local_systemctl_logs",
       "disposition": "disabled-until-reviewed",

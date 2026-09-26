@@ -1,3 +1,4 @@
+import { currentWorkspace } from './src/core/context.js';
 /**
  * Observability Ledger — append-only transaction log
  *
@@ -14,10 +15,9 @@ import { appendFileSync, readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { randomUUID } from 'crypto';
 
-const WORKSPACE = process.env.WORKSPACE_ROOT || process.cwd();
-const LEDGER_PATH = join(WORKSPACE, '.toolkit-ledger.jsonl');
+const ledgerPath = () => join(currentWorkspace(), '.toolkit-ledger.jsonl');
 
-export const LEDGER_FILE = LEDGER_PATH;
+export const LEDGER_FILE = ledgerPath();
 
 export function appendReceipt({ tool_name, args, result, inverse, reversible = true, notes }) {
   const entry = {
@@ -32,7 +32,7 @@ export function appendReceipt({ tool_name, args, result, inverse, reversible = t
     notes
   };
   try {
-    appendFileSync(LEDGER_PATH, JSON.stringify(entry) + '\n', 'utf-8');
+    appendFileSync(ledgerPath(), JSON.stringify(entry) + '\n', 'utf-8');
   } catch (e) {
     console.error(`Ledger append failed: ${e.message}`);
   }
@@ -40,8 +40,8 @@ export function appendReceipt({ tool_name, args, result, inverse, reversible = t
 }
 
 export function readLedger({ limit, since, transaction_id, include_rolled_back = false } = {}) {
-  if (!existsSync(LEDGER_PATH)) return [];
-  const lines = readFileSync(LEDGER_PATH, 'utf-8').split('\n').filter(Boolean);
+  if (!existsSync(ledgerPath())) return [];
+  const lines = readFileSync(ledgerPath(), 'utf-8').split('\n').filter(Boolean);
   let entries = lines.map(line => {
     try { return JSON.parse(line); } catch { return null; }
   }).filter(Boolean);
@@ -53,9 +53,9 @@ export function readLedger({ limit, since, transaction_id, include_rolled_back =
 }
 
 export function markRolledBack(ids) {
-  if (!existsSync(LEDGER_PATH)) return 0;
+  if (!existsSync(ledgerPath())) return 0;
   const idSet = new Set(Array.isArray(ids) ? ids : [ids]);
-  const lines = readFileSync(LEDGER_PATH, 'utf-8').split('\n').filter(Boolean);
+  const lines = readFileSync(ledgerPath(), 'utf-8').split('\n').filter(Boolean);
   let count = 0;
   const updated = lines.map(line => {
     try {
@@ -68,7 +68,7 @@ export function markRolledBack(ids) {
       return JSON.stringify(entry);
     } catch { return line; }
   });
-  writeFileSync(LEDGER_PATH, updated.join('\n') + '\n', 'utf-8');
+  writeFileSync(ledgerPath(), updated.join('\n') + '\n', 'utf-8');
   return count;
 }
 

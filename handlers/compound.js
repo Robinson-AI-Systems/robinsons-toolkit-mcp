@@ -1,3 +1,4 @@
+import { currentWorkspace } from '../src/core/context.js';
 /**
  * Compound Handler — 36 macro tools
  * Cross-service Super Tools that orchestrate multiple APIs in a single call.
@@ -9,7 +10,7 @@ import { join } from 'path';
 import { execSync } from 'child_process';
 import { readLedger, markRolledBack } from '../ledger.js';
 
-const WORKSPACE = process.env.WORKSPACE_ROOT || process.cwd();
+
 
 async function loadHandler(name) {
   const { default: handler } = await import(`./${name}.js`);
@@ -36,7 +37,7 @@ async function execute(tool, args) {
       results.connection_string = connInfo.connection_string;
       results.steps.push({ step: 'connection_string', success: true, host: connInfo.host });
       if (connInfo.connection_string) {
-        const envPath = env_file_path ? join(WORKSPACE, env_file_path) : join(WORKSPACE, '.env.local');
+        const envPath = env_file_path ? join(currentWorkspace(), env_file_path) : join(currentWorkspace(), '.env.local');
         let content = existsSync(envPath) ? readFileSync(envPath, 'utf-8') : '';
         const newLine = `DATABASE_URL=${connInfo.connection_string}`;
         if (/^DATABASE_URL=.*/m.test(content)) content = content.replace(/^DATABASE_URL=.*/m, newLine);
@@ -45,7 +46,7 @@ async function execute(tool, args) {
         results.steps.push({ step: 'env_updated', success: true, path: envPath });
       }
       if (run_migrations && connInfo.connection_string) {
-        const result = execSync(migration_command, { cwd: WORKSPACE, env: { ...process.env, DATABASE_URL: connInfo.connection_string }, timeout: 120000, encoding: 'utf-8' });
+        const result = execSync(migration_command, { cwd: currentWorkspace(), env: { ...process.env, DATABASE_URL: connInfo.connection_string }, timeout: 120000, encoding: 'utf-8' });
         results.steps.push({ step: 'migrations', success: true, output: result.slice(0, 1000) });
       }
     } catch (e) { results.steps.push({ step: 'neon_or_env', success: false, error: e.message }); }
@@ -58,7 +59,7 @@ async function execute(tool, args) {
     const { vercel_project_id, git_push = false, project_path } = args;
     const results = { steps: [] };
     if (git_push && project_path) {
-      try { execSync('git push', { cwd: join(WORKSPACE, project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
+      try { execSync('git push', { cwd: join(currentWorkspace(), project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
       catch (e) { results.steps.push({ step: 'git_push', success: false, error: e.message }); }
     }
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -144,7 +145,7 @@ async function execute(tool, args) {
   // ── GIT COMMIT AND PUSH ────────────────────────────────────────────────────
   if (tool === 'compound_git_commit_push') {
     const { project_path, message, files = '.', branch } = args;
-    const cwd = join(WORKSPACE, project_path || '');
+    const cwd = join(currentWorkspace(), project_path || '');
     const steps = [];
     try { execSync(`git add ${files}`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git add', success: true }); } catch (e) { steps.push({ step: 'git add', success: false, error: e.message }); return { steps }; }
     try { const out = execSync(`git commit -m "${message.replace(/"/g, '\\"')}"`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git commit', success: true, output: out.trim() }); }
@@ -237,7 +238,7 @@ async function execute(tool, args) {
     const results = { version, steps: [] };
 
     if (git_push && project_path) {
-      try { execSync('git push', { cwd: join(WORKSPACE, project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
+      try { execSync('git push', { cwd: join(currentWorkspace(), project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
       catch (e) { results.steps.push({ step: 'git_push', success: false, error: e.message }); }
     }
 

@@ -34,3 +34,8 @@ unsupported commands fail explicitly and are not advertised as functional.
 
 Stored result retrieval is now implemented: `rt result read <id>` and
 `rt result search <id> <query>`, with --cursor and --limit. See RESULTS.md.
+
+Workspace profile management is implemented: `rt profile create <name> --json
+<profile-object>`, `rt profile list`, and `rt profile use <name>`. See PROFILES.md
+for policy patterns, restart behavior and limitations. Transaction commands remain
+pending until their execution and rollback semantics are safe.

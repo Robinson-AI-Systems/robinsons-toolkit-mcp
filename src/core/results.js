@@ -1,3 +1,4 @@
+import {currentWorkspace} from './context.js';
 import {mkdirSync,lstatSync,openSync,closeSync,writeFileSync,readFileSync,readSync,fstatSync,readdirSync,unlinkSync,constants} from 'node:fs';
 import {resolve,join} from 'node:path';
 import {homedir} from 'node:os';
@@ -5,7 +6,7 @@ import {randomUUID,createHash} from 'node:crypto';
 const validId=/^res_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
 const fail=(message,code='INVALID_ARGUMENTS')=>Object.assign(new Error(message),{code});
 export function defaultResultDirectory(){
- const workspace=resolve(process.env.WORKSPACE_ROOT||process.cwd());
+ const workspace=resolve(currentWorkspace());
  return join(process.env.TOOLKIT_STATE_DIR||join(homedir(),'.local','state','robinsons-toolkit'),createHash('sha256').update(workspace).digest('hex').slice(0,20),'results');
 }
 export class ResultStore {

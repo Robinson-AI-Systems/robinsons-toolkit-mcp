@@ -1,8 +1,9 @@
+import { currentWorkspace, currentWriteRoots } from '../src/core/context.js';
 /**
  * Local Machine Handler — 61 tools
  * Complete local PC bridge: filesystem, git, npm/node,
  * environment, processes, system info, and Super Tools.
- * Runs in WSL2/Linux, WORKSPACE_ROOT scopes all relative paths.
+ * Runs in WSL2/Linux, currentWorkspace() scopes all relative paths.
  */
 
 import { execSync } from '../src/core/sandbox/restricted-host.js';
@@ -18,20 +19,21 @@ import { memoryUsage, cpuUsage } from '../src/core/system-metrics.js';
 import { assertWriteAllowed } from '../src/core/sandbox/restricted-host.js';
 
 const execAsync = promisify(exec);
-const WORKSPACE_ROOT = process.env.WORKSPACE_ROOT || process.cwd();
+
 
 function resolvePath(p) {
-  if (!p) return WORKSPACE_ROOT;
+  if (!p) return currentWorkspace();
   if (p.match(/^[A-Za-z]:\\/)) return p; // Absolute Windows path
   if (p.startsWith('/')) return p;         // Absolute Unix path
-  return join(WORKSPACE_ROOT, p);          // Relative to workspace
+  return join(currentWorkspace(), p);          // Relative to workspace
 }
 
 function checkWriteAllowed(p) {
+  if (currentWriteRoots()) return assertWriteAllowed(p, currentWriteRoots());
   const allowed = process.env.ALLOWED_WRITE_PATHS;
   const roots = allowed
     ? allowed.split(',').map(s => s.trim()).filter(Boolean).map(p => resolve(p))
-    : [WORKSPACE_ROOT];
+    : [currentWorkspace()];
   assertWriteAllowed(p, roots);
 }
 
@@ -46,7 +48,7 @@ function isBinary(buffer) {
 }
 
 async function git(command, cwd) {
-  const { stdout, stderr } = await execAsync(`git ${command}`, { cwd: cwd || WORKSPACE_ROOT });
+  const { stdout, stderr } = await execAsync(`git ${command}`, { cwd: cwd || currentWorkspace() });
   return { stdout: stdout.trim(), stderr: stderr.trim() };
 }
 
@@ -56,7 +58,7 @@ async function execute(tool, args) {
   if (tool === 'local_run_command') {
     const { command, cwd, timeout_ms = 30000 } = args;
     if (!command) throw new Error('command is required');
-    const workdir = cwd ? resolvePath(cwd) : WORKSPACE_ROOT;
+    const workdir = cwd ? resolvePath(cwd) : currentWorkspace();
     try {
       const { stdout, stderr } = await execAsync(command, {
         cwd: workdir, timeout: timeout_ms,
@@ -562,7 +564,7 @@ async function execute(tool, args) {
     ]);
     const diskParts = diskInfo.stdout.trim().split(/\s+/);
     return {
-      workspace_root: WORKSPACE_ROOT, platform: process.platform, arch: process.arch,
+      workspace_root: currentWorkspace(), platform: process.platform, arch: process.arch,
       node_version: nodeVer.stdout.trim(), npm_version: npmVer.stdout.trim(), git_version: gitVer.stdout.trim(),
       disk_total: diskParts[1] || 'unknown', disk_used: diskParts[2] || 'unknown', disk_available: diskParts[3] || 'unknown',
       env_vars_set: Object.keys(process.env).length, cwd: process.cwd()
@@ -781,7 +783,7 @@ async function execute(tool, args) {
   if (tool === 'local_git_clone') {
     const { url, directory, depth } = args;
     if (!url) throw new Error('url is required');
-    const cwd = directory ? resolvePath(directory) : WORKSPACE_ROOT;
+    const cwd = directory ? resolvePath(directory) : currentWorkspace();
     const depthFlag = depth ? ` --depth ${depth}` : '';
     const { stdout, stderr } = await execAsync(`git clone${depthFlag} "${url}"`, { cwd, timeout: 120000 });
     return { success: true, url, output: (stdout + stderr).trim(), destination: cwd };
