@@ -50,6 +50,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
       if(status.state!==Availability.AVAILABLE)throw Object.assign(new Error(`Capability ${name} unavailable: ${status.state}`),{code:'CAPABILITY_UNAVAILABLE',availability:status});
       const validationError=validateArgs(name,args,registry);
       if(validationError)throw Object.assign(new Error(validationError),{code:'INVALID_ARGUMENTS'});
+      credentials.rememberSecrets?.(args);
       const parent=currentExecutionContext();
       const depth=internal?(parent.depth||0)+1:0;
       if(depth>32)throw new Error('Workflow nesting limit exceeded');
@@ -57,6 +58,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
       const rollback=parent.rollback||canonicalName==='compound_rollback_transaction';
       try {
         const result=await withExecutionContext({workspace,writeRoots:selectedProfile?[workspace]:undefined,depth,transactionId,rollback,dispatch:(child,args)=>executeCapability(child,args,true)},()=>routeToolCall(canonicalName,args,handlers,registry,{skipLedger:rollback,appendReceipt:receipt=>appendReceipt({...credentials.redact(receipt),transaction_id:transactionId})}));
+        credentials.rememberSecrets?.(result);
         const output=name===canonicalName?result:withAliasWarning(result,name,canonicalName);
         return internal?output:results.deliver(output);
       }catch(error){

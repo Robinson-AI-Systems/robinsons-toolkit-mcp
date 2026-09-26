@@ -166,3 +166,11 @@ failure for failed or irreversible steps and does not mark failed inverses undon
 Forty-eight tests pass, including dynamic policy bypass prevention, bounded final
 outputs with intact intermediates and grouped child receipts. This does not yet
 certify every inverse or provide complete transaction logging for all mutations.
+
+### Generated-secret redaction
+
+Core now remembers sensitive input/result fields so newly issued credentials and
+connection strings are redacted from public results, receipts, and later error
+messages. Internal workflow values remain usable without exposing them to clients.
+Fifty offline tests pass, including nested generated-secret and environment-setter
+cases. This is defense in depth; provider modules still require credential isolation.
