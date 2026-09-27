@@ -197,3 +197,12 @@ All broker input schemas now use shared validation. Fifty-six offline tests pass
 receipt coverage remains limited to the legacy inverse map, and provider rollback
 was not tested live. The locked legacy MCP SDK remains in place pending the
 separate modern transport compatibility checkpoint.
+
+### Optional modern MCP adapter
+
+Added pinned SDK v2 support through an optional adapter while keeping existing
+stdio behavior as the default. Both adapters share broker execution and schemas.
+The v2 adapter serves legacy and modern stdio and supplies an HTTP fetch adapter
+that requires host-provided authorization. Tests use real SDK clients for both
+stdio eras and modern in-process HTTP; actual agent applications and deployed
+HTTP/OAuth remain uncertified. No remote listener is enabled automatically.

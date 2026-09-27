@@ -4,7 +4,7 @@ import {createToolkit} from '../src/core/index.js';
 import {PINNED_TOOLS} from '../src/adapters/mcp/surface.js';
 import {auditToolkit} from '../src/core/audit.js';
 
-const usage={commands:['search <intent> [--limit N] [--include-unavailable] [--json]','schema <tool> [--json]','exec <tool> --json <arguments-object>','namespaces [--json]','doctor [--json]','auth status [--json]','audit [duplicates] [--json]','mcp inspect [--json]','result read <id> [--cursor N] [--limit N]','result search <id> <query> [--cursor N] [--limit N]','tx list [--limit N] [--json]','tx rollback <id> [--dry-run] [--json]','profile list [--json]','profile create <name> --json <profile-object>','profile use <name> [--json]','serve'],exitCodes:{0:'success',2:'invalid input or unknown tool',3:'capability unavailable',4:'execution failure',5:'integrity failure'}};
+const usage={commands:['search <intent> [--limit N] [--include-unavailable] [--json]','schema <tool> [--json]','exec <tool> --json <arguments-object>','namespaces [--json]','doctor [--json]','auth status [--json]','audit [duplicates] [--json]','mcp inspect [--json]','result read <id> [--cursor N] [--limit N]','result search <id> <query> [--cursor N] [--limit N]','tx list [--limit N] [--json]','tx rollback <id> [--dry-run] [--json]','profile list [--json]','profile create <name> --json <profile-object>','profile use <name> [--json]','serve [--modern]'],exitCodes:{0:'success',2:'invalid input or unknown tool',3:'capability unavailable',4:'execution failure',5:'integrity failure'}};
 let core;
 try {
   const argv=process.argv.slice(2);
@@ -24,6 +24,7 @@ try {
       }else if(arg==='--limit'){
         if(argv[i+1]===undefined)throw new Error('--limit requires an integer');limit=Number(argv[++i]);
       }else if(arg==='--dry-run')dryRun=true;
+      else if(arg==='--modern'){if(argv[0]!=='serve')throw new Error('--modern requires serve');}
       else if(arg==='--include-unavailable')includeUnavailable=true;
       else if(arg.startsWith('--'))throw new Error('Unknown option: '+arg);
       else positionals.push(arg);
