@@ -1,10 +1,10 @@
 # Generated capability catalog
 
-Registry names: 3051
+Registry names: 3053
 
-Canonical capabilities: 3046
+Canonical capabilities: 3047
 
-Compatibility aliases: 5
+Compatibility aliases: 6
 
 Namespaces: 31
 

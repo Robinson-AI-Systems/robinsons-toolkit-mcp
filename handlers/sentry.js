@@ -130,8 +130,8 @@ async function execute(tool, args) {
   if (tool === 'sentry_list_projects') {
     return await sentry('GET', `/organizations/${ORG()}/projects/`);
   }
-  if (tool === 'sentry_get_project') {
-    return await sentry('GET', `/projects/${ORG()}/${reqProj(project_slug)}/`);
+  if (tool === 'sentry_get_project' || tool === 'sentry_get_project_data_scrubbing') {
+    return await sentry('GET', `/projects/${encodeURIComponent(ORG())}/${encodeURIComponent(reqProj(project_slug))}/`);
   }
   if (tool === 'sentry_create_project') {
     const { name, team_slug, platform } = args;
@@ -613,10 +613,6 @@ async function execute(tool, args) {
     if (scrub_ip_addresses !== undefined) body.scrubIPAddresses = scrub_ip_addresses;
     if (scrub_defaults !== undefined) body.scrubDefaults = scrub_defaults;
     return await sentry('PUT', `/organizations/${ORG()}/data-scrubbing/`, body);
-  }
-  if (tool === 'sentry_get_project_data_scrubbing') {
-    const p = reqProj(project_slug);
-    return await sentry('GET', `/projects/${ORG()}/${p}/`);
   }
 
   // ── RETENTION RULES ───────────────────────────────────────────────────────

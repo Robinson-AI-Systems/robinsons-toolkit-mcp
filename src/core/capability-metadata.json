@@ -24,8 +24,8 @@
     "handlers/resend.js": "ac8d370cb4e372ccdc2caa4e1c18fbd257570ac29a2ffe2edb95a7010a0e4857",
     "handlers/sam.js": "1acf6c7e5c7b9523f00b7d05b9d662923a0f854ad8485321750880e2bd7e50b4",
     "handlers/search.js": "e94b8d883f7ff7d2af7e311b17ac29e79f3699eafb36198244d566535bd9bfc1",
-    "handlers/sentry.js": "87419a2d42120ef5ad9b3fd771cad334e293227c89320447a71e94e92893377f",
-    "handlers/slack.js": "f976191a716efbd502e0bf609aa046df163eaf5971bcd0dd38b766d3b8f4f15d",
+    "handlers/sentry.js": "01d082653326b456c8adb840bd17f2c194ed2ac8362aca8f5ec13c3d267426fe",
+    "handlers/slack.js": "8f96ec72e244d0c14f98c4db1a9e1a5c63aa52396507e2e6be46cfa5e7582dda",
     "handlers/stripe.js": "48745dd16b77ec634cbdba58c9557d723e6637f46e66517ba3c04a18bfbf0960",
     "handlers/supabase.js": "75bdc2e385073fa2dd8aeef8495f92eb8ee628778d943e2174a39f9b72da1a36",
     "handlers/twilio.js": "b690cff5b09bcb58355f50a9ad2390907b7b6075511501641cb25aec447114e8",
@@ -34992,6 +34992,23 @@
       "childTools": [],
       "dependencyMode": "direct"
     },
+    "sentry_get_project_data_scrubbing": {
+      "namespace": "sentry",
+      "handlerModule": "handlers/sentry.js",
+      "requirements": [
+        {
+          "credentials": [
+            "SENTRY_AUTH_TOKEN"
+          ],
+          "configuration": [
+            "SENTRY_ORG_SLUG"
+          ],
+          "packages": []
+        }
+      ],
+      "childTools": [],
+      "dependencyMode": "direct"
+    },
     "slack_send_message": {
       "namespace": "slack",
       "handlerModule": "handlers/slack.js",
@@ -36064,6 +36081,21 @@
       "childTools": [],
       "dependencyMode": "direct",
       "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+    },
+    "slack_convert_channel_to_private": {
+      "namespace": "slack",
+      "handlerModule": "handlers/slack.js",
+      "requirements": [
+        {
+          "credentials": [
+            "SLACK_ADMIN_TOKEN"
+          ],
+          "configuration": [],
+          "packages": []
+        }
+      ],
+      "childTools": [],
+      "dependencyMode": "direct"
     },
     "stripe_list_customers": {
       "namespace": "stripe",

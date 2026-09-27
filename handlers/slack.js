@@ -11,34 +11,38 @@
 
 const BASE = 'https://slack.com/api';
 
-function token() {
-  const t = process.env.SLACK_BOT_TOKEN;
-  if (!t) throw new Error('SLACK_BOT_TOKEN not set in .env (xoxb-... from Slack app → OAuth & Permissions)');
+function token(name='SLACK_BOT_TOKEN') {
+  const t = process.env[name];
+  if (!t) throw new Error(`${name} is required for this Slack operation`);
   return t;
 }
 
-async function slack(method, params = {}, postBody = null) {
+async function slack(method, params = {}, postBody = null, tokenName='SLACK_BOT_TOKEN') {
   const url = `${BASE}/${method}`;
   let res;
   if (postBody) {
     // POST with JSON body (for complex payloads)
     res = await fetch(url, {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${token()}`, 'Content-Type': 'application/json; charset=utf-8' },
+      headers: { 'Authorization': `Bearer ${token(tokenName)}`, 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify(postBody)
     });
   } else if (Object.keys(params).length) {
     // POST with form params (Slack convention for most methods)
     res = await fetch(url, {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${token()}`, 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { 'Authorization': `Bearer ${token(tokenName)}`, 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(Object.fromEntries(Object.entries(params).filter(([, v]) => v !== undefined && v !== null).map(([k, v]) => [k, typeof v === 'object' ? JSON.stringify(v) : String(v)]))).toString()
     });
   } else {
-    res = await fetch(url, { headers: { 'Authorization': `Bearer ${token()}` } });
+    res = await fetch(url, { headers: { 'Authorization': `Bearer ${token(tokenName)}` } });
   }
   const data = await res.json();
-  if (!data.ok) throw new Error(`Slack API ${method}: ${data.error || JSON.stringify(data)}`);
+  if (!res.ok || data.ok !== true) {
+    const denied=['missing_scope','not_allowed_token_type','not_allowed','team_access_not_granted','access_denied'].includes(data.error);
+    const unauthenticated=['invalid_auth','not_authed','token_revoked','account_inactive'].includes(data.error);
+    throw Object.assign(new Error(`Slack API ${method}: ${data.error || `HTTP ${res.status}: invalid success response`}`),{status:!res.ok?res.status:denied?403:unauthenticated?401:undefined});
+  }
   return data;
 }
 
@@ -49,6 +53,9 @@ function defaultChannel() {
 }
 
 async function execute(tool, args) {
+  if (tool === 'slack_convert_channel_to_private') {
+    return await slack('admin.conversations.convertToPrivate', {channel_id:args.channel},null,'SLACK_ADMIN_TOKEN');
+  }
 
   // ── MESSAGES ──────────────────────────────────────────────────────────────
   if (tool === 'slack_send_message') {
@@ -520,9 +527,6 @@ async function execute(tool, args) {
   }
   if (tool === 'slack_unarchive_channel') {
     return await slack('conversations.unarchive', { channel: args.channel });
-  }
-  if (tool === 'slack_convert_channel_to_private') {
-    return await slack('conversations.convert', { channel_id: args.channel });
   }
   if (tool === 'slack_list_channel_members') {
     return await slack('conversations.members', { channel: args.channel, limit: args.limit || 200 });

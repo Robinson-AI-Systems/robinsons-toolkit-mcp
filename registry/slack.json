@@ -1839,5 +1839,33 @@
         "text"
       ]
     }
+  },
+  {
+    "name": "slack_convert_channel_to_private",
+    "description": "Convert a public Slack channel to private. Requires an Enterprise organization admin user token with admin.conversations:write. No automated rollback is configured.",
+    "namespace": "slack",
+    "tags": [
+      "slack",
+      "channel",
+      "privacy",
+      "admin"
+    ],
+    "risk": "SECURITY_SENSITIVE",
+    "sideEffects": [
+      "Changes channel visibility and access"
+    ],
+    "reversibility": "UNREVIEWED",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "channel": {
+          "type": "string",
+          "pattern": "^[CG][A-Z0-9]+$"
+        }
+      },
+      "required": [
+        "channel"
+      ]
+    }
   }
 ]

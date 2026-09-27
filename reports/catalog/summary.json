@@ -1,7 +1,7 @@
 {
-  "registryNames": 3051,
-  "canonicalCapabilities": 3046,
-  "aliases": 5,
+  "registryNames": 3053,
+  "canonicalCapabilities": 3047,
+  "aliases": 6,
   "namespaces": 31,
   "byNamespace": {
     "anthropic": 64,
@@ -28,7 +28,7 @@
     "sam": 21,
     "search": 30,
     "sentry": 104,
-    "slack": 69,
+    "slack": 70,
     "stripe": 202,
     "supabase": 128,
     "twilio": 115,
@@ -37,21 +37,21 @@
     "voyage": 11
   },
   "risk": {
-    "READ": 6,
-    "SECURITY_SENSITIVE": 4,
-    "UNREVIEWED": 3035,
+    "READ": 7,
+    "SECURITY_SENSITIVE": 5,
+    "UNREVIEWED": 3034,
     "WRITE": 1
   },
   "zeroCredentialAvailability": {
     "AVAILABLE": 79,
     "DISABLED": 482,
     "MISSING_CONFIGURATION": 248,
-    "MISSING_CREDENTIALS": 2237
+    "MISSING_CREDENTIALS": 2238
   },
   "duplicates": {
-    "candidatePairs": 1962,
+    "candidatePairs": 1963,
     "byClassification": {
-      "identical-branch-candidate": 11,
+      "identical-branch-candidate": 12,
       "partial-endpoint-overlap": 496,
       "primitive-workflow-overlap": 129,
       "same-call-different-wrapper": 430,
@@ -68,8 +68,8 @@
     "duplicateNames": 0,
     "repeatedDispatchNames": 0,
     "registryWithoutHandler": 0,
-    "handlerWithoutRegistry": 6,
-    "findings": 485
+    "handlerWithoutRegistry": 4,
+    "findings": 484
   },
   "certification": "Counts describe catalog structure, not upstream correctness or production readiness."
 }

@@ -40,6 +40,7 @@ for(const entry of data.entries){
    const projectAlso=/\b(?:proj|restQuery|projectHeaders|projectUrl)\(/.test(body);
    requirements=[group(['SUPABASE_ACCESS_TOKEN',...(projectAlso?['SUPABASE_SERVICE_ROLE_KEY']:[])],projectAlso?['SUPABASE_URL']:[])];
  }
+ if(entry.name==='slack_convert_channel_to_private')requirements=[group(['SLACK_ADMIN_TOKEN'])];
  if(ns==='search'){
    if(entry.name.startsWith('brave_'))requirements=[group(['BRAVE_SEARCH_API_KEY'])];
    else if(entry.name.startsWith('tavily_')||entry.name==='search_and_summarize')requirements=[group(['TAVILY_API_KEY'])];

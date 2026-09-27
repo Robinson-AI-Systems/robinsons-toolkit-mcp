@@ -9,6 +9,7 @@
  */
 
 export const inverses = {
+  slack_convert_channel_to_private: () => ({tool:null,reversible:false,notes:'No validated automated inverse is configured. Any manual change back to public requires a separate authorization and review of current membership/visibility.'}),
   // ── GitHub ────────────────────────────────────────────────────────────
   github_create_branch: (args) => ({
     tool: 'github_delete_branch',

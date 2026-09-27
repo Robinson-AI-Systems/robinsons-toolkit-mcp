@@ -279,3 +279,13 @@ unified stream, with real service filters, literal search, bounded time windows,
 row-limit warnings and explicit errors for failed SQL responses. Registered the
 previously orphaned PostgreSQL log reader. Remaining Supabase API routes are not
 certified by this targeted repair. Tests use HTTP fixtures only.
+
+### 2026-09-27 — Slack admin recovery and Sentry compatibility alias
+
+Recovered Slack channel privacy conversion using the documented Enterprise admin
+method and a separate admin-token requirement. Scope/auth failures isolate the
+admin group; successful changes produce receipts that explicitly have no validated
+automatic inverse. Added schema/risk metadata and profile-policy tests. Sentry's
+project-scrubbing orphan is now a deprecated alias of the identical project read,
+with canonical discovery and preserved output. Four unresolved orphans remain;
+see ORPHAN_REVIEW.md. No live provider mutation was performed.

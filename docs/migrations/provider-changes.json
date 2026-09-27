@@ -119,5 +119,34 @@
       "https://clickhouse.com/docs/sql-reference/functions/string-search-functions"
     ],
     "test": "tests/supabase-logs.test.mjs; live Supabase tests not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "slack-admin-channel-privacy-recovery",
+    "status": "migrated",
+    "tools": [
+      "slack_convert_channel_to_private"
+    ],
+    "replacement": "POST admin.conversations.convertToPrivate with channel_id and SLACK_ADMIN_TOKEN",
+    "migration": "Recovered unreachable orphan with registry metadata. Requires an Enterprise org admin user token with admin.conversations:write, independently of SLACK_BOT_TOKEN. Missing scope/authentication responses mark only their credential group unhealthy. Profile policy and channel validation run before dispatch. Successful mutations create a receipt with no automatic inverse; manual conversion to public is not claimed as an undo.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://docs.slack.dev/reference/methods/admin.conversations.convertToPrivate/"
+    ],
+    "test": "tests/orphan-recovery.test.mjs; live Slack Enterprise tests not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "sentry-project-scrubbing-alias",
+    "status": "migrated",
+    "tools": [
+      "sentry_get_project_data_scrubbing",
+      "sentry_get_project"
+    ],
+    "replacement": "Canonical sentry_get_project; GET /projects/{organization}/{project}/",
+    "migration": "Previously unregistered name returns the same complete project object as the canonical tool. Added a deprecated alias with a warning; normal discovery only returns the canonical name. No assertion that the output contains only scrubbing settings.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://docs.sentry.io/api/projects/retrieve-a-project/"
+    ],
+    "test": "tests/orphan-recovery.test.mjs; live Sentry tests not run \u2014 credentials unavailable"
   }
 ]
