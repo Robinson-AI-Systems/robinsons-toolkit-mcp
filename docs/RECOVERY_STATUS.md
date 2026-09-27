@@ -228,3 +228,14 @@ argument injection, traversal/symlink rejection and failed-backup preservation.
 Live PostgreSQL backup/restore tests were not run: authorized test credentials
 were unavailable. This closes the ambient-environment gap for these backup tools;
 compound subprocesses and broader host isolation still require work.
+
+### Behavior evidence for duplicate review
+
+Duplicate analysis now compares direct HTTP method/route patterns, normalized
+schemas and required parameters, property subset relationships, return expressions,
+metadata and implementation fingerprints. The generated report separates 129
+intentional workflow/primitive composition relationships from potential duplicates.
+It contains 1,984 candidate pairs and performs no automatic merges. Sixty-seven
+checks pass, including distinct HTTP methods, renamed parameters, schema subsets
+and workflow composition. Dynamic endpoint resolution and semantic embeddings
+remain unimplemented and are explicitly reported as unknown.

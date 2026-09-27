@@ -2,6 +2,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { parse } from 'acorn';
+import {behaviorEvidence,compareBehavior} from './behavior-evidence.mjs';
 
 export function walk(node, visit) {
   if (!node || typeof node !== 'object') return;
@@ -50,7 +51,7 @@ export function analyzeHandler(source, file) {
           if (child.type === 'CallExpression') calls.push(source.slice(child.start, child.end));
         });
         branches.push({ name, file, line: node.loc.start.line, unreachable,
-          implementationFingerprint: hash(canonical(node.consequent)), calls,
+          implementationFingerprint: hash(canonical(node.consequent)), calls,behavior:behaviorEvidence(node.consequent),
           body: source.slice(node.consequent.start,node.consequent.end) });
       }
     }
@@ -116,7 +117,6 @@ export function inventory(root) {
 }
 export function duplicateCandidates(data) {
   const candidates=[];
-  const schemaKey=e=>JSON.stringify(e.inputSchema);
   const byName=new Map(data.entries.map(e=>[e.name,e]));
   const tokens=s=>new Set(s.toLowerCase().match(/[a-z0-9]+/g)||[]);
   for (let i=0;i<data.branches.length;i++) for(let j=i+1;j<data.branches.length;j++) {
@@ -129,13 +129,23 @@ export function duplicateCandidates(data) {
     const sameCalls=a.calls.length && canonical(a.calls)===canonical(b.calls);
     const ta=tokens(ea.description||''),tb=tokens(eb.description||'');
     const similarity=[...ta].filter(t=>tb.has(t)).length/(new Set([...ta,...tb]).size||1);
-    if(!sameBody && !sameCalls && similarity<0.88)continue;
-    const sameSchema=schemaKey(ea)===schemaKey(eb);
+    const comparison=compareBehavior(a,b,ea,eb);
+    if(!sameBody && !sameCalls && !comparison.sharedEndpoints.length && similarity<0.88)continue;
+    const sameSchema=comparison.sameSchema;
     candidates.push({tools:[a.name,b.name],confidence:sameBody?'high':sameCalls?'medium':'low',
-      classification:sameBody?'identical-branch-candidate':sameCalls?'same-call-different-wrapper':'description-overlap-only',
+      classification:sameBody?'identical-branch-candidate':sameCalls?'same-call-different-wrapper':comparison.sameEndpoints?'same-endpoint-candidate':comparison.sharedEndpoints.length?'partial-endpoint-overlap':'description-overlap-only',
       reasons:[...(sameBody?['Identical implementation AST']:[]),...(sameCalls?['Identical ordered call expressions']:[]),
+        ...(comparison.sharedEndpoints.length?['Shared explicit HTTP method and route pattern']:[]),
         ...(sameSchema?['Identical input schema']:['Input schemas differ']),`Description token Jaccard ${similarity.toFixed(3)}`],
-      locations:[`${a.file}:${a.line}`,`${b.file}:${b.line}`],autoMerge:false});
+      locations:[`${a.file}:${a.line}`,`${b.file}:${b.line}`],comparison,
+      evidence:[{namespace:ea.namespace||ea.registryNamespace,provider:a.file,tags:ea.tags||[],required:ea.inputSchema?.required||[],endpoints:a.behavior?.endpoints||[],implementationFingerprint:a.implementationFingerprint},{namespace:eb.namespace||eb.registryNamespace,provider:b.file,tags:eb.tags||[],required:eb.inputSchema?.required||[],endpoints:b.behavior?.endpoints||[],implementationFingerprint:b.implementationFingerprint}],autoMerge:false});
+  }
+  for(const branch of data.branches){
+    for(const child of branch.behavior?.childTools||[]){
+      if(!byName.has(branch.name)||!byName.has(child)||branch.name===child)continue;
+      candidates.push({tools:[child,branch.name],confidence:'high',classification:'primitive-workflow-overlap',
+        reasons:['Workflow explicitly dispatches the primitive; this is composition, not evidence of duplication'],autoMerge:false});
+    }
   }
   return candidates;
 }

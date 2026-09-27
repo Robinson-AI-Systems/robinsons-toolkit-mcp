@@ -19,3 +19,13 @@ Cloudflare's input-contract migration is documented separately.
 
 Other duplicate candidates are not merged automatically. Similar descriptions
 and matching endpoints alone do not prove identical behavior.
+
+The current duplicate analyzer extracts explicit HTTP methods and normalized route
+patterns, required parameters, canonical schema structure, schema property subsets,
+return-expression fingerprints, tags, namespaces and implementation fingerprints.
+Reports distinguish shared endpoints from partial endpoint overlap and explicit
+workflow-to-primitive composition. Dynamic helper calls and SQL/GraphQL effects
+remain unknown rather than guessed. All candidates retain autoMerge:false.
+Description token overlap is lexical evidence; semanticSimilarity is null with an
+explicit explanation until a real embedding model is configured. Exact source
+similarity or endpoint overlap is insufficient to certify functional equivalence.

@@ -47,7 +47,17 @@
     "MISSING_CONFIGURATION": 246,
     "MISSING_CREDENTIALS": 2237
   },
-  "availabilityAssumptions": "Empty credential environment; optional packages assumed absent; no provider probes.",
+  "duplicates": {
+    "candidatePairs": 1984,
+    "byClassification": {
+      "identical-branch-candidate": 11,
+      "partial-endpoint-overlap": 516,
+      "primitive-workflow-overlap": 129,
+      "same-call-different-wrapper": 430,
+      "same-endpoint-candidate": 898
+    }
+  },
+  "availabilityAssumptions": "Empty credential environment; optional packages and executables assumed absent; no provider probes.",
   "mcp": {
     "advertisedTools": 7,
     "advertisedSchemaBytes": 2886,
