@@ -8,7 +8,7 @@ import {validateArgs} from './validation.js';
 import {createHandlerLoader} from './handlers.js';
 import {CapabilityAvailability,Availability} from './capabilities.js';
 import {EnvironmentCredentials} from './credentials.js';
-import {searchTools} from './discovery.js';
+import {createDiscovery} from './discovery.js';
 import {routeToolCall} from './executor.js';
 import {ResultStore} from './results.js';
 import {appendReceipt,readLedger} from '../../ledger.js';
@@ -24,6 +24,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
   const catalog=buildCatalog(loadRegistry(root));
   const registry=catalog.entries;
   const byName=catalog.byName;
+  const discovery=createDiscovery(registry);
   const metadata=JSON.parse(readFileSync(join(root,'src/core/capability-metadata.json'),'utf8')).capabilities;
   const handlers=createHandlerLoader(root);
   const availability=new CapabilityAvailability(metadata,{credentials,packageExists});
@@ -80,9 +81,8 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
     search(query,limit=8,{includeUnavailable=false}={}){
       if(typeof query!=='string'||!query.trim())throw Object.assign(new Error('query must be a non-empty string'),{code:'INVALID_ARGUMENTS'});
       if(!Number.isInteger(limit)||limit<1||limit>20)throw Object.assign(new Error('limit must be an integer between 1 and 20'),{code:'INVALID_ARGUMENTS'});
-      const states=new Map(registry.map(t=>[t.name,statusFor(t.name)]));
-      const candidates=registry.filter(t=>!t.aliasOf&&(includeUnavailable||states.get(t.name).state===Availability.AVAILABLE));
-      return searchTools(candidates,query,{},limit).map(t=>({name:t.name,description:t.description,namespace:t.namespace,availability:states.get(t.name),whyMatched:'Lexical name, description or tag match'}));
+      const states=new Map();
+      return discovery.search(query,{limit,accept:tool=>{const state=statusFor(tool.name);states.set(tool.name,state);return includeUnavailable||state.state===Availability.AVAILABLE;}}).map(({tool,matchedTerms})=>({name:tool.name,description:(tool.description||'').replace(/\s+/g,' ').slice(0,240),namespace:tool.namespace,availability:states.get(tool.name),risk:tool.risk||'UNREVIEWED',whyMatched:'BM25 name, description, tags or alias: '+matchedTerms.slice(0,8).join(', ')}));
     },
     schema(name){const tool=byName.get(name);return tool?{...tool,availability:statusFor(name)}:undefined;},
     transactions:{

@@ -206,3 +206,14 @@ The v2 adapter serves legacy and modern stdio and supplies an HTTP fetch adapter
 that requires host-provided authorization. Tests use real SDK clients for both
 stdio eras and modern in-process HTTP; actual agent applications and deployed
 HTTP/OAuth remain uncertified. No remote listener is enabled automatically.
+
+### Indexed lexical discovery
+
+Replaced substring scoring with a per-Core inverted index and BM25 ranking over
+names, descriptions, namespaces, tags and canonical aliases. Exact names receive
+a strong boost; explicit workflow-layer metadata can provide a small relevance
+tie-breaker. Availability is checked before returning results, and search now
+includes honest risk metadata and matching terms without schemas or handler loads.
+Sixty-two tests pass, including a 10,000-capability synthetic catalog. Cached
+semantic vectors and execution-history reranking are still future work; this
+increment is lexical retrieval, not a claim of completed hybrid search.
