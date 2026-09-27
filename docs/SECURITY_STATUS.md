@@ -105,3 +105,7 @@ recognized spellings in its schema. Run custom migrations separately with
 explicitly selected credentials; arbitrary commands no longer inherit Toolkit's
 credential environment. Tests use test-only CLI fixtures, not a live database.
 Source checked on 2026-09-27: https://www.prisma.io/docs/cli/db/push
+
+Connection-URI redaction also remembers the decoded password for both configured
+and newly generated connection strings. Later standalone or URL-encoded password
+echoes are masked at the output boundary, not just the complete original URI.

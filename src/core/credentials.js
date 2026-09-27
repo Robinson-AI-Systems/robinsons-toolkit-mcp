@@ -4,12 +4,17 @@ const secretField=name=>secretFields.has(name.toLowerCase().replace(/[^a-z0-9]/g
 export class EnvironmentCredentials {
   #env; #observed=new Set();
   constructor(env=process.env){this.#env=env;}
+  #remember(value){
+    if(value.length<4)return;
+    this.#observed.add(value);
+    try{const password=decodeURIComponent(new URL(value).password);if(password.length>=4)this.#observed.add(password);}catch{}
+  }
   has(name){return typeof this.#env[name]==='string'&&this.#env[name].trim().length>0;}
   configuration(name){return this.#env[name];}
   rememberSecrets(value){
     const seen=new WeakSet();
     const visit=(item,sensitive=false)=>{
-      if(typeof item==='string'){if(sensitive&&item.length>=4)this.#observed.add(item);return;}
+      if(typeof item==='string'){if(sensitive)this.#remember(item);return;}
       if(!item||typeof item!=='object'||seen.has(item))return;
       seen.add(item);
       if(Array.isArray(item)){item.forEach(v=>visit(v,sensitive));return;}
@@ -20,8 +25,8 @@ export class EnvironmentCredentials {
   }
   redact(value){
     this.rememberSecrets(value);
+    for(const [name,secret]of Object.entries(this.#env))if(/KEY|TOKEN|SECRET|PASSWORD|CONNECTION_STRING|DATABASE_URL/i.test(name)&&typeof secret==='string')this.#remember(secret);
     const values=new Set(this.#observed);
-    for(const [name,secret]of Object.entries(this.#env))if(/KEY|TOKEN|SECRET|PASSWORD|CONNECTION_STRING|DATABASE_URL/i.test(name)&&typeof secret==='string'&&secret.length>=4)values.add(secret);
     const variants=[...new Set([...values].flatMap(secret=>[secret,encodeURIComponent(secret)]))].sort((a,b)=>b.length-a.length);
     const visit=item=>{
       if(Array.isArray(item))return item.map(visit);

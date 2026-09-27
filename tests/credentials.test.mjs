@@ -26,3 +26,14 @@ test('credential-bearing URLs and bearer headers are redacted without prior secr
  assert.equal(credentials.redact('Authorization: Bearer test-only-issued-token'),'Authorization: Bearer [REDACTED]');
  assert.equal(credentials.redact('https://example.invalid/repo?page=2'),'https://example.invalid/repo?page=2');
 });
+
+test('connection URI passwords remain protected when later printed alone or URI-encoded',()=>{
+ for(const configured of [true,false]){
+  const uri='postgresql://fixture:test-only%2Fgenerated-password@fixture.invalid/db';
+  const credentials=new EnvironmentCredentials(configured?{DATABASE_URL:uri}:{});
+  if(!configured)credentials.rememberSecrets({connection_string:uri});
+  assert.equal(credentials.redact('stderr: test-only/generated-password'), 'stderr: [REDACTED]');
+  assert.equal(credentials.redact('stderr: test-only%2Fgenerated-password'), 'stderr: [REDACTED]');
+  assert.equal(credentials.redact({ordinary:'unchanged'}).ordinary,'unchanged');
+ }
+});
