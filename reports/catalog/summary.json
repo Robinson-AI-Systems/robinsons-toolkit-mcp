@@ -1,6 +1,6 @@
 {
-  "registryNames": 3050,
-  "canonicalCapabilities": 3045,
+  "registryNames": 3051,
+  "canonicalCapabilities": 3046,
   "aliases": 5,
   "namespaces": 31,
   "byNamespace": {
@@ -30,23 +30,23 @@
     "sentry": 104,
     "slack": 69,
     "stripe": 202,
-    "supabase": 127,
+    "supabase": 128,
     "twilio": 115,
     "upstash": 197,
     "vercel": 181,
     "voyage": 11
   },
   "risk": {
-    "READ": 4,
+    "READ": 6,
     "SECURITY_SENSITIVE": 4,
-    "UNREVIEWED": 3036,
+    "UNREVIEWED": 3035,
     "WRITE": 1
   },
   "zeroCredentialAvailability": {
     "AVAILABLE": 79,
-    "DISABLED": 483,
+    "DISABLED": 482,
     "MISSING_CONFIGURATION": 248,
-    "MISSING_CREDENTIALS": 2235
+    "MISSING_CREDENTIALS": 2237
   },
   "duplicates": {
     "candidatePairs": 1962,
@@ -68,8 +68,8 @@
     "duplicateNames": 0,
     "repeatedDispatchNames": 0,
     "registryWithoutHandler": 0,
-    "handlerWithoutRegistry": 7,
-    "findings": 487
+    "handlerWithoutRegistry": 6,
+    "findings": 485
   },
   "certification": "Counts describe catalog structure, not upstream correctness or production readiness."
 }

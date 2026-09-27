@@ -36,6 +36,10 @@ for(const entry of data.entries){
  if(ns==='postgres'&&['postgres_dump_schema','postgres_dump_table'].includes(entry.name))requirements=[{...group(['POSTGRES_CONNECTION_STRING']),binaries:['pg_dump']}];
  if(entry.name==='compound_git_commit_push')requirements=[{...group(),binaries:['git']}];
  if(ns==='neon'&&/\brunSQL\(/.test(body))requirements=[{...group(['NEON_API_KEY'],[],['@neondatabase/serverless']),nodeMajor:19}];
+ if(ns==='supabase'&&/\b(?:mgmt|readProjectLogs)\(/.test(body)){
+   const projectAlso=/\b(?:proj|restQuery|projectHeaders|projectUrl)\(/.test(body);
+   requirements=[group(['SUPABASE_ACCESS_TOKEN',...(projectAlso?['SUPABASE_SERVICE_ROLE_KEY']:[])],projectAlso?['SUPABASE_URL']:[])];
+ }
  if(ns==='search'){
    if(entry.name.startsWith('brave_'))requirements=[group(['BRAVE_SEARCH_API_KEY'])];
    else if(entry.name.startsWith('tavily_')||entry.name==='search_and_summarize')requirements=[group(['TAVILY_API_KEY'])];

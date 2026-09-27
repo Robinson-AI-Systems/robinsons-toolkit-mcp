@@ -7,8 +7,8 @@
 const MGMT_BASE = 'https://api.supabase.com/v1';
 
 function mgmtHeaders() {
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!key) throw new Error('SUPABASE_SERVICE_ROLE_KEY not set in .env');
+  const key = process.env.SUPABASE_ACCESS_TOKEN;
+  if (!key) throw new Error('SUPABASE_ACCESS_TOKEN is required for the Management API');
   return { 'Authorization': `Bearer ${key}`, 'Content-Type': 'application/json' };
 }
 
@@ -65,8 +65,34 @@ async function restQuery(method, table, params, body, projectRef) {
   return data;
 }
 
+// Management logs now use the unified ClickHouse stream. Service selection is
+// explicit; user search text is a literal substring, never a SQL expression.
+async function readProjectLogs(args,service=args.service) {
+  const {project_id,limit=100,search,iso_timestamp_start,iso_timestamp_end}=args;
+  const sources={api:'edge_logs',auth:'auth_logs',storage:'storage_logs',realtime:'realtime_logs',postgres:'postgres_logs'};
+  if(!/^[a-z0-9-]{1,64}$/.test(project_id||'')||!Object.hasOwn(sources,service))throw new Error('Valid project_id and supported log service are required');
+  if(!Number.isInteger(limit)||limit<1||limit>1000)throw new Error('limit must be an integer from 1 to 1000');
+  if(search!==undefined&&(typeof search!=='string'||search.length>1000||/[\u0000-\u001f]/.test(search)))throw new Error('search must be text without control characters, at most 1000 characters');
+  if(Boolean(iso_timestamp_start)!==Boolean(iso_timestamp_end))throw new Error('Provide both time range endpoints');
+  const end=iso_timestamp_end?new Date(iso_timestamp_end):new Date();
+  const start=iso_timestamp_start?new Date(iso_timestamp_start):new Date(end.getTime()-60000);
+  if(!Number.isFinite(+start)||!Number.isFinite(+end)||end<=start||end-start>86400000)throw new Error('Log time range must be positive and at most 24 hours');
+  let sql=`SELECT timestamp, id, event_message, severity_text, source FROM logs WHERE source = '${sources[service]}'`;
+  if(search){const literal=search.replaceAll('\\','\\\\').replaceAll("'","\\'");sql+=` AND positionCaseInsensitiveUTF8(event_message, '${literal}') > 0`;}
+  sql+=` ORDER BY timestamp DESC LIMIT ${limit}`;
+  const query=new URLSearchParams({sql,iso_timestamp_start:start.toISOString(),iso_timestamp_end:end.toISOString()});
+  const response=await mgmt('GET',`/projects/${project_id}/analytics/endpoints/logs?${query}`);
+  if(response.error)throw new Error(`Supabase log query failed: ${typeof response.error==='string'?response.error:JSON.stringify(response.error)}`);
+  if(!Array.isArray(response.result))throw new Error('Supabase returned an invalid log result');
+  return {...response,service,timeRange:{start:start.toISOString(),end:end.toISOString(),defaulted:!iso_timestamp_start},rowCount:response.result.length,limit,
+    limitReached:response.result.length>=limit,warnings:response.result.length>=limit?['Row limit reached; narrow the time range to retrieve more events.']:[]};
+}
+
 async function execute(tool, args) {
   const { project_ref } = args;
+
+  if (tool === 'supabase_get_logs') return await readProjectLogs(args);
+  if (tool === 'supabase_get_postgres_logs') return await readProjectLogs(args,'postgres');
 
   // ── PROJECT MANAGEMENT ────────────────────────────────────────────────────
   if (tool === 'supabase_list_projects') { return await mgmt('GET', '/projects'); }
@@ -570,18 +596,7 @@ async function execute(tool, args) {
   }
 
   // ── LOGS ──────────────────────────────────────────────────────────────────
-  if (tool === 'supabase_get_logs') {
-    const { project_id, service, limit = 100, search } = args;
-    if (!project_id || !service) throw new Error('project_id and service are required (api, auth, storage, realtime, postgres)');
-    let path = `/v1/projects/${project_id}/analytics/endpoints/logs.all?limit=${limit}&project=${project_id}`;
-    if (search) path += `&q=${encodeURIComponent(search)}`;
-    return await mgmt('GET', path);
-  }
-  if (tool === 'supabase_get_postgres_logs') {
-    const { project_id, limit = 100 } = args;
-    if (!project_id) throw new Error('project_id is required');
-    return await mgmt('GET', `/v1/projects/${project_id}/analytics/endpoints/logs.all?project=${project_id}&limit=${limit}`);
-  }
+
 
   // ── CUSTOM DOMAINS ────────────────────────────────────────────────────────
   if (tool === 'supabase_get_custom_domain') {

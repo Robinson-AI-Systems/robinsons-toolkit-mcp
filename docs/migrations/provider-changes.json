@@ -99,5 +99,25 @@
       "https://github.com/neondatabase/serverless/blob/main/CONFIG.md"
     ],
     "test": "tests/neon-connection.test.mjs exercises the real installed driver against test-only HTTP fixtures; live Neon tests not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "supabase-management-auth-and-unified-logs",
+    "status": "migrated",
+    "tools": [
+      "supabase_get_logs",
+      "supabase_get_postgres_logs"
+    ],
+    "appliesTo": "Credential change applies to capabilities using the Supabase management helper. This is not certification of their other legacy API routes.",
+    "replacement": "SUPABASE_ACCESS_TOKEN for management requests; GET /v1/projects/{ref}/analytics/endpoints/logs with bounded ClickHouse query",
+    "migration": "SUPABASE_SERVICE_ROLE_KEY remains a project API credential and is never substituted for a management token. Log service names now actually select the documented source. Search is a literal case-insensitive substring. Without explicit timestamps the window is the last minute; explicit windows require both endpoints, at most 24 hours. Row-limit warnings are explicit. Existing project_id/service/limit/search names remain. Recovered the previously unreachable PostgreSQL-specific helper and added its missing registry entry.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://supabase.com/docs/reference/api/introduction",
+      "https://supabase.com/docs/reference/api/v1-get-project-logs",
+      "https://supabase.com/docs/guides/observability/advanced-log-filtering",
+      "https://supabase.com/docs/guides/observability/log-field-reference",
+      "https://clickhouse.com/docs/sql-reference/functions/string-search-functions"
+    ],
+    "test": "tests/supabase-logs.test.mjs; live Supabase tests not run \u2014 credentials unavailable"
   }
 ]

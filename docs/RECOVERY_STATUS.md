@@ -269,3 +269,13 @@ The URI alias remains callable with a deprecation warning. Missing scaffold
 branch IDs now fail rather than falling back to the default branch. Contract
 and security tests use real driver code with test-only HTTP responses; live
 Neon behavior remains unverified without authorized sandbox credentials.
+
+### 2026-09-27 — Supabase credential and log recovery
+
+Separated Management API access tokens from project service-role keys in both
+requests and capability prerequisites. Management authorization failures no longer
+poison project API availability. Recovered the log reader through the documented
+unified stream, with real service filters, literal search, bounded time windows,
+row-limit warnings and explicit errors for failed SQL responses. Registered the
+previously orphaned PostgreSQL log reader. Remaining Supabase API routes are not
+certified by this targeted repair. Tests use HTTP fixtures only.

@@ -27,7 +27,7 @@
     "handlers/sentry.js": "87419a2d42120ef5ad9b3fd771cad334e293227c89320447a71e94e92893377f",
     "handlers/slack.js": "f976191a716efbd502e0bf609aa046df163eaf5971bcd0dd38b766d3b8f4f15d",
     "handlers/stripe.js": "48745dd16b77ec634cbdba58c9557d723e6637f46e66517ba3c04a18bfbf0960",
-    "handlers/supabase.js": "e0b71c308272b9105dfe1722ffcd78b451d5b834671396d9a2efcfb0a682e838",
+    "handlers/supabase.js": "75bdc2e385073fa2dd8aeef8495f92eb8ee628778d943e2174a39f9b72da1a36",
     "handlers/twilio.js": "b690cff5b09bcb58355f50a9ad2390907b7b6075511501641cb25aec447114e8",
     "handlers/upstash.js": "8af5f007e247237c526ba855d98a048572f6028b1b2f4773a48c27c994716f94",
     "handlers/vercel.js": "71b3924d10d2575a1910c9a1b520128ce507b85d518091400ea8c1aafa1c126b",
@@ -39160,11 +39160,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39177,11 +39175,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39194,11 +39190,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39211,11 +39205,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39228,11 +39220,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39245,11 +39235,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39262,11 +39250,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39279,11 +39265,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39296,11 +39280,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39313,11 +39295,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39330,11 +39310,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39347,11 +39325,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39381,11 +39357,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39398,11 +39372,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39415,11 +39387,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39432,11 +39402,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39449,11 +39417,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39466,11 +39432,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39483,11 +39447,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39500,11 +39462,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39517,11 +39477,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39534,11 +39492,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39551,11 +39507,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39568,11 +39522,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39585,11 +39537,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39602,11 +39552,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39619,11 +39567,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39636,11 +39582,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39653,11 +39597,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39670,11 +39612,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39687,11 +39627,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39704,11 +39642,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39721,11 +39657,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39738,11 +39672,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39755,11 +39687,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39772,11 +39702,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39789,11 +39717,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39806,11 +39732,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39823,11 +39747,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39840,11 +39762,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39857,11 +39777,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39874,11 +39792,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39891,11 +39807,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39908,11 +39822,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -39925,11 +39837,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40146,11 +40056,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40163,11 +40071,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40384,11 +40290,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40401,11 +40305,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40418,11 +40320,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40435,11 +40335,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40452,11 +40350,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40486,11 +40382,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40503,11 +40397,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40520,11 +40412,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40537,11 +40427,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40639,11 +40527,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40656,11 +40542,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40673,11 +40557,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40690,11 +40572,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40707,11 +40587,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40724,11 +40602,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40741,11 +40617,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40758,11 +40632,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40775,6 +40647,7 @@
       "requirements": [
         {
           "credentials": [
+            "SUPABASE_ACCESS_TOKEN",
             "SUPABASE_SERVICE_ROLE_KEY"
           ],
           "configuration": [
@@ -40809,11 +40682,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40826,11 +40697,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40843,11 +40712,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40860,11 +40727,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40878,11 +40743,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40896,11 +40759,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40914,11 +40775,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40932,11 +40791,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40950,11 +40807,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40968,11 +40823,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -40986,11 +40839,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41004,11 +40855,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41022,11 +40871,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41040,11 +40887,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41058,17 +40903,14 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct",
-      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+      "dependencyMode": "direct"
     },
     "supabase_get_custom_domain": {
       "namespace": "supabase",
@@ -41076,11 +40918,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41094,11 +40934,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41112,11 +40950,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41130,11 +40966,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41148,11 +40982,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41166,11 +40998,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41184,11 +41014,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41202,11 +41030,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41220,11 +41046,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41238,11 +41062,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41256,11 +41078,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41274,11 +41094,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41292,11 +41110,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41310,11 +41126,9 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
@@ -41328,17 +41142,30 @@
       "requirements": [
         {
           "credentials": [
-            "SUPABASE_SERVICE_ROLE_KEY"
+            "SUPABASE_ACCESS_TOKEN"
           ],
-          "configuration": [
-            "SUPABASE_URL"
-          ],
+          "configuration": [],
           "packages": []
         }
       ],
       "childTools": [],
       "dependencyMode": "direct",
       "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+    },
+    "supabase_get_postgres_logs": {
+      "namespace": "supabase",
+      "handlerModule": "handlers/supabase.js",
+      "requirements": [
+        {
+          "credentials": [
+            "SUPABASE_ACCESS_TOKEN"
+          ],
+          "configuration": [],
+          "packages": []
+        }
+      ],
+      "childTools": [],
+      "dependencyMode": "direct"
     },
     "twilio_send_sms": {
       "namespace": "twilio",
