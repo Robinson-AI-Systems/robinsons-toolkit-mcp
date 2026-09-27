@@ -28,17 +28,16 @@ Exit codes: 0 success; 2 invalid command/input/unknown tool; 3 unavailable
 capability; 4 execution failure; 5 structural audit failure. Duplicate candidates
 are review items, not proof of identity, and never trigger automatic deletion.
 
-Profiles, transactions, and result commands are added only when implemented;
-unsupported commands fail explicitly and are not advertised as functional.
-`serve` currently provides stdio using the locked SDK. It opens no HTTP listener.
+`serve` provides stdio through the default legacy SDK adapter. `serve --modern`
+selects the optional modern adapter. Neither opens an HTTP listener. See
+architecture/mcp-compatibility.md for runtime and deployment requirements.
 
 Stored result retrieval is now implemented: `rt result read <id>` and
 `rt result search <id> <query>`, with --cursor and --limit. See RESULTS.md.
 
 Workspace profile management is implemented: `rt profile create <name> --json
 <profile-object>`, `rt profile list`, and `rt profile use <name>`. See PROFILES.md
-for policy patterns, restart behavior and limitations. Transaction commands remain
-pending until their execution and rollback semantics are safe.
+for policy patterns, restart behavior and limitations.
 
 Transaction commands: `rt tx list --json`, `rt tx rollback <id> --dry-run --json`,
 and `rt tx rollback <id> --json`. See TRANSACTIONS.md for compensation semantics,
