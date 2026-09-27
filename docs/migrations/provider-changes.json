@@ -67,5 +67,19 @@
       "https://www.postgresql.org/docs/current/libpq-pgpass.html"
     ],
     "test": "tests/postgres-dump.test.mjs; live backup/restore not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "scaffold-fixed-schema-push",
+    "status": "migrated",
+    "tools": [
+      "compound_scaffold_feature"
+    ],
+    "replacement": "Installed project Prisma CLI with fixed db push arguments and scoped DATABASE_URL",
+    "migration": "Historical migration_command accepts only the documented Prisma db push spellings. Arbitrary shell commands are rejected before provider side effects. No npx download, data-loss override, or claim of versioned migrations. Project configuration must consume DATABASE_URL.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://www.prisma.io/docs/cli/db/push"
+    ],
+    "test": "tests/project-migration.test.mjs; live Prisma schema push not run \u2014 credentials unavailable"
   }
 ]

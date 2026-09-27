@@ -29,10 +29,17 @@
           "type": "string"
         },
         "run_migrations": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Run Prisma schema synchronization, not a versioned migration. The project Prisma configuration must use DATABASE_URL."
         },
         "migration_command": {
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "npx prisma db push",
+            "prisma db push",
+            "npm exec -- prisma db push"
+          ],
+          "description": "Compatibility spelling for a fixed invocation of the project-installed Prisma db push CLI. No shell execution or automatic package installation."
         },
         "env_file_path": {
           "type": "string"

@@ -249,3 +249,11 @@ commands; hooks do not inherit provider credentials. Missing Git is capability-
 specific configuration, and failures are explicit. Added URL/bearer redaction for
 credentials loaded by external tools. Tests use real temporary Git repositories,
 a local bare remote and test-only hooks; no production remote is modified.
+
+### 2026-09-27 — Scaffold subprocess and environment-file security
+
+Scaffold schema synchronization uses a fixed installed Prisma CLI with only its
+branch DATABASE_URL added to the filtered environment. Missing prerequisites and
+unsupported custom commands fail before provider calls. Environment file updates
+are private and boundary-checked; missing connection strings and uncertain command
+failures remain explicit. No live Prisma/database operation was performed.

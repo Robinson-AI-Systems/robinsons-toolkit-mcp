@@ -1,13 +1,11 @@
-import { currentWorkspace, currentDispatcher } from '../src/core/context.js';
+import { currentDispatcher } from '../src/core/context.js';
 /**
  * Compound Handler — 36 macro tools
  * Cross-service Super Tools that orchestrate multiple APIs in a single call.
  * These are the "power moves" — one tool replaces 5-10 individual calls.
  */
 
-import { existsSync, writeFileSync, readFileSync, mkdirSync } from 'fs';
-import { join } from 'path';
-import { execSync } from 'child_process';
+import {prepareSchemaPush,environmentFilePath,writeDatabaseEnvironment} from '../src/core/sandbox/project-migration.js';
 import {workspaceGit} from '../src/core/sandbox/git.js';
 import {rollbackTransaction} from '../src/core/transactions.js';
 
@@ -25,6 +23,8 @@ async function execute(tool, args) {
   // ── FEATURE SCAFFOLDING ───────────────────────────────────────────────────
   if (tool === 'compound_scaffold_feature') {
     const { github_owner, github_repo, feature_name, neon_project_id, run_migrations = false, migration_command = 'npx prisma db push', env_file_path } = args;
+    const envPath = environmentFilePath(env_file_path);
+    const schemaPush = run_migrations ? prepareSchemaPush(migration_command) : null;
     const results = { feature: feature_name, steps: [] };
     try {
       const gh = await loadHandler('github');
@@ -37,24 +37,20 @@ async function execute(tool, args) {
       results.neon_branch = neonBranch;
       results.steps.push({ step: 'neon_branch', success: true, branch_name: `feature-${feature_name}` });
       const connInfo = await neon.execute('neon_get_connection_string', { project_id: neon_project_id, branch_id: neonBranch.branch?.id, database: 'neondb' });
+      if (typeof connInfo.connection_string !== 'string' || !connInfo.connection_string) throw new Error('Neon returned no database connection string; environment setup did not complete');
       results.connection_string = connInfo.connection_string;
       results.steps.push({ step: 'connection_string', success: true, host: connInfo.host });
       if (connInfo.connection_string) {
-        const envPath = env_file_path ? join(currentWorkspace(), env_file_path) : join(currentWorkspace(), '.env.local');
-        let content = existsSync(envPath) ? readFileSync(envPath, 'utf-8') : '';
-        const newLine = `DATABASE_URL=${connInfo.connection_string}`;
-        if (/^DATABASE_URL=.*/m.test(content)) content = content.replace(/^DATABASE_URL=.*/m, newLine);
-        else content = content.trimEnd() + '\n' + newLine + '\n';
-        writeFileSync(envPath, content);
+        writeDatabaseEnvironment(envPath, connInfo.connection_string);
         results.steps.push({ step: 'env_updated', success: true, path: envPath });
       }
       if (run_migrations && connInfo.connection_string) {
-        const result = execSync(migration_command, { cwd: currentWorkspace(), env: { ...process.env, DATABASE_URL: connInfo.connection_string }, timeout: 120000, encoding: 'utf-8' });
-        results.steps.push({ step: 'migrations', success: true, output: result.slice(0, 1000) });
+        const result = schemaPush(connInfo.connection_string);
+        results.steps.push({ step: 'migrations', success: true, output: result });
       }
-    } catch (e) { results.steps.push({ step: 'neon_or_env', success: false, error: e.message }); }
+    } catch (e) { results.steps.push({ step: 'neon_or_env', success: false, error: e.message, ...(e.operationMayHaveCompleted ? {operationMayHaveCompleted:true} : {}) }); }
     const allSucceeded = results.steps.every(s => s.success);
-    return { ...results, status: allSucceeded ? 'ready' : 'partial', message: allSucceeded ? `Feature environment for "${feature_name}" is ready.` : 'Some steps failed.' };
+    return { ...results, success:allSucceeded, status: allSucceeded ? 'ready' : 'partial', message: allSucceeded ? `Feature environment for "${feature_name}" is ready.` : 'Some steps failed.' };
   }
 
   // ── SAFE DEPLOY ───────────────────────────────────────────────────────────

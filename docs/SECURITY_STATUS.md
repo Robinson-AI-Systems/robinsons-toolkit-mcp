@@ -29,10 +29,9 @@ File checks have a check/use race if another process can replace ancestors.
 The fixes apply to existing guarded local filesystem operations. Archive tools,
 shell-backed tools and compound workflow filesystem writes still need dedicated
 containment. Shell interpolation of structured arguments remains to be removed.
-Compound and PostgreSQL subprocesses still need scoped credential/execution
-design; compound migrations explicitly require a database credential, so simply
-stripping that credential would break the operation. Those paths have not been
-certified secure and must not be run with untrusted inputs.
+PostgreSQL backup, compound Git and scaffold schema-push subprocesses now have
+scoped execution paths described below. Trusted host executables and project code
+still have host-user filesystem privileges.
 
 Provider modules still read process.env. Handler credential isolation, safe
 credential-bearing operations, stronger execution backends, policy enforcement,
@@ -80,10 +79,29 @@ Core redaction also removes credentials embedded in remote URLs and bearer heade
 that were not previously registered with its environment resolver. Repository Git
 configuration and hooks still execute as trusted host-user code, and existing host
 credential helpers/files remain accessible. This is command/environment hygiene,
-not OS isolation. The scaffold migration subprocess remains a separate unresolved
-credential-isolation gap; this increment does not claim to secure that path.
+not OS isolation. The scaffold schema-push path is covered by the subsequent increment below.
 
 Sources checked on 2026-09-27:
 https://git-scm.com/docs/git-add
 https://git-scm.com/docs/git-commit
 https://git-scm.com/docs/git-push
+
+## Scaffold schema synchronization
+
+Automatic scaffold schema push invokes the project's already installed Prisma CLI
+with fixed `db push` arguments. It does not launch a shell, download packages, or
+forward control-plane provider credentials. The only added credential is the
+selected branch's DATABASE_URL. Project Prisma configuration must consume that
+variable; project code is trusted host code, not sandboxed. No destructive override
+flags are supplied. This synchronizes schema, not versioned migration history.
+Unsupported custom commands and absent Prisma fail before provider mutations.
+Environment files are checked against write roots and atomically replaced with
+mode 0600. Empty/multiline values and external symlink targets are rejected.
+Subprocess failures retain an explicit uncertain-outcome flag and redact credentials.
+Missing provider connection strings cannot produce a successful scaffold result.
+
+The historical migration_command property remains, restricted to the three
+recognized spellings in its schema. Run custom migrations separately with
+explicitly selected credentials; arbitrary commands no longer inherit Toolkit's
+credential environment. Tests use test-only CLI fixtures, not a live database.
+Source checked on 2026-09-27: https://www.prisma.io/docs/cli/db/push
