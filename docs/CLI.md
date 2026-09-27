@@ -39,3 +39,7 @@ Workspace profile management is implemented: `rt profile create <name> --json
 <profile-object>`, `rt profile list`, and `rt profile use <name>`. See PROFILES.md
 for policy patterns, restart behavior and limitations. Transaction commands remain
 pending until their execution and rollback semantics are safe.
+
+Transaction commands: `rt tx list --json`, `rt tx rollback <id> --dry-run --json`,
+and `rt tx rollback <id> --json`. See TRANSACTIONS.md for compensation semantics,
+partial receipt coverage and uncertain-outcome handling.

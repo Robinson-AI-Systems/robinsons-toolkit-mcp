@@ -4,14 +4,14 @@ import {createToolkit} from '../src/core/index.js';
 import {PINNED_TOOLS} from '../src/adapters/mcp/surface.js';
 import {auditToolkit} from '../src/core/audit.js';
 
-const usage={commands:['search <intent> [--limit N] [--include-unavailable] [--json]','schema <tool> [--json]','exec <tool> --json <arguments-object>','namespaces [--json]','doctor [--json]','auth status [--json]','audit [duplicates] [--json]','mcp inspect [--json]','result read <id> [--cursor N] [--limit N]','result search <id> <query> [--cursor N] [--limit N]','profile list [--json]','profile create <name> --json <profile-object>','profile use <name> [--json]','serve'],exitCodes:{0:'success',2:'invalid input or unknown tool',3:'capability unavailable',4:'execution failure',5:'integrity failure'}};
+const usage={commands:['search <intent> [--limit N] [--include-unavailable] [--json]','schema <tool> [--json]','exec <tool> --json <arguments-object>','namespaces [--json]','doctor [--json]','auth status [--json]','audit [duplicates] [--json]','mcp inspect [--json]','result read <id> [--cursor N] [--limit N]','result search <id> <query> [--cursor N] [--limit N]','tx list [--limit N] [--json]','tx rollback <id> [--dry-run] [--json]','profile list [--json]','profile create <name> --json <profile-object>','profile use <name> [--json]','serve'],exitCodes:{0:'success',2:'invalid input or unknown tool',3:'capability unavailable',4:'execution failure',5:'integrity failure'}};
 let core;
 try {
   const argv=process.argv.slice(2);
   if(!argv.length||argv.includes('--help')||argv[0]==='help'){
     process.stdout.write(JSON.stringify(usage,null,2)+'\n');
   }else{
-    const positionals=[];let jsonArgs,limit,cursor=0,includeUnavailable=false;
+    const positionals=[];let jsonArgs,limit,cursor=0,includeUnavailable=false,dryRun=false;
     for(let i=0;i<argv.length;i++){
       const arg=argv[i];
       if(arg==='--json'){
@@ -23,7 +23,8 @@ try {
         if(argv[i+1]===undefined)throw new Error('--cursor requires an integer');cursor=Number(argv[++i]);
       }else if(arg==='--limit'){
         if(argv[i+1]===undefined)throw new Error('--limit requires an integer');limit=Number(argv[++i]);
-      }else if(arg==='--include-unavailable')includeUnavailable=true;
+      }else if(arg==='--dry-run')dryRun=true;
+      else if(arg==='--include-unavailable')includeUnavailable=true;
       else if(arg.startsWith('--'))throw new Error('Unknown option: '+arg);
       else positionals.push(arg);
     }
@@ -44,6 +45,11 @@ try {
         if(args[0]==='read'){arity(2);result=core.results.read(args[1],{cursor,limit:limit??4096});}
         else if(args[0]==='search'){arity(3);result=core.results.search(args[1],args[2],{cursor,limit:limit??10});}
         else throw new Error('Use result read or result search');
+        break;
+      case 'tx':
+        if(args[0]==='list'){arity(1);result=core.transactions.list({limit:limit??100});}
+        else if(args[0]==='rollback'){arity(2);result=await core.transactions.rollback(args[1],{dryRun});if(result?.success===false)process.exitCode=4;}
+        else throw new Error('Use tx list or tx rollback');
         break;
       case 'profile':
         if(args[0]==='list'){arity(1);result={profiles:core.profileStore.list(),active:core.profileStore.active()?.name||null};}

@@ -38,7 +38,7 @@ test('MCP boots without optional secrets and advertises only brokers',async()=>{
   assert.equal(r.largeOutputStored,true);assert.equal(r.resultReadPassed,true);
   assert.equal(r.booted,true);assert.equal(r.localCallPassed,true);assert.equal(r.missingStripeIsError,true);
   assert.ok(r.advertisedSchemaBytes<baseline.runtime.advertisedSchemaBytes);
-  assert.equal(r.advertisedToolCount,6);
+  assert.equal(r.advertisedToolCount,7);assert.equal(r.transactionListPassed,true);assert.equal(r.invalidBrokerRejected,true);
 });
 test('core supports execution and discovery independently of MCP',async()=>{
   const core=await createToolkit();

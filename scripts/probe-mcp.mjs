@@ -40,9 +40,11 @@ export async function probeMcp(root) {
     const large=await request('tools/call',{name:'execute_tool',arguments:{tool_name:'local_read_file',args:{path:join(workspace,'large.txt')}}});
     const stored=JSON.parse(large.result.content[0].text);
     const page=stored.resultId?await request('tools/call',{name:'toolkit_result_read',arguments:{id:stored.resultId,limit:4096}}):null;
-    return {largeOutputStored:stored.stored===true,resultReadPassed:!!page?.result&&!page.result.isError,booted:!!init.result,protocolVersion:init.result?.protocolVersion,advertisedToolCount:tools.length,
+    const transactions=await request('tools/call',{name:'toolkit_transaction',arguments:{action:'list'}});
+    const invalidBroker=await request('tools/call',{name:'search_toolkit',arguments:{query:'x',limit:1.5}});
+    return {transactionListPassed:!!transactions.result&&!transactions.result.isError,invalidBrokerRejected:invalidBroker.result?.isError===true,largeOutputStored:stored.stored===true,resultReadPassed:!!page?.result&&!page.result.isError,booted:!!init.result,protocolVersion:init.result?.protocolVersion,advertisedToolCount:tools.length,
       advertisedSchemaBytes:Buffer.byteLength(JSON.stringify(tools)),advertisedNames:tools.map(t=>t.name),
-      providerSchemasAdvertised:tools.filter(t=>!['search_toolkit','list_namespaces','get_tool_schema','execute_tool','toolkit_result_read','toolkit_result_search'].includes(t.name)).length,
+      providerSchemasAdvertised:tools.filter(t=>!['search_toolkit','list_namespaces','get_tool_schema','execute_tool','toolkit_result_read','toolkit_result_search','toolkit_transaction'].includes(t.name)).length,
       localCallPassed:!!local.result&&!local.result.isError,missingStripeIsError:!!missing.result?.isError,
       noSecretSearch:search.result,stderr,providerLiveTests:'not run — credentials unavailable'};
   } finally {

@@ -186,3 +186,14 @@ GitHub create-or-update-file no longer advertises deletion as a valid reversal
 without a before-image. Fifty-three offline tests pass. Legacy inverse coverage
 is still incomplete; concurrent rollback and ambiguous remote outcomes require
 further handling before transaction certification.
+
+### Shared transaction commands
+
+Core transaction methods now back CLI list/rollback and the seventh MCP broker.
+Rollback lives in Core, preserves the legacy compound name, and uses durable
+attempts plus an exclusive lease. Unknown remote outcomes block automatic replay
+and dependent compensation; irreversible actions never make rollback successful.
+All broker input schemas now use shared validation. Fifty-six offline tests pass;
+receipt coverage remains limited to the legacy inverse map, and provider rollback
+was not tested live. The locked legacy MCP SDK remains in place pending the
+separate modern transport compatibility checkpoint.

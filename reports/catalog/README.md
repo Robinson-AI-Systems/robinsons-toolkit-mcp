@@ -8,7 +8,7 @@ Compatibility aliases: 4
 
 Namespaces: 31
 
-MCP broker tools: 6; schema bytes: 2442; directly exposed provider schemas: 0.
+MCP broker tools: 7; schema bytes: 2886; directly exposed provider schemas: 0.
 
 Counts describe catalog structure, not upstream correctness or production readiness.
 

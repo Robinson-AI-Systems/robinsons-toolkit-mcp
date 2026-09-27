@@ -8,7 +8,7 @@ import { currentWorkspace, currentDispatcher } from '../src/core/context.js';
 import { existsSync, writeFileSync, readFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { execSync } from 'child_process';
-import { readLedger, markRolledBack } from '../ledger.js';
+import {rollbackTransaction} from '../src/core/transactions.js';
 
 
 
@@ -535,57 +535,10 @@ async function execute(tool, args) {
   // ── ROLLBACK TRANSACTION ──────────────────────────────────────────────────
   // Reads the Observability Ledger and replays inverse operations in reverse order
   if (tool === 'compound_rollback_transaction') {
-    const { last_n, since, transaction_id, dry_run = false } = args;
-    if (!last_n && !since && !transaction_id) {
-      throw new Error('Must provide one of: last_n, since (ISO timestamp), or transaction_id');
-    }
-
-    const entries = readLedger({ limit: last_n, since, transaction_id, include_rolled_back: false });
-    const reversible = entries.filter(e => e.reversible && e.inverse?.tool);
-    const skipped = entries.filter(e => !e.reversible || !e.inverse?.tool);
-
-    const plan = reversible.slice().reverse().map(e => ({
-      id: e.id,
-      timestamp: e.timestamp,
-      original: e.tool_name,
-      inverse: e.inverse.tool,
-      inverse_args: e.inverse.args
-    }));
-
-    if (dry_run) {
-      return {
-        dry_run: true,
-        will_reverse: plan.length,
-        skipped_non_reversible: skipped.length,
-        plan,
-        skipped: skipped.map(e => ({ id: e.id, tool: e.tool_name, notes: e.notes }))
-      };
-    }
-
-    const executed = [];
-    const failed = [];
-    for (const step of plan) {
-      const ns = step.inverse.split('_')[0];
-      try {
-        const handler = await loadHandler(ns);
-        const result = await handler.execute(step.inverse, step.inverse_args);
-        if (result?.success === false || result?.operationFailed === true) throw new Error('Inverse operation reported failure');
-        markRolledBack(step.id);
-        executed.push({ id: step.id, inverse: step.inverse, result });
-      } catch (e) {
-        failed.push({ id: step.id, inverse: step.inverse, error: e.message });
-      }
-    }
-
-    return {
-      success: failed.length === 0 && skipped.length === 0,
-      reversed: executed.length,
-      failed: failed.length,
-      skipped_non_reversible: skipped.length,
-      executed,
-      failed_details: failed,
-      skipped: skipped.map(e => ({ id: e.id, tool: e.tool_name, notes: e.notes }))
-    };
+    return rollbackTransaction(args, async (name, parameters) => {
+      const handler = await loadHandler(name.split('_')[0]);
+      return handler.execute(name, parameters);
+    });
   }
 
 

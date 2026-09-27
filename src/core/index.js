@@ -11,7 +11,7 @@ import {EnvironmentCredentials} from './credentials.js';
 import {searchTools} from './discovery.js';
 import {routeToolCall} from './executor.js';
 import {ResultStore} from './results.js';
-import {appendReceipt} from '../../ledger.js';
+import {appendReceipt,readLedger} from '../../ledger.js';
 import {ProfileStore,validateProfile,policyAllows} from './profiles.js';
 import {withExecutionContext,currentWorkspace,currentExecutionContext} from './context.js';
 export const toolkitRoot=fileURLToPath(new URL('../../',import.meta.url));
@@ -85,6 +85,10 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
       return searchTools(candidates,query,{},limit).map(t=>({name:t.name,description:t.description,namespace:t.namespace,availability:states.get(t.name),whyMatched:'Lexical name, description or tag match'}));
     },
     schema(name){const tool=byName.get(name);return tool?{...tool,availability:statusFor(name)}:undefined;},
+    transactions:{
+      list:(options={})=>withExecutionContext({workspace},()=>results.deliver(readLedger({...options,limit:options.limit??100,include_rolled_back:true}))),
+      rollback:(id,{dryRun=false}={})=>executeCapability('compound_rollback_transaction',{transaction_id:id,dry_run:dryRun})
+    },
     execute:(name,args)=>executeCapability(name,args)
   };
 }

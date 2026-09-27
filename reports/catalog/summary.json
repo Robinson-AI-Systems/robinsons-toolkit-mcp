@@ -49,8 +49,8 @@
   },
   "availabilityAssumptions": "Empty credential environment; optional packages assumed absent; no provider probes.",
   "mcp": {
-    "advertisedTools": 6,
-    "advertisedSchemaBytes": 2442,
+    "advertisedTools": 7,
+    "advertisedSchemaBytes": 2886,
     "providerSchemasAdvertisedDirectly": 0
   },
   "integrity": {

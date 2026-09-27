@@ -13,7 +13,7 @@ test('dynamic compound child dispatch cannot bypass a profile deny rule',async t
  const result=await core.execute('compound_rollback_transaction',{last_n:1});
  assert.equal(result.success,false);assert.equal(result.reversed,0);assert.equal(result.failed,1);
  assert.equal(existsSync(join(dir,'blocked.txt')),false);
- assert.equal(JSON.parse(readFileSync(join(dir,'.toolkit-ledger.jsonl'),'utf8')).rolled_back,false);
+ assert.equal(JSON.parse(readFileSync(join(dir,'.toolkit-ledger.jsonl'),'utf8').split('\n')[0]).rolled_back,false);
  assert.deepEqual(core.loadedNamespaces,['compound']);
 });
 test('workflow intermediates stay raw while the final response goes through bounded result storage',async t=>{

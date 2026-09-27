@@ -14,7 +14,7 @@ test('CLI boots, discovers and executes local tools with zero secrets',()=>{
  for(const args of [['doctor','--json'],['auth','status','--json'],['namespaces'],['schema','stripe_list_customers'],['search','list directory'],['exec','local_list_directory','--json','{}']]){
   const r=cli(args);assert.equal(r.status,0,JSON.stringify(r));assert.equal(r.body.ok,true);
  }
- const r=cli(['mcp','inspect']);assert.equal(r.body.result.advertisedTools,6);assert.equal(r.body.result.providerSchemasAdvertisedDirectly,0);
+ const r=cli(['mcp','inspect']);assert.equal(r.body.result.advertisedTools,7);assert.equal(r.body.result.providerSchemasAdvertisedDirectly,0);
 });
 test('CLI emits deterministic failure codes and valid JSON',()=>{
  assert.equal(cli(['exec','stripe_list_customers','--json','{}']).status,3);

@@ -43,14 +43,18 @@ export function readLedger({limit,since,transaction_id,include_rolled_back=false
  try{fd=openSync(ledgerPath(),constants.O_RDONLY|constants.O_NOFOLLOW);}catch(error){if(error.code==='ENOENT')return [];throw error;}
  let text;
  try{verifyFile(fd);text=readFileSync(fd,'utf8');}finally{closeSync(fd);}
+ if(text&&!text.endsWith('\n'))throw ledgerError('Incomplete ledger record; inspect it before continuing');
  const entries=new Map();
  for(const [i,line]of text.split('\n').entries()){
   if(!line.trim())continue;
   let event;try{event=JSON.parse(line);}catch{throw ledgerError(`Corrupt ledger JSON at line ${i+1}`);}
   if(!event||typeof event!=='object')throw ledgerError(`Invalid ledger event at line ${i+1}`);
-  if(event.event==='rollback_completed'){
+  if(event.event==='rollback_attempt'||event.event==='rollback_uncertain'){
+   if(!entries.has(event.receipt_id))throw ledgerError(`Invalid rollback event at line ${i+1}`);
+   Object.assign(entries.get(event.receipt_id),{rollback_state:event.event==='rollback_attempt'?'IN_PROGRESS':'UNKNOWN',rollback_attempted_at:event.timestamp});
+  }else if(event.event==='rollback_completed'){
    if(!Array.isArray(event.ids)||event.ids.some(id=>!entries.has(id)))throw ledgerError(`Invalid rollback event at line ${i+1}`);
-   for(const id of event.ids)Object.assign(entries.get(id),{rolled_back:true,rolled_back_at:event.timestamp});
+   for(const id of event.ids)Object.assign(entries.get(id),{rolled_back:true,rolled_back_at:event.timestamp,rollback_state:'COMPENSATED'});
   }else{
    if(typeof event.id!=='string'||!event.id||typeof event.tool_name!=='string'||entries.has(event.id))throw ledgerError(`Invalid receipt at line ${i+1}`);
    entries.set(event.id,event);
@@ -69,6 +73,24 @@ export function markRolledBack(ids){
   if(entries.length)appendEvents([{event:'rollback_completed',timestamp:new Date().toISOString(),ids:entries.map(e=>e.id)}]);
   return entries.length;
  });
+}
+// The rollback lease covers provider calls; the shorter writer lock protects
+// each append. Abandoned leases require inspection, never automatic expiry.
+export async function withRollbackLease(action){
+ const path=ledgerPath()+'.rollback.lock';let fd;
+ try{fd=openSync(path,constants.O_WRONLY|constants.O_CREAT|constants.O_EXCL|constants.O_NOFOLLOW,0o600);}
+ catch(error){if(error.code==='EEXIST')throw ledgerError('Rollback is locked; inspect an abandoned lease before retrying','LEDGER_BUSY');throw error;}
+ try{return await action();}finally{closeSync(fd);unlinkSync(path);}
+}
+export function recordRollbackAttempt(id){
+ locked(()=>{
+  const entry=readLedger({include_rolled_back:true}).find(e=>e.id===id);
+  if(!entry||entry.rolled_back||entry.rollback_state)throw ledgerError('Receipt cannot be retried without manual reconciliation','ROLLBACK_UNCERTAIN');
+  appendEvents([{event:'rollback_attempt',receipt_id:id,timestamp:new Date().toISOString()}]);
+ });
+}
+export function recordRollbackUncertain(id){
+ locked(()=>appendEvents([{event:'rollback_uncertain',receipt_id:id,timestamp:new Date().toISOString()}]));
 }
 function summarize(result){
  if(result==null)return null;
