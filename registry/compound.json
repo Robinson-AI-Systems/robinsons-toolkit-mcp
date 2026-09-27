@@ -210,7 +210,21 @@
           "type": "string"
         },
         "files": {
-          "type": "string"
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            }
+          ],
+          "description": "A literal Git pathspec, or an array of pathspecs. Shell splitting and command expansion are not performed."
         },
         "branch": {
           "type": "string"
@@ -219,7 +233,15 @@
       "required": [
         "message"
       ]
-    }
+    },
+    "risk": "WRITE",
+    "layer": 2,
+    "sideEffects": [
+      "Stages files in the repository index",
+      "Creates a Git commit",
+      "Pushes the branch to origin"
+    ],
+    "reversibility": "UNREVIEWED"
   },
   {
     "name": "compound_project_health_check",

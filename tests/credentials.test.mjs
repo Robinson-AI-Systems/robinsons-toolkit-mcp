@@ -18,3 +18,11 @@ test('environment setter inputs protect newly supplied secrets without redacting
  assert.equal(credentials.redact({key:'STRIPE_SECRET_KEY',value:'test-only-new-secret'}).value,'[REDACTED]');
  assert.deepEqual(credentials.redact({key:'port',value:5432}),{key:'port',value:5432});
 });
+
+test('credential-bearing URLs and bearer headers are redacted without prior secret registration',()=>{
+ const credentials=new EnvironmentCredentials({});
+ assert.equal(credentials.redact('fatal: https://fixture:test-only-remote-password@example.invalid/repo'), 'fatal: https://[REDACTED]@example.invalid/repo');
+ assert.equal(credentials.redact('https://test-only-token@example.invalid/repo?access_token=test-only-query'), 'https://[REDACTED]@example.invalid/repo?access_token=[REDACTED]');
+ assert.equal(credentials.redact('Authorization: Bearer test-only-issued-token'),'Authorization: Bearer [REDACTED]');
+ assert.equal(credentials.redact('https://example.invalid/repo?page=2'),'https://example.invalid/repo?page=2');
+});

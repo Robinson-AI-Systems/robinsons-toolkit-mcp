@@ -39,13 +39,14 @@
   "risk": {
     "READ": 4,
     "SECURITY_SENSITIVE": 3,
-    "UNREVIEWED": 3039
+    "UNREVIEWED": 3038,
+    "WRITE": 1
   },
   "zeroCredentialAvailability": {
-    "AVAILABLE": 80,
+    "AVAILABLE": 79,
     "DISABLED": 483,
-    "MISSING_CONFIGURATION": 246,
-    "MISSING_CREDENTIALS": 2237
+    "MISSING_CONFIGURATION": 248,
+    "MISSING_CREDENTIALS": 2236
   },
   "duplicates": {
     "candidatePairs": 1984,

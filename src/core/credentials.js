@@ -30,7 +30,12 @@ export class EnvironmentCredentials {
         return Object.fromEntries(Object.entries(item).map(([key,child])=>[key,secretField(key)||(namedSecret&&key==='value')?'[REDACTED]':visit(child)]));
       }
       if(typeof item!=='string')return item;
-      let text=item;for(const secret of variants)text=text.split(secret).join('[REDACTED]');return text;
+      let text=item;for(const secret of variants)text=text.split(secret).join('[REDACTED]');
+      // Remote URLs and authorization errors can contain credentials that were
+      // loaded by a child from repository configuration rather than our resolver.
+      return text.replace(/\b((?:https?|postgres(?:ql)?|rediss?|amqps?):\/\/)[^/\s@]+@/gi,'$1[REDACTED]@')
+        .replace(/([?&](?:access_token|api_key|token|password|secret)=)[^&#\s"'<>]+/gi,'$1[REDACTED]')
+        .replace(/\bBearer\s+[A-Za-z0-9._~+\/=-]+/gi,'Bearer [REDACTED]');
     };
     return visit(value);
   }

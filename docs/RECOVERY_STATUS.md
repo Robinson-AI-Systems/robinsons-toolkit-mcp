@@ -239,3 +239,13 @@ It contains 1,984 candidate pairs and performs no automatic merges. Sixty-seven
 checks pass, including distinct HTTP methods, renamed parameters, schema subsets
 and workflow composition. Dynamic endpoint resolution and semantic embeddings
 remain unimplemented and are explicitly reported as unknown.
+
+### 2026-09-27 — Compound Git security checkpoint
+
+Published the six checkpoints interrupted by the usage limit, through 1cba9ef.
+Compound Git operations now use structured arguments, filtered environments and
+workspace/metadata boundary checks. Literal messages/pathspecs cannot inject shell
+commands; hooks do not inherit provider credentials. Missing Git is capability-
+specific configuration, and failures are explicit. Added URL/bearer redaction for
+credentials loaded by external tools. Tests use real temporary Git repositories,
+a local bare remote and test-only hooks; no production remote is modified.

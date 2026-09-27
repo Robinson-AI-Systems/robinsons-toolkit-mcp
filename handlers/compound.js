@@ -8,6 +8,7 @@ import { currentWorkspace, currentDispatcher } from '../src/core/context.js';
 import { existsSync, writeFileSync, readFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { execSync } from 'child_process';
+import {workspaceGit} from '../src/core/sandbox/git.js';
 import {rollbackTransaction} from '../src/core/transactions.js';
 
 
@@ -61,7 +62,7 @@ async function execute(tool, args) {
     const { vercel_project_id, git_push = false, project_path } = args;
     const results = { steps: [] };
     if (git_push && project_path) {
-      try { execSync('git push', { cwd: join(currentWorkspace(), project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
+      try { workspaceGit(project_path).push(); results.steps.push({ step: 'git_push', success: true }); }
       catch (e) { results.steps.push({ step: 'git_push', success: false, error: e.message }); }
     }
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -147,16 +148,21 @@ async function execute(tool, args) {
   // ── GIT COMMIT AND PUSH ────────────────────────────────────────────────────
   if (tool === 'compound_git_commit_push') {
     const { project_path, message, files = '.', branch } = args;
-    const cwd = join(currentWorkspace(), project_path || '');
     const steps = [];
-    try { execSync(`git add ${files}`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git add', success: true }); } catch (e) { steps.push({ step: 'git add', success: false, error: e.message }); return { steps }; }
-    try { const out = execSync(`git commit -m "${message.replace(/"/g, '\\"')}"`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git commit', success: true, output: out.trim() }); }
-    catch (e) {
-      if (e.message.includes('nothing to commit')) return { steps: [{ step: 'git commit', success: true, note: 'Nothing to commit' }] };
-      steps.push({ step: 'git commit', success: false, error: e.message }); return { steps };
+    let git;
+    try { git = workspaceGit(project_path); }
+    catch (error) { return {success:false,all_succeeded:false,steps:[{step:'git preflight',success:false,error:error.message}]}; }
+    for (const [step,operation] of [
+      ['git add',()=>git.stage(files)],
+      ['git commit',()=>git.commit(message)],
+      ['git push',()=>git.push(branch)]
+    ]) {
+      try { steps.push({step,success:true,output:operation()}); }
+      catch (error) {
+        return {success:false,all_succeeded:false,steps:[...steps,{step,success:false,error:error.message}]};
+      }
     }
-    try { const out = execSync(`git push ${branch ? `origin ${branch}` : 'origin HEAD'}`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git push', success: true, output: out.trim() }); } catch (e) { steps.push({ step: 'git push', success: false, error: e.message }); }
-    return { steps, all_succeeded: steps.every(s => s.success) };
+    return {success:true,steps,all_succeeded:true};
   }
 
   // ── PROJECT HEALTH CHECK ──────────────────────────────────────────────────
@@ -240,7 +246,7 @@ async function execute(tool, args) {
     const results = { version, steps: [] };
 
     if (git_push && project_path) {
-      try { execSync('git push', { cwd: join(currentWorkspace(), project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
+      try { workspaceGit(project_path).push(); results.steps.push({ step: 'git_push', success: true }); }
       catch (e) { results.steps.push({ step: 'git_push', success: false, error: e.message }); }
     }
 

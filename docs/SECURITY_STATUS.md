@@ -64,3 +64,26 @@ handling; no live database backup has been certified.
 Sources checked: PostgreSQL pg_dump and libpq password-file documentation:
 https://www.postgresql.org/docs/current/app-pgdump.html
 https://www.postgresql.org/docs/current/libpq-pgpass.html
+
+## Compound Git subprocess recovery
+
+Compound Git staging, commit and push now use argument arrays and an explicit
+filtered environment. Literal pathspec strings remain single arguments; multiple
+pathspecs must be supplied as an array. Shell expansion is deliberately removed.
+Preflight checks the working directory, Git metadata, common directory and worktree
+against configured write roots. Traversal, symlink escapes and linked metadata
+outside those roots are rejected. Missing Git is a formal configuration requirement
+for compound_git_commit_push. Failures return explicit success:false; an empty
+commit no longer produces a fabricated success response.
+
+Core redaction also removes credentials embedded in remote URLs and bearer headers
+that were not previously registered with its environment resolver. Repository Git
+configuration and hooks still execute as trusted host-user code, and existing host
+credential helpers/files remain accessible. This is command/environment hygiene,
+not OS isolation. The scaffold migration subprocess remains a separate unresolved
+credential-isolation gap; this increment does not claim to secure that path.
+
+Sources checked on 2026-09-27:
+https://git-scm.com/docs/git-add
+https://git-scm.com/docs/git-commit
+https://git-scm.com/docs/git-push
