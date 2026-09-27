@@ -13,7 +13,8 @@
     "audit:baseline": "node scripts/baseline.mjs",
     "audit:metadata": "node scripts/generate-capabilities.mjs --check",
     "catalog:generate": "node scripts/generate-catalog.mjs",
-    "catalog:check": "node scripts/generate-catalog.mjs --check"
+    "catalog:check": "node scripts/generate-catalog.mjs --check",
+    "verify:recovery": "node scripts/verify-recovery.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
