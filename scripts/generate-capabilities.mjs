@@ -33,6 +33,7 @@ for(const entry of data.entries){
  const body=branch?.body||'';
  let requirements=structuredClone(defaults[ns]);
  if(!requirements)throw Error('Missing namespace requirements: '+ns);
+ if(ns==='postgres'&&['postgres_dump_schema','postgres_dump_table'].includes(entry.name))requirements=[{...group(['POSTGRES_CONNECTION_STRING']),binaries:['pg_dump']}];
  if(ns==='search'){
    if(entry.name.startsWith('brave_'))requirements=[group(['BRAVE_SEARCH_API_KEY'])];
    else if(entry.name.startsWith('tavily_')||entry.name==='search_and_summarize')requirements=[group(['TAVILY_API_KEY'])];

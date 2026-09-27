@@ -1,12 +1,14 @@
 import {createRequire} from 'node:module';
 import {accessSync,constants} from 'node:fs';
+import {findExecutable} from './sandbox/executables.js';
 import {EnvironmentCredentials} from './credentials.js';
 const require=createRequire(import.meta.url);
 export const Availability=Object.freeze(Object.fromEntries(['AVAILABLE','MISSING_CREDENTIALS','MISSING_CONFIGURATION','AUTHORIZATION_REQUIRED','UNREACHABLE','DISABLED','DEPRECATED'].map(s=>[s,s])));
 
 export class CapabilityAvailability {
   #metadata; #credentials; #health=new Map(); #packages=new Map();
-  constructor(metadata,{credentials=new EnvironmentCredentials(),packageExists}={}){
+  constructor(metadata,{credentials=new EnvironmentCredentials(),packageExists,binaryExists}={}){
+    this.binaryExists=binaryExists||((name)=>!!findExecutable(name));
     this.#metadata=metadata;this.#credentials=credentials;
     this.packageExists=packageExists||((name)=>{if(!this.#packages.has(name)){try{require.resolve(name);this.#packages.set(name,true);}catch{this.#packages.set(name,false);}}return this.#packages.get(name);});
   }
@@ -22,7 +24,8 @@ export class CapabilityAvailability {
         try{accessSync(this.#credentials.configuration('GOOGLE_SERVICE_ACCOUNT_KEY_PATH'),constants.R_OK);}catch{missingConfiguration.push('GOOGLE_SERVICE_ACCOUNT_KEY_PATH (readable file required)');}
       }
       const missingPackages=g.packages.filter(n=>!this.packageExists(n));
-      return {state:missingCredentials.length?Availability.MISSING_CREDENTIALS:missingConfiguration.length||missingPackages.length?Availability.MISSING_CONFIGURATION:Availability.AVAILABLE,missingCredentials,missingConfiguration,missingPackages};
+      const missingBinaries=(g.binaries||[]).filter(n=>!this.binaryExists(n));
+      return {state:missingCredentials.length?Availability.MISSING_CREDENTIALS:missingConfiguration.length||missingPackages.length||missingBinaries.length?Availability.MISSING_CONFIGURATION:Availability.AVAILABLE,missingCredentials,missingConfiguration,missingPackages,missingBinaries};
     });
     if(!statuses.some(s=>s.state===Availability.AVAILABLE))return {state:statuses.some(s=>s.state===Availability.MISSING_CONFIGURATION)?Availability.MISSING_CONFIGURATION:Availability.MISSING_CREDENTIALS,requirements:statuses};
     const scope=this.scope(name);

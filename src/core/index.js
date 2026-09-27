@@ -17,7 +17,7 @@ import {withExecutionContext,currentWorkspace,currentExecutionContext} from './c
 export const toolkitRoot=fileURLToPath(new URL('../../',import.meta.url));
 
 /** Transport-independent capability gateway; constructing it imports no handlers. */
-export async function createToolkit({root=toolkitRoot,credentials=new EnvironmentCredentials(),packageExists,resultOptions={},profile,profileStore=new ProfileStore()}={}) {
+export async function createToolkit({root=toolkitRoot,credentials=new EnvironmentCredentials(),packageExists,binaryExists,resultOptions={},profile,profileStore=new ProfileStore()}={}) {
   const selectedProfile=profile===undefined?profileStore.active():profile===null?null:validateProfile(profile);
   const workspace=selectedProfile?.workspace||currentWorkspace();
   const results=withExecutionContext({workspace},()=>new ResultStore({inlineBytes:Number(process.env.RT_MAX_INLINE_BYTES||16384),inlineRecords:Number(process.env.RT_MAX_INLINE_RECORDS||100),...resultOptions,redact:value=>credentials.redact(value)}));
@@ -27,7 +27,7 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
   const discovery=createDiscovery(registry);
   const metadata=JSON.parse(readFileSync(join(root,'src/core/capability-metadata.json'),'utf8')).capabilities;
   const handlers=createHandlerLoader(root);
-  const availability=new CapabilityAvailability(metadata,{credentials,packageExists});
+  const availability=new CapabilityAvailability(metadata,{credentials,packageExists,binaryExists});
   const statusFor=name=>{
     const canonical=catalog.resolve(name)?.canonical.name||name;
     const pending=[canonical],seen=new Set();

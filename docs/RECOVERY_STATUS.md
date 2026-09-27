@@ -217,3 +217,14 @@ includes honest risk metadata and matching terms without schemas or handler load
 Sixty-two tests pass, including a 10,000-capability synthetic catalog. Cached
 semantic vectors and execution-history reranking are still future work; this
 increment is lexical retrieval, not a claim of completed hybrid search.
+
+### PostgreSQL backup credential and path isolation
+
+Replaced shell-interpolated pg_dump calls with credential-scoped native processes,
+private temporary password files, checked/staged outputs and explicit warning/error
+reporting. Added executable availability requirements so missing pg_dump disables
+only these tools. Sixty-five offline tests pass, including environment isolation,
+argument injection, traversal/symlink rejection and failed-backup preservation.
+Live PostgreSQL backup/restore tests were not run: authorized test credentials
+were unavailable. This closes the ambient-environment gap for these backup tools;
+compound subprocesses and broader host isolation still require work.

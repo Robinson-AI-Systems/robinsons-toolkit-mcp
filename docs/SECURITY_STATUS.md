@@ -39,3 +39,28 @@ credential-bearing operations, stronger execution backends, policy enforcement,
 generated-secret redaction and project profiles remain incomplete.
 
 This increment does not complete Checkpoint 6 or certify production readiness.
+
+## PostgreSQL backup recovery
+
+The two pg_dump capabilities now use a native executable with an argument vector,
+not a shell string. The child inherits only the environment allowlist plus a
+private temporary PGPASSFILE path and a connection timeout. The database password
+is removed from the URI passed in argv and held in a mode-0600 password file that
+is removed afterward. Backup output is staged with mode 0600 under checked write
+roots and replaces the requested file only after pg_dump succeeds. Errors preserve
+existing output and redact password echoes; stderr warnings are returned explicitly.
+The availability system reports a missing pg_dump binary without loading handlers.
+These tools no longer incorrectly require the unrelated Node postgres package.
+
+For this hardened path, supply a postgres/postgresql URI with explicit host and
+user. Alternate service/passfile references and host/user/database overrides in
+query parameters are rejected rather than allowing unrelated host credentials.
+Plain and custom dumps are supported. SQL execution keeps its existing connection
+handling. Native executable installation, database authorization and actual backup
+restore verification remain the operator's responsibility. Tests use test-only
+executables to verify process arguments, environment, file boundaries and failure
+handling; no live database backup has been certified.
+
+Sources checked: PostgreSQL pg_dump and libpq password-file documentation:
+https://www.postgresql.org/docs/current/app-pgdump.html
+https://www.postgresql.org/docs/current/libpq-pgpass.html

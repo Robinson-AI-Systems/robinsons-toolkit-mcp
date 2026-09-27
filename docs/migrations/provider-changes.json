@@ -2,34 +2,70 @@
   {
     "id": "cloudflare-zone-settings-read",
     "status": "migrated",
-    "tools": ["cf_get_zone_settings", "cf_get_all_zone_settings"],
+    "tools": [
+      "cf_get_zone_settings",
+      "cf_get_all_zone_settings"
+    ],
     "replacement": "GET /zones/{zone_id}/settings/{setting_id}",
     "migration": "Provide setting_ids explicitly. cf_get_all_zone_settings remains a deprecated compatibility name, excluded from discovery. No claim to enumerate every setting.",
     "verifiedOn": "2026-09-26",
-    "sources": ["https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/", "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/get/"],
+    "sources": [
+      "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/",
+      "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/get/"
+    ],
     "test": "tests/cloudflare-settings.test.mjs"
   },
   {
     "id": "cloudflare-zone-health-bulk-read",
     "status": "blocked",
-    "tools": ["cf_zone_health_report"],
+    "tools": [
+      "cf_zone_health_report"
+    ],
     "blocker": "Disabled unreachable workflow also swallows provider failures and misreads unwrapped responses. Must repair the whole report before exposing it, including reviewing rate-limit/firewall endpoints.",
     "nextAction": "Use supported individual-setting reads for the report's explicit fields; preserve real per-provider failures and verify the remaining endpoints.",
-    "sources": ["https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/"]
+    "sources": [
+      "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/"
+    ]
   },
   {
     "id": "slack-set-active",
     "status": "retired",
-    "tools": ["slack_set_user_active"],
+    "tools": [
+      "slack_set_user_active"
+    ],
     "migration": "Removed an unregistered nonfunctional orphan. No equivalent exists for forcing activity; users.setPresence has different semantics.",
-    "sources": ["https://docs.slack.dev/reference/methods/users.setActive/"],
+    "sources": [
+      "https://docs.slack.dev/reference/methods/users.setActive/"
+    ],
     "test": "tests/provider-repairs.test.mjs"
   },
   {
     "id": "legacy-provider-usage-routes",
     "status": "review-required",
-    "tools": ["openai_get_usage", "anthropic_get_usage"],
+    "tools": [
+      "openai_get_usage",
+      "anthropic_get_usage"
+    ],
     "nextAction": "Reconcile legacy arguments and credentials with documented organization usage reports; do not silently change date ranges or output scope.",
-    "sources": ["https://platform.claude.com/docs/en/manage-claude/usage-cost-api", "https://developers.openai.com/api/reference/python/resources/admin/subresources/organization/subresources/usage"]
+    "sources": [
+      "https://platform.claude.com/docs/en/manage-claude/usage-cost-api",
+      "https://developers.openai.com/api/reference/python/resources/admin/subresources/organization/subresources/usage"
+    ]
+  },
+  {
+    "id": "postgres-native-backup-recovery",
+    "status": "migrated",
+    "tools": [
+      "postgres_dump_schema",
+      "postgres_dump_table"
+    ],
+    "replacement": "Native pg_dump argument vector with private PGPASSFILE and staged output",
+    "migration": "Recovered unreachable tools. Require pg_dump on an absolute PATH entry and an explicit PostgreSQL host/user URI. Output is restricted to the workspace/profile and replaced only on successful completion. Service/passfile and query authority overrides are rejected.",
+    "verifiedOn": "2026-09-26",
+    "sources": [
+      "https://www.postgresql.org/docs/current/app-pgdump.html",
+      "https://www.postgresql.org/docs/current/libpq-pgpass.html"
+    ],
+    "test": "tests/postgres-dump.test.mjs; live backup/restore not run \u2014 credentials unavailable"
   }
 ]

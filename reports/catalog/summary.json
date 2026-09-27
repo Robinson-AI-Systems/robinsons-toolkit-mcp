@@ -43,9 +43,9 @@
   },
   "zeroCredentialAvailability": {
     "AVAILABLE": 80,
-    "DISABLED": 485,
+    "DISABLED": 483,
     "MISSING_CONFIGURATION": 246,
-    "MISSING_CREDENTIALS": 2235
+    "MISSING_CREDENTIALS": 2237
   },
   "availabilityAssumptions": "Empty credential environment; optional packages assumed absent; no provider probes.",
   "mcp": {
@@ -58,7 +58,7 @@
     "repeatedDispatchNames": 0,
     "registryWithoutHandler": 0,
     "handlerWithoutRegistry": 7,
-    "findings": 489
+    "findings": 487
   },
   "certification": "Counts describe catalog structure, not upstream correctness or production readiness."
 }

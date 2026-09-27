@@ -55,3 +55,13 @@ test('broken lazy module does not prevent loading a separate namespace',async()=
   const [a,b]=await Promise.all([loader.load('good'),loader.load('good')]);assert.equal(a,b);assert.equal(await a.execute(),42);
  }finally{rmSync(root,{recursive:true,force:true});}
 });
+
+test('native executable requirements disable only the affected capability',async()=>{
+ const core=await createToolkit({profile:null,credentials:new EnvironmentCredentials({POSTGRES_CONNECTION_STRING:'postgres://test:test@fixture.invalid/test'}),packageExists:()=>false,binaryExists:()=>false});
+ const status=core.schema('postgres_dump_schema').availability;
+ assert.equal(status.state,'MISSING_CONFIGURATION');assert.deepEqual(status.requirements[0].missingBinaries,['pg_dump']);
+ assert.equal(core.schema('local_list_directory').availability.state,'AVAILABLE');
+ const configured=await createToolkit({profile:null,credentials:new EnvironmentCredentials({POSTGRES_CONNECTION_STRING:'postgres://test:test@fixture.invalid/test'}),packageExists:()=>false,binaryExists:()=>true});
+ assert.equal(configured.schema('postgres_dump_schema').availability.state,'AVAILABLE');
+ assert.equal(configured.schema('postgres_run_sql').availability.state,'MISSING_CONFIGURATION');
+});

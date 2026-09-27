@@ -19,7 +19,7 @@
     "handlers/ollama.js": "1abf5eb5a2017b966673350bece054fd95ed15b69c5700db4ce1e1ba4166941e",
     "handlers/openai.js": "0da1c0bbc41043b93f701c37dac6e22bd6e130e3ec9d386e01c489ebb9b7094d",
     "handlers/playwright.js": "d56d5fb9a0f3f20cd7322968b3b9a59760ff99c3ee88196a8782cf018a386a76",
-    "handlers/postgres.js": "219d1975bf0f15417cc531398ff4f5cda017b34ed04b0fc8341f2660fbe4cf47",
+    "handlers/postgres.js": "6cd499c9f2125207b124e99dcc342a5795af1d6fad4bef5e35a36c4d613496f4",
     "handlers/qdrant.js": "3f8f9a14a9f5fd6b31ad7666e94cbe3e1459e2b9212bc8f9d5b98042fd7edc35",
     "handlers/resend.js": "ac8d370cb4e372ccdc2caa4e1c18fbd257570ac29a2ffe2edb95a7010a0e4857",
     "handlers/sam.js": "1acf6c7e5c7b9523f00b7d05b9d662923a0f854ad8485321750880e2bd7e50b4",
@@ -29437,14 +29437,14 @@
             "POSTGRES_CONNECTION_STRING"
           ],
           "configuration": [],
-          "packages": [
-            "postgres"
+          "packages": [],
+          "binaries": [
+            "pg_dump"
           ]
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct",
-      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+      "dependencyMode": "direct"
     },
     "postgres_dump_table": {
       "namespace": "postgres",
@@ -29455,14 +29455,14 @@
             "POSTGRES_CONNECTION_STRING"
           ],
           "configuration": [],
-          "packages": [
-            "postgres"
+          "packages": [],
+          "binaries": [
+            "pg_dump"
           ]
         }
       ],
       "childTools": [],
-      "dependencyMode": "direct",
-      "disabled": "Implementation is unreachable after an unconditional return or throw; pending provider review"
+      "dependencyMode": "direct"
     },
     "postgres_get_query_stats": {
       "namespace": "postgres",
