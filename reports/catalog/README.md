@@ -2,9 +2,9 @@
 
 Registry names: 3050
 
-Canonical capabilities: 3046
+Canonical capabilities: 3045
 
-Compatibility aliases: 4
+Compatibility aliases: 5
 
 Namespaces: 31
 

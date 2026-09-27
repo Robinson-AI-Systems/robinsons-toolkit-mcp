@@ -52,3 +52,9 @@ test('scaffold cannot report ready when the provider omits its connection string
  assert.ok(result.steps.some(step=>step.success===false&&step.error.includes('no database connection string')));
  assert.equal(existsSync(join(workspace,'.env.local')),false);
 });
+test('scaffold refuses default-branch fallback when Neon omits the new branch ID',async t=>{
+ const workspace=fixture(t),calls=[];
+ const result=await withExecutionContext({workspace,dispatch:async(tool)=>{calls.push(tool);return {};}},()=>compound.execute('compound_scaffold_feature',{feature_name:'fixture'}));
+ assert.equal(result.success,false);assert.ok(!calls.includes('neon_get_connection_string'));
+ assert.equal(existsSync(join(workspace,'.env.local')),false);
+});

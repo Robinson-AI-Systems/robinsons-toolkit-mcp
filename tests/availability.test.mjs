@@ -65,3 +65,9 @@ test('native executable requirements disable only the affected capability',async
  assert.equal(configured.schema('postgres_dump_schema').availability.state,'AVAILABLE');
  assert.equal(configured.schema('postgres_run_sql').availability.state,'MISSING_CONFIGURATION');
 });
+test('runtime requirements gate only capabilities that need a newer Node release',()=>{
+ const metadata={future:{namespace:'fixture',requirements:[{credentials:[],configuration:[],packages:[],nodeMajor:Number(process.versions.node.split('.')[0])+1}],childTools:[]}};
+ const state=new CapabilityAvailability(metadata,{credentials:new EnvironmentCredentials({})});
+ assert.equal(state.get('future').state,'MISSING_CONFIGURATION');
+ assert.match(state.get('future').requirements[0].missingConfiguration[0],/Node.js/);
+});

@@ -1,7 +1,7 @@
 [
   {
     "name": "compound_scaffold_feature",
-    "description": "SUPER TOOL: Set up a complete feature branch environment \u2014 GitHub branch + Neon DB branch + .env.local update + optional migration run \u2014 in one call.",
+    "description": "SUPER TOOL: Set up a complete feature branch environment \u2014 GitHub branch + Neon DB branch + .env.local update + optional Prisma schema synchronization \u2014 in one call.",
     "namespace": "compound",
     "tags": [
       "compound",

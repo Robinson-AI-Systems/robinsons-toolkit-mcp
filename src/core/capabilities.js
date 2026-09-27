@@ -23,6 +23,7 @@ export class CapabilityAvailability {
       if(g.configuration.includes('GOOGLE_SERVICE_ACCOUNT_KEY_PATH')&&!missingConfiguration.length){
         try{accessSync(this.#credentials.configuration('GOOGLE_SERVICE_ACCOUNT_KEY_PATH'),constants.R_OK);}catch{missingConfiguration.push('GOOGLE_SERVICE_ACCOUNT_KEY_PATH (readable file required)');}
       }
+      if(g.nodeMajor&&Number(process.versions.node.split('.')[0])<g.nodeMajor)missingConfiguration.push(`Node.js >= ${g.nodeMajor} required`);
       const missingPackages=g.packages.filter(n=>!this.packageExists(n));
       const missingBinaries=(g.binaries||[]).filter(n=>!this.binaryExists(n));
       return {state:missingCredentials.length?Availability.MISSING_CREDENTIALS:missingConfiguration.length||missingPackages.length||missingBinaries.length?Availability.MISSING_CONFIGURATION:Availability.AVAILABLE,missingCredentials,missingConfiguration,missingPackages,missingBinaries};

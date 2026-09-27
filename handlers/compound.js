@@ -34,6 +34,7 @@ async function execute(tool, args) {
     try {
       const neon = await loadHandler('neon');
       const neonBranch = await neon.execute('neon_create_branch', { project_id: neon_project_id, branch_name: `feature-${feature_name}` });
+      if (!neonBranch.branch?.id) throw new Error('Neon returned no branch ID; refusing to use the default database branch');
       results.neon_branch = neonBranch;
       results.steps.push({ step: 'neon_branch', success: true, branch_name: `feature-${feature_name}` });
       const connInfo = await neon.execute('neon_get_connection_string', { project_id: neon_project_id, branch_id: neonBranch.branch?.id, database: 'neondb' });

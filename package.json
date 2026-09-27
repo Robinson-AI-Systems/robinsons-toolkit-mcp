@@ -31,7 +31,8 @@
     "robinsons-toolkit": "bin/rt.js"
   },
   "optionalDependencies": {
-    "@modelcontextprotocol/server": "2.1.0"
+    "@modelcontextprotocol/server": "2.1.0",
+    "@neondatabase/serverless": "1.1.0"
   },
   "devDependencies": {
     "@modelcontextprotocol/client": "2.1.0"

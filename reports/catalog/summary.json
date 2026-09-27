@@ -1,7 +1,7 @@
 {
   "registryNames": 3050,
-  "canonicalCapabilities": 3046,
-  "aliases": 4,
+  "canonicalCapabilities": 3045,
+  "aliases": 5,
   "namespaces": 31,
   "byNamespace": {
     "anthropic": 64,
@@ -18,7 +18,7 @@
     "mapbox": 51,
     "moonshot": 17,
     "n8n": 79,
-    "neon": 204,
+    "neon": 203,
     "ollama": 16,
     "openai": 133,
     "playwright": 47,
@@ -38,24 +38,24 @@
   },
   "risk": {
     "READ": 4,
-    "SECURITY_SENSITIVE": 3,
-    "UNREVIEWED": 3038,
+    "SECURITY_SENSITIVE": 4,
+    "UNREVIEWED": 3036,
     "WRITE": 1
   },
   "zeroCredentialAvailability": {
     "AVAILABLE": 79,
     "DISABLED": 483,
     "MISSING_CONFIGURATION": 248,
-    "MISSING_CREDENTIALS": 2236
+    "MISSING_CREDENTIALS": 2235
   },
   "duplicates": {
-    "candidatePairs": 1984,
+    "candidatePairs": 1962,
     "byClassification": {
       "identical-branch-candidate": 11,
-      "partial-endpoint-overlap": 516,
+      "partial-endpoint-overlap": 496,
       "primitive-workflow-overlap": 129,
       "same-call-different-wrapper": 430,
-      "same-endpoint-candidate": 898
+      "same-endpoint-candidate": 896
     }
   },
   "availabilityAssumptions": "Empty credential environment; optional packages and executables assumed absent; no provider probes.",

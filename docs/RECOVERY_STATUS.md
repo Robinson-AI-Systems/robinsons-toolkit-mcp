@@ -257,3 +257,15 @@ branch DATABASE_URL added to the filtered environment. Missing prerequisites and
 unsupported custom commands fail before provider calls. Environment file updates
 are private and boundary-checked; missing connection strings and uncertain command
 failures remain explicit. No live Prisma/database operation was performed.
+
+### 2026-09-27 — Neon authenticated connection and SQL repair
+
+Replaced the passwordless synthesized URI with the documented management API.
+Replaced the SQL helper's incorrect management-token authentication with the
+optional official serverless driver and the retrieved database credential.
+SQL errors throw, driver transactions use atomic batches, and SQL availability
+requires the driver and Node >=19 without disabling management capabilities.
+The URI alias remains callable with a deprecation warning. Missing scaffold
+branch IDs now fail rather than falling back to the default branch. Contract
+and security tests use real driver code with test-only HTTP responses; live
+Neon behavior remains unverified without authorized sandbox credentials.

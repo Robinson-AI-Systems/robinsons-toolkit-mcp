@@ -81,5 +81,23 @@
       "https://www.prisma.io/docs/cli/db/push"
     ],
     "test": "tests/project-migration.test.mjs; live Prisma schema push not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "neon-authenticated-connections-and-sql",
+    "status": "migrated",
+    "tools": [
+      "neon_get_connection_string",
+      "neon_get_connection_uri",
+      "neon_run_sql",
+      "neon_run_sql_transaction"
+    ],
+    "replacement": "Management connection_uri API plus optional official @neondatabase/serverless 1.1.0 driver",
+    "migration": "Existing database, role, branch_id and pooled selectors map to documented API query parameters. connection_string now contains real credentials internally and is redacted at public output boundaries. host is the selected URI host; fabricated pooler_host and implicit endpoint_id fields are no longer returned. The URI tool remains a deprecated alias. SQL returns typed full driver results, transactions return one result per statement, and SQL failures throw instead of returning fallback connection instructions. SQL-dependent tools require the optional driver and Node >=19; management tools remain independent. Existing SQL wrapper query construction still requires further review.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://api-docs.neon.tech/reference/getconnectionuri",
+      "https://github.com/neondatabase/serverless/blob/main/CONFIG.md"
+    ],
+    "test": "tests/neon-connection.test.mjs exercises the real installed driver against test-only HTTP fixtures; live Neon tests not run \u2014 credentials unavailable"
   }
 ]
