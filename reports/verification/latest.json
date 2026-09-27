@@ -1,11 +1,11 @@
 {
-  "sourceTree": "07a1b2fc06efed8546acbe4e37d65a9896b82093",
-  "verifiedAt": "2026-09-27T14:52:23.882Z",
+  "sourceTree": "2091559d20f1f1c66fa3d10f1e1fe1c5cea6f131",
+  "verifiedAt": "2026-09-27T22:02:00.721Z",
   "node": "v24.19.0",
   "tests": {
     "exitCode": 0,
-    "tests": 85,
-    "passed": 85,
+    "tests": 96,
+    "passed": 96,
     "failed": 0,
     "skipped": 0,
     "timedOut": false
@@ -21,8 +21,8 @@
     }
   ],
   "inventory": {
-    "registryEntries": 3050,
-    "uniqueNames": 3050,
+    "registryEntries": 3053,
+    "uniqueNames": 3053,
     "handlerDispatchBranches": 3057,
     "uniqueHandlerNames": 3057,
     "namespaces": 31,
@@ -32,20 +32,17 @@
     "registryWithoutHandler": [],
     "handlerWithoutRegistry": [
       "cf_list_ai_finetune_assets",
-      "sentry_get_project_data_scrubbing",
       "sentry_list_org_rules",
-      "slack_convert_channel_to_private",
       "slack_list_apps",
-      "supabase_get_edge_function_body",
-      "supabase_get_postgres_logs"
+      "supabase_get_edge_function_body"
     ]
   },
   "strictIntegrity": {
     "passed": false,
-    "findings": 487,
-    "unreachableRegisteredNames": 482
+    "findings": 484,
+    "unreachableRegisteredNames": 481
   },
-  "duplicateCandidates": 1962,
+  "duplicateCandidates": 1963,
   "mcp": {
     "transactionListPassed": true,
     "invalidBrokerRejected": true,
