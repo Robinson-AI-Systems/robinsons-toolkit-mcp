@@ -14,7 +14,9 @@
     "audit:metadata": "node scripts/generate-capabilities.mjs --check",
     "catalog:generate": "node scripts/generate-catalog.mjs",
     "catalog:check": "node scripts/generate-catalog.mjs --check",
-    "verify:recovery": "node scripts/verify-recovery.mjs"
+    "verify:recovery": "node scripts/verify-recovery.mjs",
+    "repair:generate": "node scripts/repair-backlog.mjs",
+    "repair:check": "node scripts/repair-backlog.mjs --check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",

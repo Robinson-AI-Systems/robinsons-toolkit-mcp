@@ -17,4 +17,5 @@ jobs:
       # Deliberately fails on the inherited defects captured in reports/recovery.
       # Do not weaken this gate to make the baseline appear production-ready.
       - run: npm run catalog:check
+      - run: npm run repair:check
       - run: npm run audit:integrity

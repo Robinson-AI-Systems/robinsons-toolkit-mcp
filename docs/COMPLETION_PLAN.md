@@ -250,7 +250,9 @@ their own existing authorization; finish the reviewable work before that decisio
 
 ## Immediate next three engineering commits
 
-1. Generate the repair backlog and capability evidence matrix from existing audits.
+1. Initial backlog and conservative capability evidence matrix implemented in
+   `scripts/repair-backlog.mjs` and `reports/repair/`; continue populating reviewed
+   contract/live evidence as repairs land. Generate from existing audits.
    Add regression checks that detect new integrity/security defects while preserving
    the strict failing gate for inherited defects. Do not suppress its exit code.
 2. Implement and test the scoped provider-execution harness with a real read handler

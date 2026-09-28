@@ -1,0 +1,3897 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_compare_pages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "005288af834ad6a528ac4c2ededd4eb372978545642138f486628eee6385f56d"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_remove_copilot_seats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0142194f995bfa5f96d4824d1d0715c7bad129c916b39668f351ff28dbb2b3bf"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_security_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "02c770691183ca10a407d84b39ae14bb07d2d488819bcb796e7f0d9cf916beb6"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_delete_issue_relation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "032f4001b7f8e0a0dc2da195f51030fb533d93a8861f305fa18f4c41fc6006dd"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_click_by_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "03e657424dcca7af12e6bbe7aeab1e140d5d9e61c2eba4cffa2722e89faad94d"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "045187c011046b8cde03ef281b854caf39b2c4fbdb8826db83902ea8409852bc"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "04564b3dd5f0f2cfd1121094a7786fbc0669d9872118d4b28c51a1a6985660e4"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_audit_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "048da5bd9994a953041f3fb421190b0c222138a1ce7b6d49b7f3bd0c4fb90ce6"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_get_locks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0583ec2118740e62d1ec77411552cfe5aaf834a1b3051fbe08d5f427549997fb"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_email_routing_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "06433dfe8ec2df0714fcef7d79a48202e48068a26d3f97e53905606ebb5bff4c"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_create_schedule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "07383f638b8c188117d83791c2a15e142b0d88e315d931875ac8af600c4a51d2"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_oauth_applications",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "07636903532b332cb9cab70dd111d67cac7e4d5370bd86827cea7d07538fcd78"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_database",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0763ea6a69178b28c97d9b2e644e8727d0c8d25a25632495fcce9f20333ed312"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_check_constraint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "07937b40cea91da77591df584e425a0816e2e711fcf11b3de373414cb2415341"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_org_projects",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "07a28758a031dd13bf268d23974766e2b8aef6e8d8600b4ac03a69d0bfca0524"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_trigger_cron_job",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "082ab599de7a2df9ffdbd9e70f957545548ea3c65cfcc22cff50774156027e7f"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_list_available_extensions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "08560dff71574e13de9a8fa6c47c8e3557a884a5d372d830406f628dcb9bd9e9"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_org_usage",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "085ac0c10437fffd7f11a0d3a2490c311b26902646144f74d2b89b927a0af939"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_pull_env_vars",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "08602c5ca161f37fe8dbb2d2bef7cc18c62ff2effc53f8fd2e708c180551825b"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_project_security_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0867a9c499f208e679dccd87713c54d2257e7ef4ba04ab06569f416ea3e280a0"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_team",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0874b8ccc0c8aba8a3444a31ded6f671248a435425d7fa377e17de6a2d4f1b94"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_radar_value_lists",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "087e67e046791246f90f531c96534fd18f09f491fb14d188d2df6c454313af17"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_delete_team",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "08a23ccde8d087513ca15e2bcb64c9ccbbd2343ca13143638ebf9408ca205d25"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_templates",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "08c5710a1b1d7b0c77a896b8e080319ac6cb4821e88f7d233af70c08266291cc"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_page_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "09083c8dccbedd8639fd6548c4d03d7f0c2474a12d45dc49ae0228058e35df95"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_ssl_enforcement",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "094c68e9bc9fc979e1b5f4bb92c831f613485e4753b3d3241d7a8304f4fdaab7"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_scale_process_group",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "09687bafbcfba85d179615d38d81a8f71be6699ccf360d50b3844ca995aed47a"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_us_app_to_person_campaigns",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0aef86a17770b6ef52387932bb6c1a431b142244ae0443df86de7e2fe75bca32"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_workflows",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0b656bddb8ff1a17fc81b248c9a41ef7a6e870ba19c856d842e7acbfc710240d"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_invoice",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0d143ceb79098adc6b21c77b3f23f4016ea6d0ab62726be60f6734726ee3db1e"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_radar_value_list_item",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0da08733ed9f5c09e7aad4b393f43488822253b149973fa61c55b30c5ee7eee1"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_list_attack_events",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0dac43b707a61d9097b342e5a21a5b102bb0728534e5668dda6dcc2e32a11177"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_rename_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0de1bc5f1ff12ba5211c11910198ffe8bd818eb97aa0a85c207314a083b53d51"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_add_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0f1c3399f6f4ba53bf3de512d4273f1767cdac6b3d5ef426379fd5b10ea3587a"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_identity_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0f2360acee0572af170fb6b85151a4f9b8e067b4225f7b206cefa80856a7cdd5"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "0fffcca368173aa1958e020dfe64cc07ad6935c377dfefaef20ec086037d0c80"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_tax_settings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "10ac6b6ae24671123015258929e4c58329361856206204db4e9e98faa609bd90"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_waf_rule_groups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "113c10fe8d96cc0e728b7153049d2e1237e0a7335d9017de6cf381be898edd6e"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_tar_extract",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1181dbe225c1970beb89b243638cfdc3a06f7f3f27cc5b31ad530be0b044739d"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_queue",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "12b774d29b6fb3c54fb20ba3b659480c61db179a1e76a21c19efd0599be37711"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_record_video",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "13c0b8161e9073bc83dae898f2ae4f5f58613541c6d351bb220460be2c77dab6"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_set_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "13eeeb84a150cece268324070d8b69bc69831951c79681e9cbcb6a98c7afc36f"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_channel_digest",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "14194f43a820110e2ef7800cba488ba79c1d1ac245d0bbe244c37c9cb20933e0"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_grant_all_tables",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "14585983a5d5003cf6a3a9af51eb4067b073bf689acc34db59822f7cb78eea27"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_analytics_engine_datasets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1463d59d5674c7f226a5570c44c967ca90d6e058d2470f458b9cd55f596c77de"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_brands",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1506d309de58a72b1854408453a5275946f709e03ff2957107f44f9a8e9fc924"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_clusters",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1540a9e15ac9d7b4abb3496a68fdcca2ca15d34b2287ea4bea61570ec4efce21"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_delete_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "16663cdff4ce879dd9494b4532f2a23ea7abc9fdcda94b69d3d5ac21ff84fc77"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_revoke_sign_in_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "168255db75f421e0e33cbfa7dd4727b5d66b771513339d0925294b84a2a5f839"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_storage_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "16c22838de1d19407ebb1c42d76254e128f9adfc8297ec9bd99386eb6c47791e"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_waf_active_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "16e87dfa77bbdceccab28fc3950069796aa04a3d4f16cc4bf893715853d9f042"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_verify_bank_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "173d1dd981b9035b7bb1d356afedce428236faf2c034487618b113d4270ed698"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_schedule_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1859ccf72fef7c62a6885fea52764e0478940b25d2a22e6d59dea5f7946e517a"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_required_workflows",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "196a6b96400666031d508899eea7e0880be05afec217fbefc7d2e6dc6ffab3e5"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_resume_log_drain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "197a34d8ca4f963284e2248049bf3886495e6041d364dfccf9a1f740d2b5868c"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_grant_schema_privileges",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1a05241a51cc29b59807185f0bc06e841460e950b6a80c3d7c15ee12440cbbb9"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_update_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1a2374303f38327d154cc636793930d0911408fe4e5a720b1e8800f554daf202"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_delete_required_workflow",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1b930455c0911f3f23f20901eec9c36e16288ac5d093782067972821e04a398a"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1c00dfcd11f041edab43648a0fd2e241ed6733b8fbb71306b66d2cae51c66461"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_spend_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1c67be46063b4b880d9a87188b861ed56dc15ae709bb29116e10a83789296fb9"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_active_entitlements",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1cc7d96bcd0eb44f741071297abb67935fb5a6066d980fba25bd3b1dcb740439"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_audit_log",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1ccbbdb6808b33f0be9c690898d2e9402a9617c79d90573f25f0a5ec307bde32"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_workers_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1ce0aac94415cffd0fb732455da9fbce07dae02c11f0069c6f1c21a448b96f82"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_customer_tax_ids",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1d431fe4cc354fa0095061417bedb423d1bcc34b041d7d01e7051c2b4080e6d1"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_saml_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1d5c512c0e86aff2c6caac6f6e32ddb6c1ab1ed5e8db54e9fa0bd676b960eecb"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_get_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1e3a21279ccb4e94c26f055d9a450dbbce06e988f56d4a741a0da76b486cfff9"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_mark_notification_read",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1e5ee5d7a8ee8111223fb05166e98c14a02276db41c673a49a64046a8a32912e"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_add_endpoint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1e6838c796e74df26f101e9df15f87afd74bb2611978b499ce3bc63f9db3dc7c"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_zip_files",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1ed10d59bdbaefc750c13f7f6437d57f4c426be04701090444b505b3a22ff019"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_unarchive_channel",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1f3afd379cf5d17067f887bd803f92115739d3da37e5ff88cb163e63daaa2cb3"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_issue_domain_ssl",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1f85f8268a633aa605a2e9a578962c3643d565158ab7053aeb9c09a2b5abf181"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_remove_bookmark",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1fb1a4c71b037be4aa3401291ff9f68ea4b7a17032476cf9567dd5ec0c681ea1"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_create_database",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1fb7c71b3f29161a700fd0bb6698318fe0910520bc5cfbb97c6b5350322b4440"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_click_by_text",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "1ff6329ec0576b037a05496e0e72e0c00d450495274cc36fd7fe17ffb2150b75"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_forwarding_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "213aa7cbc0aca0eed8fb6ac6ab6e7ff1d9c6e0601231832ed4bf6cd3499f253d"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_transfer_credential",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2157249ee7a42a5fdbdb333bb13f0df5009aa946305d2631d9d2079157b5a19f"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_verification_sessions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "21bdb05dddf6e3cc801ccb341d294dcfc53c980e7e23a672d91a86a8d24413fd"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_forwarding_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "21cea0312f14c63df670b9f15b4e4807f966dca4b88588d243175fca6699c9a1"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_credential_types",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "225880cae1f28c4c24659588112c7467aff15a708d5381fe25c16ef46924e3e1"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_missing_indexes",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "225e59906ad0e7ba1bb6f64820ffef7ee34db724c6bc8b95a33d599605186a34"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_sign_up",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "228641bedabcc1930818eeaa5eb099231814b31d5a0ec6504a4a6a075241432f"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_billing_alerts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "23541a6ead34212dc752dfd75ac336bd9cc698f47fd61eddcf7f13dfa5596c10"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_clear_execution_history",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "237595b8c4263305d33dc6aa94e38edbc6c1f467fcf2c436d087009f5bf85dd4"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_account_health",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2377afa64ffdc843bde27fdc42db8ff2195f1d59968e9c8c690d2764e0e52364"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_duplicate_workflow",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "23b6b373d852394265a4eb01eb63c6ec669e5a87ca838a7634954344d76e2254"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_discussion_categories",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "247c408985cda1212a50fc49792ba6e5af303354c328b8d1627eb9b0ea663cd8"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_activate_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2493544882cf8ad3e1c92065ea16d61582e1917b5294e49441705bc26c225b43"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_workflow_state",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "26001f73d9fac4954ee2ccb9aff619e3a4914c95ca0c90a4e6f6393cb4853e7c"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_create_publication",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "263017bb8f5062cca73a4523eedc62a0795fcaac9dd98db8eebf2b33c958a80b"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_kill_process",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "27b8025d02a8781275ac19f603a50aef351b211ffd05d7d658c341294164e673"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_delete_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "27d7e99658d949263cbfcf4741f19c4c12e313b27ad260d18b7215169b7a4d25"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_compliance_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "28a0f83435b755aa8b54d0c9bea6df526c52d6ef003c8af1bf86f62205776080"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_quantization",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "28bb97e7c1ca6717c46d545c6726ce758421ef7c6261a0fac9e6ab954ed8f920"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_auth_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2936bae189b9402a639ef4875298b77b312a3a2897a86f43c384003a0e0aaf29"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_archive_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2937e6417613a6561d2d9892ed339fe47ccb9aa2284626b656883e41cb83e690"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_scheduled_messages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "296f578a303d127457566ac55f05c7e3d189f51c85a5d2948962a291b7231769"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_update_usergroup_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2aa2893c5bd0e144255666b24094ff9ffbe62ad944a83a15ec44e86129a40c57"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_copilot_billing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2aa44ba53ffd4896738110735497b84473aa0cdd9162034415837a3418178d35"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_all_variables",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2b2ba5e8b5b29895a4d16503bea78deefdc439f2503c888a6f514fe1fc186fda"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_delete_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2ba9a251c812b0a0905dab997abe050b23a987a790dc5b71b34b10d69a96fe85"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_alter_user",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2bf0896b4d740051673a4be9beb71e2e2e66958263e0c1669ed07a1b4bb024ce"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_topics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2bfe241a0cfb428d339233209dd06c2f137301bb85db39aa862a63c61bc93ee9"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_publish_to_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2c10a9688cdbd5097e3fe101fba8019219623de924bb3d1f598abea4c7b163e9"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_set_default_privileges",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2c4f8a79af119b448b112b19a33019e0b25afa3da00cd292889bedc9a41fb44e"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_copilot_seats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2d4c4788cc83771689d6340068bd54b97f6b8e149581737b6b5ac5fc4ccead31"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_extension",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "2dd6f0a8885b9d3303fd26966137e736a7a04eccfe928c1d9409bd9b7a326539"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_systemctl_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "30155f5afd8cff383228561ec3668a362066bad720fe3feed2ec60b948b6ba04"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_get_process_by_name",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "30bf46cc1650863f27b0ddaf1543e564accbea699ca3c939a3858e75dfded7ba"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_list_containers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "31a9a232d74c9affea9fb1eb98afd3732e5698d8891413d12f5a06c6b30beac7"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_create_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "31c350a8b737994807997e0ae40dd4497b3d4b3bd7fac2feefd8ce6e36c6e850"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_enable_phone_auth",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "32fe321dd3892dff3e2f97e8923904b40b9fc275d4cfd30c0a2ad175ae2f4cd0"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_get_auth_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "332084287d223cab1372b9e9e77490433e79510b8d375eb37185a5f95e6200da"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_check_ports",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "349c5fa7b53a7a4c3314e5d3ba577b72def0e00b26a25876b7167d15f799e1fd"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_email_routing_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "35ffb683f4369eb6312b1f57d090641906439a2454101abc39446e4a96aea060"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3663d53a3afd5ba6981833bcff5c3df73dacb991473d72119e00f9ea6ad23d7c"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_get_org_consumption",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "36652130fbca7e3c64fa8699fe23b3f5ead09e99533c65c29016158d7756fd48"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_audio_transcriptions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3756d58f4ff853783a6f959cd86fb82f5dfd1b61a19c888296bf843edebc5966"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_list_collection_shards",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "375fecc49fd80c1e93a885a173de03814bd9ca0905f090f3ced3fc2546c95b9e"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_radar_value_list",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "37a0d67e22b201df0dd71f3f7d295b3eb3c14827dedd18b85ccea6424410d16e"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_usergroups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "38890a1a83371b21ad9c2caf48ad41a79de2c784ec206a36698ac5b86d601865"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_delete_project_service_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3975946d523478ffbbaca3821a53f038a92630f83112b9d646de109288b24883"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_workflow_template",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "39e7ff55c88165146364e15245d687946f1b6198bc9d211e07cec9707bbf2e93"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_account_member_roles",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3ad0c5b4ff9fd4005395de79eee54250f9a7df13e97ef285b250520cbf08c6f5"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_systemctl_status",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3ad2a9548c66a82adee81ac3c073c8ebf7198d254671dea14bce7ec47b4d8524"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_forwarding_requests",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3b4a17af1dde8092ac8b2ba60ea3fd3a4b1694d903df7b753227f2274e531710"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_unique_constraint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3bc2b70e3f51ae5dc4990aff66c9bef7b93d65ac99b4b44253f1d2e531464bd2"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_delete_user_factor",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3be4f1da261683734f12d579a82d878a36d3234bdc35dcf31508f4159caf13c7"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_share_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3c73047c277de58b1fd53f7a923f0692a089c3424da6037dbfd598c817375050"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_exec",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3cb52b78ad111ae23f2df37fcf51928ffb76d9796a5d70007e52995d4cc60d95"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_invite_account_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3d26e87563834f970fb73e338382a990b95d234e7bb48e91c07d4c333ba04835"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_identity_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3d903f7d7d5ecab94ff24fb59489da9cccea39984cef86eaeb31a056ae1e16ed"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_create_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3e03b3cd4b18676a2d518fc3a625cbf5af540be2efa6cdb677d64841bca2d1db"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_saml_connections",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3f11ef61532f04ec257dd93f2321141e671a1a0f36cac8cbc0bc96f2e6537290"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_org_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3f27dfb520e10d4390c48fd5fd5ed9d02713795bf736dd2231565fc7ba190393"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_systemctl_restart",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3f4b8d73cead0e51bc680d34dc3d02e421f8396c8fa056eae09496211785154d"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_project_domains_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3f92efd73f4f9840491f9d115010b0bfd7c61b9de795f39f7eb2e3d858da4b6a"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_tax_codes",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3f95c65977e8476cfc7802b4a333f72c8779c3077590501f181eb83afe7d60f6"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_topups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "3f9d874c9f7307e621d08cbe7129111df089228e8b26c454c13d5fd0f3e060b8"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_list_images",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4225402d2654e40e8ace2542b76bd07d3859d30c8fc82a5ec73f52e41be10350"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_schedules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "42ddf40f1e608f1774fafac79a00c9e0d3c61b2f564fb99dd3f610fe8040ca50"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "43a6e32f41df9de1472b9279bc0e557451890981061d76bf8dac2f5f7ea1489c"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_pull",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "459539acba368cfd52af88786e27062b23a053d60ca851658d1911bb06a7b830"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_cache_hit_ratio",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "45a40a0d2d812abcef5b4c8fcc6e36a5e236dce2acdf7f271bc692056a1b553a"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_sign_in_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "45b6aa3ad2e686faeffedfa39b4676a8de776ef99bdebc4bef68d17b2847b7a9"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_update_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "45e7a268dd15499f451c2ce977b8c03f7411e4ccd55c279700bc4a6ad7fcff6b"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_check_model_deprecation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4611162aa6d7f426fd711ad2ea62e2b10c2984369ddf9d046f19d2a9c7d8ee4e"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_compose_down",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "468186f5b1815fafbfc022582e6c55744a015389362bd1240a6adf53128a3f2f"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "473ef5e48fa23bb8138faaa41d2ecea1024d9054ad28cbad5e3386189beb2ce2"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_notifications",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "47d99a0b7ca60180894d8c2609e105bd99c5cef5b5a277ffb91e804b93f14b36"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_analyze_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "49cd4e16a9b74e252f42dc009eb043d8352c7adfbe4d9b424e0ad401d2a15b38"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_kick_from_channel",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4a0d2a7a0ae278b56e0217154022180caed791cb79d810e1b31e0ff02daede20"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_enable_email_auth",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4a4b8ff830fef90c22a29e71fb143e4c97b0ccbf2cfb4a6d71f028d3f8d207b8"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_list_realtime_channels",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4d875da71e02d63b6078b1bb514ad5e6f9cebfe8a7083c2c663a15bce374970a"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_deployment_events",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4ec039f9dd6338ce670fd9d495e53f65c5826af23a23e85af2d9fd82ffd15751"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_fine_tuning_jobs_for_model",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "4f1253fac5f9f8d3775d332d3c215e51a0d1e8923e7942c745c132ec3ce3e4e6"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_restore_volume_from_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "50264d0f0c39018bb2d8efeb5e550e7c74daa68d28793c26d6d61edb8c46ca3f"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_reverse_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5034679a62d9aa215b70f6823686070d01bec71f36e8ae3f34f4a3dc0898e724"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_update_tax_settings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5044d3ebe968b73a0dc88194e7a98322b2e2a438585b152ec1df06b16aed7654"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_project_rate_limits",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5070158ba881267eb8c26f6190814f8cd0cc0bfe6f1bc5656c3605d8a498ce21"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_list_private_network_peers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5070a4e8f45a1c2fb181da36032bc5affb77602448f8b0d25c16a2d386cdcbf5"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_email_routing_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5092280b75042186e31ea6c25cc6c13e084143c5d2186a431d3ed4a223b586f8"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_attachment",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "50f8130a2d79d5f57abd75597653a1233d67be334c7efe6653f1722d37d48916"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_calculate_tax",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5175a0279444de11b9b41c8df2998ec0492f96b851f9287046846d9198df9cf3"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_app",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "51e0ab05457eef1a2357084c6cbee54307b44beb26f25f185b39b24728c664ae"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_pause_log_drain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5294e15e0f23def1f1df4dec8b40cf89da5541f8260ceef01a9a33c9b01b7624"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_testing_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "52cce0991b94110eaf2c05e18f75c707537ac404b3d2e87129fc663f0322edbf"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_discussion",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "530a5a4d2afaf362afc85b1a10d2bc79ba5bce25d2f9d2149824fff099392e05"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_add_team_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5397feb64d9780aca612c0c5519526c11bc0d1ffcd718047e704e65c3b3367d0"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_view",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "53e5d6a1c23abfae9d0a7f7730b961a3ad3b855bb28c6d926439daab7f60de69"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_keys",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "54a205f2a3890cd09df20f99020c34476574615c28d0556df752497cd1ff9b7f"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_permissions_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5596468ca590d8658977423761a89f1b4f51d89de982cda38d4336b56eb4ce79"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_pooler_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "55a8d8c01fefc4e38527299fcb28669119b17497a135036b4ae0fd5aaf90ca81"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_list_databases",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "55b7ea173a6e340e277107a5598ff68a28fff9aefdba9cbf060f66cda6fd6d4e"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_enable_email_routing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "563c7911e68fa4955e0bdbd9f52df53f09e9e4126cc72e5870567ad34d7d76bc"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_database_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "564aa54c79747d2a618f5202168ad0a86563af1725f9f70d5f8b1846f379e685"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_update_team_saml_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "56679d7bf7a452a54ef9ba44391e9ef191757dd54e07cb2cb8fe7ed7e1c62013"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_restart",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "567aa200c57f5a656f9a666e18d9a9f90629536bf5efecd8993803b8fb21246f"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_edge_function_secrets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5714809639a5239380f94e49eef3c7551ed08d33c9827deb23e19c22987be0d9"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_redact_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5859e3073311a681b56de82bd86bffd8d9d03f99ec8e398b42b5f1b56387855d"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_r2_delete_object",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "588bfb1fb1311a5dd87fae2a7d9bb68bae205f807cc1b090dff54370a4eab100"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_extension_info",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "59f6262b3b7bb3b59aaac38aff46f9440c57312015c9b18362319404a0c8c141"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_webhooks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5abb7be80e0d92bd1673c810a88dabfe099c37fe449210e7a7907e2a263cf6e4"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_upload_sarif",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5bff0f903f147df418b0cc891800c17340f50bdbd9c1d1847254d419f4cb42d2"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_moderations",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5c020e29f403a3eec38e8c661f78a06f6ac2dd5167c963706f675c2bf612f9a1"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_foreign_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5ca95cb72d17546153bf40e9b2656c9f0616cf7fca77c7e39efc96af394d2fcd"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_zone_ssl_setting",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5caa4d49b029a200764b857b894df95d226036ac8540cc7ff1e3e17822e35b55"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_credentials",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5de1f97458477b69c78ed11f1397b8ef87e555e617caf8d63f40e66df8782a22"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_tax_transactions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5e9698d9d90c4facbf51cc6b9e5575805d50b70755069d0af5c12f0ab2196cd8"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_images",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5e96aebe4b889be0cccdbaff12768c0573e0970e31dc28c904f21c03511a1bab"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_bot_management_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5ff0eabda5b9e17d188fb0ab42eadfe38a37ab6a7c2db7b00c7391bee62c6e2a"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_postgres_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "5ff5df26607e99752d3a925e74bfc691800c0cfa8937ecae649e4710d0522a8e"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_get_cluster",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "60de617a39618f5d4e6e47b56e6794441ef31d37acd864ab3a6780e780ce559f"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_delete_queue",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "629f31211d1908567c589a6d31e21d1253da49ac3d22500ea329e0b80040d1ee"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_org_cost_breakdown",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "63b88945185e6e1046f5ebbd78c1c53aeb49b0f0666d1621a6185eee86b2e5cd"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_remove_team_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "640f52834e8ef63ffeaf9a4f3edea22e09f59c5b9492ecaf9a1bf69f3d5d1d1b"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_cron_job",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6420ed49e593a49019cece097111e46bcb6b97275a980fc451780c077350459d"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_abort_transfer",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6480127a7301673305523c74db7f7503e8b752792fc31cad385e15c173b9f923"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_deactivate_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "64e32c32b5cd5d0c96e53b887a7699d62f3bdb4a500f8f964e7f42954d9f281c"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_delete_shard_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "64fc6b95d890f7a8cf25c437139ebe1c828bd8d35bc369fd2f220748e0aa7606"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_zone_settings_bulk",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "65517f1a1e42c9f1ff8ce19c974ab167cabc839b9d538d9c9fe9c3fb40dee196"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_long_running_queries",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "65ee123bf29c64d6073c71f16bb64cec09791c871a01f837df578553dd17e59b"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_get_template",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "65f5d1b090cd012de3fff077da7528e2c77dc11a24894da54ac681fb1e69e52f"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_pooler_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "661cfb1b26d094cd361495ae83d4a252570917a56943e0ec8d84dd210c3df654"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_download_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "662bd3796c03f6ad82848db5734e9c17743f62b58107eb79a71f1c400c88366a"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_create_usergroup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "66a6d9ac189d685835979c6e89492b5108be132981f4c5c1064393186a362d4f"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_validate_webhook_signature",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "671edbc09d326b59222ff4796d0d6fab8a1aaea6dd7fb8140e5de5b636167385"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_waf_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "679e429183c95839df8d6009e6409e2c034e86a1f013fe49115d4c9cc8946927"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_delete_cluster",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "68512f43dca70bc0cf82c1232a3de07e5b2cea8edbae0239829cc6b262b77280"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_replication_slots",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "68e70681797c00fcf94224ca498bae02172e2ab16b85c95b3c89f6abeef800d3"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_instance_diagnostics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "69441d58e76e7ce7bc4e50fe7b5ef5671521b534b3389c6cdb3626d2bbfb6034"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_unpin_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6a2eb36f50be80a367596876bea8e933e2cc044707c1bc31f16a9168618eccd6"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_dependabot_org_alerts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6ada1b759fe9cbc21f3f46568bdd74a12489319c98496a4e9ec20e6320973b77"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_set_autoscale_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6b13cb783c73156f694489788db566df264b2666c55062034bbefea7238d96a8"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_replicate_shard",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6b19d36813aa80e981572399f73a4242e55c6dc49ced04c2baa077da741a5f10"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_oauth_application",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6b628ef896bd96d500ceeb022f60cd53445cce98c6171d830ce787434080ec5a"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_compose_up",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6b9cafc7648b04cd1c4c033a07beca7ad83f9f74c47528ed28ee914f017d195f"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_activate_instance_license",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6c01b3510a51c7314ef48dc5d479feecc201d5e44dbd664b63cfe70d96cff03c"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_revoke_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6c4a81f7dfacd46bae7f1d490b5ea8f7bffe1bfc1eb19ad35ea10ae998c75bf2"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_delete_schedule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6c977479e0244fd8afae93904c525957ebdeda3c3ae192e6facf6309065d968e"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_transfer_workflow_to_project",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6cae4de9afb6d05a525ac1ba5fce68a14fa6d65e1a41f4ce019183f4ea430f74"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_auth_test",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6d6117d7132ea2e0a8ef3fea15cb21c6bb661b9fe43f513c85ed4dad6f1fd872"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_test_credential",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6ea5a2cf30c4cbf4c0a797396aa3a3ce934ba8e8ac16a9ab19281a2830d8751b"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_identity_provider",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "6f16934f64c1f5540e925f0047c4b52000e4d5390b05fbceda12a717a269a3be"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_bookmarks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "72c5d957585f7cae31e3a3648ddcb6b9a866866606f6d3db2ab11397789146ad"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_compose_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7407f61f1b6a6bbb19d886f5bbffb1ff436264cf1ea4f7bff70bbd4afe4f5a34"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_installation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "74553ecb8425a566a942b3066370826e4e5ae1d811132b0e5b06f29ed5d0d32c"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_cancel_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "746014846a35c3a22e2cdffafe77e15b295cfe748d99bbb0b2a4fd1e7ec9467d"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_features",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7493242b53da5f898e4fda32cd3803dd439cc7991122d7b2a9cbf81316d44632"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_tar_create",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "74ecca2d5dfcbbfcfe207984a904024264607c9ad041a54f969cae8f6d9c59f9"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_meter_event",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7570914e7de31c1058524d8fd206b64988ea218b97dee3c036f9e926eaa9a1c8"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_fill_by_label",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7572e12480f44b9373711946fbe3ef6f95f4d5b7eafbe26f3e228ffa4dc04666"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_workflow_templates",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "75f7a7821ea5ccd4aa996c0c74f29244bd70dac34fc9da5ff922d1aff02603b9"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_ai_finetune_assets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "764ee7ced1038151199c57391196e716c5a8a8f8598a8cbd3ec5eeef50904d4d"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_recover_from_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "76ac9ad67176dbcca35aec7ac6b6103663fd464e12643376e30be63fae348120"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_list_api_keys",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "76ade84237986062277cfbffefb03f853ee40c52c396b47aba04c1bedb37eb4f"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_model_usage_breakdown",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "76c9b66bbf1dce697389ed30377b416bf18a0eed245d78cc688f0bf96d9a9834"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_create_cluster",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "76d15e7617872090a7fefcf1566765e741d37600d67913af7f6d8b1003ca8161"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_pins",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7812c7c5330f2a996a6629b00feca937c899ba15a1d95951ec64dd14455bd9e4"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_org_security_posture",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "792fbb59ce55b331431c78e780d15001e2c8cd664903e24f69d6fd961c054e4a"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_ai_finetune",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "796ae283a42ffc7fc52758da6be6aa1c21060f41bf4c45305b102db4d83724ee"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_rotate_oauth_application_secret",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "79abc15810da74149586c7ec461bf1ed1fe1b32ff5e5699587861e931761540c"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_stop",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7a80199737d58fe8095dc5e945937cb1699548b6b6ddc35a7085100a122a7ea4"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_roadmap",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7b5e6ad284816b951197089a382caf0f4bb2ce9eca13a1de2e5965ad0dd01e84"
+    },
+    {
+      "rule": "handler-without-registry",
+      "name": "supabase_get_edge_function_body",
+      "id": "7c7535700dd7fbdf867ce57b99fc03aa5e6c0c20c8eb40f295fad92985ff9278"
+    },
+    {
+      "rule": "handler-without-registry",
+      "name": "cf_list_ai_finetune_assets",
+      "id": "7cffcf7b21c3473f5e24d761554b7cefe609c7a9d429cf3a202795ae525b979b"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_set_column_not_null",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7d7c27d7b2647ea5860c132f22261bfe61f0ace03302bf1c4eb052c982200445"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_email_routing_addresses",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7dc343da42894b3067195ba4b0bd45dac45b0e9e2d2926041797b73a8eb6adb7"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_verify_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7dffeb227a26978f41f745e61ba2c24bf588fb43ff9382b801af1ec2a447e135"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_bot_info",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7e7f15c55bfa1967e661b20b368d71357f998bd901093b6bb02891712dd5429f"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_optimizer_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7eed204ad8490a218d96c648a67aa72053a19e1687c7add1a69e66c397d8fad6"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_get_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7efe1a492231135a256f93cdb74233c9ce01642a19c508d15836d0d1b966c793"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_add_ip_to_allowlist",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "7f0832c253bcb3af0c7266d3b78066178b6cb94a606b250acda369cbb64af7bd"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_move_shard",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "817aad7234328cb8912f61e88861031c6f0d8d7ed67d500353fe13e11fa19af8"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_create_project_service_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "828e274c378f0492d1abe102bd7623b6be59b8a7e3c3c7c39bf59c93460e4aeb"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_radar_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "82b779d88a11879fe726539a60e7481a2b5bbe5b352ce796e1fcd5eb458d3f59"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_dlq",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8384e53655ebdfc83587cdabcf31f1c93dacd30f4a6cb99b7928f4361f760b8d"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_edge_function_body",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "83875dd09bedcdebc2b7f97a52531e0bec925764a2440c0c4769433523924e96"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_publish",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8457806fe4c9073a6961eb6f9349ca2e37c5d7e83cd1dfacf688ed2d0f2b1aa6"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "84b81708320b838f4f1d120e480fe78a0dcc0c7c09c39f978fbdde91e58d4f8f"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_api_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "86908fbb14de7b1fbad07d857518d255214ac7d89537892c93b1c507ab340ea8"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_performance_report",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "86f351137c7135d1b75cc8fb8dbbe7bd33ea12f16bac346a64f6ae674bf3d49e"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_user_profile",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8884eba58d5f689286341734d77e858518613cef5d98e71ad0120d7d107bc147"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_cost_forecast",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8981f00f66b09e803faa1e9275fc8759ffde0813fea151fe0d0a84b6920e6666"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_org_rulesets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8b7767feacd5a7deb023c20f7dc8f33af9a781c3dc840a8a9553ee51c6042746"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_team_health_dashboard",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8c4a8aa8f38e41439368e1a71e337ba52141f4b79e93da541bb4c1a9fcd4cff5"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_bank_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8c4e31951bf1dc427a6eaa55ffcceb92490e87afc55dff6043eee1af4b886f1a"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_get_sign_up",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8c5e0000343a06d8266b80844116579531cdd003ce8a482bf1641f53f4dcae9a"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_delete_edge_function_secrets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8d38b235845608022d2b1bb77f1e73ca5fb9bcd4297c6a5f638f73ff75102815"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_org_audit_log",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8d3aec7acff10b10860a54761f1c612ff94b7a83884e2e197a045c791b762dea"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_topics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8d9ca9468fd7f65a33f98942ca46faf48cb2c83d088b06f206d48b20c3a0ffb5"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_list_publications",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8db96ddb199293c46eab47ad709882c043b2294cde34a9330e31ca3226b6bccb"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_customer_tax_id",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8e4b90a75c2b3d05a9ab9006d29bef04134b22763b4813f86d4feea2c64083ac"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_usergroup_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8e604bfe2a0a77babf00631a77249e566d5289b25f21e91e5d3b0927effdb5c1"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_create_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8e64ff3cc3c6a3c23d857a830d1af70d2d3783b7b3e847d037352ccc6e9b0309"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_reset_statistics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8e7a36f24cc2fbf2b19fd2d2a3f84e04a700acd3c40d9ad04cacb53741928cbb"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_vector_stores",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8e9277ccda50157d8077f8160e4e4161ff03dd8c8baf8df956a0e3b59fad8f56"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_set_lock",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8f301f2ee9be9010383a1853a91404682c3805d587974e3a6b6b2ac77fb135c3"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_workflow_state",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "8fb08aeb9bd65d6c8ab1c409ef481632c7ed3e4e205ce550adcbb8aa4e744e13"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_get_schedule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "90a48f8f6d7e78b61a6a0847aafb3b0f11cac6d619bdb5575b93c3965a50b6c0"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_org_membership_requests",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "90ac03ee11ff39f1d533014932787fe3916df90933dcd722afab28e3f55de9fd"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_feature",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "916224d33f80d80219b87b12f8e0855be009392f25b0f7977c45eec9ff669513"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_configure_saml",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "919268dd54d0cb3bdab4a9dce77f8d4e7533888700a3248bb577f750934d4353"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_delete_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "921d0d6a5068e9c9e25a4e62c6967efa17ff7a3683444554a772d884a0b6f99a"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_update_usergroup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "92dbae3eb330359318c663da4bb681e4bc90859e69564063e4d5637b2c4f2a2a"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_sign_ups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9349fe36c4c50387efefa43e31f304ab0f3643adda6142c74005896e8d4a1880"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_storage_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9380f4ec97da05c195500f9e01d0414b4b36529745c4da3b7d2aa8a135bd37d6"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_unzip",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "93ae3ffb4ba52c453513cf07c55a2fac0fd4d9508ba5b099ec050333105b1044"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_r2_head_object",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "947379dbaf2a7670baf3c4fd688fe3ef6db341c3ec7dc397c0ff9d41d4de0272"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_radar_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "951554bc21579460a789b1d265baabf08d63737cac87affdf42c614cfd8dce4b"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_delete_dlq_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "955b8a9ccf9bb237d86687a0e2c510ceb6401ae15bd9851a2346fc8147500035"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_get_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "961d865aa76562938164461e4c1ffd4fda2c49e91caeafacd4d863f18552cb84"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "96bec5216603c62734be06d73161bb8530c3f6a0a9c54cf24d3daf04c5e8f66f"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_alter_column_type",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "98850f2a4f8044f6192f0d409348031b7f449145ff278a8adf52ab96b823299c"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_domain_ssl",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "98a872cbb900bb92b4b847aa37becf6db9164fb434f8f2976574237894078468"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_issue_relation",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "98bf246b43501cfe3605986a178a99bfa15c8c66f2b1e91ea603385ef4daefb1"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_project_status",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "98e2c845fed8cc5800d4ec1da1ebb82c9e4df94c2abaef32d219dbdd7deda3d1"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_open_multiple_tabs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "99540a1d2058aaa088235db882057653412bc0d05b1bd1febe325458eade19b5"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_query_stats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9a598de877225de829ef0283637faeb6718fc453d2d8df5da49e5a6fc4ab69d1"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_roadmap",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9a82783d9c6eb197468aca7ecadbc2451ff75d25d43c29397749587c1a6fa3c1"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_list_role_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9c5530726ca508bd20216d1222aa533b7cebc0b57ef372983af65f656136135e"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_embeddings",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9c7a062b94a8fc557cf7875170d40ffbe1216911e2c855acf84d7f9b2daa1f67"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_auth_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9efd6f097209bfc1fddd4935f937442fa592c6d563a4bf39232721917851e44b"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_discussions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9f0eb53a7227e7e910f8efa4b997574b46e3555264064ac6e3b50b151ebd3f87"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_enable_logical_replication",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "9fa8e468505e55528a31604308066cd630f1f43872f9a63e25cbf88d5e44aede"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_installations",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a2680af175a0a6c9ac3390e4d85eb72bdddc58bd3d10d74dbde764eef7f4c1ed"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_create_view",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a2765e3e9e634d948ceea8b77779dd8d44d123d761a46eb745293a9cc158fa09"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_waf_packages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a3b86424e1bc8fe119fd6a976cff27e077bd6866fb16e8fd4272e02f757deaee"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_list_project_workflows",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a3bf28d02b3b31e67e9910499003f837bfbab6b582edc2ee40df281b956ea01f"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_attach_feature_to_product",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a4d438bc7cc9b5ff5e4266eca9645afd147cce8f0bf0f03809d4deecf8a46c99"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_waf_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a54e59bce5dbf6d98b0a09a7429a413901f4d4c5e75489410b6bb6552656b1a4"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_autoscale_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a5d744abbc97242cffd99e1cb380f7aeadae71197d27ae0652da4c0c7aa0a240"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_update_auth_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a63735698e68aaa538caef4e4c8d50fe35ff4807f9dcedf255e9c814121ab842"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_update_variable",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a69c4ac225e3c99afb73d6fc7caee66873e4ce53c0927b1dc7775fc432df146c"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_channel_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a6d6f81a9d20747451989b928e1c679e5eb459992835a9d0e044ea030cbe3f61"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_update_machine_resources",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a6f6c419247fc5f59ac006ee8e34c36e02246f8751d3887b4d12e9d465c504b5"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_security_overview",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a74b8a49603a575183fe27752331ee04ded7e0016440a500bb1f1072f2fcbafc"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_org_deployment_status",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a7561b51c3d89ac8a35499f85ea3f83778ad5445efe6df0efdf5c9ab6ec8ccfc"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_topup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a7fe13e304ff3e66be60553771677db1c9c9b9ba167402995f66f1394868dd90"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_radar_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a82b0989c4a8804b986f9f003b8a9891cb61df7786c603a84a79bf4f1da451e7"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_constraint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a844300051a1a557791e5077213be150986b82725a767979aea8450576fa5137"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_customer_tax_id",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a915d89fc2b1e4dbbc8d78847785ea6ac52309e39a601a2e1b88ed1fcb0f5d61"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_log_drain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a9287978a46a3febb6613f2ff8bdfb546e1729e54cfb5e969caa0e73cb1340cb"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_create_queue",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "a9cb825564fee323dbd3ba5807795c14d9307c026b2c3c1aed6f25ec569aa6c5"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_zone_health_report",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "aac34a3107521985fcf356bfbeed43ba85a5bf8cf8162c22a314ca01134bebfd"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_delete_edge_config_items",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ab41ef3a41c415238c72aae5db922100b01f5e69c07572358e1592a13f008f56"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_get_org_billing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ac3ef42fbf18b3ad4fdba6c05f1b2de94b39791aa16bd6ebdb8a401a458d5703"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_audio_speeches",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "acd01c320e0da1e675daffeb22c3666188320bbfca7bd66cc52d58726cfd11bf"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_delete_api_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ad7467c9fc876a4769729e73929f31d84737d039fe1e17fad5d9f8f0dd82c8c3"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_radar_value_list",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "adbbb0d79c1678c5968fbb4ced127605059d3e10705fc584518aba817e4df4aa"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_update_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "adc1403c89b3b670357de526ce3ce492fc574453906f1b60203dc77bee082095"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_rerun_deployment_check",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ae2209b7f3a9b8df718471fbf301a3c4de36c9a8736a875b395611d5511040ec"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_update_ssl_enforcement",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "aea5f8ac8b5290c3c4e3f492d3de06f1b6a47f90a17000cbc15e10f83de571e6"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_rename_column",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "af1d71cc560cd13bcd20fc8b77be28aca37f2d13db5538ad98187a99a4366c9e"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_get_performance_metrics",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "af5bbe23a79848746636931ce1265f9771e95bc335c3be92f501c56c2b09f0b2"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_product_features",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b21f5b5c8be67795504ecaea10aabdd98179654ae0fe8118323a6907050fb842"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_logs",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b2fce4002aeeec6a7c77c80df01f8afda36b1049aca3955a1680327e7ec4e9bd"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_update_ip_allowlist",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b33d7d8fa7a96fabfe9abcc7a601c1a0dd8dda7badd8118168436178ea159fc3"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_index_bloat",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b3809f1b9783de5912df549e854ce15800cddb62d36781af2bf6de41b072f296"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b4502825c13ac38a2c43b75339035c67812371d511fd9a9e48f4d0c0e5009ad1"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_create_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b47a09aa3480f08bfb6a45ae18193419306f06bcc6cbadbfb2ef8045d8a1ff36"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_disable_email_routing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b50536477e691acb147687a1fda984cdfa2ee23acfddbf11d5aebd27de4bd535"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_upload_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b556c6dd8861a4e4d9429eec3e7bfa24c73aed6b9fc9cf3ffd0bbd842496bcdb"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_rename_channel",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b557fdb71b9596b2418ba85a4271246295278ab1c5bf702f11145d58a40cbe0d"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_update_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b570d075506a3bdb5b556c5dd8b80bd98045388600d414832a96bd454ddd569c"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_update_firewall_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b59d7fc6dcbda266f7ae10f526f0c7c36116f557b0b0a79d16ee0d6d1d8c863f"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_roll_api_token",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b613a519e14cd57765196e380587d073637982dc4f69bbe4c2410a100a2edaf4"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_instance_overview",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b6921f3a88a001c52cfeceef69b6e6661e37476988c9d4c4b6a4a04312082fce"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_update_bot_management_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b6e68e719ee3c400360bd0a2c5ff6120c96794daa47f9bc5c26f7d2747496286"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_verify_proxy_url",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b7182e33c833928f39455ac1639d3337f27e61674485dc999bc17732251f12df"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_meter_event_summaries",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b7f5fc9f54061127568a9ffbe7555479d6e62fdc9fda86c094fe5a77697322a7"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_update_team",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b81cce3b7e3301369984f3197731cf63cd8a43903d64f03fc19a22150ec3e38a"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_app_usage",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b92598bb3e45357f8de8efad714f21f77c9e62f60a2163da8231a053e43b1cc1"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_delete_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "b9e87c1022e5b7e613425da773eeff0733ae8a211f2a46c64e3eabc05a8298dd"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_add_bookmark",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bad28ed90872a0abc50168e1c02335ba34b9cfafd7bf380384ca1b4072802525"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_radar_rules",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bb6f665aea03e75987407f7c242e54b519d184f6ff29b7eec743345eb44a1d2a"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_update_repo_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bbfbdfde2a857edc5420227ae919cd7abbbf88ef84ff88a533d0ec649d53a608"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_delete_repo_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bc76fbfcba4e1b86507abfbe558f3020d75f5652ada1e01522ee0fe99004abb4"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_delete_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bc7ec0e7a7c05b56e5428d77c1c769aa76b65157fcced8adce7658fe0911c1b2"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_billing_alert",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bc8e47c3257df3090af2579551ec341164b151aaf5f1da14f06aad8319c94349"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_brand",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bd2afb3bec7c90160b179bf6025effcdb5414b4225858030c3a33c9525473d25"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_delete_email_routing_address",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bdb9862b94cc5516dd55a9ee2b343809143ebf35fb75109900b55e104b4c127d"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_collection_health_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bde094b87b51c0892f1eb1e5c76e9ec3cb5e54ea654a14a5a03096c643d99b9c"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_radar_value_list_items",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bde67c122b52135cab5434257f496a299bcc5bc1412a923924487accc2af405c"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_remove_ip_from_allowlist",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "be50e44b76de138c6a06fbf44b5a5e79fdd0a75a6b003cb082fddf40be778151"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_block_resources",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bf1f501c085fe94a5f03762b0a34fc3890e32365fdc3b5d95587bbde55d5f773"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_list_process_groups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "bfa97b53f331257dc61e97ede80dd0068d340890c3261eba74761537b701b92a"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_tax_transaction",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c0610423c92f2f6f0031023220921d2a218df61f0d57285dfa7c4f4615e394f9"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_set_column_default",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c08930e5f7f742f7a7af12a1b16503c7bdab5bb62c03d417cd8c095453548715"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_volume_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c1551283455f950edfe7479de52214291ff4b92c005f78ce3d370f1fdcb4d661"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_remove_endpoint",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c2217b798c6e3af9b1c10e5cb3b85205adc80942c9fdff2e0a9d263f5ff5ffc5"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_apps",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c23886fed3b2de0590ee99fa61a5746fb86ed7faa9c81380e3cd0cae84999153"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c361a6e2741956a77feaa2800fdd92996a0b3eabf42b2596411e40f018aaad59"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_deployment_aliases",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c404f4e387f801e9363ee1fec3ad1585396e98a7c1d1cd5f276214da565b94af"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_remove_peer",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c466d54c2bd14d73be22c2360b79febd0a9cdbd6062c9bffe88f6ccfbc697720"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_delete_bank_account",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c46c1bcfea9fb62914736f560e57f264158c2050064fa3eb6f27668a32d31903"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_check_dependabot_enabled",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c4aea3fbb1dd37ca5c89ac1107a7d988914dba2272f25c0f09f280746547acb7"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_reset_autoscale_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c53b386cd2fa7f360a3e1afcd345fd08bc2262807af7868349d989a50a7520a9"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_meters",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c595fa623695bbd7c5be2e9c8ca2afb418a7678e256aa5124e2140843259090e"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_capture_har",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c6fbc8545ecce5d02a8050b08d7e6cb4c14b0ed69d8fb3dc836d90da877dbb7a"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_brand_registrations",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c7216dacecb9f59fe0016fb36cb088280c654146928fb80b5b73ca497bb05b34"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_rename_database",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c8ba2b374ccbfc47f6ec428079b4d28f0c59465981b40510d7d749b1075c603b"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_create_shard_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c90eff23fca95a1591a1bfe805adbc3e245c1380f1340567884e5996793d3c3e"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_delete_topic",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "c9f5a3bc63589994c9991af91bfd8238021b44bdee5d5f6ca6716c92062bf6ce"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_deployment_checks",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ca9495b439bce1dfe045ae42c2dd3661e66959eab43f68f3c832754566a51a30"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_initiative",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "caed8d77dedf15d182e55f32c0fe4bdc39b4fb8784b044d71a9c17f3a7631f34"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_reject_org_membership_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cbb00551c24b479e3c48cd18b8e7e61dd6ef987795cdd6b5841d9caf725b65e5"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_delete_scheduled_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cbb19f21686b6b77669ad0760251ddf358cc56073bcb1d54296faf05bb6ff781"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_drop_replication_slot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cc4c4bfc5ea79cde3765d62a5e0b5390832f44c4be6c7eec6dc71dbac32a137e"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_get_app_network",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ccccd560b08d1a6cb10d776fa28c4006e84d564d15a1db521d8df161f90154c8"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_get_resource_timing",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ccd114ee08fded84f9d14833d0267c494b8ab5088b3003f205eebba9189a8c49"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_custom_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cd9caf674fc905e82249be9c8920dd08d4fb2323ead59d3572b0f892be821927"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_security_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ce1c4519dd92c782ffa5ced4341e61f497bb2970a8e27617721af5e27e425431"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_delete_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ce2e6acb288d12c5545c6556052a4611dac5aaa1bdebdc03eda0cb935786f972"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_email_routing_address",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cf056703b45beb9ba263d2952d886b971be164c9ec2b752f20e0e858d918491a"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_create_repo_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cf0a1c7e3228983818d0a175419552558b53d08a3583c27b63fbe1a9019c8e9f"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_delete_domain",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cf501ea4716e33f2e802203bb526ca74f11a10a4b904890edda2b851cd2e7763"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_campaigns",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cf74e39653b73316e49f935879f0d9a3cfe0577633b0094abb4508e8865459fa"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_create_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "cfe85b2c29c4a8a3ba00e20afcf48e11266089bbfb088892698298448bb21676"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_upgrade_plan",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d0c7ba53ef5219c6372becdab0c4a3fc64150a2042f5aefd669afb310fc3c516"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_queues",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d0eda128e5640a3d4e46fd12bc13e5ec1adbeae8b686c01fe981a0224f7a34b6"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_list_domains",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d13a490cc9dac5cf49b353b670e87598f69dc4d051aab7e9b6460ba78eacf296"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_list_project_service_accounts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d16fc1e5379612679609c126a7afe091579d1443c66dda52edb0b9da862099d8"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_wal_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d36dc1528f45392fa78d0410a592a57cbf127c90b12c1df17c39ba5a4dfb1d12"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_curl",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d3c24301dc9cbef2e381f4c6a135c821ff22f22a786e73ca5e8aa5fb3e156f83"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_r2_list_objects",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d3ee4dc56fae05ee551b8b66bea115b4429f0e09fa75d6703c59b2d3ea24553b"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_get_by_test_id",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d4193f3b86be388c09e77b0845237d80f141475805e16d00a45e1973d6d89a06"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_attachments",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d44b71d0fa783db65264e03bd31903d16e4c8a7876fa9c0fb56526b125eaaea0"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_team_memberships",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d459fd25aff42a04cb1a1d88e0ff6b90fe47c506106bbc57f58750830f940712"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_get_api_keys",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d5085e68f8de4733c69904aa9d22a10ca3379b276fa717b70069ff3268cf0fc7"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_create_credentials",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d5d6c727eae65ca130216a26a136566992a94f5566de471dc30f03c3bbe37bd3"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_team_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d5df9bb6d6efbcfcf649fd8be3fb1fbf4ad2f038433ad2df48b26533f66c9025"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_initiatives",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d5eda8f46d12eee3e7f46ab97e723679aab13304b955adbb6e22988aecd0889c"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_get_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d5f5a4cfeb63ba0e0a49b503b53f1aaae9d0b4418275d0dbf88fd46f2d43f932"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_refresh_materialized_view",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d6f9b6b068cdb78faa5dfdc5f4e717cfee878c68b65a1377492766ee6b91f5f1"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_instance_license",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d757021c5175d3d908df1dd62ba91b99461e71ea282cc6b5df7f127c737217d0"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_get_function_definition",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d883f4544e7d90a1414d48df896e96febb2f60c3dd51dca799078f01d20b807c"
+    },
+    {
+      "file": "handlers/n8n.js",
+      "rule": "unreachable-dispatch",
+      "name": "n8n_get_executions_summary",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "d9f94faba0d3ed84cac73ceb72858efcf5ec9afde29d496cff646093e06e0263"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_create_required_workflow",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "da42849449c5ee58e4812c7beaccac61c4c942952e42893d69e2439c7c6c3f59"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_add_primary_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dbf37223a56f452953ea587b98f5b4de9adbbc06951fdc615d00928f66172e7e"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_revoke_privileges",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dbfc078f7e641a2cae644945cca82ea99e92f09a7d8cc6264560e2df589c60b3"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_configure_number_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dc480fb8f5d8a5ff86f61cd78357fa2dd191d321fdc91f0e63fedd1e4439d036"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_create_saml_connection",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dc4b14546fb7c75b2f54d9640f38ad83b7b2839c0347be16162b4e39fd43bbd5"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_drop_publication",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dce2298ee09da68d06f193d04f9dab152df154cf521504b81f033a97e0057313"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_queue_members",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dd11b80344591cabab5d33cbe0d86ab3272812d0865b337f6d14a912b2244bc3"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_list_emoji",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dd12186b2b1f374dab2bab723d967b834732f54446bbef45d2db529162e6455d"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_disable_quantization",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "dd6effab077e4f975521879ad6acb131fde6e8b841456a77cbc6fbcd97cb11b4"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_payment_methods",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "de21bfad48529545c961cb6260b32735f388ce896ffbf1f26163dfd9ff329f5d"
+    },
+    {
+      "rule": "handler-without-registry",
+      "name": "slack_list_apps",
+      "id": "de259f852a33409d72385872a8fea2f27e9742566a517caf14dd67eff12096a7"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_promote_env_var_to_production",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "de6aeb46de0b674c1c5b0b5c572c58d9d285e53cefec5fe96158718e59395e52"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_completions",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "deee27c169610ffa8308123291b44468f47da8a0ec13561204f065a58e1ed7e7"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_list_bank_accounts",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "df0d049d5d400d19fe2f8d3f2849ab73f7f97cf4233a96b78ff0838543cdf0ae"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_reactivate_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e0192072badc193aeb5bf2c9b63c29a9fd0d1a12cb8c409a81bbe8f9560b4c6e"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_get_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e04bf5eeff3e98d041fd547d2b16f38a4ad6df046b4a056b76a5fa89134ea6f2"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_topup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e0b9eb5ae58a8a053f6e3e62d5c0970cdfedeed70909d846562065f95954d1dd"
+    },
+    {
+      "file": "handlers/qdrant.js",
+      "rule": "unreachable-dispatch",
+      "name": "qdrant_update_hnsw_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e0ef86150b2aa26b7360d8301f207e5c087a31431a9fc4ba4d4a96188b4407d7"
+    },
+    {
+      "rule": "handler-without-registry",
+      "name": "sentry_list_org_rules",
+      "id": "e166c4eaf164bcda5b502912f3a29e911cd45dc6253230493471a953d7cc35d0"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_get_campaign",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e1ee5bee0bfa85d75eefdfa5988ff317ec552841703ef3edd3a34d852127e9b0"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_payout_health",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e2fdc4587c49045c91aea9609a748ada6c3bc6bdcfba6f2dc9e99fc0b46e969e"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_ping",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e3345784f8dbac42f0bf9fcc6f8326e79a07fe5758c3bed09167751ca2dd0b7e"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_qstash_list_messages",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e3665f9ea1e17fbac92a89ce26d49fe8c8d49f9ee735639597feb78caacc9525"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_drop_function",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e39b0aeb301737c078380e1c62f9847d4709acba337355be6fc74892602f1b31"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_create_api_key",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e3dda7940560a512a710d351f01e24769573fd25f4c6d8b5361d5009ba78d39d"
+    },
+    {
+      "file": "handlers/fly.js",
+      "rule": "unreachable-dispatch",
+      "name": "fly_list_dns_records",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e4c81b3ceedc9ff5468daf967ec428ff51d4b3d0d3e2f34eadc555bca7310c31"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_change_database_owner",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e589a0bbadadf75a84ddf57905b3afa110211423274f4cbae2035c36f9b27162"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_get_edge_config_item",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e66f0e500323029cb8ea704cf271a3ecf1f211c38dd43cdc321940dac7d7540d"
+    },
+    {
+      "file": "handlers/upstash.js",
+      "rule": "unreachable-dispatch",
+      "name": "upstash_kafka_list_consumer_groups",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e6fca73e0bd75c5e5ff0cec2386acf2ba12efce0aab1e71db7c1dcee331d6c41"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_edit_canvas",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e954e2223e93a5a914f70240efe569ac588d9cb21033e7366b913d80ccf154f0"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_get_postgres_config",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "e9d78b6a21bef527de45ef5d6bdb923b7183a9415b3ad00c521c0ed7b397f6a6"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_list_app_repos",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ea1e8b49a6dbc4109c2aca7eccca50f03bd04ce6faf9f4b169b48297316c1790"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_update_project_rate_limit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ea6d789a23d038eb04d65830047a462284777efe68474790f63a598824753c50"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_accept_org_membership_request",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "eaa7a79d90f48be285ce5b1121bb45d414a8ef5e20e41d9478c9631bdbae3653"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_get_zone_ssl_setting",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "eaab775dcb30bafd222ad82ee21de00606443c16918e2aba53e807b8ba32cccd"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_repo_dependency_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "eaf41df9b4c329db48a206a055173d2dbc04b525c6d0ec3eee48dddc7fa9de68"
+    },
+    {
+      "file": "handlers/playwright.js",
+      "rule": "unreachable-dispatch",
+      "name": "playwright_capture_network_requests",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ec11e721b80ce5cdac9dee5ec0d531dc5ed2df783f3bb71456eca5bc835dfada"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_org_cost_report",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "eca37de1ebe46ff2f305e49e681eaea14317a8e84923ab8a90d600b87b7fed40"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_list_audit_entries",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ecd01e607fb41e00e96aaeb5ad8e3a674f470dbb06caf4b96b634e8efd13295a"
+    },
+    {
+      "file": "handlers/neon.js",
+      "rule": "unreachable-dispatch",
+      "name": "neon_create_replication_slot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ed7973ca875343f474aae4c6b2e15ef94d6286458e71f4ef15555c869a699b09"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_local_numbers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ed7b3d2ca545845f4ab411fc18dda5d89360e336394c1f9540b4e734cd283bda"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_compliance_snapshot",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "edd5add589c381f13797ab9d4dfc525bb6dc1ff289b727c310658eb713878a20"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_get_sarif_upload",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "edde7025067869786cd736603b304adc5aee7de81de4b22c95d2454c867215ce"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_add_copilot_seats",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ee1a8635c100c812342b7a3206b0aeb1a5ac5ab468fb281ac072080e332271d2"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_remove_account_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "eec807cbbdca2e137a7bf8670bd26fbf498e1f1c143beba201c632c9af17fae1"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_create_radar_value_list_item",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ef8dff789a73416a5cb09cdede011a6dc19d5f3ea860c6710944044af0677ded"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_pin_message",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "efcf777e7222fe371891a7b42b15aed599f486b2b9f751ebacd65af5217efe50"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_set_user_profile",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f03d73d5000cbbba6df842adbdd2fcd21c66397efc665c6f9ec3123297c73a5a"
+    },
+    {
+      "file": "handlers/local.js",
+      "rule": "unreachable-dispatch",
+      "name": "local_docker_start",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f0f0300ed4beb71a1d8e992e738a54581c5372997f6d7780d0579712b4424b57"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_grant_role",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f130fefa0b7ffabc7c7ebf883680bd4b646676884d05fb7ea390bb6a98d25500"
+    },
+    {
+      "file": "handlers/twilio.js",
+      "rule": "unreachable-dispatch",
+      "name": "twilio_list_taskrouter_workspaces",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f24aa25225527026b829a63d98c73014e710ea35cbdbee34ce59ca0d34e6b80e"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_list_saml_providers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f295a23b78de4ea052f920da0c25288c309ea64ca0914c4a2cbc6fa04621689b"
+    },
+    {
+      "file": "handlers/clerk.js",
+      "rule": "unreachable-dispatch",
+      "name": "clerk_org_member_audit",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f2a4a69bade53d8a0ef7664293f4ca1706105b5c845875d26678f638c1a3e26c"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_query_analytics_engine",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f363c0161b0ccbea38e73f3ca0d974dae2afe6932b97c588e0b2658b7a52b7a8"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_get_tax_code",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f420482813d2e6cc51f7effc93a4ec045205264f1a298de8c28497c64216dc41"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_list_identity_providers",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f522a2cb28ca4e0591cddf4161d1d365bc9624e6901e6d8b207078033e9f1bdb"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_update_team_member",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f5719258686c741f9efeb9d4cdba01143b326baea58ef469701e4af0d3f7731d"
+    },
+    {
+      "file": "handlers/postgres.js",
+      "rule": "unreachable-dispatch",
+      "name": "postgres_cluster_table",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f5c4299b4f5e75153b3b485cea4e8e6be45607f4d366c068c6189bb2aa89c2c1"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_cancel_payout",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f5de9f9d1eb5020f0bb3e9c6f86ffc97090ec3b3d433bda2e37c4297cbc95346"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_deactivate_meter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f61639109434685807605a465a7746419649c431c66a1f687c59d8d55113e351"
+    },
+    {
+      "file": "handlers/linear.js",
+      "rule": "unreachable-dispatch",
+      "name": "linear_create_webhook",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f6c09b49fc31a012e3b9620088e14528ab549b41589080c85c5238843770e6e8"
+    },
+    {
+      "file": "handlers/vercel.js",
+      "rule": "unreachable-dispatch",
+      "name": "vercel_encrypt_env_var",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f8239892f7968b2a2816442a6edac92fba03da928f253b2fcfde17db00447165"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_cancel_topup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "f94eef6bf2c6c701f87b207d5878bcd1cf2a8b2d30c4c7125782d3772e28c5c8"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_list_user_factors",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "fce8952e5cd1d3f5f1b973d3d51b0ff41cc27326ee91b22928fb3432c74f8e16"
+    },
+    {
+      "file": "handlers/openai.js",
+      "rule": "unreachable-dispatch",
+      "name": "openai_get_usage_code_interpreter",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "fde58e4abbaeb1c8bc438041c94072d993e35d22ca8f64907f1c19f582d13635"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_disable_usergroup",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "fea7e64e142db6f1db141305594d4f76be0e5fe69e972e2896b9b0ec3307705c"
+    },
+    {
+      "file": "handlers/github.js",
+      "rule": "unreachable-dispatch",
+      "name": "github_update_org_ruleset",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "feb224021e1c243be73e0c2bcd0faf89d037805602eb6c1108e8689d34549a5d"
+    },
+    {
+      "file": "handlers/cloudflare.js",
+      "rule": "unreachable-dispatch",
+      "name": "cf_create_email_routing_rule",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "feb4e749a1be33e13ebfa8a13bd6071601495b241ebac2bc291c403173e8bfcf"
+    },
+    {
+      "file": "handlers/slack.js",
+      "rule": "unreachable-dispatch",
+      "name": "slack_multi_channel_announce",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "fee5b8cc8147a0d48d174adb8ee1dfc9d9beffe8482d3d781b64c6b3fa330897"
+    },
+    {
+      "file": "handlers/stripe.js",
+      "rule": "unreachable-dispatch",
+      "name": "stripe_cancel_verification_session",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ff60b36f23c49fa2460c1581a783e9e1e1bce67efe13415fd4ccf3863f798891"
+    },
+    {
+      "file": "handlers/supabase.js",
+      "rule": "unreachable-dispatch",
+      "name": "supabase_set_edge_function_secrets",
+      "disposition": "disabled-until-reviewed",
+      "evidence": "Dispatch appears after an unconditional return or throw in execute.",
+      "id": "ff9df85f98099192598e0c09cd4d898d1e97f7b30f0adf08c852fa7690874689"
+    }
+  ]
+}
