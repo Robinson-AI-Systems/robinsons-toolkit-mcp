@@ -13,12 +13,14 @@ import {
 } from 'fs';
 import { join, resolve, dirname, basename, extname, relative } from 'path';
 import { promisify } from 'util';
-import { exec } from '../src/core/sandbox/restricted-host.js';
+import { exec, sanitizedEnvironment } from '../src/core/sandbox/restricted-host.js';
+import { execFile } from 'node:child_process';
 import { createHash } from 'crypto';
 import { memoryUsage, cpuUsage } from '../src/core/system-metrics.js';
 import { assertWriteAllowed } from '../src/core/sandbox/restricted-host.js';
 
 const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
 
 
 function resolvePath(p) {
@@ -79,10 +81,18 @@ async function execute(tool, args) {
     const ext = extname(fullPath).toLowerCase();
     const interp = interpreter || (ext === '.py' ? 'python3' : ext === '.sh' ? 'bash' : 'node');
     const workdir = cwd ? resolvePath(cwd) : dirname(fullPath);
-    const argStr = scriptArgs.map(a => `"${a}"`).join(' ');
-    const command = `${interp} "${fullPath}" ${argStr}`.trim();
+    if (typeof interp !== 'string' || !interp || interp.includes('\0') ||
+        !Array.isArray(scriptArgs) || scriptArgs.some(value => typeof value !== 'string' || value.includes('\0')) ||
+        !Number.isSafeInteger(timeout_ms) || timeout_ms < 1 || timeout_ms > 2147483647) {
+      throw Object.assign(new Error('Invalid script interpreter, arguments or deadline'), { code: 'INVALID_ARGUMENTS' });
+    }
+    // Display only. Never execute the serialized command through a shell.
+    const command = [interp, fullPath, ...scriptArgs].map(value => JSON.stringify(value)).join(' ');
     try {
-      const { stdout, stderr } = await execAsync(command, { cwd: workdir, timeout: timeout_ms, maxBuffer: 10 * 1024 * 1024 });
+      const { stdout, stderr } = await execFileAsync(interp, [fullPath, ...scriptArgs], {
+        cwd: workdir, timeout: timeout_ms, maxBuffer: 10 * 1024 * 1024,
+        env: sanitizedEnvironment(), shell: false, windowsHide: true
+      });
       return { success: true, stdout: stdout || '', stderr: stderr || '', command, script: fullPath };
     } catch (err) {
       return { success: false, error: err.message, stdout: err.stdout || '', stderr: err.stderr || '', exitCode: err.code };

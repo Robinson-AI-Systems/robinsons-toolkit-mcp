@@ -1,11 +1,13 @@
 {
-  "sourceTree": "2091559d20f1f1c66fa3d10f1e1fe1c5cea6f131",
-  "verifiedAt": "2026-09-27T22:02:00.721Z",
+  "sourceCommit": "3c0339dee871499694dcc7794b3d4c788912bf5d",
+  "worktreeDirty": true,
+  "sourceTree": null,
+  "verifiedAt": "2026-09-28T06:06:44.821Z",
   "node": "v24.19.0",
   "tests": {
     "exitCode": 0,
-    "tests": 96,
-    "passed": 96,
+    "tests": 106,
+    "passed": 106,
     "failed": 0,
     "skipped": 0,
     "timedOut": false

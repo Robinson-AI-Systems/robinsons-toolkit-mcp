@@ -109,3 +109,17 @@ Source checked on 2026-09-27: https://www.prisma.io/docs/cli/db/push
 Connection-URI redaction also remembers the decoded password for both configured
 and newly generated connection strings. Later standalone or URL-encoded password
 echoes are masked at the output boundary, not just the complete original URI.
+
+### Local script argument boundary
+
+`local_run_script` now passes the interpreter, absolute script path and literal
+argument array to `execFile` with `shell:false` and a sanitized environment.
+Shell expansion in arguments and interpreter names cannot launch extra commands.
+Real-process regressions cover hostile arguments, spaces, Unicode, empty arguments,
+credential exclusion and a nonzero script exit. An interpreter containing flags
+must now be a separate executable wrapper; the interpreter field is an executable
+path/name, not shell syntax. This remains trusted-host execution: the script itself
+can access host files and spawn processes. No filesystem sandbox is claimed.
+
+Docker is not installed in the current verification environment. Container-backend
+live validation remains not run and the isolated-backend release gate remains open.

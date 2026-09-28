@@ -75,3 +75,32 @@ test('local handler enforces boundaries and sanitizes inherited command environm
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('script execution preserves hostile arguments literally and excludes provider credentials', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'rt-script-'));
+  const saved = process.env.STRIPE_SECRET_KEY;
+  try {
+    process.env.STRIPE_SECRET_KEY = 'test-only-script-secret';
+    const script = join(dir, 'script with spaces.cjs');
+    const marker = join(dir, 'injected');
+    writeFileSync(script, 'console.log(JSON.stringify({args:process.argv.slice(2),secret:process.env.STRIPE_SECRET_KEY}))');
+    const args = [`$(touch ${marker})`, '`touch injected`', '"; touch injected; #', 'spaces and unicode é', '', '\nsecond line'];
+    const { default: local } = await import('../handlers/local.js');
+    const result = await local.execute('local_run_script', { script_path: script, interpreter: process.execPath, args, cwd: dir });
+    assert.equal(result.success, true);
+    assert.deepEqual(JSON.parse(result.stdout), {args});
+    assert.equal(existsSync(marker), false);
+    const invalidInterpreter = await local.execute('local_run_script', { script_path: script, interpreter: `node; touch ${marker}; #`, cwd: dir });
+    assert.equal(invalidInterpreter.success, false);
+    assert.equal(existsSync(marker), false);
+    writeFileSync(script, 'console.error("expected failure");process.exit(7)');
+    const failed = await local.execute('local_run_script', { script_path: script, interpreter: process.execPath, cwd: dir });
+    assert.equal(failed.success, false);
+    assert.equal(failed.exitCode, 7);
+    assert.match(failed.stderr, /expected failure/);
+    await assert.rejects(local.execute('local_run_script', {script_path: script, args:[{}]}), {code:'INVALID_ARGUMENTS'});
+  } finally {
+    if (saved === undefined) delete process.env.STRIPE_SECRET_KEY; else process.env.STRIPE_SECRET_KEY = saved;
+    rmSync(dir, {recursive:true,force:true});
+  }
+});
