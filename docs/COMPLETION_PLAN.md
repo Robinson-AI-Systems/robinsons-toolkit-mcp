@@ -255,7 +255,8 @@ their own existing authorization; finish the reviewable work before that decisio
    contract/live evidence as repairs land. Generate from existing audits.
    Add regression checks that detect new integrity/security defects while preserving
    the strict failing gate for inherited defects. Do not suppress its exit code.
-2. Implement and test the scoped provider-execution harness with a real read handler
+2. Initial opt-in process harness implemented (see PROVIDER_EXECUTION.md); review
+   and migrate provider families before default rollout. Test with a real read handler
    and a compound child path; cover concurrent credential scopes, crashes, timeouts,
    lazy imports and secret-free error propagation before broad rollout.
 3. Implement the isolated command backend and Core policy admission, then migrate

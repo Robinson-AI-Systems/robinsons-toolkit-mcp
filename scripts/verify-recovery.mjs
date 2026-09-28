@@ -12,7 +12,8 @@ const data=inventory(root),duplicates=duplicateCandidates(data),runtime=await pr
 const checks=['scripts/generate-capabilities.mjs','scripts/generate-catalog.mjs'].map(script=>{
  const result=spawnSync(process.execPath,[script,'--check'],{cwd:root,encoding:'utf8'});return {script,passed:result.status===0};
 });
-const report={sourceTree:execFileSync('git',['rev-parse','HEAD^{tree}'],{cwd:root,encoding:'utf8'}).trim(),verifiedAt:new Date().toISOString(),node:process.version,
+const worktreeDirty=!!execFileSync('git',['status','--porcelain','--untracked-files=normal'],{cwd:root,encoding:'utf8'}).trim();
+const report={sourceCommit:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),worktreeDirty,sourceTree:worktreeDirty?null:execFileSync('git',['rev-parse','HEAD^{tree}'],{cwd:root,encoding:'utf8'}).trim(),verifiedAt:new Date().toISOString(),node:process.version,
  tests:{exitCode:tests.status,tests:count('tests'),passed:count('pass'),failed:count('fail'),skipped:count('skipped'),timedOut:tests.error?.code==='ETIMEDOUT'},
  freshness:checks,inventory:data.counts,mismatches:data.mismatches,
  strictIntegrity:{passed:!data.findings.length&&!data.duplicateNames.length&&!data.repeatedDispatchNames.length&&!data.mismatches.registryWithoutHandler.length&&!data.mismatches.handlerWithoutRegistry.length,findings:data.findings.length,unreachableRegisteredNames:new Set(data.findings.filter(f=>f.rule==='unreachable-dispatch'&&data.entries.some(e=>e.name===f.name)).map(f=>f.name)).size},

@@ -6,6 +6,7 @@ import {loadRegistry} from './registry.js';
 import {buildCatalog,withAliasWarning} from './catalog.js';
 import {validateArgs} from './validation.js';
 import {createHandlerLoader} from './handlers.js';
+import {createProcessHandlerLoader} from './providers/process-loader.js';
 import {CapabilityAvailability,Availability} from './capabilities.js';
 import {EnvironmentCredentials} from './credentials.js';
 import {createDiscovery} from './discovery.js';
@@ -17,7 +18,7 @@ import {withExecutionContext,currentWorkspace,currentExecutionContext} from './c
 export const toolkitRoot=fileURLToPath(new URL('../../',import.meta.url));
 
 /** Transport-independent capability gateway; constructing it imports no handlers. */
-export async function createToolkit({root=toolkitRoot,credentials=new EnvironmentCredentials(),packageExists,binaryExists,resultOptions={},profile,profileStore=new ProfileStore()}={}) {
+export async function createToolkit({root=toolkitRoot,credentials=new EnvironmentCredentials(),packageExists,binaryExists,resultOptions={},profile,profileStore=new ProfileStore(),providerExecution}={}) {
   const selectedProfile=profile===undefined?profileStore.active():profile===null?null:validateProfile(profile);
   const workspace=selectedProfile?.workspace||currentWorkspace();
   const results=withExecutionContext({workspace},()=>new ResultStore({inlineBytes:Number(process.env.RT_MAX_INLINE_BYTES||16384),inlineRecords:Number(process.env.RT_MAX_INLINE_RECORDS||100),...resultOptions,redact:value=>credentials.redact(value)}));
@@ -26,7 +27,10 @@ export async function createToolkit({root=toolkitRoot,credentials=new Environmen
   const byName=catalog.byName;
   const discovery=createDiscovery(registry);
   const metadata=JSON.parse(readFileSync(join(root,'src/core/capability-metadata.json'),'utf8')).capabilities;
-  const handlers=createHandlerLoader(root);
+  if(providerExecution)for(const name of Object.keys(providerExecution.scopes||{})){
+    if(!byName.has(name)||byName.get(name).aliasOf)throw Object.assign(new Error('Provider process scopes must name existing canonical capabilities'),{code:'INVALID_PROVIDER_EXECUTION'});
+  }
+  const handlers=providerExecution?createProcessHandlerLoader(root,{...providerExecution,credentials}):createHandlerLoader(root);
   const availability=new CapabilityAvailability(metadata,{credentials,packageExists,binaryExists});
   const statusFor=name=>{
     const canonical=catalog.resolve(name)?.canonical.name||name;
