@@ -4,6 +4,7 @@ Reviewed against the original owner prompt on 2026-09-27. This checklist records
 implemented behavior and remaining acceptance work. It is not a production-ready
 claim. Current counts come from reports/catalog; earlier checkpoint notes remain
 historical. Main is preserved; development is on v3/recovery-core.
+Execution order and closure criteria: [completion plan](COMPLETION_PLAN.md).
 
 | Requirement | Verified state | Remaining acceptance work |
 | --- | --- | --- |

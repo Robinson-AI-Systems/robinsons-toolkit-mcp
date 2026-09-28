@@ -39,3 +39,8 @@ sources, compatibility changes and test evidence in docs/migrations/provider-cha
 If there is no equivalent or a concrete blocker, record that blocker and an
 explicit next action; do not silently substitute different behavior. A documentation
 note alone does not close a migration. Keep blocked broken capabilities unavailable.
+
+Use docs/COMPLETION_PLAN.md as the remaining-work sequence and acceptance gates.
+At session start, reconcile it with current generated evidence and resume the
+first incomplete dependency. Update requirement/repair evidence after checkpoints.
+Do not mark the original request complete until its release acceptance gates pass.
