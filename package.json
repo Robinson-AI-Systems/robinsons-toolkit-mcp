@@ -1,18 +1,42 @@
 {
   "name": "robinsons-toolkit-mcp",
   "version": "2.0.0",
-  "description": "Robinson's Toolkit MCP Server - 1400+ tools across 28 categories",
+  "description": "Robinson's Toolkit capability Core with lean MCP and CLI adapters",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "test": "node --test tests/*.test.mjs",
+    "audit": "node audit.js",
+    "audit:integrity": "node scripts/check-integrity.mjs",
+    "audit:baseline": "node scripts/baseline.mjs",
+    "audit:metadata": "node scripts/generate-capabilities.mjs --check",
+    "catalog:generate": "node scripts/generate-catalog.mjs",
+    "catalog:check": "node scripts/generate-catalog.mjs --check",
+    "verify:recovery": "node scripts/verify-recovery.mjs",
+    "repair:generate": "node scripts/repair-backlog.mjs",
+    "repair:check": "node scripts/repair-backlog.mjs --check"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
+    "acorn": "8.18.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
     "dotenv": "^16.0.0"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "bin": {
+    "rt": "bin/rt.js",
+    "robinsons-toolkit": "bin/rt.js"
+  },
+  "optionalDependencies": {
+    "@modelcontextprotocol/server": "2.1.0",
+    "@neondatabase/serverless": "1.1.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.1.0"
   }
 }

@@ -596,12 +596,6 @@ async function execute(tool, args) {
     return await res.json();
   }
 
-  if (tool === 'openai_list_org_users') {
-    const { limit = 20 } = args;
-    const data = await admin('GET', `/organization/users?limit=${limit}`);
-    return data.data || data;
-  }
-
   if (tool === 'openai_invite_user') {
     const { email, role = 'reader' } = args;
     if (!email) throw new Error('email is required');
@@ -612,27 +606,6 @@ async function execute(tool, args) {
     const { user_id } = args;
     if (!user_id) throw new Error('user_id is required');
     return await admin('DELETE', `/organization/users/${user_id}`);
-  }
-
-  if (tool === 'openai_list_projects') {
-    const { limit = 20 } = args;
-    const data = await admin('GET', `/organization/projects?limit=${limit}`);
-    return data.data || data;
-  }
-
-  if (tool === 'openai_create_project') {
-    const { name } = args;
-    if (!name) throw new Error('name is required');
-    return await admin('POST', '/organization/projects', { name });
-  }
-
-  if (tool === 'openai_get_usage') {
-    const { start_time, end_time, bucket_width = '1d', limit = 30 } = args;
-    const params = new URLSearchParams({ bucket_width, limit });
-    if (start_time) params.set('start_time', start_time);
-    if (end_time) params.set('end_time', end_time);
-    const data = await admin('GET', `/organization/usage/completions?${params}`);
-    return data;
   }
 
   if (tool === 'openai_get_costs') {

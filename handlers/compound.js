@@ -1,17 +1,19 @@
+import { currentDispatcher } from '../src/core/context.js';
 /**
  * Compound Handler — 36 macro tools
  * Cross-service Super Tools that orchestrate multiple APIs in a single call.
  * These are the "power moves" — one tool replaces 5-10 individual calls.
  */
 
-import { existsSync, writeFileSync, readFileSync, mkdirSync } from 'fs';
-import { join } from 'path';
-import { execSync } from 'child_process';
-import { readLedger, markRolledBack } from '../ledger.js';
+import {prepareSchemaPush,environmentFilePath,writeDatabaseEnvironment} from '../src/core/sandbox/project-migration.js';
+import {workspaceGit} from '../src/core/sandbox/git.js';
+import {rollbackTransaction} from '../src/core/transactions.js';
 
-const WORKSPACE = process.env.WORKSPACE_ROOT || process.cwd();
+
 
 async function loadHandler(name) {
+  const dispatch = currentDispatcher();
+  if (dispatch) return { execute: (tool, args) => dispatch(tool, args) };
   const { default: handler } = await import(`./${name}.js`);
   return handler;
 }
@@ -21,6 +23,8 @@ async function execute(tool, args) {
   // ── FEATURE SCAFFOLDING ───────────────────────────────────────────────────
   if (tool === 'compound_scaffold_feature') {
     const { github_owner, github_repo, feature_name, neon_project_id, run_migrations = false, migration_command = 'npx prisma db push', env_file_path } = args;
+    const envPath = environmentFilePath(env_file_path);
+    const schemaPush = run_migrations ? prepareSchemaPush(migration_command) : null;
     const results = { feature: feature_name, steps: [] };
     try {
       const gh = await loadHandler('github');
@@ -30,27 +34,24 @@ async function execute(tool, args) {
     try {
       const neon = await loadHandler('neon');
       const neonBranch = await neon.execute('neon_create_branch', { project_id: neon_project_id, branch_name: `feature-${feature_name}` });
+      if (!neonBranch.branch?.id) throw new Error('Neon returned no branch ID; refusing to use the default database branch');
       results.neon_branch = neonBranch;
       results.steps.push({ step: 'neon_branch', success: true, branch_name: `feature-${feature_name}` });
       const connInfo = await neon.execute('neon_get_connection_string', { project_id: neon_project_id, branch_id: neonBranch.branch?.id, database: 'neondb' });
+      if (typeof connInfo.connection_string !== 'string' || !connInfo.connection_string) throw new Error('Neon returned no database connection string; environment setup did not complete');
       results.connection_string = connInfo.connection_string;
       results.steps.push({ step: 'connection_string', success: true, host: connInfo.host });
       if (connInfo.connection_string) {
-        const envPath = env_file_path ? join(WORKSPACE, env_file_path) : join(WORKSPACE, '.env.local');
-        let content = existsSync(envPath) ? readFileSync(envPath, 'utf-8') : '';
-        const newLine = `DATABASE_URL=${connInfo.connection_string}`;
-        if (/^DATABASE_URL=.*/m.test(content)) content = content.replace(/^DATABASE_URL=.*/m, newLine);
-        else content = content.trimEnd() + '\n' + newLine + '\n';
-        writeFileSync(envPath, content);
+        writeDatabaseEnvironment(envPath, connInfo.connection_string);
         results.steps.push({ step: 'env_updated', success: true, path: envPath });
       }
       if (run_migrations && connInfo.connection_string) {
-        const result = execSync(migration_command, { cwd: WORKSPACE, env: { ...process.env, DATABASE_URL: connInfo.connection_string }, timeout: 120000, encoding: 'utf-8' });
-        results.steps.push({ step: 'migrations', success: true, output: result.slice(0, 1000) });
+        const result = schemaPush(connInfo.connection_string);
+        results.steps.push({ step: 'migrations', success: true, output: result });
       }
-    } catch (e) { results.steps.push({ step: 'neon_or_env', success: false, error: e.message }); }
+    } catch (e) { results.steps.push({ step: 'neon_or_env', success: false, error: e.message, ...(e.operationMayHaveCompleted ? {operationMayHaveCompleted:true} : {}) }); }
     const allSucceeded = results.steps.every(s => s.success);
-    return { ...results, status: allSucceeded ? 'ready' : 'partial', message: allSucceeded ? `Feature environment for "${feature_name}" is ready.` : 'Some steps failed.' };
+    return { ...results, success:allSucceeded, status: allSucceeded ? 'ready' : 'partial', message: allSucceeded ? `Feature environment for "${feature_name}" is ready.` : 'Some steps failed.' };
   }
 
   // ── SAFE DEPLOY ───────────────────────────────────────────────────────────
@@ -58,7 +59,7 @@ async function execute(tool, args) {
     const { vercel_project_id, git_push = false, project_path } = args;
     const results = { steps: [] };
     if (git_push && project_path) {
-      try { execSync('git push', { cwd: join(WORKSPACE, project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
+      try { workspaceGit(project_path).push(); results.steps.push({ step: 'git_push', success: true }); }
       catch (e) { results.steps.push({ step: 'git_push', success: false, error: e.message }); }
     }
     await new Promise(resolve => setTimeout(resolve, 5000));
@@ -144,16 +145,21 @@ async function execute(tool, args) {
   // ── GIT COMMIT AND PUSH ────────────────────────────────────────────────────
   if (tool === 'compound_git_commit_push') {
     const { project_path, message, files = '.', branch } = args;
-    const cwd = join(WORKSPACE, project_path || '');
     const steps = [];
-    try { execSync(`git add ${files}`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git add', success: true }); } catch (e) { steps.push({ step: 'git add', success: false, error: e.message }); return { steps }; }
-    try { const out = execSync(`git commit -m "${message.replace(/"/g, '\\"')}"`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git commit', success: true, output: out.trim() }); }
-    catch (e) {
-      if (e.message.includes('nothing to commit')) return { steps: [{ step: 'git commit', success: true, note: 'Nothing to commit' }] };
-      steps.push({ step: 'git commit', success: false, error: e.message }); return { steps };
+    let git;
+    try { git = workspaceGit(project_path); }
+    catch (error) { return {success:false,all_succeeded:false,steps:[{step:'git preflight',success:false,error:error.message}]}; }
+    for (const [step,operation] of [
+      ['git add',()=>git.stage(files)],
+      ['git commit',()=>git.commit(message)],
+      ['git push',()=>git.push(branch)]
+    ]) {
+      try { steps.push({step,success:true,output:operation()}); }
+      catch (error) {
+        return {success:false,all_succeeded:false,steps:[...steps,{step,success:false,error:error.message}]};
+      }
     }
-    try { const out = execSync(`git push ${branch ? `origin ${branch}` : 'origin HEAD'}`, { cwd, encoding: 'utf-8' }); steps.push({ step: 'git push', success: true, output: out.trim() }); } catch (e) { steps.push({ step: 'git push', success: false, error: e.message }); }
-    return { steps, all_succeeded: steps.every(s => s.success) };
+    return {success:true,steps,all_succeeded:true};
   }
 
   // ── PROJECT HEALTH CHECK ──────────────────────────────────────────────────
@@ -237,7 +243,7 @@ async function execute(tool, args) {
     const results = { version, steps: [] };
 
     if (git_push && project_path) {
-      try { execSync('git push', { cwd: join(WORKSPACE, project_path), timeout: 30000, encoding: 'utf-8' }); results.steps.push({ step: 'git_push', success: true }); }
+      try { workspaceGit(project_path).push(); results.steps.push({ step: 'git_push', success: true }); }
       catch (e) { results.steps.push({ step: 'git_push', success: false, error: e.message }); }
     }
 
@@ -532,55 +538,10 @@ async function execute(tool, args) {
   // ── ROLLBACK TRANSACTION ──────────────────────────────────────────────────
   // Reads the Observability Ledger and replays inverse operations in reverse order
   if (tool === 'compound_rollback_transaction') {
-    const { last_n, since, transaction_id, dry_run = false } = args;
-    if (!last_n && !since && !transaction_id) {
-      throw new Error('Must provide one of: last_n, since (ISO timestamp), or transaction_id');
-    }
-
-    const entries = readLedger({ limit: last_n, since, transaction_id, include_rolled_back: false });
-    const reversible = entries.filter(e => e.reversible && e.inverse?.tool);
-    const skipped = entries.filter(e => !e.reversible || !e.inverse?.tool);
-
-    const plan = reversible.slice().reverse().map(e => ({
-      id: e.id,
-      timestamp: e.timestamp,
-      original: e.tool_name,
-      inverse: e.inverse.tool,
-      inverse_args: e.inverse.args
-    }));
-
-    if (dry_run) {
-      return {
-        dry_run: true,
-        will_reverse: plan.length,
-        skipped_non_reversible: skipped.length,
-        plan,
-        skipped: skipped.map(e => ({ id: e.id, tool: e.tool_name, notes: e.notes }))
-      };
-    }
-
-    const executed = [];
-    const failed = [];
-    for (const step of plan) {
-      const ns = step.inverse.split('_')[0];
-      try {
-        const handler = await loadHandler(ns);
-        const result = await handler.execute(step.inverse, step.inverse_args);
-        executed.push({ id: step.id, inverse: step.inverse, result });
-        markRolledBack(step.id);
-      } catch (e) {
-        failed.push({ id: step.id, inverse: step.inverse, error: e.message });
-      }
-    }
-
-    return {
-      reversed: executed.length,
-      failed: failed.length,
-      skipped_non_reversible: skipped.length,
-      executed,
-      failed_details: failed,
-      skipped: skipped.map(e => ({ id: e.id, tool: e.tool_name, notes: e.notes }))
-    };
+    return rollbackTransaction(args, async (name, parameters) => {
+      const handler = await loadHandler(name.split('_')[0]);
+      return handler.execute(name, parameters);
+    });
   }
 
 

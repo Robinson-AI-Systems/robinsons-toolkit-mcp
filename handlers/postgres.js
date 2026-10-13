@@ -1,3 +1,4 @@
+import {dumpPostgres} from '../src/integrations/postgres/dump.js';
 /**
  * Postgres Handler — 52 tools
  * Direct PostgreSQL operations: SQL, schema inspection, data ops,
@@ -426,6 +427,21 @@ async function execute(tool, args) {
   }
 
 
+  // ── BACKUP & DUMP (credential-scoped pg_dump process) ─────────────────────
+  if (tool === 'postgres_dump_schema') {
+    const connStr = process.env.POSTGRES_CONNECTION_STRING;
+    if (!connStr) throw new Error('POSTGRES_CONNECTION_STRING not set in .env');
+    const { schema = 'public', output_path } = args;
+    return { ...dumpPostgres({connectionString:connStr,outputPath:output_path,schema,schemaOnly:true}), schema };
+  }
+  if (tool === 'postgres_dump_table') {
+    const connStr = process.env.POSTGRES_CONNECTION_STRING;
+    if (!connStr) throw new Error('POSTGRES_CONNECTION_STRING not set in .env');
+    const { table_name, schema = 'public', output_path, format = 'plain' } = args;
+    if (!table_name) throw new Error('table_name is required');
+    return { ...dumpPostgres({connectionString:connStr,outputPath:output_path,schema,table:table_name,format}), table: `${schema}.${table_name}` };
+  }
+
     throw new Error(`Unknown Postgres tool: ${tool}`);
 
   // ── DATABASE MANAGEMENT ──────────────────────────────────────────────────
@@ -510,35 +526,6 @@ async function execute(tool, args) {
   }
   if (tool === 'postgres_list_role_members') {
     return await pg(`SELECT r.rolname AS role, m.rolname AS member FROM pg_roles r JOIN pg_auth_members am ON r.oid = am.roleid JOIN pg_roles m ON am.member = m.oid ORDER BY r.rolname, m.rolname`);
-  }
-
-  // ── BACKUP & DUMP (via pg_dump shell) ─────────────────────────────────────
-  if (tool === 'postgres_dump_schema') {
-    const connStr = process.env.POSTGRES_CONNECTION_STRING;
-    if (!connStr) throw new Error('POSTGRES_CONNECTION_STRING not set in .env');
-    const { schema = 'public', output_path } = args;
-    if (!output_path) throw new Error('output_path is required');
-    const { execSync } = await import('child_process');
-    try {
-      execSync(`pg_dump "${connStr}" --schema="${schema}" --schema-only -f "${output_path}"`, { stdio: 'pipe' });
-      return { success: true, schema, output_path, message: `Schema dumped to ${output_path}` };
-    } catch (e) {
-      throw new Error(`pg_dump failed: ${e.message}`);
-    }
-  }
-  if (tool === 'postgres_dump_table') {
-    const connStr = process.env.POSTGRES_CONNECTION_STRING;
-    if (!connStr) throw new Error('POSTGRES_CONNECTION_STRING not set in .env');
-    const { table_name, schema = 'public', output_path, format = 'plain' } = args;
-    if (!table_name || !output_path) throw new Error('table_name and output_path are required');
-    const { execSync } = await import('child_process');
-    try {
-      const fmtFlag = format === 'custom' ? '-Fc' : '';
-      execSync(`pg_dump "${connStr}" --table="${schema}.${table_name}" ${fmtFlag} -f "${output_path}"`, { stdio: 'pipe' });
-      return { success: true, table: `${schema}.${table_name}`, output_path, format };
-    } catch (e) {
-      throw new Error(`pg_dump failed: ${e.message}`);
-    }
   }
 
   // ── ADVANCED PERFORMANCE ──────────────────────────────────────────────────

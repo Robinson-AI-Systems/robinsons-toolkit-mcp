@@ -3110,7 +3110,7 @@
   },
   {
     "name": "supabase_get_logs",
-    "description": "Get project logs for a specific service (api, auth, storage, realtime, postgres).",
+    "description": "Read one service from the Supabase unified log stream. Default window: last minute. Explicit ranges require both endpoints and span at most 24 hours.",
     "namespace": "supabase",
     "tags": [
       "supabase",
@@ -3122,24 +3122,47 @@
       "type": "object",
       "properties": {
         "project_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,64}$"
         },
         "service": {
           "type": "string",
-          "description": "api, auth, storage, realtime, or postgres"
+          "description": "api, auth, storage, realtime, or postgres",
+          "enum": [
+            "api",
+            "auth",
+            "storage",
+            "realtime",
+            "postgres"
+          ]
         },
         "limit": {
-          "type": "number"
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "default": 100
         },
         "search": {
-          "type": "string"
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Literal case-insensitive substring of the log message."
+        },
+        "iso_timestamp_start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "iso_timestamp_end": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
         "project_id",
         "service"
       ]
-    }
+    },
+    "risk": "READ",
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "supabase_get_custom_domain",
@@ -3506,5 +3529,51 @@
         "project_id"
       ]
     }
+  },
+  {
+    "name": "supabase_get_postgres_logs",
+    "description": "Read PostgreSQL logs from the unified Supabase log stream; bounded to the selected time range (last minute by default).",
+    "namespace": "supabase",
+    "tags": [
+      "supabase",
+      "logs",
+      "monitoring",
+      "debugging",
+      "postgres"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,64}$"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "default": 100
+        },
+        "search": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Literal case-insensitive substring of the log message."
+        },
+        "iso_timestamp_start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "iso_timestamp_end": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "project_id"
+      ]
+    },
+    "risk": "READ",
+    "reversibility": "READ_ONLY",
+    "specializationOf": "supabase_get_logs"
   }
 ]

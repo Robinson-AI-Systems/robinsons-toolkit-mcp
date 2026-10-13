@@ -43,7 +43,7 @@
   },
   {
     "name": "anthropic_message_with_tools",
-    "description": "Multi-turn Claude conversation with automatic tool-use handling. Runs up to max_turns.",
+    "description": "Send a message with client tool definitions. Returns real pending tool calls for the calling agent to execute; continue with anthropic_message and actual tool results. Does not run client tools automatically.",
     "namespace": "anthropic",
     "inputSchema": {
       "type": "object",
@@ -64,7 +64,8 @@
           "type": "number"
         },
         "max_turns": {
-          "type": "number"
+          "type": "number",
+          "description": "Deprecated compatibility parameter. One provider response is returned; the calling agent executes client tools."
         }
       },
       "required": [
@@ -787,7 +788,7 @@
   },
   {
     "name": "anthropic_extract_entities",
-    "description": "Extract named entities (people, organizations, locations, dates, emails, phones, URLs by default — or custom types) from text as structured JSON.",
+    "description": "Extract named entities (people, organizations, locations, dates, emails, phones, URLs by default \u2014 or custom types) from text as structured JSON.",
     "namespace": "anthropic",
     "inputSchema": {
       "type": "object",
@@ -1413,7 +1414,7 @@
   },
   {
     "name": "anthropic_get_api_key",
-    "description": "Get details for an API key (metadata only — key value is not returned). Requires Admin API key.",
+    "description": "Get details for an API key (metadata only \u2014 key value is not returned). Requires Admin API key.",
     "namespace": "anthropic",
     "inputSchema": {
       "type": "object",
@@ -1659,7 +1660,7 @@
   },
   {
     "name": "anthropic_chat_session",
-    "description": "SUPER TOOL: Stateful chat — pass the returned history array back as input on the next call to continue the conversation. Returns {response, history, usage}.",
+    "description": "SUPER TOOL: Stateful chat \u2014 pass the returned history array back as input on the next call to continue the conversation. Returns {response, history, usage}.",
     "namespace": "anthropic",
     "inputSchema": {
       "type": "object",

@@ -682,8 +682,7 @@ async function execute(tool, args) {
     };
     const data = await gem('POST', `/v1beta/models/${model}:generateContent`, body);
     return {
-      transcript: data.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('
-'),
+      transcript: data.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('\n'),
       file_uri: fileState.uri,
       file_name: file.name,
       usage: data.usageMetadata,
@@ -697,8 +696,7 @@ async function execute(tool, args) {
     const { turns, output_path, model = 'gemini-2.5-flash-preview-tts' } = args;
     if (!turns?.length || !output_path) throw new Error('turns array and output_path are required');
     // turns: [{speaker: 'Speaker1', text: '...'}, ...]
-    const text = turns.map(t => `${t.speaker}: ${t.text}`).join('
-');
+    const text = turns.map(t => `${t.speaker}: ${t.text}`).join('\n');
     const body = {
       contents: [{ parts: [{ text }] }],
       generationConfig: {
@@ -746,8 +744,7 @@ async function execute(tool, args) {
       ...(output_format === 'json' ? { generationConfig: { responseMimeType: 'application/json' } } : {})
     };
     const data = await gem('POST', `/v1beta/models/${model}:generateContent`, body);
-    const raw = data.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('
-');
+    const raw = data.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('\n');
     let parsed = null;
     if (output_format === 'json') { try { parsed = JSON.parse(raw); } catch {} }
     return { text: raw, parsed, output_format, file_name: fileName, usage: data.usageMetadata, model };
@@ -773,8 +770,7 @@ async function execute(tool, args) {
     };
     const data = await gem('POST', `/v1beta/models/${model}:generateContent`, body);
     return {
-      comparison: data.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('
-'),
+      comparison: data.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('\n'),
       file_a: fileA.name,
       file_b: fileB.name,
       usage: data.usageMetadata,

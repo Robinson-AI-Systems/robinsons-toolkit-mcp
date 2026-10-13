@@ -1,0 +1,21 @@
+name: Toolkit integrity
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: node scripts/generate-capabilities.mjs --check
+      # Deliberately fails on the inherited defects captured in reports/recovery.
+      # Do not weaken this gate to make the baseline appear production-ready.
+      - run: npm run catalog:check
+      - run: npm run repair:check
+      - run: npm run audit:integrity

@@ -462,7 +462,9 @@
         }
       },
       "required": []
-    }
+    },
+    "risk": "READ",
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "sentry_create_project",
@@ -2715,5 +2717,29 @@
       "properties": {},
       "required": []
     }
+  },
+  {
+    "name": "sentry_get_project_data_scrubbing",
+    "description": "Compatibility name for the complete Sentry project response, including its configuration. Use sentry_get_project.",
+    "namespace": "sentry",
+    "tags": [
+      "sentry",
+      "project",
+      "get",
+      "details"
+    ],
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "project_slug": {
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "risk": "READ",
+    "reversibility": "READ_ONLY",
+    "aliasOf": "sentry_get_project",
+    "deprecated": true
   }
 ]

@@ -5011,7 +5011,7 @@
   },
   {
     "name": "neon_get_connection_string",
-    "description": "Get the PostgreSQL connection string for a Neon branch endpoint, with optional pooler and database selection.",
+    "description": "Retrieve an authenticated PostgreSQL connection URI from Neon; secret values are redacted at the Toolkit output boundary.",
     "namespace": "neon",
     "tags": [
       "neon",
@@ -5026,10 +5026,12 @@
       "type": "object",
       "properties": {
         "project_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,60}$"
         },
         "branch_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,60}$"
         },
         "database": {
           "type": "string"
@@ -5045,11 +5047,13 @@
       "required": [
         "project_id"
       ]
-    }
+    },
+    "risk": "SECURITY_SENSITIVE",
+    "reversibility": "READ_ONLY"
   },
   {
     "name": "neon_get_connection_uri",
-    "description": "Alias for neon_get_connection_string — get the PostgreSQL URI for a Neon endpoint.",
+    "description": "Retrieve an authenticated PostgreSQL connection URI from Neon; secret values are redacted at the Toolkit output boundary.",
     "namespace": "neon",
     "tags": [
       "neon",
@@ -5063,10 +5067,12 @@
       "type": "object",
       "properties": {
         "project_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,60}$"
         },
         "branch_id": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,60}$"
         },
         "database": {
           "type": "string"
@@ -5081,7 +5087,11 @@
       "required": [
         "project_id"
       ]
-    }
+    },
+    "risk": "SECURITY_SENSITIVE",
+    "reversibility": "READ_ONLY",
+    "aliasOf": "neon_get_connection_string",
+    "deprecated": true
   },
   {
     "name": "neon_test_connection",

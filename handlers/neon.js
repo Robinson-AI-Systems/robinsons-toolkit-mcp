@@ -25,44 +25,31 @@ async function n(method, path, body) {
   return data;
 }
 
-// Execute SQL against a Neon database via the serverless HTTP driver
-async function runSQL(projectId, sql, database = 'neondb', branchId, role) {
-  const project = await n('GET', `/projects/${projectId}`);
-  const branches = await n('GET', `/projects/${projectId}/branches`);
-  const branch = branchId
-    ? branches.branches.find(b => b.id === branchId)
-    : branches.branches.find(b => b.primary) || branches.branches[0];
-  if (!branch) throw new Error('No branch found');
+// Retrieve credentials from the supported management endpoint, never synthesize them.
+async function connectionInfo(projectId, database='neondb', branchId, role='neondb_owner', pooled=true) {
+  const query=new URLSearchParams({database_name:database,role_name:role,pooled:String(pooled)});
+  if(branchId)query.set('branch_id',branchId);
+  const result=await n('GET', `/projects/${encodeURIComponent(projectId)}/connection_uri?${query}`);
+  let uri;try{uri=new URL(result.uri);}catch{throw new Error('Neon returned an invalid connection URI');}
+  if(!['postgres:','postgresql:'].includes(uri.protocol)||!uri.hostname||!uri.username||!uri.password)throw new Error('Neon returned an incomplete authenticated connection URI');
+  return {connection_string:result.uri,host:uri.hostname,database,role,pooled};
+}
 
-  const endpoints = await n('GET', `/projects/${projectId}/endpoints`);
-  const endpoint = endpoints.endpoints.find(e => e.branch_id === branch.id && e.type === 'read_write')
-    || endpoints.endpoints.find(e => e.branch_id === branch.id);
-  if (!endpoint) throw new Error('No endpoint found for this branch. Create one with neon_create_endpoint.');
-
-  const dbRole = role || 'neondb_owner';
-  const connStr = `postgresql://${dbRole}@${endpoint.host}/${database}?sslmode=require`;
-
-  const res = await fetch(`https://${endpoint.host}/sql`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.NEON_API_KEY}`,
-      'Content-Type': 'application/json',
-      'Neon-Connection-String': connStr
-    },
-    body: JSON.stringify({ query: sql })
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    return {
-      connection_string: connStr,
-      host: endpoint.host,
-      database,
-      note: 'Direct SQL via HTTP unavailable. Use the connection_string with a Postgres client.',
-      error: err.slice(0, 500)
-    };
+// Use the official driver so database credentials never become management auth.
+async function runSQL(projectId, sql, database='neondb', branchId, role='neondb_owner') {
+  const {neon}=await import('@neondatabase/serverless');
+  const connection=await connectionInfo(projectId,database,branchId,role,false);
+  const client=neon(connection.connection_string,{fullResults:true,fetchOptions:{signal:AbortSignal.timeout(30000)}});
+  try{
+    if(Array.isArray(sql))return await client.transaction(sql.map(statement=>client.query(statement,[])));
+    return await client.query(sql,[]);
+  }catch(error){
+    // SQL errors are failures, never successful objects containing fallback instructions.
+    const {EnvironmentCredentials}=await import('../src/core/credentials.js');
+    const password=decodeURIComponent(new URL(connection.connection_string).password);
+    const redact=new EnvironmentCredentials({DATABASE_URL:connection.connection_string,DATABASE_PASSWORD:password});
+    throw Object.assign(new Error(redact.redact(`Neon SQL failed: ${error.message}`)),{code:'EXECUTION_FAILED',operationMayHaveCompleted:true});
   }
-  return await res.json();
 }
 
 async function execute(tool, args) {
@@ -228,8 +215,7 @@ async function execute(tool, args) {
   }
   if (tool === 'neon_run_sql_transaction') {
     const { statements, database = 'neondb' } = args;
-    const sql = `BEGIN;\n${statements.join(';\n')};\nCOMMIT;`;
-    return await runSQL(project_id, sql, database, branch_id);
+    return await runSQL(project_id, statements, database, branch_id);
   }
   if (tool === 'neon_explain_sql_statement') {
     return await runSQL(project_id, `EXPLAIN (ANALYZE, FORMAT JSON) ${args.sql}`, args.database, branch_id);
@@ -1005,15 +991,7 @@ async function execute(tool, args) {
 
   // ── CONNECTION STRING ─────────────────────────────────────────────────────
   if (tool === 'neon_get_connection_string' || tool === 'neon_get_connection_uri') {
-    const endpoints = await n('GET', `/projects/${project_id}/endpoints`);
-    const bid = branch_id || (await n('GET', `/projects/${project_id}/branches`)).branches.find(b => b.primary)?.id;
-    const endpoint = endpoints.endpoints.find(e => e.branch_id === bid && e.type === 'read_write') || endpoints.endpoints.find(e => e.branch_id === bid);
-    if (!endpoint) throw new Error('No endpoint found. Create one with neon_create_endpoint first.');
-    const database = args.database || 'neondb';
-    const role = args.role || 'neondb_owner';
-    const pooled = args.pooled !== false;
-    const host = pooled ? endpoint.host.replace('.aws.neon.tech', '-pooler.aws.neon.tech') : endpoint.host;
-    return { connection_string: `postgresql://${role}@${host}/${database}?sslmode=require`, host: endpoint.host, pooler_host: host, database, role, endpoint_id: endpoint.id };
+    return await connectionInfo(project_id,args.database,branch_id,args.role,args.pooled!==false);
   }
   if (tool === 'neon_test_connection') {
     return await runSQL(project_id, 'SELECT version(), current_database(), current_user, now() as server_time;', args.database, branch_id);

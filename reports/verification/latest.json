@@ -1,0 +1,73 @@
+{
+  "sourceCommit": "3c0339dee871499694dcc7794b3d4c788912bf5d",
+  "worktreeDirty": true,
+  "sourceTree": null,
+  "verifiedAt": "2026-09-28T06:06:44.821Z",
+  "node": "v24.19.0",
+  "tests": {
+    "exitCode": 0,
+    "tests": 106,
+    "passed": 106,
+    "failed": 0,
+    "skipped": 0,
+    "timedOut": false
+  },
+  "freshness": [
+    {
+      "script": "scripts/generate-capabilities.mjs",
+      "passed": true
+    },
+    {
+      "script": "scripts/generate-catalog.mjs",
+      "passed": true
+    }
+  ],
+  "inventory": {
+    "registryEntries": 3053,
+    "uniqueNames": 3053,
+    "handlerDispatchBranches": 3057,
+    "uniqueHandlerNames": 3057,
+    "namespaces": 31,
+    "duplicateNames": 0
+  },
+  "mismatches": {
+    "registryWithoutHandler": [],
+    "handlerWithoutRegistry": [
+      "cf_list_ai_finetune_assets",
+      "sentry_list_org_rules",
+      "slack_list_apps",
+      "supabase_get_edge_function_body"
+    ]
+  },
+  "strictIntegrity": {
+    "passed": false,
+    "findings": 484,
+    "unreachableRegisteredNames": 481
+  },
+  "duplicateCandidates": 1963,
+  "mcp": {
+    "transactionListPassed": true,
+    "invalidBrokerRejected": true,
+    "largeOutputStored": true,
+    "resultReadPassed": true,
+    "booted": true,
+    "protocolVersion": "2024-11-05",
+    "advertisedToolCount": 7,
+    "advertisedSchemaBytes": 2886,
+    "advertisedNames": [
+      "search_toolkit",
+      "list_namespaces",
+      "get_tool_schema",
+      "execute_tool",
+      "toolkit_transaction",
+      "toolkit_result_read",
+      "toolkit_result_search"
+    ],
+    "providerSchemasAdvertised": 0,
+    "localCallPassed": true,
+    "missingStripeIsError": true,
+    "providerLiveTests": "not run — credentials unavailable"
+  },
+  "providerLiveTests": "not run — authorized test credentials unavailable",
+  "productionReady": false
+}

@@ -1,0 +1,291 @@
+# Recovery status
+
+## Checkpoint 0
+
+Committed snapshot: [generated baseline](../reports/recovery/BASELINE.md).
+Original main: `6c590f9c7895ea3bf2ce9e5d37bf300f5bd03cff`.
+Local preservation tag: `v2-recovered` (never overwrite).
+
+The baseline measured inherited failures; it did not certify the toolkit as
+production-ready. Strict CI remains red until those failures are repaired.
+
+## Checkpoint 1 — shared core extraction
+
+Registry loading, handler loading, discovery, legacy availability checks,
+argument validation, execution and ledger routing now live in `src/core`.
+`index.js` handles MCP presentation and delegates execution to Core. MCP
+surface definitions moved intact to `src/adapters/mcp/surface.js`.
+
+No registry entries, provider implementations, schemas or advertised schema
+bytes changed. Eight automated tests pass, including no-secret stdio startup,
+actual local execution, validation before dispatch, special namespace routing,
+and receipt behavior. Current inventory and duplicate analysis match baseline.
+
+This is deliberately an extraction checkpoint. Eager handler loading and the
+legacy availability bugs are not yet fixed. Missing secret configuration must
+not be confused with a validated provider connection. The inherited Gemini
+syntax failure, fabricated Anthropic tool results, orphan handler names,
+repeated dispatches and security defects remain tracked by strict integrity CI.
+
+Next: repair/quarantine inherited invalid implementations; make capability
+availability explicit and handler loading lazy; then implement CLI/result
+storage over the same core. Review [MCP compatibility](architecture/mcp-compatibility.md)
+before adapting protocol/transport behavior.
+
+## Checkpoint 2 — availability and lazy loading
+
+Provider import and fabricated-result defects repaired in a separate commit.
+Formal per-capability requirements, isolated lazy imports, provider health states,
+zero-secret discovery gating and a four-tool MCP broker surface are implemented.
+See CAPABILITY_AVAILABILITY.md for deliberately conservative dependency limits.
+Fourteen tests pass. The strict orphan/repeated-dispatch gate remains red.
+
+## Repository publishing
+
+Organization GitHub App authorization was corrected. Checkpoints 0 and 1 were
+published as 60403b5 and 3a65c08. GitHub Git Data API commits may have different
+commit SHAs from local commits; compare tree SHAs to verify identical contents.
+Main remains unchanged.
+
+## Checkpoints 3 and 4 — CLI and bounded results
+
+The CLI commands in CLI.md execute over the shared Core. Large results are
+stored, bounded reads/searches work across processes, and MCP advertises six
+broker tools including result retrieval. Twenty-one tests pass, including CLI
+exit codes, actual no-secret MCP execution, a 5,000-record Unicode round trip,
+secret redaction, result traversal/symlink rejection and quota failures.
+
+Remaining strict integrity issues are nine orphan handler definitions and nine
+repeated dispatch names. Full sandboxing/credential isolation, profiles,
+transaction semantics, deeper duplicate canonicalization, hybrid discovery and
+modern MCP transport migration remain incomplete. Do not interpret these
+checkpoints as full production readiness.
+
+## Security increment — local execution
+
+Local subprocesses now receive an allowlisted environment. Existing guarded local
+file writes reject sibling-prefix escapes, symlink escapes and dangling symlinks;
+file moves validate the source too. Twenty-four tests pass, including three new
+security regressions using real subprocesses and filesystem operations.
+Inventory remains 3,049 registry names, 31 namespaces, 440 duplicate candidates;
+MCP remains six broker tools / 2,442 schema bytes with zero direct provider schemas.
+Strict integrity still fails on the same nine orphan names and nine repeated
+dispatch names. See SECURITY_STATUS.md for the substantial remaining security work.
+
+## Integrity increment — shadowed dispatch cleanup
+
+Removed nine unreachable Anthropic/OpenAI branches while preserving all reachable
+per-tool AST fingerprints and registry names. Twenty-four tests pass. Strict
+integrity now reports only the nine orphan names; it remains a failing gate.
+Provider endpoint correctness still requires separate review, including legacy
+usage routes. See PROVIDER_REPAIRS.md and the generated integrity repair report.
+
+## Integrity increment — verified orphan recovery
+
+Recovered cf_get_api_token into the registry, removed the obsolete unregistered
+Slack users.setActive call, and fixed Cloudflare HTTP failure handling. All 3,049
+original registry names remain; the catalog now has 3,050 names. Seven orphan
+handlers remain under review. No live provider tests were run without credentials.
+
+## Reachability correction — counts are not working capability counts
+
+Execution testing exposed premature unconditional throws before expansion code.
+The strengthened AST audit reports 495 unreachable dispatch branches across 18
+namespaces, including 490 registered names. These 490 entries are preserved but
+now DISABLED in generated capability metadata and excluded from normal discovery.
+Dependent workflows may also become unavailable. This corrects prior structural
+reports, which counted branch presence without proving reachability.
+
+cf_get_api_token was moved before the premature Cloudflare throw and verified with
+contract tests. Other expansion branches remain disabled until individually
+reviewed and repaired. Strict integrity intentionally fails on unreachable
+branches plus the seven remaining orphan names. Do not interpret 3,050 registry
+entries as 3,050 working capabilities. The historical recovery report is unchanged.
+
+Regenerate the current reachability report with:
+`node scripts/report-reachability.mjs > reports/integrity/reachability.json`.
+This scan detects direct unconditional return/throw, not all control-flow defects.
+
+## Restored Cloudflare read capabilities
+
+Three reviewed read capabilities are reachable again with credentials configured:
+email-routing settings, user-token listing and current-token verification. Token
+listing preserves pagination metadata. Thirty-two tests pass. Registered names
+remain 3,050; directly unreachable registered names fall from 490 to 487. Strict
+integrity still fails on remaining unreachable branches and seven orphan names.
+
+## Restored local system readings
+
+local_get_memory_usage and local_get_cpu_usage now use Node OS counters through
+Core instead of unreachable Linux shell pipelines. Memory returns byte counters;
+CPU returns measured aggregate busy/idle percentages over a bounded sampling
+interval. Output identifies host/container scope limitations. Existing names are
+preserved; their previously unreachable string outputs are replaced by structured
+measurements. References: https://nodejs.org/api/os.html#oscpus and #osfreemem.
+Real host and zero-credential CLI tests cover these readings. Directly unreachable
+registered names fall to 485. Windows/macOS execution has not been tested here.
+
+## Implemented zone-settings replacement
+
+Supersedes the earlier deferred bulk-settings note: cf_get_zone_settings and the
+compatibility name cf_get_all_zone_settings now read explicitly requested settings
+through supported individual endpoints. setting_ids is required; the legacy name
+warns and is excluded from discovery. See migrations/cloudflare-zone-settings.md
+for the intentional input/output contract change. The migration tracker records
+completed changes and concrete outstanding blockers. Thirty-eight tests pass;
+directly unreachable registered names fall to 484. Full integrity still fails.
+
+## Shared validation, canonical aliases and generated catalog
+
+Complete registered JSON Schema validation now enforces nested constraints without
+coercing caller arguments. Formal catalog resolution validates aliases and routes
+legacy names to their canonical implementation. Forty-two tests pass, including
+real local alias operations and all-schema compilation. Current reports under
+reports/catalog distinguish canonical entries, aliases, namespaces, risk review,
+zero-credential availability and MCP exposure. CI checks generated freshness.
+See REQUIREMENTS_STATUS.md for the original-request acceptance review and ALIASES.md
+for compatibility response details. Full integrity remains failing.
+
+## Workspace profiles and admission policy
+
+Profile create/list/use commands persist workspace selection and explicit
+capability allow/deny rules. Asynchronous execution context isolates workspaces
+across concurrent Core instances, including guarded local writes and result
+partitions. Alias names cannot bypass canonical admission rules. Forty-five tests
+pass, including real concurrent writes, cross-workspace rejection and cross-process
+CLI profile selection. See PROFILES.md for credential and sandbox limitations.
+
+## Compound dispatch through Core
+
+Compound child calls now pass through Core validation, alias resolution,
+availability, profile admission and ledger routing. Intermediate responses remain
+raw for trusted workflow logic; only external responses enter the result broker.
+Children share a transaction ID in existing receipts, and rollback inverse calls
+do not create another chain of inverse receipts. Legacy rollback now reports
+failure for failed or irreversible steps and does not mark failed inverses undone.
+Forty-eight tests pass, including dynamic policy bypass prevention, bounded final
+outputs with intact intermediates and grouped child receipts. This does not yet
+certify every inverse or provide complete transaction logging for all mutations.
+
+### Generated-secret redaction
+
+Core now remembers sensitive input/result fields so newly issued credentials and
+connection strings are redacted from public results, receipts, and later error
+messages. Internal workflow values remain usable without exposing them to clients.
+Fifty offline tests pass, including nested generated-secret and environment-setter
+cases. This is defense in depth; provider modules still require credential isolation.
+
+### Ledger durability and truthful reversal
+
+Ledger I/O now rejects symlinks, hard links, malformed receipts and corrupt JSON,
+uses private permissions and exclusive writer locks, and fsyncs append-only events.
+Rollback marks no longer rewrite receipt history. A receipt failure after a
+successful operation raises LEDGER_WRITE_FAILED with an explicit warning against
+blind retries. Failed operations do not receive successful inverse receipts.
+GitHub create-or-update-file no longer advertises deletion as a valid reversal
+without a before-image. Fifty-three offline tests pass. Legacy inverse coverage
+is still incomplete; concurrent rollback and ambiguous remote outcomes require
+further handling before transaction certification.
+
+### Shared transaction commands
+
+Core transaction methods now back CLI list/rollback and the seventh MCP broker.
+Rollback lives in Core, preserves the legacy compound name, and uses durable
+attempts plus an exclusive lease. Unknown remote outcomes block automatic replay
+and dependent compensation; irreversible actions never make rollback successful.
+All broker input schemas now use shared validation. Fifty-six offline tests pass;
+receipt coverage remains limited to the legacy inverse map, and provider rollback
+was not tested live. The locked legacy MCP SDK remains in place pending the
+separate modern transport compatibility checkpoint.
+
+### Optional modern MCP adapter
+
+Added pinned SDK v2 support through an optional adapter while keeping existing
+stdio behavior as the default. Both adapters share broker execution and schemas.
+The v2 adapter serves legacy and modern stdio and supplies an HTTP fetch adapter
+that requires host-provided authorization. Tests use real SDK clients for both
+stdio eras and modern in-process HTTP; actual agent applications and deployed
+HTTP/OAuth remain uncertified. No remote listener is enabled automatically.
+
+### Indexed lexical discovery
+
+Replaced substring scoring with a per-Core inverted index and BM25 ranking over
+names, descriptions, namespaces, tags and canonical aliases. Exact names receive
+a strong boost; explicit workflow-layer metadata can provide a small relevance
+tie-breaker. Availability is checked before returning results, and search now
+includes honest risk metadata and matching terms without schemas or handler loads.
+Sixty-two tests pass, including a 10,000-capability synthetic catalog. Cached
+semantic vectors and execution-history reranking are still future work; this
+increment is lexical retrieval, not a claim of completed hybrid search.
+
+### PostgreSQL backup credential and path isolation
+
+Replaced shell-interpolated pg_dump calls with credential-scoped native processes,
+private temporary password files, checked/staged outputs and explicit warning/error
+reporting. Added executable availability requirements so missing pg_dump disables
+only these tools. Sixty-five offline tests pass, including environment isolation,
+argument injection, traversal/symlink rejection and failed-backup preservation.
+Live PostgreSQL backup/restore tests were not run: authorized test credentials
+were unavailable. This closes the ambient-environment gap for these backup tools;
+compound subprocesses and broader host isolation still require work.
+
+### Behavior evidence for duplicate review
+
+Duplicate analysis now compares direct HTTP method/route patterns, normalized
+schemas and required parameters, property subset relationships, return expressions,
+metadata and implementation fingerprints. The generated report separates 129
+intentional workflow/primitive composition relationships from potential duplicates.
+It contains 1,984 candidate pairs and performs no automatic merges. Sixty-seven
+checks pass, including distinct HTTP methods, renamed parameters, schema subsets
+and workflow composition. Dynamic endpoint resolution and semantic embeddings
+remain unimplemented and are explicitly reported as unknown.
+
+### 2026-09-27 — Compound Git security checkpoint
+
+Published the six checkpoints interrupted by the usage limit, through 1cba9ef.
+Compound Git operations now use structured arguments, filtered environments and
+workspace/metadata boundary checks. Literal messages/pathspecs cannot inject shell
+commands; hooks do not inherit provider credentials. Missing Git is capability-
+specific configuration, and failures are explicit. Added URL/bearer redaction for
+credentials loaded by external tools. Tests use real temporary Git repositories,
+a local bare remote and test-only hooks; no production remote is modified.
+
+### 2026-09-27 — Scaffold subprocess and environment-file security
+
+Scaffold schema synchronization uses a fixed installed Prisma CLI with only its
+branch DATABASE_URL added to the filtered environment. Missing prerequisites and
+unsupported custom commands fail before provider calls. Environment file updates
+are private and boundary-checked; missing connection strings and uncertain command
+failures remain explicit. No live Prisma/database operation was performed.
+
+### 2026-09-27 — Neon authenticated connection and SQL repair
+
+Replaced the passwordless synthesized URI with the documented management API.
+Replaced the SQL helper's incorrect management-token authentication with the
+optional official serverless driver and the retrieved database credential.
+SQL errors throw, driver transactions use atomic batches, and SQL availability
+requires the driver and Node >=19 without disabling management capabilities.
+The URI alias remains callable with a deprecation warning. Missing scaffold
+branch IDs now fail rather than falling back to the default branch. Contract
+and security tests use real driver code with test-only HTTP responses; live
+Neon behavior remains unverified without authorized sandbox credentials.
+
+### 2026-09-27 — Supabase credential and log recovery
+
+Separated Management API access tokens from project service-role keys in both
+requests and capability prerequisites. Management authorization failures no longer
+poison project API availability. Recovered the log reader through the documented
+unified stream, with real service filters, literal search, bounded time windows,
+row-limit warnings and explicit errors for failed SQL responses. Registered the
+previously orphaned PostgreSQL log reader. Remaining Supabase API routes are not
+certified by this targeted repair. Tests use HTTP fixtures only.
+
+### 2026-09-27 — Slack admin recovery and Sentry compatibility alias
+
+Recovered Slack channel privacy conversion using the documented Enterprise admin
+method and a separate admin-token requirement. Scope/auth failures isolate the
+admin group; successful changes produce receipts that explicitly have no validated
+automatic inverse. Added schema/risk metadata and profile-policy tests. Sentry's
+project-scrubbing orphan is now a deprecated alias of the identical project read,
+with canonical discovery and preserved output. Four unresolved orphans remain;
+see ORPHAN_REVIEW.md. No live provider mutation was performed.

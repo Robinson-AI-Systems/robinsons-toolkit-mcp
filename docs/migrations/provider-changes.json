@@ -1,0 +1,152 @@
+[
+  {
+    "id": "cloudflare-zone-settings-read",
+    "status": "migrated",
+    "tools": [
+      "cf_get_zone_settings",
+      "cf_get_all_zone_settings"
+    ],
+    "replacement": "GET /zones/{zone_id}/settings/{setting_id}",
+    "migration": "Provide setting_ids explicitly. cf_get_all_zone_settings remains a deprecated compatibility name, excluded from discovery. No claim to enumerate every setting.",
+    "verifiedOn": "2026-09-26",
+    "sources": [
+      "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/",
+      "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/get/"
+    ],
+    "test": "tests/cloudflare-settings.test.mjs"
+  },
+  {
+    "id": "cloudflare-zone-health-bulk-read",
+    "status": "blocked",
+    "tools": [
+      "cf_zone_health_report"
+    ],
+    "blocker": "Disabled unreachable workflow also swallows provider failures and misreads unwrapped responses. Must repair the whole report before exposing it, including reviewing rate-limit/firewall endpoints.",
+    "nextAction": "Use supported individual-setting reads for the report's explicit fields; preserve real per-provider failures and verify the remaining endpoints.",
+    "sources": [
+      "https://developers.cloudflare.com/api/resources/zones/subresources/settings/methods/list/"
+    ]
+  },
+  {
+    "id": "slack-set-active",
+    "status": "retired",
+    "tools": [
+      "slack_set_user_active"
+    ],
+    "migration": "Removed an unregistered nonfunctional orphan. No equivalent exists for forcing activity; users.setPresence has different semantics.",
+    "sources": [
+      "https://docs.slack.dev/reference/methods/users.setActive/"
+    ],
+    "test": "tests/provider-repairs.test.mjs"
+  },
+  {
+    "id": "legacy-provider-usage-routes",
+    "status": "review-required",
+    "tools": [
+      "openai_get_usage",
+      "anthropic_get_usage"
+    ],
+    "nextAction": "Reconcile legacy arguments and credentials with documented organization usage reports; do not silently change date ranges or output scope.",
+    "sources": [
+      "https://platform.claude.com/docs/en/manage-claude/usage-cost-api",
+      "https://developers.openai.com/api/reference/python/resources/admin/subresources/organization/subresources/usage"
+    ]
+  },
+  {
+    "id": "postgres-native-backup-recovery",
+    "status": "migrated",
+    "tools": [
+      "postgres_dump_schema",
+      "postgres_dump_table"
+    ],
+    "replacement": "Native pg_dump argument vector with private PGPASSFILE and staged output",
+    "migration": "Recovered unreachable tools. Require pg_dump on an absolute PATH entry and an explicit PostgreSQL host/user URI. Output is restricted to the workspace/profile and replaced only on successful completion. Service/passfile and query authority overrides are rejected.",
+    "verifiedOn": "2026-09-26",
+    "sources": [
+      "https://www.postgresql.org/docs/current/app-pgdump.html",
+      "https://www.postgresql.org/docs/current/libpq-pgpass.html"
+    ],
+    "test": "tests/postgres-dump.test.mjs; live backup/restore not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "scaffold-fixed-schema-push",
+    "status": "migrated",
+    "tools": [
+      "compound_scaffold_feature"
+    ],
+    "replacement": "Installed project Prisma CLI with fixed db push arguments and scoped DATABASE_URL",
+    "migration": "Historical migration_command accepts only the documented Prisma db push spellings. Arbitrary shell commands are rejected before provider side effects. No npx download, data-loss override, or claim of versioned migrations. Project configuration must consume DATABASE_URL.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://www.prisma.io/docs/cli/db/push"
+    ],
+    "test": "tests/project-migration.test.mjs; live Prisma schema push not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "neon-authenticated-connections-and-sql",
+    "status": "migrated",
+    "tools": [
+      "neon_get_connection_string",
+      "neon_get_connection_uri",
+      "neon_run_sql",
+      "neon_run_sql_transaction"
+    ],
+    "replacement": "Management connection_uri API plus optional official @neondatabase/serverless 1.1.0 driver",
+    "migration": "Existing database, role, branch_id and pooled selectors map to documented API query parameters. connection_string now contains real credentials internally and is redacted at public output boundaries. host is the selected URI host; fabricated pooler_host and implicit endpoint_id fields are no longer returned. The URI tool remains a deprecated alias. SQL returns typed full driver results, transactions return one result per statement, and SQL failures throw instead of returning fallback connection instructions. SQL-dependent tools require the optional driver and Node >=19; management tools remain independent. Existing SQL wrapper query construction still requires further review.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://api-docs.neon.tech/reference/getconnectionuri",
+      "https://github.com/neondatabase/serverless/blob/main/CONFIG.md"
+    ],
+    "test": "tests/neon-connection.test.mjs exercises the real installed driver against test-only HTTP fixtures; live Neon tests not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "supabase-management-auth-and-unified-logs",
+    "status": "migrated",
+    "tools": [
+      "supabase_get_logs",
+      "supabase_get_postgres_logs"
+    ],
+    "appliesTo": "Credential change applies to capabilities using the Supabase management helper. This is not certification of their other legacy API routes.",
+    "replacement": "SUPABASE_ACCESS_TOKEN for management requests; GET /v1/projects/{ref}/analytics/endpoints/logs with bounded ClickHouse query",
+    "migration": "SUPABASE_SERVICE_ROLE_KEY remains a project API credential and is never substituted for a management token. Log service names now actually select the documented source. Search is a literal case-insensitive substring. Without explicit timestamps the window is the last minute; explicit windows require both endpoints, at most 24 hours. Row-limit warnings are explicit. Existing project_id/service/limit/search names remain. Recovered the previously unreachable PostgreSQL-specific helper and added its missing registry entry.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://supabase.com/docs/reference/api/introduction",
+      "https://supabase.com/docs/reference/api/v1-get-project-logs",
+      "https://supabase.com/docs/guides/observability/advanced-log-filtering",
+      "https://supabase.com/docs/guides/observability/log-field-reference",
+      "https://clickhouse.com/docs/sql-reference/functions/string-search-functions"
+    ],
+    "test": "tests/supabase-logs.test.mjs; live Supabase tests not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "slack-admin-channel-privacy-recovery",
+    "status": "migrated",
+    "tools": [
+      "slack_convert_channel_to_private"
+    ],
+    "replacement": "POST admin.conversations.convertToPrivate with channel_id and SLACK_ADMIN_TOKEN",
+    "migration": "Recovered unreachable orphan with registry metadata. Requires an Enterprise org admin user token with admin.conversations:write, independently of SLACK_BOT_TOKEN. Missing scope/authentication responses mark only their credential group unhealthy. Profile policy and channel validation run before dispatch. Successful mutations create a receipt with no automatic inverse; manual conversion to public is not claimed as an undo.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://docs.slack.dev/reference/methods/admin.conversations.convertToPrivate/"
+    ],
+    "test": "tests/orphan-recovery.test.mjs; live Slack Enterprise tests not run \u2014 credentials unavailable"
+  },
+  {
+    "id": "sentry-project-scrubbing-alias",
+    "status": "migrated",
+    "tools": [
+      "sentry_get_project_data_scrubbing",
+      "sentry_get_project"
+    ],
+    "replacement": "Canonical sentry_get_project; GET /projects/{organization}/{project}/",
+    "migration": "Previously unregistered name returns the same complete project object as the canonical tool. Added a deprecated alias with a warning; normal discovery only returns the canonical name. No assertion that the output contains only scrubbing settings.",
+    "verifiedOn": "2026-09-27",
+    "sources": [
+      "https://docs.sentry.io/api/projects/retrieve-a-project/"
+    ],
+    "test": "tests/orphan-recovery.test.mjs; live Sentry tests not run \u2014 credentials unavailable"
+  }
+]
