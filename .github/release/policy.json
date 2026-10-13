@@ -1,0 +1,6 @@
+{
+  "repository": "Robinson-AI-Systems/robinsons-toolkit-mcp",
+  "requiredChecks": [
+    "release-policy"
+  ]
+}

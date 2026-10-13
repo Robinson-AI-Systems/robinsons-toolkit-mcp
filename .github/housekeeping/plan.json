@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "repository": "Robinson-AI-Systems/robinsons-toolkit-mcp",
+  "archive": "archive/housekeeping-2026-10-13",
+  "branches": [
+    {
+      "name": "ai/codex/daily-live-policy",
+      "sha": "1d0d8979400c824d0df2444bb167697101ece454",
+      "disposition": "merged",
+      "prs": [
+        1
+      ],
+      "reason": "Merged infrastructure PR source."
+    },
+    {
+      "name": "ai/codex/neon-cost-record",
+      "sha": "946e3253c8c182ff4f22bd1084da1e5cb6a7dfac",
+      "disposition": "merged",
+      "prs": [
+        2
+      ],
+      "reason": "Merged infrastructure PR source."
+    },
+    {
+      "name": "copilot/vscode-mpdhw2pi-81uh",
+      "sha": "4d6df7a2f640a973d840547503f8c11183f55e7c",
+      "disposition": "superseded",
+      "prs": [],
+      "reason": "Historical experiment superseded by the tracked v3/recovery-core Core/transaction work; preserve exact history, avoid obsolete placeholder inverse maps."
+    },
+    {
+      "name": "phase-3-reversible-state",
+      "sha": "458870d2c0aafd8a73af03009a97191fb0557a77",
+      "disposition": "superseded",
+      "prs": [],
+      "reason": "Historical experiment superseded by the tracked v3/recovery-core Core/transaction work; preserve exact history, avoid obsolete placeholder inverse maps."
+    }
+  ]
+}
